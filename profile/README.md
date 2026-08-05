@@ -1,225 +1,91 @@
 <p align="center">
   <img
     src="./assets/aether-x-premium-banner.png"
-    alt="AETHER X GLOBAL — Engineering Intelligence. Building the Future."
+    alt="AETHER X GLOBAL"
     width="100%"
   />
 </p>
 
-<h1 align="center">AETHER X GLOBAL</h1>
+# AETHER X GLOBAL
 
-<p align="center">
-  <strong>Governed Intelligence Infrastructure</strong>
-</p>
+### Governed intelligence infrastructure for financial, knowledge and decision systems.
 
-<p align="center">
-  Engineering secure, auditable, and multi-model systems for financial
-  intelligence, knowledge infrastructure, and specialized AI agents.
-</p>
+AETHER X GLOBAL designs and builds secure, auditable and multi-model AI systems that transform data into knowledge, knowledge into decisions and solutions, and decisions into measurable value.
 
-<p align="center">
-  <a href="https://www.aetherxglobal.com">Company</a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#capabilities">Capabilities</a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#engineering">Engineering</a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#public-engineering">Public Engineering</a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#security">Security</a>
-</p>
+Multi-model systems · Specialized AI agents · Evidence · Governance · Auditability
 
 ---
 
-## Company
+## What We Build
 
-AETHER X is a technology and artificial intelligence company building
-governed systems that transform data into knowledge, knowledge into
-decisions, and decisions into measurable value.
+### Governed Intelligence Infrastructure
 
-We develop the engineering infrastructure required to connect enterprise
-data, artificial intelligence models, specialized agents, and accountable
-human decision-making.
-
-> **Our strategic position**
->
-> AETHER X does not build a general-purpose foundation model.
-> We build the governed, auditable, and multi-model intelligence layer
-> required to operate specialized AI systems responsibly.
-
-## Capabilities
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### Financial Intelligence
-
-Governed analytical systems designed to support reliable financial
-reasoning, controlled workflows, and traceable decisions.
-
-</td>
-<td width="50%" valign="top">
-
-### Knowledge Infrastructure
-
-Institutional knowledge systems that organize evidence, context,
-documentation, and decision history into durable operational intelligence.
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+Modular infrastructure for model orchestration, knowledge integration, evaluation and evidence records, permissions and policy enforcement, traceability and operational control.
 
 ### Specialized AI Agents
 
-Domain-focused agents operating through explicit permissions, controlled
-tools, human approval points, and auditable execution.
+Domain-focused agents that operate within explicit permissions, evidence requirements and human oversight. Agents are designed for constrained, auditable tasks — not for unrestricted autonomous operation.
 
-</td>
-<td width="50%" valign="top">
+### Financial and Knowledge Systems
 
-### Multi-Model Orchestration
-
-Independent routing, evaluation, governance, and replacement of artificial
-intelligence models without binding company systems to a single provider.
-
-</td>
-</tr>
-</table>
-
-## Institutional Architecture
-
-AETHER X builds the governed engineering layer between:
-
-<p align="center">
-  <strong>
-    Enterprise Data &nbsp;→&nbsp; Knowledge Systems &nbsp;→&nbsp;
-    AI Models &nbsp;→&nbsp; Specialized Agents &nbsp;→&nbsp;
-    Accountable Decisions
-  </strong>
-</p>
-
-The architecture is designed to keep company data, institutional memory,
-governance controls, and intellectual property independent from individual
-model vendors.
-
-## Engineering
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### Governed by Default
-
-Authority, permissions, approvals, and accountability are designed into the
-system rather than added after deployment.
-
-</td>
-<td width="33%" valign="top">
-
-### Secure by Design
-
-Security, privacy, least privilege, and controlled access are treated as
-core engineering requirements.
-
-</td>
-<td width="33%" valign="top">
-
-### Auditable Execution
-
-Important actions, evidence, decisions, and system behavior must remain
-traceable and reviewable.
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top">
-
-### Human Accountability
-
-Artificial intelligence supports accountable human decisions and does not
-replace ownership of high-impact outcomes.
-
-</td>
-<td width="33%" valign="top">
-
-### Model Independence
-
-Models are replaceable components evaluated by quality, cost, risk,
-reliability, and operational fit.
-
-</td>
-<td width="33%" valign="top">
-
-### Evidence-Based Engineering
-
-Architecture and product decisions are tested against measurable evidence,
-explicit assumptions, and documented trade-offs.
-
-</td>
-</tr>
-</table>
-
-## Public Engineering
-
-Selected public engineering releases are being prepared under security,
-governance, intellectual-property, and engineering-readiness review.
-
-Public repositories will be published only when they have:
-
-- A defined purpose and accountable owner
-- Approved public visibility
-- Documented architecture and operating scope
-- Security and intellectual-property review
-- Reproducible validation where applicable
-- Clear maintenance and lifecycle status
-
-Private products, customer information, internal architecture, credentials,
-security controls, and unpublished intellectual property are not disclosed
-through this organization profile.
-
-## Operating Standard
-
-AETHER X systems are designed around the following institutional principles:
-
-- Governance by default
-- Security and privacy by design
-- End-to-end traceability
-- Human accountability
-- Least privilege
-- Modular and replaceable architecture
-- Evidence-based engineering
-- Controlled automation
-- Measurable quality, cost, risk, and operational value
-- Avoidance of unnecessary vendor lock-in
-
-## Security
-
-Do not submit credentials, customer data, confidential documents, private
-architecture, or unpublished intellectual property through public
-repositories.
-
-Repository-specific security reporting instructions will be published when
-an approved public repository requires them.
-
-## Contact
-
-**Official website:** [aetherxglobal.com](https://www.aetherxglobal.com)
-
-Business and institutional inquiries are handled through the official
-company website.
+Shared intelligence components that support financial analysis, economic research, enterprise knowledge, advanced analytics, intelligent automation, risk-aware decision support and reproducible validation.
 
 ---
 
-<p align="center">
-  <sub>
-    Engineering Intelligence. Building the Future.
-  </sub>
-</p>
+## AETHER X Intelligence Layer
 
-<p align="center">
-  <sub>
-    © 2026 AETHER X GLOBAL. All rights reserved.
-  </sub>
-</p>
+The shared technical layer beneath specialized products provides:
+
+- Model routing and provider abstraction
+- Knowledge and data integration
+- Evaluation, evidence records and traceability
+- Permissions, policies and least-privilege controls
+- Quality, cost and risk monitoring
+- Human approval points and controlled automation
+- Modular, replaceable components
+
+---
+
+## Flagship Product
+
+### AETHER X Quantum
+
+AETHER X Quantum is the current flagship application of the shared intelligence layer: a governed financial intelligence and strategy engineering environment for market and economic research, quantitative analysis, evidence-backed hypothesis testing, backtesting and validation, sensitivity and stress testing, and risk-aware decision support. Quantum is designed for disciplined analysis and research and does not promise or guarantee investment outcomes.
+
+---
+
+## Engineering Principles
+
+- Multi-model by design
+- Auditable by default
+- Security and privacy by design
+- Human-governed autonomy
+- Evidence-based evaluation
+- Modular and replaceable components
+- Least privilege
+- Measurable quality, cost and risk
+
+---
+
+## Public Engineering
+
+Selected reference implementations, specifications and tools are published publicly only after security, intellectual-property and release-readiness review. Public repositories represent intentionally released engineering work; proprietary platforms and internal systems remain private.
+
+---
+
+## Security
+
+Do not report security vulnerabilities through public issues. Formal responsible-disclosure instructions will be published through the organization security policy. Until then, do not disclose vulnerability details publicly.
+
+---
+
+## Contact
+
+Official institutional contact channels are available through the company website below. No personal emails or unreleased support channels are published here.
+
+**Official website:** [aetherxglobal.com](https://www.aetherxglobal.com)
+
+---
+
+<p align="center"><sub>Engineering Intelligence. Building the Future.</sub></p>
+
