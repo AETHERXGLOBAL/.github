@@ -75,13 +75,13 @@ Selected reference implementations, specifications and tools are published publi
 
 ## Security
 
-Do not report security vulnerabilities through public issues. Formal responsible-disclosure instructions will be published through the organization security policy when available. If this repository contains a SECURITY.md file, please follow the instructions there.
+Do not report security vulnerabilities through public issues. Formal responsible-disclosure instructions will be published through the organization security policy. Until then, do not disclose vulnerability details publicly.
 
 ---
 
 ## Contact
 
-Official institutional contacts are provided through the organization profile and the official company website linked below. No personal emails or unreleased support channels are published here.
+Official institutional contact channels are available through the company website below. No personal emails or unreleased support channels are published here.
 
 **Official website:** [aetherxglobal.com](https://www.aetherxglobal.com)
 
