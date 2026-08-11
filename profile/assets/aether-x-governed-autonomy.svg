@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="640" viewBox="0 0 1600 640" role="img" aria-labelledby="title desc">
+  <title id="title">AETHER X Governed Autonomy Model</title>
+  <desc id="desc">A layered model showing AI capability operating inside authority, evidence, security and verification controls.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1220"/><stop offset="1" stop-color="#111827"/></linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#172554"/><stop offset="1" stop-color="#312E81"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1600" height="640" rx="32" fill="url(#bg)"/>
+  <rect x="24" y="24" width="1552" height="592" rx="26" fill="none" stroke="#263244" stroke-width="2"/>
+  <text x="80" y="88" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700">Governed Autonomy</text>
+  <text x="80" y="128" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20">Useful AI capability inside explicit authority, evidence, security and verification boundaries.</text>
+
+  <g transform="translate(800 355)" font-family="Inter,Segoe UI,Arial,sans-serif" text-anchor="middle">
+    <ellipse rx="620" ry="205" fill="#0F172A" stroke="#22D3EE" stroke-width="2" stroke-dasharray="10 10" opacity="0.95"/>
+    <text y="-166" fill="#67E8F9" font-size="18" font-weight="700">INSTITUTIONAL CONTROL BOUNDARY</text>
+
+    <ellipse rx="470" ry="145" fill="#111827" stroke="#818CF8" stroke-width="2"/>
+    <text y="-116" fill="#A5B4FC" font-size="18" font-weight="700">GOVERNANCE &amp; SECURITY</text>
+
+    <ellipse rx="310" ry="92" fill="url(#core)" stroke="#C4B5FD" stroke-width="3" filter="url(#glow)"/>
+    <text y="-18" fill="#F8FAFC" font-size="24" font-weight="800">AI CAPABILITY</text>
+    <text y="18" fill="#CBD5E1" font-size="18">Models • Agents • Analysis • Tools</text>
+  </g>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" text-anchor="middle">
+    <g transform="translate(250 220)"><rect x="-115" y="-42" width="230" height="84" rx="18" fill="#111827" stroke="#38BDF8"/><text y="-4" fill="#E2E8F0" font-weight="700">AUTHORITY</text><text y="20" fill="#94A3B8">Who may do what?</text></g>
+    <g transform="translate(525 190)"><rect x="-115" y="-42" width="230" height="84" rx="18" fill="#111827" stroke="#818CF8"/><text y="-4" fill="#E2E8F0" font-weight="700">EVIDENCE</text><text y="20" fill="#94A3B8">Why trust the input?</text></g>
+    <g transform="translate(1075 190)"><rect x="-115" y="-42" width="230" height="84" rx="18" fill="#111827" stroke="#A78BFA"/><text y="-4" fill="#E2E8F0" font-weight="700">POLICY</text><text y="20" fill="#94A3B8">What rules apply?</text></g>
+    <g transform="translate(1350 220)"><rect x="-115" y="-42" width="230" height="84" rx="18" fill="#111827" stroke="#22D3EE"/><text y="-4" fill="#E2E8F0" font-weight="700">VERIFICATION</text><text y="20" fill="#94A3B8">Was the outcome proven?</text></g>
+
+    <g transform="translate(285 493)"><rect x="-125" y="-42" width="250" height="84" rx="18" fill="#111827" stroke="#0EA5E9"/><text y="-4" fill="#E2E8F0" font-weight="700">LEAST PRIVILEGE</text><text y="20" fill="#94A3B8">Bounded tools &amp; access</text></g>
+    <g transform="translate(800 535)"><rect x="-135" y="-42" width="270" height="84" rx="18" fill="#111827" stroke="#8B5CF6"/><text y="-4" fill="#E2E8F0" font-weight="700">AUDITABILITY</text><text y="20" fill="#94A3B8">Traceable actions &amp; state</text></g>
+    <g transform="translate(1315 493)"><rect x="-125" y="-42" width="250" height="84" rx="18" fill="#111827" stroke="#14B8A6"/><text y="-4" fill="#E2E8F0" font-weight="700">RECOVERY</text><text y="20" fill="#94A3B8">Contain • Revoke • Roll back</text></g>
+  </g>
+
+  <text x="80" y="595" fill="#64748B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">The goal is not unrestricted autonomy. The goal is autonomy that remains governable, reversible and independently verifiable.</text>
+</svg>
