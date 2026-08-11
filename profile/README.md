@@ -47,9 +47,11 @@ AETHER X does not organize its strategy around building the largest general-purp
 ## The AETHER X Intelligence Chain
 
 <p align="center">
-  <strong>
-    INTENT → DATA / KNOWLEDGE → EVIDENCE → ANALYSIS → DECISION → AUTHORITY → CONTROLLED EXECUTION → VERIFICATION → VERIFIED OUTCOME → AUDIT / LEARNING
-  </strong>
+  <img
+    src="./assets/aether-x-intelligence-chain.svg"
+    alt="AETHER X Intelligence Chain"
+    width="100%"
+  />
 </p>
 
 This operating chain expresses the company-level design principle behind AETHER X systems: intelligence should remain traceable from intent through evidence, authority, execution and verified outcome.
@@ -109,6 +111,26 @@ AETHER X systems are designed around a shared engineering layer that can combine
 - Quality, cost and risk measurement
 
 The objective is not unrestricted autonomy. The objective is **useful autonomy with explicit authority, evidence and verification**.
+
+<p align="center">
+  <img
+    src="./assets/aether-x-governed-autonomy.svg"
+    alt="AETHER X Governed Autonomy Model"
+    width="100%"
+  />
+</p>
+
+---
+
+## Technology Landscape
+
+<p align="center">
+  <img
+    src="./assets/aether-x-technology-landscape.svg"
+    alt="AETHER X Technology Landscape"
+    width="100%"
+  />
+</p>
 
 ---
 
