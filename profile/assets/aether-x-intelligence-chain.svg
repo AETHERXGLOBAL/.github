@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" role="img" aria-labelledby="title desc">
+  <title id="title">AETHER X Intelligence Chain</title>
+  <desc id="desc">A visual flow from intent through evidence, decision, authority, controlled execution, verification and verified outcome.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D1117"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6EE7F9"/>
+      <stop offset="0.5" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="560" rx="32" fill="url(#bg)"/>
+  <rect x="24" y="24" width="1552" height="512" rx="26" fill="none" stroke="#263244" stroke-width="2"/>
+  <text x="80" y="92" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700">AETHER X Intelligence Chain</text>
+  <text x="80" y="132" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20">From institutional intent to verified outcome — with authority and evidence preserved end to end.</text>
+
+  <line x1="145" y1="315" x2="1455" y2="315" stroke="url(#line)" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" text-anchor="middle">
+    <g transform="translate(150 315)">
+      <circle r="46" fill="#111827" stroke="#6EE7F9" stroke-width="3"/><text y="7" fill="#E2E8F0" font-size="19" font-weight="700">INTENT</text>
+    </g>
+    <g transform="translate(335 315)">
+      <circle r="46" fill="#111827" stroke="#67E8F9" stroke-width="3"/><text y="7" fill="#E2E8F0" font-size="18" font-weight="700">KNOWLEDGE</text>
+    </g>
+    <g transform="translate(520 315)">
+      <circle r="46" fill="#111827" stroke="#818CF8" stroke-width="3"/><text y="7" fill="#E2E8F0" font-size="18" font-weight="700">EVIDENCE</text>
+    </g>
+    <g transform="translate(705 315)">
+      <circle r="46" fill="#111827" stroke="#A78BFA" stroke-width="3"/><text y="7" fill="#E2E8F0" font-size="18" font-weight="700">DECISION</text>
+    </g>
+    <g transform="translate(890 315)">
+      <circle r="46" fill="#111827" stroke="#C084FC" stroke-width="3"/><text y="7" fill="#E2E8F0" font-size="18" font-weight="700">AUTHORITY</text>
+    </g>
+    <g transform="translate(1075 315)">
+      <circle r="46" fill="#111827" stroke="#60A5FA" stroke-width="3"/><text y="-4" fill="#E2E8F0" font-size="17" font-weight="700">CONTROLLED</text><text y="18" fill="#E2E8F0" font-size="17" font-weight="700">EXECUTION</text>
+    </g>
+    <g transform="translate(1260 315)">
+      <circle r="46" fill="#111827" stroke="#22D3EE" stroke-width="3"/><text y="7" fill="#E2E8F0" font-size="17" font-weight="700">VERIFY</text>
+    </g>
+    <g transform="translate(1445 315)">
+      <circle r="52" fill="#0F172A" stroke="#5EEAD4" stroke-width="4" filter="url(#glow)"/><text y="-4" fill="#F8FAFC" font-size="16" font-weight="800">VERIFIED</text><text y="17" fill="#F8FAFC" font-size="16" font-weight="800">OUTCOME</text>
+    </g>
+  </g>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" fill="#94A3B8" text-anchor="middle">
+    <text x="150" y="405">Why?</text><text x="335" y="405">What is known?</text><text x="520" y="405">What supports it?</text><text x="705" y="405">What should happen?</text><text x="890" y="405">Who may act?</text><text x="1075" y="405">Execute within bounds</text><text x="1260" y="405">Prove the result</text><text x="1445" y="405">Acceptable outcome</text>
+  </g>
+
+  <text x="80" y="500" fill="#64748B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">CAPABILITY ≠ AUTHORITY   •   EXECUTION ≠ VERIFICATION   •   OUTCOME ≠ ACCEPTANCE</text>
+</svg>
