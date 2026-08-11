@@ -27,6 +27,8 @@
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#what-we-build">What We Build</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#live-engineering-pulse">Engineering Pulse</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#engineering-standard">Engineering Standard</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#public-engineering">Public Engineering</a>
@@ -131,6 +133,20 @@ The objective is not unrestricted autonomy. The objective is **useful autonomy w
     width="100%"
   />
 </p>
+
+---
+
+## Live Engineering Pulse
+
+<p align="center">
+  <img
+    src="./assets/aether-x-engineering-pulse.svg"
+    alt="AETHER X Live Engineering Pulse"
+    width="100%"
+  />
+</p>
+
+The pulse is generated from **public GitHub organization data only**. Private repositories, private activity and confidential engineering metadata are neither queried nor published. When the public engineering footprint is not yet representative of the company, the system intentionally suppresses vanity statistics and reports disclosure posture instead; numeric public metrics activate automatically once the public surface becomes sufficiently representative.
 
 ---
 
