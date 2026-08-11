@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500" role="img" aria-labelledby="title desc">
+  <title id="title">AETHER X Engineering Pulse</title>
+  <desc id="desc">A public-safe engineering telemetry panel generated only from publicly visible GitHub organization data.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1018"/><stop offset="1" stop-color="#111827"/></linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22D3EE"/><stop offset="0.55" stop-color="#8B5CF6"/><stop offset="1" stop-color="#D6A84B"/></linearGradient>
+  </defs>
+  <rect width="1600" height="500" rx="32" fill="url(#bg)"/>
+  <rect x="24" y="24" width="1552" height="452" rx="26" fill="none" stroke="#273244" stroke-width="2"/>
+  <rect x="80" y="62" width="140" height="5" rx="2.5" fill="url(#bar)"/>
+  <text x="80" y="112" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="36" font-weight="800">LIVE ENGINEERING PULSE</text>
+  <text x="80" y="149" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19">GitHub-native public telemetry • disclosure-safe by design • private engineering remains private.</text>
+  <text x="1520" y="93" text-anchor="end" fill="#D6A84B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">CURATED PUBLIC SURFACE</text>
+  <text x="1520" y="122" text-anchor="end" fill="#64748B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Latest public push: 2026-08-11</text>
+
+  <g transform="translate(80 210)">
+    <rect width="315" height="190" rx="22" fill="#111827" stroke="#273244" stroke-width="2"/>
+    <rect width="6" height="190" rx="3" fill="#22D3EE"/>
+    <text x="28" y="42" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">PUBLIC ENGINEERING</text>
+    <text x="28" y="94" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">CURATED</text>
+    <text x="28" y="134" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Only approved public surfaces are exposed</text>
+  </g>
+
+  <g transform="translate(455 210)">
+    <rect width="315" height="190" rx="22" fill="#111827" stroke="#273244" stroke-width="2"/>
+    <rect width="6" height="190" rx="3" fill="#60A5FA"/>
+    <text x="28" y="42" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">TELEMETRY</text>
+    <text x="28" y="94" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">PUBLIC-ONLY</text>
+    <text x="28" y="134" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">No private repository metadata is queried</text>
+  </g>
+
+  <g transform="translate(830 210)">
+    <rect width="315" height="190" rx="22" fill="#111827" stroke="#273244" stroke-width="2"/>
+    <rect width="6" height="190" rx="3" fill="#A78BFA"/>
+    <text x="28" y="42" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">DISCLOSURE</text>
+    <text x="28" y="94" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">CONTROLLED</text>
+    <text x="28" y="134" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Metrics publish only when representative</text>
+  </g>
+
+  <g transform="translate(1205 210)">
+    <rect width="315" height="190" rx="22" fill="#111827" stroke="#273244" stroke-width="2"/>
+    <rect width="6" height="190" rx="3" fill="#D6A84B"/>
+    <text x="28" y="42" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">NUMERIC MODE</text>
+    <text x="28" y="94" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">ARMED</text>
+    <text x="28" y="134" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Activates automatically at 3+ public repos</text>
+  </g>
+
+  <text x="80" y="449" fill="#64748B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Metrics are generated from GitHub public organization data only. Private repositories, private activity and confidential engineering metadata are never queried or published.</text>
+</svg>
