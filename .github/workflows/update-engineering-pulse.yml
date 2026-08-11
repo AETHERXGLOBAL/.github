@@ -1,0 +1,47 @@
+name: Update public engineering pulse
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-engineering-pulse
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Clone organization profile repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch main "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
+
+      - name: Render disclosure-safe public telemetry
+        run: |
+          set -euo pipefail
+          cd repo
+          python3 profile/scripts/render_engineering_pulse.py
+
+      - name: Publish only when public telemetry changed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          cd repo
+          if git diff --quiet -- profile/assets/aether-x-engineering-pulse.svg; then
+            echo "No public telemetry change; no commit required."
+            exit 0
+          fi
+          git config user.name "AETHER X Engineering Pulse"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/assets/aether-x-engineering-pulse.svg
+          git commit -m "chore(profile): refresh public engineering pulse"
+          git push origin HEAD:main
