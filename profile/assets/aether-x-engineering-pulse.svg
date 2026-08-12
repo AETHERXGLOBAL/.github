@@ -1,49 +1,94 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500" role="img" aria-labelledby="title desc">
-  <title id="title">AETHER X Engineering Pulse</title>
-  <desc id="desc">A public-safe engineering telemetry panel generated only from publicly visible GitHub organization data.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="840" viewBox="0 0 1600 840" role="img" aria-labelledby="title desc">
+  <title id="title">AETHER X Live GitHub Activity</title>
+  <desc id="desc">Professional public-only GitHub pull-request activity dashboard for AETHER X GLOBAL.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1018"/><stop offset="1" stop-color="#111827"/></linearGradient>
-    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22D3EE"/><stop offset="0.55" stop-color="#8B5CF6"/><stop offset="1" stop-color="#D6A84B"/></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#010D1D"/>
+      <stop offset="0.58" stop-color="#071426"/>
+      <stop offset="1" stop-color="#0B1A2C"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#DEB459"/>
+      <stop offset="0.50" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#3E8BFF"/>
+    </linearGradient>
   </defs>
-  <rect width="1600" height="500" rx="32" fill="url(#bg)"/>
-  <rect x="24" y="24" width="1552" height="452" rx="26" fill="none" stroke="#273244" stroke-width="2"/>
-  <rect x="80" y="62" width="140" height="5" rx="2.5" fill="url(#bar)"/>
-  <text x="80" y="112" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="36" font-weight="800">LIVE ENGINEERING PULSE</text>
-  <text x="80" y="149" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19">GitHub-native public telemetry • disclosure-safe by design • private engineering remains private.</text>
-  <text x="1520" y="93" text-anchor="end" fill="#D6A84B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">CURATED PUBLIC SURFACE</text>
-  <text x="1520" y="122" text-anchor="end" fill="#64748B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Latest public push: 2026-08-11</text>
 
-  <g transform="translate(80 210)">
-    <rect width="315" height="190" rx="22" fill="#111827" stroke="#273244" stroke-width="2"/>
-    <rect width="6" height="190" rx="3" fill="#22D3EE"/>
-    <text x="28" y="42" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">PUBLIC ENGINEERING</text>
-    <text x="28" y="94" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">CURATED</text>
-    <text x="28" y="134" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Only approved public surfaces are exposed</text>
+  <rect width="1600" height="840" rx="30" fill="url(#bg)"/>
+  <rect x="24" y="24" width="1552" height="792" rx="24" fill="none" stroke="#243247" stroke-width="1.5"/>
+  <rect x="80" y="58" width="150" height="5" rx="2.5" fill="url(#accent)"/>
+
+  <text x="80" y="108" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">AETHER X • LIVE GITHUB ACTIVITY</text>
+  <text x="80" y="140" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">Professional pull-request telemetry generated directly from public GitHub organization data.</text>
+  <text x="1520" y="92" text-anchor="end" fill="#DEB459" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800">PUBLIC-ONLY • AUTO-REFRESH</text>
+  <text x="1520" y="120" text-anchor="end" fill="#6F7D89" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Latest PR activity: 2026-08-11 12:51 UTC</text>
+
+  
+  <g transform="translate(80 178)">
+    <rect width="330" height="142" rx="20" fill="#0F1726" stroke="#243247" stroke-width="1.5"/>
+    <rect width="5" height="142" rx="2.5" fill="#DEB459"/>
+    <text x="27" y="35" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.1">PUBLIC PULL REQUESTS</text>
+    <text x="27" y="85" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">6</text>
+    <text x="27" y="116" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">All-time public PR records</text>
   </g>
-
-  <g transform="translate(455 210)">
-    <rect width="315" height="190" rx="22" fill="#111827" stroke="#273244" stroke-width="2"/>
-    <rect width="6" height="190" rx="3" fill="#60A5FA"/>
-    <text x="28" y="42" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">TELEMETRY</text>
-    <text x="28" y="94" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">PUBLIC-ONLY</text>
-    <text x="28" y="134" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">No private repository metadata is queried</text>
+  <g transform="translate(430 178)">
+    <rect width="330" height="142" rx="20" fill="#0F1726" stroke="#243247" stroke-width="1.5"/>
+    <rect width="5" height="142" rx="2.5" fill="#8B5CF6"/>
+    <text x="27" y="35" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.1">MERGED</text>
+    <text x="27" y="85" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">6</text>
+    <text x="27" y="116" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">100.0% of public PRs</text>
   </g>
-
-  <g transform="translate(830 210)">
-    <rect width="315" height="190" rx="22" fill="#111827" stroke="#273244" stroke-width="2"/>
-    <rect width="6" height="190" rx="3" fill="#A78BFA"/>
-    <text x="28" y="42" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">DISCLOSURE</text>
-    <text x="28" y="94" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">CONTROLLED</text>
-    <text x="28" y="134" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Metrics publish only when representative</text>
+  <g transform="translate(780 178)">
+    <rect width="330" height="142" rx="20" fill="#0F1726" stroke="#243247" stroke-width="1.5"/>
+    <rect width="5" height="142" rx="2.5" fill="#2EA043"/>
+    <text x="27" y="35" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.1">OPEN</text>
+    <text x="27" y="85" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">0</text>
+    <text x="27" y="116" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Currently open public PRs</text>
   </g>
-
-  <g transform="translate(1205 210)">
-    <rect width="315" height="190" rx="22" fill="#111827" stroke="#273244" stroke-width="2"/>
-    <rect width="6" height="190" rx="3" fill="#D6A84B"/>
-    <text x="28" y="42" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">NUMERIC MODE</text>
-    <text x="28" y="94" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">ARMED</text>
-    <text x="28" y="134" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Activates automatically at 3+ public repos</text>
+  <g transform="translate(1130 178)">
+    <rect width="330" height="142" rx="20" fill="#0F1726" stroke="#243247" stroke-width="1.5"/>
+    <rect width="5" height="142" rx="2.5" fill="#3E8BFF"/>
+    <text x="27" y="35" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.1">PUBLIC REPOS</text>
+    <text x="27" y="85" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">1</text>
+    <text x="27" y="116" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">1 with PR activity</text>
   </g>
+  
+  <g transform="translate(80 350)">
+    <rect width="1000" height="410" rx="22" fill="#0D1522" stroke="#243247" stroke-width="1.5"/>
+    <text x="28" y="42" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">Pull Requests by Repository</text>
+    <text x="28" y="69" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Public repositories only • all-time status distribution</text>
+    <circle cx="590" cy="39" r="5" fill="#2EA043"/><text x="604" y="44" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Open</text>
+    <circle cx="672" cy="39" r="5" fill="#8B5CF6"/><text x="686" y="44" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Merged</text>
+    <circle cx="770" cy="39" r="5" fill="#F85149"/><text x="784" y="44" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Closed</text>
+  </g>
+  <text x="108" y="472" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">.github</text>
+  <rect x="390" y="455" width="620" height="26" rx="7" fill="#111C2C"/>
+  <rect x="390" y="455" width="0.00" height="26" rx="7" fill="#2EA043"/>
+  <rect x="390.00" y="455" width="620.00" height="26" fill="#8B5CF6"/>
+  <rect x="1010.00" y="455" width="0.00" height="26" rx="7" fill="#F85149"/>
+  <text x="1032" y="473" text-anchor="end" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700">6</text>
+  
+  <g transform="translate(1100 350)">
+    <rect width="420" height="410" rx="22" fill="#0D1522" stroke="#243247" stroke-width="1.5"/>
+    <text x="28" y="42" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">Activity Insights</text>
+    <text x="28" y="69" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Live public GitHub telemetry</text>
+  </g>
+  <circle cx="1270" cy="493" r="68" fill="none" stroke="#162235" stroke-width="24"/>
+  <circle cx="1270" cy="493" r="68" fill="none" stroke="#8B5CF6" stroke-width="24" stroke-dasharray="427.26 0.00" stroke-dashoffset="-0.00" transform="rotate(-90 1270 493)"/>
+  <text x="1270" y="489" text-anchor="middle" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="30" font-weight="800">6</text>
+  <text x="1270" y="514" text-anchor="middle" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">PUBLIC PRs</text>
 
-  <text x="80" y="449" fill="#64748B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Metrics are generated from GitHub public organization data only. Private repositories, private activity and confidential engineering metadata are never queried or published.</text>
+  <text x="1392" y="445" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">MERGE RATE</text>
+  <text x="1392" y="474" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">100.0%</text>
+
+  <text x="1130" y="602" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">RECENT ACTIVITY / 90D</text>
+  <text x="1130" y="632" fill="#3E8BFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">6 PRs</text>
+
+  <text x="1130" y="682" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">TOP PUBLIC REPOSITORY</text>
+  <text x="1130" y="710" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">.github</text>
+  <text x="1130" y="735" fill="#DEB459" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">6 public PRs</text>
+
+
+  <line x1="80" y1="790" x2="1520" y2="790" stroke="#243247" stroke-width="1"/>
+  <text x="80" y="817" fill="#6F7D89" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Disclosure boundary: only public repositories and public pull-request metadata are queried. Private repository names, private activity and confidential engineering metadata are excluded.</text>
 </svg>
