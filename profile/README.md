@@ -146,7 +146,7 @@ The objective is not unrestricted autonomy. The objective is **useful autonomy w
   />
 </p>
 
-The pulse is generated from **public GitHub organization data only**. Private repositories, private activity and confidential engineering metadata are neither queried nor published. When the public engineering footprint is not yet representative of the company, the system intentionally suppresses vanity statistics and reports disclosure posture instead; numeric public metrics activate automatically once the public surface becomes sufficiently representative.
+The dashboard is generated directly from **public GitHub organization data only** and refreshes automatically. It reports public pull-request totals, status distribution, repository activity, merge rate and recent 90-day activity. Private repositories, private activity and confidential engineering metadata are neither queried nor published.
 
 ---
 

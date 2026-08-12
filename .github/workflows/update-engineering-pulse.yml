@@ -1,47 +1,75 @@
-name: Update public engineering pulse
+name: Update public GitHub activity dashboard
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "profile/scripts/render_engineering_pulse.py"
+      - "profile/assets/aether-x-engineering-pulse.svg"
+      - ".github/workflows/update-engineering-pulse.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "profile/scripts/render_engineering_pulse.py"
+      - ".github/workflows/update-engineering-pulse.yml"
   schedule:
-    - cron: "17 6 * * 1"
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: public-engineering-pulse
+  group: public-github-activity-dashboard-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8
     steps:
       - name: Clone organization profile repository
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          git clone --depth 1 --branch main "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
+          BRANCH="${GITHUB_HEAD_REF:-main}"
+          git clone --depth 1 --branch "${BRANCH}" "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
 
-      - name: Render disclosure-safe public telemetry
+      - name: Validate renderer syntax
+        run: |
+          set -euo pipefail
+          cd repo
+          python3 -m py_compile profile/scripts/render_engineering_pulse.py
+
+      - name: Render public GitHub activity dashboard
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           cd repo
           python3 profile/scripts/render_engineering_pulse.py
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          ET.parse("profile/assets/aether-x-engineering-pulse.svg")
+          print("SVG_XML_VALID")
+          PY
 
-      - name: Publish only when public telemetry changed
+      - name: Publish only when dashboard changed
+        if: github.event_name != 'pull_request'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           cd repo
           if git diff --quiet -- profile/assets/aether-x-engineering-pulse.svg; then
-            echo "No public telemetry change; no commit required."
+            echo "No public GitHub telemetry change; no commit required."
             exit 0
           fi
-          git config user.name "AETHER X Engineering Pulse"
+          git config user.name "AETHER X GitHub Activity"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile/assets/aether-x-engineering-pulse.svg
-          git commit -m "chore(profile): refresh public engineering pulse"
+          git commit -m "chore(profile): refresh public GitHub activity"
           git push origin HEAD:main
