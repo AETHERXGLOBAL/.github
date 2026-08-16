@@ -29,6 +29,8 @@
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#portfolio-at-a-glance">Portfolio</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#investor-evidence">Investor Evidence</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#our-thesis">Our Thesis</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#engineering-doctrine">Engineering Doctrine</a>
@@ -76,6 +78,39 @@ Quantum does not promise or guarantee investment outcomes. AIC implementation ha
 **Public access:** Current core development and research repositories are private. Public GitHub materials represent intentionally released engineering work only; any future public release remains subject to explicit review and approval.
 
 These initiatives are intentionally described by their **current maturity**, not by future ambition.
+
+---
+
+## Investor Evidence
+
+AETHER X is designed to be evaluated on **evidence rather than presentation**. For investors, strategic partners and institutional reviewers, this public GitHub surface now provides a bounded diligence layer that separates what can be verified publicly from what remains private, unestablished or intentionally not asserted.
+
+### Governed Project-State Evidence
+
+<p align="center">
+  <img
+    src="./assets/aether-x-live-project-pulse.svg"
+    alt="AETHER X Live Project Pulse"
+    width="100%"
+  />
+</p>
+
+The Live Project Pulse publishes selected project-state signals from allowlisted governed sources without exposing private repository content. It does not infer aggregate completion percentages and does not convert commits, merges, research or design into acceptance or production claims.
+
+| Public diligence signal | Current public evidence |
+|---|---|
+| **Corporate thesis & engineering doctrine** | Publicly stated and directly inspectable in this profile. |
+| **Portfolio maturity** | Explicitly disclosed by initiative and bounded by current maturity. |
+| **Governed execution state** | Live Project Pulse with public-safe, automatically refreshed project-state telemetry. |
+| **Public engineering activity** | Engineering Pulse generated from public GitHub organization data. |
+| **Commercial / financial traction** | Not established by this public GitHub profile. |
+| **Production readiness / customer outcomes** | Not implied unless separately evidenced and explicitly disclosed. |
+
+For the evidence definitions, limitations, diligence sequence and disclosure rules, see:
+
+**[Public Investor Evidence →](./INVESTOR_EVIDENCE.md)**
+
+> **Diligence boundary:** GitHub evidence is not a substitute for technical, commercial, financial, capitalization, legal, security or intellectual-property due diligence.
 
 ---
 
