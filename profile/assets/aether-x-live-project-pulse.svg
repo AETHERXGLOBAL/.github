@@ -27,7 +27,7 @@
 <text x="70" y="122" class="title">LIVE PROJECT PULSE</text>
 <text x="70" y="154" class="subtitle">Verified execution telemetry · governed sources · no inferred completion percentages</text>
 <text x="1530" y="72" text-anchor="end" class="footerGold">AUTO-REFRESH · PUBLIC-SAFE</text>
-<text x="1530" y="100" text-anchor="end" class="footer">Last verified refresh: 2026-08-16 19:50 UTC</text>
+<text x="1530" y="100" text-anchor="end" class="footer">Last published state update: 2026-08-16 20:10 UTC</text>
 <line x1="70" y1="184" x2="1530" y2="184" stroke="#9D753C" stroke-opacity=".7"/>
 
   <g transform="translate(70 210)">
@@ -43,7 +43,7 @@
     <text x="34" y="247" class="body">Latest externally accepted gate: DOD-01-01</text>
 
     <text x="34" y="304" class="label">NEXT AUTHORIZED / GOVERNED STEP</text>
-    <text x="34" y="329" class="body">SELECT AND EXPLICITLY AUTHORIZE EXACTLY ONE NEXT BOUNDED GATE 1 TASK</text>
+    <text x="34" y="329" class="body">Next bounded action requires explicit authorization under the current gate.</text>
 
     <line x1="34" y1="365" x2="666" y2="365" stroke="#26364b"/>
     <text x="34" y="383" class="source">START_HERE.md · governed handoff</text>
@@ -61,8 +61,7 @@
     <text x="34" y="247" class="body">3 accepted build tasks recorded in current status.</text>
 
     <text x="34" y="304" class="label">NEXT AUTHORIZED / GOVERNED STEP</text>
-    <text x="34" y="329" class="body">Issue exactly one coherent execution for AXOS-T004 — Domain Events, Transactional Outbox &amp;</text>
-<text x="34" y="351" class="body">Durable Job Runtime. Do not start T005/T006/T007/T012/T020 in parallel.</text>
+    <text x="34" y="329" class="body">AXOS-T004 is selected as the next bounded build task.</text>
 
     <line x1="34" y1="365" x2="666" y2="365" stroke="#26364b"/>
     <text x="34" y="383" class="source">PROJECT_STATUS.md · current build state</text>
@@ -82,8 +81,7 @@
 <text x="34" y="269" class="body">remains active.</text>
 
     <text x="34" y="304" class="label">NEXT AUTHORIZED / GOVERNED STEP</text>
-    <text x="34" y="329" class="body">AIC-003 — Establish and verify the local AIC working tree from the private GitHub repository</text>
-<text x="34" y="351" class="body">on the actual AIC host.</text>
+    <text x="34" y="329" class="body">AIC-003 is the next authorized pre-implementation step.</text>
 
     <line x1="34" y1="365" x2="666" y2="365" stroke="#26364b"/>
     <text x="34" y="383" class="source">05_AIC_CURRENT_STATE.md · CURRENT</text>
@@ -101,7 +99,7 @@
     <text x="34" y="247" class="body">Latest governed acceptance record is established for the current research phase.</text>
 
     <text x="34" y="304" class="label">NEXT AUTHORIZED / GOVERNED STEP</text>
-    <text x="34" y="329" class="body">No separate next authorized step is asserted by the latest acceptance record.</text>
+    <text x="34" y="329" class="body">No separate next authorized step is asserted by the current governed record.</text>
 
     <line x1="34" y1="365" x2="666" y2="365" stroke="#26364b"/>
     <text x="34" y="383" class="source">AMII_RECOVERY_ACCEPTANCE_2026-08-14.md · latest acceptance record</text>
