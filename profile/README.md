@@ -6,10 +6,10 @@
   />
 </p>
 
-# AETHER X GLOBAL
+<h1 align="center">AETHER X GLOBAL</h1>
 
 <p align="center">
-  <strong>Build Intelligence That Can Be Trusted to Act.</strong>
+  <strong>A Governed Intelligence Systems Company</strong>
 </p>
 
 <p align="center">
@@ -17,22 +17,125 @@
 </p>
 
 <p align="center">
-  Governed intelligence systems for consequential financial, knowledge, research, enterprise and institutional workflows.
+  <strong>Build Intelligence That Can Be Trusted to Act.</strong>
+</p>
+
+<p align="center">
+  We engineer governed intelligence systems for consequential financial, research, knowledge, enterprise and institutional workflows.
 </p>
 
 <p align="center">
   <a href="https://www.aetherxglobal.com"><strong>Official Website</strong></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="#core-portfolio">Core Portfolio</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#our-thesis">Our Thesis</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#what-we-build">What We Build</a>
+  <a href="#engineering-doctrine">Engineering Doctrine</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#live-engineering-pulse">Engineering Pulse</a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#engineering-standard">Engineering Standard</a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#public-engineering">Public Engineering</a>
+  <a href="#engineering-pulse">Engineering Pulse</a>
 </p>
+
+---
+
+## Company
+
+AETHER X GLOBAL builds the system layer around advanced intelligence: the evidence, authority, controls, verification and institutional memory required to make AI useful in consequential work.
+
+Our architecture is designed around **multi-model intelligence, specialized agents, governed data and knowledge, bounded authority, controlled execution, independent verification and measurable outcomes**.
+
+The objective is not unrestricted autonomy. The objective is **useful intelligence with explicit evidence, authority and accountability**.
+
+---
+
+## Core Portfolio
+
+Our current product and research portfolio spans governed financial intelligence, institutional AI operations, temporal financial-data infrastructure and quantitative market research.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### AETHER X Quantum
+
+`UNDER ACTIVE DEVELOPMENT`
+
+**Domain:** Financial Strategy Intelligence
+
+An evidence-governed strategy engineering and trading workflow intelligence platform designed to connect market analysis, strategy construction, quantitative and historical validation, lifecycle governance, controlled runtime workflows, trade management, evidence and reporting.
+
+Quantum is designed for disciplined research and controlled operational workflows. It does not promise or guarantee investment outcomes.
+
+</td>
+<td width="50%" valign="top">
+
+### AX-OS
+
+`UNDER DEVELOPMENT · ACTIVE BUILD`
+
+**Domain:** Governed AI Operations
+
+An internal-first Corporate Cognitive & Outcome Operating System designed to coordinate AI-enabled work from objective and research through decision, bounded execution, independent verification and institutional learning.
+
+AX-OS focuses on explicit authority, agent identity, task contracts, governed memory, controlled tools, verification and auditable outcomes rather than unrestricted agent autonomy.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### AETHER Intelligence Core (AIC)
+
+`APPROVED ARCHITECTURE · PRE-IMPLEMENTATION`
+
+**Domain:** Financial Intelligence Infrastructure
+
+A governed temporal intelligence foundation designed to become AETHER X's trusted machine-readable memory of the financial world through time.
+
+AIC is designed around point-in-time correctness, immutable source history, revisions, entity resolution, provenance, rights, lineage and reproducible datasets for future research, AI/ML, risk, forecasting and authorized products.
+
+Implementation has not started under the current baseline and remains gated by security, data-rights, infrastructure and bounded-task readiness.
+
+</td>
+<td width="50%" valign="top">
+
+### AMII Research Lab
+
+`RESEARCH · CURRENT RESEARCH PHASE`
+
+**Domain:** Quantitative Market Research
+
+AMII — AETHER Market Intent Index — is a proprietary quantitative research program focused on developing and validating a market-intent indicator around direction, strength of evidence, participation and risk.
+
+The current research baseline does not establish empirical validity, predictive performance, profitability, production readiness or authorized integration with AETHER X Quantum.
+
+</td>
+</tr>
+</table>
+
+> **Portfolio boundary:** Shared ownership, branding or engineering doctrine does not imply technical integration between AETHER X projects. Product-to-product integration requires separate approval and implementation evidence.
+
+---
+
+## Portfolio Architecture
+
+Each initiative explores a distinct layer of the AETHER X thesis:
+
+```text
+AIC
+Financial data, temporal memory, provenance and reusable intelligence foundations
+
+AMII
+Quantitative research, methodology, validation and derived market intelligence
+
+AETHER X Quantum
+Governed financial research, strategy engineering and controlled workflow intelligence
+
+AX-OS
+Governed AI workforce coordination, authority, execution, verification and institutional learning
+```
+
+These initiatives are intentionally described by their **current maturity**, not by future ambition.
 
 ---
 
@@ -40,7 +143,7 @@
 
 Artificial intelligence becomes institutionally valuable when capability is connected to **evidence, bounded authority, controlled execution, independent verification and accountable outcomes**.
 
-AETHER X does not organize its strategy around building the largest general-purpose model. We engineer the governed, multi-model intelligence layer that enables specialized models, agents, institutional knowledge and deterministic controls to operate as one accountable system.
+AETHER X does not organize its core strategy around building the largest general-purpose foundation model. We engineer the governed intelligence layer that can enable models, specialized agents, institutional knowledge and deterministic controls to operate inside accountable systems.
 
 > **The durable value of advanced AI systems is not raw model capability alone. It is the system that makes intelligence governable, evidence-backed, secure, measurable and safe to use in real decisions and controlled execution.**
 
@@ -56,42 +159,89 @@ AETHER X does not organize its strategy around building the largest general-purp
   />
 </p>
 
-This operating chain expresses the company-level design principle behind AETHER X systems: intelligence should remain traceable from intent through evidence, authority, execution and verified outcome.
+```text
+INTENT
+  ↓
+DATA / KNOWLEDGE
+  ↓
+EVIDENCE
+  ↓
+ANALYSIS / REASONING
+  ↓
+DECISION
+  ↓
+AUTHORITY
+  ↓
+CONTROLLED EXECUTION
+  ↓
+VERIFICATION
+  ↓
+VERIFIED OUTCOME
+  ↓
+AUDIT / LEARNING
+```
+
+Individual projects may implement only the parts of this chain appropriate to their domain and risk.
 
 ---
 
-## What We Build
+## What We Engineer
+
+- **Intelligence orchestration** — model abstraction, routing, specialized agents, structured workflows and deterministic components.
+- **Knowledge & evidence systems** — provenance, point-in-time knowledge, institutional memory, versioned decisions and reproducible research artifacts.
+- **Governance & authority systems** — permissions, policies, approvals, delegated authority, least privilege and bounded execution.
+- **Verification systems** — testable acceptance criteria, independent checks, evidence packages and verified outcomes.
+- **Financial & quantitative intelligence** — data lineage, validation discipline, scenario analysis, reproducibility and risk-aware decision support.
+- **Operational intelligence** — observable, recoverable, measurable and auditable systems designed for real institutional workflows.
+
+---
+
+## Engineering Doctrine
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
-### Governed Intelligence Infrastructure
+### Evidence Before Confidence
 
-Modular infrastructure for model orchestration, institutional knowledge, evidence records, permissions, policy enforcement, traceability, controlled execution and verification.
+Important claims should remain traceable to evidence, provenance, assumptions and time.
 
 </td>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
-### Specialized AI Agents
+### Authority Before Action
 
-Domain-focused agents designed to work within explicit permissions, evidence requirements, bounded tools, human oversight and measurable acceptance conditions.
+Capability does not imply permission. Consequential actions require an explicit authority path.
+
+</td>
+<td width="33%" valign="top">
+
+### Verification Before Acceptance
+
+Execution completion is not acceptance. Critical outcomes require evidence and verification.
 
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
-### Knowledge & Evidence Systems
+### Security by Design
 
-Systems for provenance, point-in-time knowledge, institutional memory, versioned decisions, reproducible research artifacts and evidence-backed outputs.
+Identity, least privilege, trust boundaries, recovery, audit and revocation are architectural concerns.
 
 </td>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
-### Financial & Quantitative Intelligence
+### Multi-Model Resilience
 
-Risk-aware analytical systems emphasizing point-in-time correctness, data lineage, deterministic research primitives, validation discipline and reproducible evidence.
+Models are components. Domain logic and institutional memory should remain portable where technically and economically justified.
+
+</td>
+<td width="33%" valign="top">
+
+### Measurable Outcomes
+
+We care about verified outcomes, reliability, risk, rework and cost — not model activity for its own sake.
 
 </td>
 </tr>
@@ -99,28 +249,14 @@ Risk-aware analytical systems emphasizing point-in-time correctness, data lineag
 
 ---
 
-## The Intelligence Layer
+## Operating Principles
 
-AETHER X systems are designed around a shared engineering layer that can combine:
-
-- Model routing and provider abstraction
-- Specialized agents and bounded capabilities
-- Institutional knowledge and evidence provenance
-- Explicit authority, approvals and least privilege
-- Controlled tools and execution boundaries
-- Independent verification and acceptance evidence
-- Auditability, observability and recovery
-- Quality, cost and risk measurement
-
-The objective is not unrestricted autonomy. The objective is **useful autonomy with explicit authority, evidence and verification**.
-
-<p align="center">
-  <img
-    src="./assets/aether-x-governed-autonomy.svg"
-    alt="AETHER X Governed Autonomy Model"
-    width="100%"
-  />
-</p>
+`CAPABILITY ≠ AUTHORITY`  
+`OUTPUT ≠ FACT`  
+`RECOMMENDATION ≠ DECISION`  
+`EXECUTION COMPLETE ≠ VERIFIED`  
+`RESEARCH ≠ PRODUCTION`  
+`DESIGN ≠ IMPLEMENTATION`
 
 ---
 
@@ -136,7 +272,7 @@ The objective is not unrestricted autonomy. The objective is **useful autonomy w
 
 ---
 
-## Live Engineering Pulse
+## Engineering Pulse
 
 <p align="center">
   <img
@@ -146,100 +282,27 @@ The objective is not unrestricted autonomy. The objective is **useful autonomy w
   />
 </p>
 
-The dashboard is generated directly from **public GitHub organization data only** and refreshes automatically. It reports public pull-request totals, status distribution, repository activity, merge rate and recent 90-day activity. Private repositories, private activity and confidential engineering metadata are neither queried nor published.
-
----
-
-## Flagship Product
-
-### AETHER X Quantum
-
-AETHER X Quantum is the current flagship application of the shared intelligence layer: a governed financial intelligence and strategy engineering environment for market and economic research, quantitative analysis, evidence-backed hypothesis testing, backtesting and validation, sensitivity and stress testing, and risk-aware decision support. Quantum is designed for disciplined analysis and research and does not promise or guarantee investment outcomes.
-
----
-
-## Engineering Standard
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### Governed by Design
-
-Authority, permissions, approvals and accountability are explicit system properties rather than assumptions hidden inside model behavior.
-
-</td>
-<td width="33%" valign="top">
-
-### Evidence Before Confidence
-
-Important conclusions and actions are expected to retain provenance, assumptions, evidence and verification appropriate to their risk.
-
-</td>
-<td width="33%" valign="top">
-
-### Secure by Default
-
-Least privilege, explicit authority, secrets protection, containment, auditability, recovery and revocation are built into consequential workflows.
-
-</td>
-</tr>
-<tr>
-<td width="33%" valign="top">
-
-### Multi-Model by Design
-
-Models are replaceable components. Domain logic and institutional memory should remain portable unless a deliberate architectural reason requires otherwise.
-
-</td>
-<td width="33%" valign="top">
-
-### Independently Verifiable
-
-Execution completion is not acceptance. Material outcomes require evidence and verification independent of the executor where risk warrants it.
-
-</td>
-<td width="33%" valign="top">
-
-### Measurable Value
-
-Systems should be observable, recoverable and measurable across quality, cost, risk, reliability and verified outcome.
-
-</td>
-</tr>
-</table>
-
----
-
-## Operating Principles
-
-`CAPABILITY ≠ AUTHORITY`  
-`OUTPUT ≠ FACT`  
-`RECOMMENDATION ≠ DECISION`  
-`EXECUTION COMPLETE ≠ VERIFIED`  
-`DONE ≠ ACCEPTED`
-
-These distinctions are foundational to how AETHER X approaches AI-enabled work.
+The dashboard is generated from **public GitHub organization data only**. Private repositories, private activity and confidential engineering metadata are neither queried nor published by this public view.
 
 ---
 
 ## Public Engineering
 
-Selected reference implementations, specifications and tools are published publicly only after security, intellectual-property and release-readiness review.
+Selected reference implementations, specifications and tools are published publicly only after appropriate security, intellectual-property and release-readiness review.
 
-Public repositories represent intentionally released engineering work. Proprietary platforms, confidential architecture, customer information, credentials, internal security controls and unpublished intellectual property remain private.
+Public repositories represent intentionally released engineering work. Proprietary platforms, confidential architecture, credentials, internal security controls, private customer information and unpublished intellectual property remain private.
 
 ---
 
 ## Security
 
-Do not report security vulnerabilities through public issues. Formal responsible-disclosure instructions will be published through the organization security policy. Until then, do not disclose vulnerability details publicly.
+Do not report security vulnerabilities through public issues. Responsible-disclosure instructions should be followed when formally published by the organization.
 
 ---
 
 ## Contact
 
-Official institutional contact channels are available through the company website. No personal emails or unreleased support channels are published here.
+Official institutional contact channels are available through the company website.
 
 **Official website:** [aetherxglobal.com](https://www.aetherxglobal.com)
 
