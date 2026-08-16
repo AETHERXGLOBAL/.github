@@ -54,7 +54,7 @@ Our current portfolio spans four distinct areas of governed intelligence. The vi
 
 <p align="center">
   <img
-    src="./assets/aether-x-portfolio-architecture.svg"
+    src="./assets/aether-x-portfolio-official.webp"
     alt="AETHER X GLOBAL Portfolio Architecture"
     width="100%"
   />
