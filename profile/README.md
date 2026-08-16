@@ -62,23 +62,18 @@ Our current portfolio spans four distinct areas of governed intelligence. The vi
 
 > **Portfolio boundary:** The visual represents portfolio membership and strategic roles only. Shared ownership, branding or engineering doctrine does not imply technical integration, shared runtime, deployment dependency or production interoperability. Product-to-product integration requires separate approval and implementation evidence.
 
-### Initiative Briefs
+### Portfolio Snapshot
 
-**AETHER X Quantum** — `UNDER ACTIVE DEVELOPMENT`  
-**Domain:** Financial Strategy Intelligence  
-An evidence-governed strategy engineering and trading workflow intelligence platform designed to connect market analysis, strategy construction, quantitative and historical validation, lifecycle governance, controlled runtime workflows, trade management, evidence and reporting. Quantum does not promise or guarantee investment outcomes.
+| Initiative | Current maturity | Primary role |
+|---|---|---|
+| **AETHER X Quantum** | `UNDER ACTIVE DEVELOPMENT` | Evidence-governed financial strategy engineering and controlled workflow intelligence. |
+| **AX-OS** | `UNDER DEVELOPMENT · ACTIVE BUILD` | Internal-first governed AI operations, authority, execution, verification and institutional learning. |
+| **AETHER Intelligence Core (AIC)** | `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION` | Governed temporal financial-intelligence infrastructure for point-in-time data, provenance and reusable intelligence foundations. |
+| **AMII Research Lab** | `RESEARCH · CURRENT RESEARCH PHASE` | Quantitative market-intent research focused on methodology, validation, evidence strength, participation and risk. |
 
-**AX-OS** — `UNDER DEVELOPMENT · ACTIVE BUILD`  
-**Domain:** Governed AI Operations  
-An internal-first Corporate Cognitive & Outcome Operating System designed to coordinate AI-enabled work from objective and research through decision, bounded execution, independent verification and institutional learning. Its emphasis is explicit authority, agent identity, task contracts, governed memory, controlled tools and auditable outcomes.
+Quantum does not promise or guarantee investment outcomes. AIC implementation has not started under the current baseline and remains gated. The AMII research baseline does not establish empirical validity, predictive performance, profitability, production readiness or authorized integration with AETHER X Quantum.
 
-**AETHER Intelligence Core (AIC)** — `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION`  
-**Domain:** Financial Intelligence Infrastructure  
-A governed temporal intelligence foundation designed to become AETHER X's trusted machine-readable memory of the financial world through time, with point-in-time correctness, immutable source history, revisions, entity resolution, provenance, rights, lineage and reproducible datasets. Implementation has not started under the current baseline and remains gated.
-
-**AMII Research Lab** — `RESEARCH · CURRENT RESEARCH PHASE`  
-**Domain:** Quantitative Market Research  
-AMII — AETHER Market Intent Index — is a proprietary quantitative research program focused on developing and validating a market-intent indicator around direction, strength of evidence, participation and risk. The current research baseline does not establish empirical validity, predictive performance, profitability, production readiness or authorized integration with AETHER X Quantum.
+**Public access:** Development and research repositories remain private unless explicitly approved for public release. Public GitHub materials represent intentionally released engineering work only.
 
 These initiatives are intentionally described by their **current maturity**, not by future ambition.
 
@@ -103,28 +98,6 @@ AETHER X does not organize its core strategy around building the largest general
     width="100%"
   />
 </p>
-
-```text
-INTENT
-  ↓
-DATA / KNOWLEDGE
-  ↓
-EVIDENCE
-  ↓
-ANALYSIS / REASONING
-  ↓
-DECISION
-  ↓
-AUTHORITY
-  ↓
-CONTROLLED EXECUTION
-  ↓
-VERIFICATION
-  ↓
-VERIFIED OUTCOME
-  ↓
-AUDIT / LEARNING
-```
 
 Individual projects may implement only the parts of this chain appropriate to their domain and risk.
 
@@ -254,7 +227,7 @@ Official institutional contact channels are available through the company websit
 ---
 
 <p align="center">
-  <strong>Engineering Intelligence. Building the Future.</strong>
+  <strong>Institutional Intelligence. Governed Autonomy.</strong>
 </p>
 
 <p align="center">
