@@ -83,7 +83,7 @@ These initiatives are intentionally described by their **current maturity**, not
 
 ## Investor Evidence
 
-AETHER X is designed to be evaluated on **evidence rather than presentation**. For investors, strategic partners and institutional reviewers, this public GitHub surface now provides a bounded diligence layer that separates what can be verified publicly from what remains private, unestablished or intentionally not asserted.
+AETHER X is designed to be evaluated on **evidence rather than presentation**. For investors, strategic partners and institutional reviewers, this public GitHub surface provides a bounded diligence layer that separates what can be inspected directly from what requires controlled diligence or remains unestablished.
 
 ### Governed Project-State Evidence
 
@@ -101,7 +101,7 @@ The Live Project Pulse publishes selected project-state signals from allowlisted
 |---|---|
 | **Corporate thesis & engineering doctrine** | Publicly stated and directly inspectable in this profile. |
 | **Portfolio maturity** | Explicitly disclosed by initiative and bounded by current maturity. |
-| **Governed execution state** | Live Project Pulse with public-safe, automatically refreshed project-state telemetry. |
+| **Governed project-state publication** | Live Project Pulse: a public output generated from allowlisted private governed sources. |
 | **Public engineering activity** | Engineering Pulse generated from public GitHub organization data. |
 | **Commercial / financial traction** | Not established by this public GitHub profile. |
 | **Production readiness / customer outcomes** | Not implied unless separately evidenced and explicitly disclosed. |
