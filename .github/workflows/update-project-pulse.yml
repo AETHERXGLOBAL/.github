@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "profile/scripts/render_project_pulse.py"
+      - "profile/scripts/sanitize_project_pulse.py"
       - ".github/workflows/update-project-pulse.yml"
   schedule:
     - cron: "*/5 * * * *"
@@ -31,15 +32,22 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Validate renderer syntax
-        run: python3 -m py_compile profile/scripts/render_project_pulse.py
+      - name: Validate publication scripts
+        run: |
+          python3 -m py_compile profile/scripts/render_project_pulse.py
+          python3 -m py_compile profile/scripts/sanitize_project_pulse.py
 
-      - name: Render governed public-safe project telemetry
+      - name: Render governed project telemetry
         env:
           PROJECT_PULSE_READ_TOKEN: ${{ secrets.PROJECT_PULSE_READ_TOKEN }}
         run: |
           set -euo pipefail
           python3 profile/scripts/render_project_pulse.py
+
+      - name: Apply public-safe presentation policy
+        run: |
+          set -euo pipefail
+          python3 profile/scripts/sanitize_project_pulse.py
 
       - name: Validate generated SVG and disclosure boundary
         run: |
@@ -56,14 +64,24 @@ jobs:
               r"github_pat_[A-Za-z0-9_]+",
               r"ghp_[A-Za-z0-9]+",
               r"Bearer\s+[A-Za-z0-9_.-]+",
+              r"Do not start T\d+",
+              r"Last verified refresh:",
           ]
           for pattern in forbidden:
               if re.search(pattern, text):
-                  raise SystemExit(f"PUBLIC_OUTPUT_POLICY_FAIL: forbidden credential pattern {pattern}")
+                  raise SystemExit(f"PUBLIC_OUTPUT_POLICY_FAIL: forbidden pattern {pattern}")
+          required = [
+              "Last published state update:",
+              "COMMIT ≠ PROGRESS",
+              "RESEARCH ≠ PRODUCTION",
+          ]
+          for value in required:
+              if value not in text:
+                  raise SystemExit(f"PUBLIC_OUTPUT_POLICY_FAIL: missing required marker {value}")
           print("PROJECT_PULSE_SVG_VALID")
           PY
 
-      - name: Preserve prior timestamp when governed state is unchanged
+      - name: Preserve prior published timestamp when governed state is unchanged
         run: |
           set -euo pipefail
           python3 - <<'PY'
@@ -84,11 +102,18 @@ jobs:
               raise SystemExit(0)
 
           def semantic(value: str) -> str:
-              return re.sub(
-                  r"Last verified refresh:\s*[^<]+",
-                  "Last verified refresh: <normalized>",
+              value = re.sub(
+                  r"Last published state update:\s*[^<]+",
+                  "Last published state update: <normalized>",
                   value,
               )
+              # One-time compatibility with the pre-refinement asset.
+              value = re.sub(
+                  r"Last verified refresh:\s*[^<]+",
+                  "Last published state update: <normalized>",
+                  value,
+              )
+              return value
 
           if semantic(new) == semantic(old):
               path.write_text(old, encoding="utf-8")
@@ -97,7 +122,7 @@ jobs:
               print("PROJECT_PULSE_STATE_CHANGED")
           PY
 
-      - name: Publish only when governed state changed
+      - name: Publish only when governed public state changed
         run: |
           set -euo pipefail
           PULSE="profile/assets/aether-x-live-project-pulse.svg"
