@@ -53,7 +53,11 @@ The objective is not unrestricted autonomy. The objective is **useful intelligen
 Our current portfolio spans four distinct areas of governed intelligence. The visual architecture below shows **portfolio membership, maturity, domain and role** — not technical integration between projects.
 
 <p align="center">
-  <img src="./assets/aether-x-portfolio-brand-01.webp" alt="AETHER X GLOBAL Portfolio Architecture — 1" width="100%"/><img src="./assets/aether-x-portfolio-brand-02.webp" alt="AETHER X GLOBAL Portfolio Architecture — 2" width="100%"/><img src="./assets/aether-x-portfolio-brand-03.webp" alt="AETHER X GLOBAL Portfolio Architecture — 3" width="100%"/><img src="./assets/aether-x-portfolio-brand-04.webp" alt="AETHER X GLOBAL Portfolio Architecture — 4" width="100%"/><img src="./assets/aether-x-portfolio-brand-05.webp" alt="AETHER X GLOBAL Portfolio Architecture — 5" width="100%"/><img src="./assets/aether-x-portfolio-brand-06.webp" alt="AETHER X GLOBAL Portfolio Architecture — 6" width="100%"/>
+  <img
+    src="./assets/aether-x-portfolio-architecture.svg"
+    alt="AETHER X GLOBAL Portfolio Architecture"
+    width="100%"
+  />
 </p>
 
 > **Portfolio boundary:** The visual represents portfolio membership and strategic roles only. Shared ownership, branding or engineering doctrine does not imply technical integration, shared runtime, deployment dependency or production interoperability. Product-to-product integration requires separate approval and implementation evidence.
