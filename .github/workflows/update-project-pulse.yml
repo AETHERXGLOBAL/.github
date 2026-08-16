@@ -1,0 +1,113 @@
+name: Update AETHER X Live Project Pulse
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "profile/scripts/render_project_pulse.py"
+      - ".github/workflows/update-project-pulse.yml"
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types:
+      - project_state_changed
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aether-x-live-project-pulse
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout public profile repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate renderer syntax
+        run: python3 -m py_compile profile/scripts/render_project_pulse.py
+
+      - name: Render governed public-safe project telemetry
+        env:
+          PROJECT_PULSE_READ_TOKEN: ${{ secrets.PROJECT_PULSE_READ_TOKEN }}
+        run: |
+          set -euo pipefail
+          python3 profile/scripts/render_project_pulse.py
+
+      - name: Validate generated SVG and disclosure boundary
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import re
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          path = Path("profile/assets/aether-x-live-project-pulse.svg")
+          ET.parse(path)
+          text = path.read_text(encoding="utf-8")
+          forbidden = [
+              r"github_pat_[A-Za-z0-9_]+",
+              r"ghp_[A-Za-z0-9]+",
+              r"Bearer\s+[A-Za-z0-9_.-]+",
+          ]
+          for pattern in forbidden:
+              if re.search(pattern, text):
+                  raise SystemExit(f"PUBLIC_OUTPUT_POLICY_FAIL: forbidden credential pattern {pattern}")
+          print("PROJECT_PULSE_SVG_VALID")
+          PY
+
+      - name: Preserve prior timestamp when governed state is unchanged
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import re
+          import subprocess
+          from pathlib import Path
+
+          path = Path("profile/assets/aether-x-live-project-pulse.svg")
+          new = path.read_text(encoding="utf-8")
+          try:
+              old = subprocess.check_output(
+                  ["git", "show", f"HEAD:{path.as_posix()}"],
+                  text=True,
+                  stderr=subprocess.DEVNULL,
+              )
+          except subprocess.CalledProcessError:
+              print("PROJECT_PULSE_FIRST_PUBLICATION")
+              raise SystemExit(0)
+
+          def semantic(value: str) -> str:
+              return re.sub(
+                  r"Last verified refresh:\s*[^<]+",
+                  "Last verified refresh: <normalized>",
+                  value,
+              )
+
+          if semantic(new) == semantic(old):
+              path.write_text(old, encoding="utf-8")
+              print("PROJECT_PULSE_STATE_UNCHANGED")
+          else:
+              print("PROJECT_PULSE_STATE_CHANGED")
+          PY
+
+      - name: Publish only when governed state changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- profile/assets/aether-x-live-project-pulse.svg; then
+            echo "No governed public-state change; no commit required."
+            exit 0
+          fi
+
+          git config user.name "AETHER X Project Pulse"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/assets/aether-x-live-project-pulse.svg
+          git commit -m "chore(profile): refresh live project pulse"
+          git pull --rebase origin main
+          git push origin HEAD:main
