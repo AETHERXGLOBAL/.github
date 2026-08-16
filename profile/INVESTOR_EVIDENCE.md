@@ -9,9 +9,9 @@ Its purpose is not to create a fundraising claim or imply investment readiness.
 Its purpose is to separate:
 
 ```text
-WHAT CAN BE VERIFIED PUBLICLY
+WHAT CAN BE INSPECTED OR VERIFIED PUBLICLY
 FROM
-WHAT IS PRIVATE, UNESTABLISHED OR NOT ASSERTED
+WHAT REQUIRES CONTROLLED DILIGENCE OR IS NOT ESTABLISHED
 ```
 
 AETHER X applies the same core rule here that it applies to consequential systems:
@@ -26,7 +26,7 @@ Public investment-facing claims should follow this chain:
 
 ```text
 PUBLIC CLAIM
-→ TRACEABLE PUBLIC SOURCE
+→ TRACEABLE PUBLIC SOURCE OR DISCLOSED PRIVATE-SOURCE BOUNDARY
 → CURRENT MATURITY / STATUS
 → LIMITATION
 ```
@@ -39,9 +39,9 @@ A claim should not be promoted because it is persuasive. It should be promoted o
 
 | Evidence dimension | What can be checked publicly today | Public evidence state |
 |---|---|---|
-| **Corporate identity & thesis** | Organization profile, strategic positioning, engineering doctrine and claim boundaries | `PUBLICLY VERIFIABLE` |
+| **Corporate identity & thesis** | Organization profile, strategic positioning, engineering doctrine and claim boundaries | `PUBLICLY DISCLOSED · INSPECTABLE` |
 | **Portfolio membership & stated maturity** | Current portfolio snapshot and maturity labels in the organization profile | `PUBLICLY DISCLOSED` |
-| **Governed project-state telemetry** | AETHER X Live Project Pulse, generated from allowlisted governed project-state sources | `PUBLICLY VERIFIABLE · AUTO-REFRESHED` |
+| **Governed project-state telemetry** | AETHER X Live Project Pulse, generated from allowlisted governed project-state sources | `PUBLICLY INSPECTABLE OUTPUT · PRIVATE SOURCE-BACKED` |
 | **Public engineering activity** | Engineering Pulse and public GitHub workflow/repository evidence | `PUBLICLY VERIFIABLE` |
 | **Private implementation depth** | Core development and research repositories are private | `NOT PUBLICLY VERIFIABLE HERE` |
 | **Production readiness** | No company-wide production-readiness claim is made by this profile | `NOT ESTABLISHED BY THIS PROFILE` |
@@ -53,8 +53,10 @@ A claim should not be promoted because it is persuasive. It should be promoted o
 
 ### Evidence-state semantics
 
-- `PUBLICLY VERIFIABLE` — the relevant public source can be inspected directly.
+- `PUBLICLY DISCLOSED · INSPECTABLE` — the organization has intentionally published the statement or artifact and a reviewer can inspect it directly; this does not convert a self-published statement into independent external verification.
+- `PUBLICLY VERIFIABLE` — the relevant evidence is observable directly in the public GitHub surface or public repository history.
 - `PUBLICLY DISCLOSED` — the status is intentionally disclosed, while supporting private artifacts may remain confidential.
+- `PUBLICLY INSPECTABLE OUTPUT · PRIVATE SOURCE-BACKED` — the published output and publication mechanism can be inspected publicly, but the underlying governed source remains private and requires controlled diligence for independent source-level verification.
 - `NOT PUBLICLY VERIFIABLE HERE` — the evidence may be private or outside the public GitHub surface; no public conclusion should be inferred.
 - `NOT PUBLICLY ESTABLISHED` — this GitHub profile does not currently establish the claim.
 - `NOT ASSERTED` — the organization intentionally makes no claim in that category without suitable evidence and authority.
@@ -102,12 +104,12 @@ A public reviewer can reasonably use this GitHub surface as evidence that AETHER
 1. a defined corporate thesis around governed intelligence systems;
 2. explicit maturity boundaries across the disclosed portfolio;
 3. public claim-integrity rules that distinguish research, design, implementation and production;
-4. a governed public project-state telemetry mechanism;
-5. public engineering automation and disclosure controls around that telemetry.
+4. a governed public project-state publication mechanism backed by allowlisted private sources;
+5. public engineering automation and disclosure controls around that publication mechanism.
 
-These are **evidence of operating and engineering discipline**.
+These are **evidence of public disclosure discipline and engineering control design**.
 
-They are not, by themselves, evidence of commercial success, production scale or investment returns.
+They are not, by themselves, independent verification of private implementation depth, commercial success, production scale or investment returns.
 
 ---
 
