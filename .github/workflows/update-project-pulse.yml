@@ -100,14 +100,15 @@ jobs:
       - name: Publish only when governed state changed
         run: |
           set -euo pipefail
-          if git diff --quiet -- profile/assets/aether-x-live-project-pulse.svg; then
+          PULSE="profile/assets/aether-x-live-project-pulse.svg"
+          if [[ -z "$(git status --porcelain -- "$PULSE")" ]]; then
             echo "No governed public-state change; no commit required."
             exit 0
           fi
 
           git config user.name "AETHER X Project Pulse"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/assets/aether-x-live-project-pulse.svg
+          git add "$PULSE"
           git commit -m "chore(profile): refresh live project pulse"
           git pull --rebase origin main
           git push origin HEAD:main
