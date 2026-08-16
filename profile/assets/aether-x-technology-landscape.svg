@@ -1,43 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
-  <title id="title">AETHER X Technology Landscape</title>
-  <desc id="desc">A layered view of AETHER X technology from data and knowledge through models, agents, governance, verification and products.</desc>
+  <title id="title">AETHER X Technology Landscape — Conceptual Model</title>
+  <desc id="desc">A conceptual company-level view of technology layers used across AETHER X system design. It is not evidence of a shared runtime, deployment dependency, or product integration.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0D1117"/><stop offset="1" stop-color="#0F172A"/></linearGradient>
-    <linearGradient id="layer1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E7490"/><stop offset="1" stop-color="#155E75"/></linearGradient>
-    <linearGradient id="layer2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1D4ED8"/><stop offset="1" stop-color="#3730A3"/></linearGradient>
-    <linearGradient id="layer3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6D28D9"/><stop offset="1" stop-color="#7E22CE"/></linearGradient>
-    <linearGradient id="layer4" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0F766E"/><stop offset="1" stop-color="#115E59"/></linearGradient>
-    <linearGradient id="layer5" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#334155"/><stop offset="1" stop-color="#1E293B"/></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#010D1D"/><stop offset="1" stop-color="#071426"/></linearGradient>
+    <linearGradient id="layer1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#152238"/><stop offset="1" stop-color="#0F1D31"/></linearGradient>
+    <linearGradient id="layer2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#13243A"/><stop offset="1" stop-color="#102034"/></linearGradient>
+    <linearGradient id="layer3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1A2637"/><stop offset="1" stop-color="#121E2E"/></linearGradient>
+    <linearGradient id="layer4" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#162635"/><stop offset="1" stop-color="#10202D"/></linearGradient>
+    <linearGradient id="layer5" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#101B2B"/><stop offset="1" stop-color="#0B1625"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9D753C"/><stop offset="0.5" stop-color="#DEB459"/><stop offset="1" stop-color="#9D753C"/></linearGradient>
   </defs>
   <rect width="1600" height="700" rx="32" fill="url(#bg)"/>
   <rect x="24" y="24" width="1552" height="652" rx="26" fill="none" stroke="#263244" stroke-width="2"/>
-  <text x="80" y="88" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="36" font-weight="700">AETHER X Technology Landscape</text>
-  <text x="80" y="128" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20">A shared governed intelligence layer beneath specialized products and institutional workflows.</text>
+  <text x="80" y="88" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="36" font-weight="800">AETHER X Technology Landscape</text>
+  <text x="80" y="126" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18">Conceptual company-level technology layers used across AETHER X system design — not a claim of shared runtime or product integration.</text>
+  <rect x="80" y="148" width="220" height="4" rx="2" fill="url(#gold)"/>
 
   <g font-family="Inter,Segoe UI,Arial,sans-serif">
-    <rect x="180" y="180" width="1240" height="82" rx="20" fill="url(#layer1)"/>
-    <text x="220" y="214" fill="#ECFEFF" font-size="22" font-weight="800">PRODUCTS &amp; DOMAIN SYSTEMS</text>
-    <text x="220" y="244" fill="#CFFAFE" font-size="18">Financial intelligence • Research environments • Knowledge systems • Enterprise workflows</text>
+    <rect x="180" y="190" width="1240" height="78" rx="20" fill="url(#layer1)" stroke="#9D753C" stroke-width="1.3"/>
+    <text x="220" y="222" fill="#F4F4F3" font-size="22" font-weight="800">PRODUCTS &amp; DOMAIN SYSTEMS</text>
+    <text x="220" y="250" fill="#AAB3BD" font-size="17">Financial intelligence • Research environments • Knowledge systems • Enterprise workflows</text>
 
-    <rect x="230" y="280" width="1140" height="82" rx="20" fill="url(#layer2)"/>
-    <text x="270" y="314" fill="#EFF6FF" font-size="22" font-weight="800">SPECIALIZED AGENTS &amp; MULTI-MODEL INTELLIGENCE</text>
-    <text x="270" y="344" fill="#DBEAFE" font-size="18">Model routing • Domain agents • Structured analysis • Provider independence • Bounded tools</text>
+    <rect x="230" y="286" width="1140" height="78" rx="20" fill="url(#layer2)" stroke="#3E5971" stroke-width="1.3"/>
+    <text x="270" y="318" fill="#F4F4F3" font-size="22" font-weight="800">SPECIALIZED AGENTS &amp; MULTI-MODEL INTELLIGENCE</text>
+    <text x="270" y="346" fill="#AAB3BD" font-size="17">Model abstraction • Routing • Domain agents • Structured analysis • Bounded tools</text>
 
-    <rect x="280" y="380" width="1040" height="82" rx="20" fill="url(#layer3)"/>
-    <text x="320" y="414" fill="#FAF5FF" font-size="22" font-weight="800">GOVERNANCE, AUTHORITY &amp; SECURITY</text>
-    <text x="320" y="444" fill="#F3E8FF" font-size="18">Permissions • Policy • Approvals • Least privilege • Data boundaries • Revocation</text>
+    <rect x="280" y="382" width="1040" height="78" rx="20" fill="url(#layer3)" stroke="#9D753C" stroke-width="1.3"/>
+    <text x="320" y="414" fill="#F4F4F3" font-size="22" font-weight="800">GOVERNANCE, AUTHORITY &amp; SECURITY</text>
+    <text x="320" y="442" fill="#AAB3BD" font-size="17">Permissions • Policy • Approvals • Least privilege • Data boundaries • Revocation</text>
 
-    <rect x="330" y="480" width="940" height="82" rx="20" fill="url(#layer4)"/>
-    <text x="370" y="514" fill="#F0FDFA" font-size="22" font-weight="800">EVIDENCE, VERIFICATION &amp; AUDIT</text>
-    <text x="370" y="544" fill="#CCFBF1" font-size="18">Provenance • Acceptance evidence • Independent verification • Audit trail • Recovery</text>
+    <rect x="330" y="478" width="940" height="78" rx="20" fill="url(#layer4)" stroke="#9D753C" stroke-width="1.3"/>
+    <text x="370" y="510" fill="#F4F4F3" font-size="22" font-weight="800">EVIDENCE, VERIFICATION &amp; AUDIT</text>
+    <text x="370" y="538" fill="#AAB3BD" font-size="17">Provenance • Acceptance evidence • Independent verification • Audit trail • Recovery</text>
 
-    <rect x="380" y="580" width="840" height="62" rx="18" fill="url(#layer5)"/>
-    <text x="420" y="618" fill="#E2E8F0" font-size="21" font-weight="800">DATA • KNOWLEDGE • STATE • INSTITUTIONAL MEMORY</text>
+    <rect x="380" y="574" width="840" height="62" rx="18" fill="url(#layer5)" stroke="#3E5971" stroke-width="1.3"/>
+    <text x="420" y="612" fill="#F4F4F3" font-size="21" font-weight="800">DATA • KNOWLEDGE • STATE • INSTITUTIONAL MEMORY</text>
   </g>
 
-  <g stroke="#64748B" stroke-width="2" stroke-dasharray="6 8" opacity="0.75">
-    <line x1="800" y1="262" x2="800" y2="280"/><line x1="800" y1="362" x2="800" y2="380"/><line x1="800" y1="462" x2="800" y2="480"/><line x1="800" y1="562" x2="800" y2="580"/>
+  <g stroke="#6F7D89" stroke-width="2" stroke-dasharray="6 8" opacity="0.72">
+    <line x1="800" y1="268" x2="800" y2="286"/>
+    <line x1="800" y1="364" x2="800" y2="382"/>
+    <line x1="800" y1="460" x2="800" y2="478"/>
+    <line x1="800" y1="556" x2="800" y2="574"/>
   </g>
 
-  <text x="80" y="662" fill="#64748B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">Shared principle: models are replaceable; authority, evidence, state and institutional knowledge remain governed system assets.</text>
+  <text x="80" y="666" fill="#6F7D89" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16">Projects implement only the layers appropriate to their scope, maturity, risk and authority. Shared doctrine does not imply technical interoperability.</text>
 </svg>
