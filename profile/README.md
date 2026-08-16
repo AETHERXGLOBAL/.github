@@ -50,31 +50,15 @@ The objective is not unrestricted autonomy. The objective is **useful intelligen
 
 ## Portfolio at a Glance
 
-Our current portfolio spans four distinct areas of governed intelligence. The map below shows **portfolio membership, maturity, domain and role** — not technical integration between projects.
+Our current portfolio spans four distinct areas of governed intelligence. The visual architecture below shows **portfolio membership, maturity, domain and role** — not technical integration between projects.
 
-```mermaid
-flowchart TB
-    AX["AETHER X GLOBAL<br/>GOVERNED INTELLIGENCE SYSTEMS<br/>Evidence · Authority · Verification · Controlled Action"]
-
-    Q["AETHER X QUANTUM<br/>Financial Strategy Intelligence<br/>UNDER ACTIVE DEVELOPMENT<br/>Role: Governed research, strategy engineering & workflow intelligence"]
-
-    OS["AX-OS<br/>Governed AI Operations<br/>UNDER DEVELOPMENT · ACTIVE BUILD<br/>Role: AI workforce coordination, authority, execution & verification"]
-
-    AIC["AETHER INTELLIGENCE CORE · AIC<br/>Financial Intelligence Infrastructure<br/>APPROVED ARCHITECTURE · PRE-IMPLEMENTATION<br/>Role: Temporal data, provenance & reusable intelligence foundations"]
-
-    AMII["AMII RESEARCH LAB<br/>Quantitative Market Research<br/>RESEARCH · CURRENT RESEARCH PHASE<br/>Role: Methodology, validation & derived market intelligence research"]
-
-    AX ---|PORTFOLIO INITIATIVE| Q
-    AX ---|PORTFOLIO INITIATIVE| OS
-    AX ---|PORTFOLIO INITIATIVE| AIC
-    AX ---|PORTFOLIO INITIATIVE| AMII
-
-    classDef company fill:#0B1220,stroke:#C9A86A,stroke-width:3px,color:#F7F8FA;
-    classDef product fill:#101A2A,stroke:#C9A86A,stroke-width:1.5px,color:#F7F8FA;
-    class AX company;
-    class Q,OS,AIC,AMII product;
-    linkStyle default stroke:#8D98A8,stroke-width:1px;
-```
+<p align="center">
+  <img
+    src="./assets/aether-x-portfolio-architecture.svg"
+    alt="AETHER X GLOBAL Portfolio Architecture"
+    width="100%"
+  />
+</p>
 
 > **Portfolio boundary:** The connecting lines above represent portfolio membership only. Shared ownership, branding or engineering doctrine does not imply technical integration, shared runtime, deployment dependency or production interoperability. Product-to-product integration requires separate approval and implementation evidence.
 
