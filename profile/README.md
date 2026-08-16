@@ -27,7 +27,7 @@
 <p align="center">
   <a href="https://www.aetherxglobal.com"><strong>Official Website</strong></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#core-portfolio">Core Portfolio</a>
+  <a href="#portfolio-at-a-glance">Portfolio</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#our-thesis">Our Thesis</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
@@ -48,92 +48,53 @@ The objective is not unrestricted autonomy. The objective is **useful intelligen
 
 ---
 
-## Core Portfolio
+## Portfolio at a Glance
 
-Our current product and research portfolio spans governed financial intelligence, institutional AI operations, temporal financial-data infrastructure and quantitative market research.
+Our current portfolio spans four distinct areas of governed intelligence. The map below shows **portfolio membership, maturity, domain and role** — not technical integration between projects.
 
-<table>
-<tr>
-<td width="50%" valign="top">
+```mermaid
+flowchart TB
+    AX["AETHER X GLOBAL<br/>GOVERNED INTELLIGENCE SYSTEMS<br/>Evidence · Authority · Verification · Controlled Action"]
 
-### AETHER X Quantum
+    Q["AETHER X QUANTUM<br/>Financial Strategy Intelligence<br/>UNDER ACTIVE DEVELOPMENT<br/>Role: Governed research, strategy engineering & workflow intelligence"]
 
-`UNDER ACTIVE DEVELOPMENT`
+    OS["AX-OS<br/>Governed AI Operations<br/>UNDER DEVELOPMENT · ACTIVE BUILD<br/>Role: AI workforce coordination, authority, execution & verification"]
 
-**Domain:** Financial Strategy Intelligence
+    AIC["AETHER INTELLIGENCE CORE · AIC<br/>Financial Intelligence Infrastructure<br/>APPROVED ARCHITECTURE · PRE-IMPLEMENTATION<br/>Role: Temporal data, provenance & reusable intelligence foundations"]
 
-An evidence-governed strategy engineering and trading workflow intelligence platform designed to connect market analysis, strategy construction, quantitative and historical validation, lifecycle governance, controlled runtime workflows, trade management, evidence and reporting.
+    AMII["AMII RESEARCH LAB<br/>Quantitative Market Research<br/>RESEARCH · CURRENT RESEARCH PHASE<br/>Role: Methodology, validation & derived market intelligence research"]
 
-Quantum is designed for disciplined research and controlled operational workflows. It does not promise or guarantee investment outcomes.
+    AX ---|PORTFOLIO INITIATIVE| Q
+    AX ---|PORTFOLIO INITIATIVE| OS
+    AX ---|PORTFOLIO INITIATIVE| AIC
+    AX ---|PORTFOLIO INITIATIVE| AMII
 
-</td>
-<td width="50%" valign="top">
-
-### AX-OS
-
-`UNDER DEVELOPMENT · ACTIVE BUILD`
-
-**Domain:** Governed AI Operations
-
-An internal-first Corporate Cognitive & Outcome Operating System designed to coordinate AI-enabled work from objective and research through decision, bounded execution, independent verification and institutional learning.
-
-AX-OS focuses on explicit authority, agent identity, task contracts, governed memory, controlled tools, verification and auditable outcomes rather than unrestricted agent autonomy.
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### AETHER Intelligence Core (AIC)
-
-`APPROVED ARCHITECTURE · PRE-IMPLEMENTATION`
-
-**Domain:** Financial Intelligence Infrastructure
-
-A governed temporal intelligence foundation designed to become AETHER X's trusted machine-readable memory of the financial world through time.
-
-AIC is designed around point-in-time correctness, immutable source history, revisions, entity resolution, provenance, rights, lineage and reproducible datasets for future research, AI/ML, risk, forecasting and authorized products.
-
-Implementation has not started under the current baseline and remains gated by security, data-rights, infrastructure and bounded-task readiness.
-
-</td>
-<td width="50%" valign="top">
-
-### AMII Research Lab
-
-`RESEARCH · CURRENT RESEARCH PHASE`
-
-**Domain:** Quantitative Market Research
-
-AMII — AETHER Market Intent Index — is a proprietary quantitative research program focused on developing and validating a market-intent indicator around direction, strength of evidence, participation and risk.
-
-The current research baseline does not establish empirical validity, predictive performance, profitability, production readiness or authorized integration with AETHER X Quantum.
-
-</td>
-</tr>
-</table>
-
-> **Portfolio boundary:** Shared ownership, branding or engineering doctrine does not imply technical integration between AETHER X projects. Product-to-product integration requires separate approval and implementation evidence.
-
----
-
-## Portfolio Architecture
-
-Each initiative explores a distinct layer of the AETHER X thesis:
-
-```text
-AIC
-Financial data, temporal memory, provenance and reusable intelligence foundations
-
-AMII
-Quantitative research, methodology, validation and derived market intelligence
-
-AETHER X Quantum
-Governed financial research, strategy engineering and controlled workflow intelligence
-
-AX-OS
-Governed AI workforce coordination, authority, execution, verification and institutional learning
+    classDef company fill:#0B1220,stroke:#C9A86A,stroke-width:3px,color:#F7F8FA;
+    classDef product fill:#101A2A,stroke:#C9A86A,stroke-width:1.5px,color:#F7F8FA;
+    class AX company;
+    class Q,OS,AIC,AMII product;
+    linkStyle default stroke:#8D98A8,stroke-width:1px;
 ```
+
+> **Portfolio boundary:** The connecting lines above represent portfolio membership only. Shared ownership, branding or engineering doctrine does not imply technical integration, shared runtime, deployment dependency or production interoperability. Product-to-product integration requires separate approval and implementation evidence.
+
+### Initiative Briefs
+
+**AETHER X Quantum** — `UNDER ACTIVE DEVELOPMENT`  
+**Domain:** Financial Strategy Intelligence  
+An evidence-governed strategy engineering and trading workflow intelligence platform designed to connect market analysis, strategy construction, quantitative and historical validation, lifecycle governance, controlled runtime workflows, trade management, evidence and reporting. Quantum does not promise or guarantee investment outcomes.
+
+**AX-OS** — `UNDER DEVELOPMENT · ACTIVE BUILD`  
+**Domain:** Governed AI Operations  
+An internal-first Corporate Cognitive & Outcome Operating System designed to coordinate AI-enabled work from objective and research through decision, bounded execution, independent verification and institutional learning. Its emphasis is explicit authority, agent identity, task contracts, governed memory, controlled tools and auditable outcomes.
+
+**AETHER Intelligence Core (AIC)** — `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION`  
+**Domain:** Financial Intelligence Infrastructure  
+A governed temporal intelligence foundation designed to become AETHER X's trusted machine-readable memory of the financial world through time, with point-in-time correctness, immutable source history, revisions, entity resolution, provenance, rights, lineage and reproducible datasets. Implementation has not started under the current baseline and remains gated.
+
+**AMII Research Lab** — `RESEARCH · CURRENT RESEARCH PHASE`  
+**Domain:** Quantitative Market Research  
+AMII — AETHER Market Intent Index — is a proprietary quantitative research program focused on developing and validating a market-intent indicator around direction, strength of evidence, participation and risk. The current research baseline does not establish empirical validity, predictive performance, profitability, production readiness or authorized integration with AETHER X Quantum.
 
 These initiatives are intentionally described by their **current maturity**, not by future ambition.
 
