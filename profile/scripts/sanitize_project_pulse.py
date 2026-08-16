@@ -12,20 +12,16 @@ import re
 from pathlib import Path
 
 PATH = Path("profile/assets/aether-x-live-project-pulse.svg")
+CARD_PATTERN = re.compile(r'<g transform="translate\([^\"]+\)">[\s\S]*?</g>')
 
 
 def replace_next_step(svg: str, project: str, summary: str) -> str:
-    project_pattern = re.escape(project)
-    block_pattern = re.compile(
-        rf'(<g transform="translate\([^\"]+\)">[\s\S]*?'
-        rf'<text x="34" y="76" class="cardTitle">{project_pattern}</text>'
-        rf'[\s\S]*?</g>)'
-    )
-    match = block_pattern.search(svg)
+    marker = f'class="cardTitle">{project}</text>'
+    match = next((item for item in CARD_PATTERN.finditer(svg) if marker in item.group(0)), None)
     if not match:
         raise RuntimeError(f"Card not found for public sanitization: {project}")
 
-    block = match.group(1)
+    block = match.group(0)
     section_pattern = re.compile(
         r'(<text x="34" y="304" class="label">NEXT AUTHORIZED / GOVERNED STEP</text>\s*)'
         r'[\s\S]*?'
