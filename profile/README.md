@@ -42,7 +42,7 @@
 
 AETHER X GLOBAL builds the system layer around advanced intelligence: the evidence, authority, controls, verification and institutional memory required to make AI useful in consequential work.
 
-Our architecture is designed around **multi-model intelligence, specialized agents, governed data and knowledge, bounded authority, controlled execution, independent verification and measurable outcomes**.
+Our engineering approach is designed around **multi-model intelligence, specialized agents, governed data and knowledge, bounded authority, controlled execution, independent verification and measurable outcomes**.
 
 The objective is not unrestricted autonomy. The objective is **useful intelligence with explicit evidence, authority and accountability**.
 
@@ -73,7 +73,7 @@ Our current portfolio spans four distinct areas of governed intelligence. The vi
 
 Quantum does not promise or guarantee investment outcomes. AIC implementation has not started under the current baseline and remains gated. The AMII research baseline does not establish empirical validity, predictive performance, profitability, production readiness or authorized integration with AETHER X Quantum.
 
-**Public access:** Development and research repositories remain private unless explicitly approved for public release. Public GitHub materials represent intentionally released engineering work only.
+**Public access:** Current core development and research repositories are private. Public GitHub materials represent intentionally released engineering work only; any future public release remains subject to explicit review and approval.
 
 These initiatives are intentionally described by their **current maturity**, not by future ambition.
 
