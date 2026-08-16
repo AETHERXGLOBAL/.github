@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="930" viewBox="0 0 1600 930" role="img" aria-labelledby="title desc">
+<title id="title">AETHER X Live Project Pulse</title>
+<desc id="desc">Automatically refreshed, public-safe project-state telemetry derived from governed private AETHER X project status sources. No completion percentages are inferred.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#010D1D"/><stop offset="0.55" stop-color="#071426"/><stop offset="1" stop-color="#0B1A2C"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101B2B"/><stop offset="1" stop-color="#0B1524"/></linearGradient>
+  <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#8fa0b5" stroke-opacity="0.035"/></pattern>
+  <style>
+    .brand{font:700 18px Inter,Segoe UI,Arial,sans-serif;letter-spacing:4.5px;fill:#DEB459}
+    .title{font:800 38px Inter,Segoe UI,Arial,sans-serif;fill:#F4F4F3}
+    .subtitle{font:400 17px Inter,Segoe UI,Arial,sans-serif;fill:#AAB3BD}
+    .cardTitle{font:800 25px Inter,Segoe UI,Arial,sans-serif;fill:#F4F4F3}
+    .domain{font:700 13px Inter,Segoe UI,Arial,sans-serif;letter-spacing:1.05px;fill:#C9A86A}
+    .phase{font:800 13px Inter,Segoe UI,Arial,sans-serif;letter-spacing:.45px;fill:#F2D99F}
+    .label{font:800 10.5px Inter,Segoe UI,Arial,sans-serif;letter-spacing:1.1px;fill:#7F90A6}
+    .body{font:500 13.5px Inter,Segoe UI,Arial,sans-serif;fill:#D5DCE5}
+    .source{font:500 10.5px Inter,Segoe UI,Arial,sans-serif;fill:#6F7D89}
+    .boundary{font:600 9.6px Inter,Segoe UI,Arial,sans-serif;fill:#9B8A70}
+    .footer{font:600 12px Inter,Segoe UI,Arial,sans-serif;fill:#8E9BAD}
+    .footerGold{font:800 12px Inter,Segoe UI,Arial,sans-serif;letter-spacing:.8px;fill:#DEB459}
+  </style>
+</defs>
+<rect width="1600" height="930" rx="30" fill="url(#bg)"/>
+<rect width="1600" height="930" rx="30" fill="url(#grid)"/>
+<rect x="24" y="24" width="1552" height="882" rx="24" fill="none" stroke="#243247" stroke-width="1.5"/>
+<text x="70" y="70" class="brand">AETHER X GLOBAL</text>
+<text x="70" y="122" class="title">LIVE PROJECT PULSE</text>
+<text x="70" y="154" class="subtitle">Verified execution telemetry · governed sources · no inferred completion percentages</text>
+<text x="1530" y="72" text-anchor="end" class="footerGold">AUTO-REFRESH · PUBLIC-SAFE</text>
+<text x="1530" y="100" text-anchor="end" class="footer">Last verified refresh: 2026-08-16 19:48 UTC</text>
+<line x1="70" y1="184" x2="1530" y2="184" stroke="#9D753C" stroke-opacity=".7"/>
+
+  <g transform="translate(70 210)">
+    <rect width="700" height="300" rx="24" fill="url(#panel)" stroke="#DEB459" stroke-width="1.6"/>
+    <rect x="30" y="28" width="112" height="3" rx="1.5" fill="#DEB459"/>
+    <text x="34" y="78" class="cardTitle">AETHER X QUANTUM</text>
+    <text x="34" y="108" class="domain">FINANCIAL STRATEGY INTELLIGENCE</text>
+    <rect x="34" y="130" width="632" height="48" rx="11" fill="#2b2418" stroke="#9D753C"/>
+    <text x="52" y="160" class="phase">Gate 1 — Market Data Truth &amp; Governed Data</text>
+<text x="52" y="179" class="phase">Foundation · ACTIVE / NOT COMPLETE</text>
+    <text x="34" y="208" class="label">VERIFIED SIGNAL</text>
+    <text x="34" y="232" class="body">Latest externally accepted gate: DOD-01-01</text>
+    <text x="360" y="208" class="label">NEXT AUTHORIZED / GOVERNED STEP</text>
+    <text x="360" y="232" class="body">SELECT AND EXPLICITLY AUTHORIZE EXACTLY ONE NEXT BOUNDED GATE</text>
+<text x="360" y="253" class="body">1 TASK</text>
+    <line x1="34" y1="270" x2="666" y2="270" stroke="#26364b"/>
+    <text x="34" y="289" class="source">START_HERE.md · governed handoff</text>
+    <text x="666" y="289" text-anchor="end" class="boundary">V1 live execution: PROHIBITED</text>
+  </g>
+  <g transform="translate(830 210)">
+    <rect width="700" height="300" rx="24" fill="url(#panel)" stroke="#4F86C6" stroke-width="1.6"/>
+    <rect x="30" y="28" width="112" height="3" rx="1.5" fill="#4F86C6"/>
+    <text x="34" y="78" class="cardTitle">AX-OS</text>
+    <text x="34" y="108" class="domain">GOVERNED AI OPERATIONS</text>
+    <rect x="34" y="130" width="632" height="48" rx="11" fill="#11243a" stroke="#4F86C6"/>
+    <text x="52" y="160" class="phase">G3 — BUILD</text>
+    <text x="34" y="208" class="label">VERIFIED SIGNAL</text>
+    <text x="34" y="232" class="body">3 accepted build tasks recorded in current status.</text>
+    <text x="360" y="208" class="label">NEXT AUTHORIZED / GOVERNED STEP</text>
+    <text x="360" y="232" class="body">Issue exactly one coherent execution for `AXOS-T004 — Domain</text>
+<text x="360" y="253" class="body">Events, Transactional Outbox &amp; Durable Job Runtime`. Do not</text>
+    <line x1="34" y1="270" x2="666" y2="270" stroke="#26364b"/>
+    <text x="34" y="289" class="source">PROJECT_STATUS.md · current build state</text>
+    <text x="666" y="289" text-anchor="end" class="boundary">No Security GO, Pilot, Production or Release authority is asserted.</text>
+  </g>
+  <g transform="translate(70 540)">
+    <rect width="700" height="300" rx="24" fill="url(#panel)" stroke="#B08A4A" stroke-width="1.6"/>
+    <rect x="30" y="28" width="112" height="3" rx="1.5" fill="#B08A4A"/>
+    <text x="34" y="78" class="cardTitle">AETHER INTELLIGENCE CORE · AIC</text>
+    <text x="34" y="108" class="domain">FINANCIAL INTELLIGENCE INFRASTRUCTURE</text>
+    <rect x="34" y="130" width="632" height="48" rx="11" fill="#2b2418" stroke="#9D753C"/>
+    <text x="52" y="160" class="phase">PHASE 0 — Governance, Research Baseline &amp;</text>
+<text x="52" y="179" class="phase">Architecture</text>
+    <text x="34" y="208" class="label">VERIFIED SIGNAL</text>
+    <text x="34" y="232" class="body">Implementation has not started under the current baseline;</text>
+<text x="34" y="253" class="body">architecture/governance phase remains active.</text>
+    <text x="360" y="208" class="label">NEXT AUTHORIZED / GOVERNED STEP</text>
+    <text x="360" y="232" class="body">`AIC-003` — Establish and verify the local AIC working tree</text>
+<text x="360" y="253" class="body">from the private GitHub repository on the actual AIC host.</text>
+    <line x1="34" y1="270" x2="666" y2="270" stroke="#26364b"/>
+    <text x="34" y="289" class="source">05_AIC_CURRENT_STATE.md · CURRENT</text>
+    <text x="666" y="289" text-anchor="end" class="boundary">No platform, connector, ingestion pipeline or production data collection has started.</text>
+  </g>
+  <g transform="translate(830 540)">
+    <rect width="700" height="300" rx="24" fill="url(#panel)" stroke="#8B5CA8" stroke-width="1.6"/>
+    <rect x="30" y="28" width="112" height="3" rx="1.5" fill="#8B5CA8"/>
+    <text x="34" y="78" class="cardTitle">AMII RESEARCH LAB</text>
+    <text x="34" y="108" class="domain">QUANTITATIVE MARKET RESEARCH</text>
+    <rect x="34" y="130" width="632" height="48" rx="11" fill="#25192e" stroke="#8B5CA8"/>
+    <text x="52" y="160" class="phase">RESEARCH · CURRENT RESEARCH PHASE</text>
+    <text x="34" y="208" class="label">VERIFIED SIGNAL</text>
+    <text x="34" y="232" class="body">Latest governed acceptance record is established for the</text>
+<text x="34" y="253" class="body">current research phase.</text>
+    <text x="360" y="208" class="label">NEXT AUTHORIZED / GOVERNED STEP</text>
+    <text x="360" y="232" class="body">Continue governed research and validation within the current</text>
+<text x="360" y="253" class="body">authorized research scope.</text>
+    <line x1="34" y1="270" x2="666" y2="270" stroke="#26364b"/>
+    <text x="34" y="289" class="source">AMII_RECOVERY_ACCEPTANCE_2026-08-14.md · latest acceptance record</text>
+    <text x="666" y="289" text-anchor="end" class="boundary">No empirical validity, predictive performance, profitability, production readiness or Quantum integrati…</text>
+  </g>
+<rect x="70" y="865" width="1460" height="38" rx="12" fill="#0A1422" stroke="#243247"/>
+<text x="95" y="889" class="footerGold">PROGRESS SIGNAL = GOVERNED STATE CHANGE / ACCEPTED MILESTONE</text>
+<text x="1505" y="889" text-anchor="end" class="footer">COMMIT ≠ PROGRESS · MERGE ≠ ACCEPTANCE · RESEARCH ≠ PRODUCTION</text>
+</svg>
