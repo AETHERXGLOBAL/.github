@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
-<title id="title">AETHER X Live Project Pulse</title>
+<title id="title">AETHER X Live Portfolio Pulse</title>
 <desc id="desc">Automatically refreshed, public-safe project-state telemetry for selected AETHER X system initiatives plus a bounded public organizational-state disclosure for the Research unit. No completion percentages are inferred.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#010D1D"/><stop offset="0.55" stop-color="#071426"/><stop offset="1" stop-color="#0B1A2C"/></linearGradient>
@@ -24,10 +24,10 @@
 <rect width="1600" height="1100" rx="30" fill="url(#grid)"/>
 <rect x="24" y="24" width="1552" height="1052" rx="24" fill="none" stroke="#243247" stroke-width="1.5"/>
 <text x="70" y="70" class="brand">AETHER X GLOBAL</text>
-<text x="70" y="122" class="title">LIVE PROJECT PULSE</text>
-<text x="70" y="154" class="subtitle">Selected live project telemetry · governed sources · bounded Research-unit disclosure</text>
+<text x="70" y="122" class="title">LIVE PORTFOLIO PULSE</text>
+<text x="70" y="154" class="subtitle">Selected live portfolio telemetry · governed sources · bounded Research-unit disclosure</text>
 <text x="1530" y="72" text-anchor="end" class="footerGold">AUTO-REFRESH · PUBLIC-SAFE</text>
-<text x="1530" y="100" text-anchor="end" class="footer">Last published state update: 2026-08-17 19:54 UTC</text>
+<text x="1530" y="100" text-anchor="end" class="footer">Last published state update: 2026-08-17 20:17 UTC</text>
 <line x1="70" y1="184" x2="1530" y2="184" stroke="#9D753C" stroke-opacity=".7"/>
 
   <g transform="translate(70 210)">
