@@ -1,4 +1,4 @@
-name: Update AETHER X Live Project Pulse
+name: Update AETHER X Live Portfolio Pulse
 
 on:
   push:
@@ -19,7 +19,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: aether-x-live-project-pulse
+  group: aether-x-live-portfolio-pulse
   cancel-in-progress: false
 
 jobs:
@@ -37,7 +37,7 @@ jobs:
           python3 -m py_compile profile/scripts/render_project_pulse.py
           python3 -m py_compile profile/scripts/sanitize_project_pulse.py
 
-      - name: Render governed project telemetry
+      - name: Render governed portfolio telemetry
         env:
           PROJECT_PULSE_READ_TOKEN: ${{ secrets.PROJECT_PULSE_READ_TOKEN }}
         run: |
@@ -68,11 +68,14 @@ jobs:
               r"Last verified refresh:",
               r"AMII RESEARCH LAB",
               r"amii-research-lab",
+              r"LIVE PROJECT PULSE",
           ]
           for pattern in forbidden:
               if re.search(pattern, text, re.IGNORECASE):
                   raise SystemExit(f"PUBLIC_OUTPUT_POLICY_FAIL: forbidden pattern {pattern}")
           required = [
+              "AETHER X Live Portfolio Pulse",
+              "LIVE PORTFOLIO PULSE",
               "Last published state update:",
               "AETHER X RESEARCH",
               "INSTITUTIONAL RESEARCH UNIT · ACTIVE",
@@ -82,7 +85,7 @@ jobs:
           for value in required:
               if value not in text:
                   raise SystemExit(f"PUBLIC_OUTPUT_POLICY_FAIL: missing required marker {value}")
-          print("PROJECT_PULSE_SVG_VALID")
+          print("PORTFOLIO_PULSE_SVG_VALID")
           PY
 
       - name: Preserve prior published timestamp when governed state is unchanged
@@ -102,7 +105,7 @@ jobs:
                   stderr=subprocess.DEVNULL,
               )
           except subprocess.CalledProcessError:
-              print("PROJECT_PULSE_FIRST_PUBLICATION")
+              print("PORTFOLIO_PULSE_FIRST_PUBLICATION")
               raise SystemExit(0)
 
           def semantic(value: str) -> str:
@@ -120,9 +123,9 @@ jobs:
 
           if semantic(new) == semantic(old):
               path.write_text(old, encoding="utf-8")
-              print("PROJECT_PULSE_STATE_UNCHANGED")
+              print("PORTFOLIO_PULSE_STATE_UNCHANGED")
           else:
-              print("PROJECT_PULSE_STATE_CHANGED")
+              print("PORTFOLIO_PULSE_STATE_CHANGED")
           PY
 
       - name: Publish only when governed public state changed
@@ -134,9 +137,9 @@ jobs:
             exit 0
           fi
 
-          git config user.name "AETHER X Project Pulse"
+          git config user.name "AETHER X Portfolio Pulse"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "$PULSE"
-          git commit -m "chore(profile): refresh live project pulse"
+          git commit -m "chore(profile): refresh live portfolio pulse"
           git pull --rebase origin main
           git push origin HEAD:main
