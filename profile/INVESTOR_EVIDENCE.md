@@ -46,6 +46,7 @@ A claim should not be promoted because it is persuasive. It should be promoted o
 | **Public technical architecture & control specifications** | `AX-PUB-ARCH-001`, `AX-PUB-SPEC-002` and `AX-PUB-SPEC-003` | `PUBLICLY INSPECTABLE · CONCEPTUAL / NON-PRODUCT-SPECIFIC` |
 | **Public machine-readable contracts** | `AX-PUB-SCHEMA-001` Governed EAV Contract Schema and `AX-PUB-SCHEMA-002` Point-in-Time Knowledge Envelope with public schema-alignment workflows | `PUBLICLY INSPECTABLE · MACHINE-READABLE · CONCEPTUAL / NON-PRODUCT-SPECIFIC` |
 | **Public executable reference implementations** | `AX-PUB-REF-001` EAV Contract Validator and `AX-PUB-REF-002` Point-in-Time Knowledge Validator, with examples, unit tests and public CI | `PUBLICLY INSPECTABLE · CI-TESTED · EDUCATIONAL / NON-PRODUCTION` |
+| **Public conformance evidence** | `AX-PUB-TEST-001` synthetic conformance kit: `15/15` declared cases reproduced against byte-identical published Git blobs, with the public/private dependency-boundary guard passing | `PUBLICLY INSPECTABLE · REPRODUCIBLY VERIFIED · CI RUN UNVERIFIED · NON-PRODUCTION` |
 | **Public reproducibility snapshot** | `AX-PUB-SNAP-001 — Governed Intelligence Public v1.0`, anchored to Git commit `f839d4ac0a0b69dcbb682e900f02aad7e24524eb`, with recorded Git blob identities and public snapshot-integrity CI | `PUBLICLY INSPECTABLE · COMMIT-ANCHORED · SNAPSHOT-CI-VALIDATED` |
 | **Public engineering activity** | Engineering Pulse and public GitHub repository/workflow evidence | `PUBLICLY VERIFIABLE` |
 | **Private implementation & research depth** | Core development repositories and the canonical Research repository are private | `NOT PUBLICLY VERIFIABLE HERE` |
@@ -65,6 +66,7 @@ A claim should not be promoted because it is persuasive. It should be promoted o
 - `PUBLICLY INSPECTABLE · CONCEPTUAL / NON-PRODUCT-SPECIFIC` — a technical reference or specification is intentionally public and can be inspected directly, while remaining a conceptual engineering artifact rather than evidence of full product implementation.
 - `PUBLICLY INSPECTABLE · MACHINE-READABLE · CONCEPTUAL / NON-PRODUCT-SPECIFIC` — a structural contract is published in machine-readable form and its repository alignment checks are inspectable; this does not establish a production API, product data model, authorization system or integration contract.
 - `PUBLICLY INSPECTABLE · CI-TESTED · EDUCATIONAL / NON-PRODUCTION` — executable reference code, examples and tests are public and GitHub Actions workflows have successfully exercised the defined checks; this does not establish production fitness, security certification, production data quality or product integration.
+- `PUBLICLY INSPECTABLE · REPRODUCIBLY VERIFIED · CI RUN UNVERIFIED · NON-PRODUCTION` — byte-identical published Git blobs have been reconstructed and executed in an isolated environment with the declared public conformance cases and boundary guard passing; this is not represented as a verified GitHub Actions run and does not establish private-product behavior, production readiness or security certification.
 - `PUBLICLY INSPECTABLE · COMMIT-ANCHORED · SNAPSHOT-CI-VALIDATED` — a fixed public engineering state is anchored to an immutable Git commit, material file identities are recorded as Git blob SHAs, and a public workflow validates the snapshot record against Git history; this does not make the snapshot a Git tag, GitHub Release, product release or proof of product implementation.
 - `PUBLICLY INSPECTABLE OUTPUT · PRIVATE SOURCE-BACKED / BOUNDED ORGANIZATIONAL DISCLOSURE` — the published output and mechanism can be inspected publicly; selected initiative states are backed by private governed sources, while the Research card is intentionally limited to an approved organizational-state disclosure rather than private research telemetry.
 - `NOT PUBLICLY VERIFIABLE HERE` — the evidence may be private or outside the public GitHub surface; no public conclusion should be inferred.
@@ -140,11 +142,20 @@ Their validation workflows are directly inspectable:
 - **[Validate EAV Reference Implementation](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-eav-reference.yml)**
 - **[Validate Point-in-Time Knowledge Reference Implementation](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-ptk-reference.yml)**
 
+AETHER X additionally publishes **[AX-PUB-TEST-001 — Governed Intelligence Conformance Test Kit](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/conformance/AX-PUB-TEST-001)**. The current kit defines 15 synthetic public cases across the EAV and point-in-time/provenance reference paths. Byte-identical copies of the declared public Git blobs were independently reconstructed and executed, producing:
+
+```text
+AX_PUBLIC_CONFORMANCE_PASS cases=15 conforming=15
+AX_PUBLIC_CONFORMANCE_BOUNDARY_PASS
+```
+
+The test-kit record publishes the exact Git blob identities used for that reproducible execution. The conformance workflow is public, but this evidence is **not** represented as a directly verified GitHub Actions run. `REPRODUCIBLY VERIFIED ≠ GITHUB CI VERIFIED`, and neither state establishes production implementation, private-project behavior, security certification or product integration.
+
 For reproducible external review, AETHER X also publishes **[AX-PUB-SNAP-001 — Governed Intelligence Public v1.0](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/snapshots/AX-PUB-SNAP-001_GOVERNED_INTELLIGENCE_PUBLIC_V1.0.md)**. The snapshot is anchored to immutable Git commit `f839d4ac0a0b69dcbb682e900f02aad7e24524eb`; its **[machine-readable snapshot record](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/snapshots/AX-PUB-SNAP-001.json)** records the public artifact inventory, material Git blob identities and selected CI evidence. The **[snapshot-integrity workflow](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-public-snapshot.yml)** validates the recorded anchor and blob inventory against Git history.
 
 `AX-PUB-SNAP-001` is a public engineering reproducibility record. It is **not** a Git tag, GitHub Release or product release, and it does not establish adoption of these public artifacts inside any AETHER X product or initiative.
 
-These artifacts are evidence of **published engineering doctrine, temporal data-integrity design, control-system design, machine-readable reference contract design, bounded executable reference implementations and public reproducibility discipline**. The specifications and schemas remain conceptual and non-product-specific. The reference validators are educational / non-production. None of these artifacts establishes complete product implementation, production-scale financial-data infrastructure, a production API or SDK, secure authorization enforcement, production data-quality guarantees, shared runtime or technical integration across AETHER X initiatives.
+These artifacts are evidence of **published engineering doctrine, temporal data-integrity design, control-system design, machine-readable reference contract design, bounded executable reference implementations, public conformance discipline and reproducibility discipline**. The specifications and schemas remain conceptual and non-product-specific. The reference validators and conformance kit are educational / non-production. None of these artifacts establishes complete product implementation, production-scale financial-data infrastructure, a production API or SDK, secure authorization enforcement, production data-quality guarantees, shared runtime or technical integration across AETHER X initiatives.
 
 ---
 
@@ -161,9 +172,10 @@ A public reviewer can reasonably use this GitHub surface as evidence that AETHER
 7. a dedicated canonical public engineering repository containing technology-neutral architecture and specifications covering governed control semantics and point-in-time knowledge / provenance integrity;
 8. machine-readable structural contracts for selected EAV and point-in-time knowledge / provenance objects with public alignment CI;
 9. CI-tested, non-production public reference implementations demonstrating selected EAV and point-in-time temporal / provenance invariants in executable code;
-10. a validated public reproducibility snapshot anchored to an explicit immutable Git commit, with recorded Git blob identities for material public artifacts.
+10. a reproducibly verified public conformance kit showing `15/15` declared synthetic cases matching expected behavior for byte-identical public Git blobs, with a passing public/private dependency-boundary guard and GitHub CI status kept explicitly separate;
+11. a validated public reproducibility snapshot anchored to an explicit immutable Git commit, with recorded Git blob identities for material public artifacts.
 
-These are **evidence of public disclosure discipline, engineering doctrine, control design, machine-readable contract design, reproducibility discipline and inspectable reference engineering**.
+These are **evidence of public disclosure discipline, engineering doctrine, control design, machine-readable contract design, conformance discipline, reproducibility discipline and inspectable reference engineering**.
 
 They are not, by themselves, independent verification of private implementation depth, scientific validity, commercial success, production scale, production data quality, security certification or investment returns.
 
@@ -270,6 +282,9 @@ The objective is **credible evidence without unnecessary information exposure**.
 - [AX-PUB-SCHEMA-002 — Point-in-Time Knowledge Envelope](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-002_POINT_IN_TIME_KNOWLEDGE_ENVELOPE.schema.json)
 - [AX-PUB-REF-001 — EAV Contract Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/eav-contract-validator)
 - [AX-PUB-REF-002 — Point-in-Time Knowledge Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/point-in-time-knowledge-validator)
+- [AX-PUB-TEST-001 — Governed Intelligence Conformance Test Kit](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/conformance/AX-PUB-TEST-001)
+- [Public conformance workflow](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-public-conformance.yml)
+- [Public conformance private-project boundary checker](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/tools/check_public_conformance_boundary.py)
 - [AX-PUB-SNAP-001 — Governed Intelligence Public v1.0](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/snapshots/AX-PUB-SNAP-001_GOVERNED_INTELLIGENCE_PUBLIC_V1.0.md)
 - [AX-PUB-SNAP-001 — machine-readable snapshot record](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/snapshots/AX-PUB-SNAP-001.json)
 - [Public snapshot integrity workflow](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-public-snapshot.yml)
