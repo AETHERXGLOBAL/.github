@@ -39,9 +39,17 @@ GOVERNED KNOWLEDGE
 → RECONSTRUCTABLE OUTCOMES
 ```
 
+## Executable Companion
+
+- **[AX-PUB-REF-001 — EAV Contract Validator](../reference-implementations/eav-contract-validator/README.md)** — `PUBLIC REFERENCE IMPLEMENTATION · CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
+
+The validator demonstrates selected `AX-PUB-SPEC-002` invariants in deterministic, standard-library Python code. It is intentionally bounded and does not represent a production authorization, security or policy-enforcement system.
+
+See the **[Public Reference Implementations Index](../reference-implementations/README.md)**.
+
 ## Disclosure Boundary
 
-Publication of a reference or specification does **not** establish:
+Publication of a reference, specification or companion implementation does **not** establish:
 
 - implementation by every AETHER X initiative;
 - shared runtime or shared data infrastructure;
@@ -53,6 +61,8 @@ Publication of a reference or specification does **not** establish:
 - predictive or investment performance.
 
 `PUBLIC SPECIFICATION ≠ PRODUCT IMPLEMENTATION`
+
+`REFERENCE IMPLEMENTATION ≠ PRODUCTION IMPLEMENTATION`
 
 Each artifact defines its own additional claim boundary.
 
