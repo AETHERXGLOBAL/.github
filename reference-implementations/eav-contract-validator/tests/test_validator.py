@@ -1,14 +1,12 @@
-import copy
-import importlib.util
 from pathlib import Path
+import sys
 import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SPEC = importlib.util.spec_from_file_location("eav_validator", ROOT / "validator.py")
-validator = importlib.util.module_from_spec(SPEC)
-assert SPEC.loader is not None
-SPEC.loader.exec_module(validator)
+sys.path.insert(0, str(ROOT))
+
+import validator  # noqa: E402
 
 
 def valid_bundle():
