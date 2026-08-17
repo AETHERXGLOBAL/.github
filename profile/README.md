@@ -102,7 +102,7 @@ The Live Portfolio Pulse publishes selected initiative-state signals from allowl
 | **Corporate thesis & engineering doctrine** | Publicly stated and directly inspectable in this profile. |
 | **Portfolio maturity & research structure** | Explicitly disclosed by initiative or unit and bounded by current maturity / organizational state. |
 | **Governed portfolio-state publication** | Live Portfolio Pulse: a public output generated from allowlisted governed initiative sources plus a bounded Research-unit disclosure state. |
-| **Public technical engineering** | Dedicated public engineering repository with inspectable specifications, reference implementation and public CI. |
+| **Public technical engineering** | Dedicated public engineering repository with inspectable specifications, machine-readable contract, reference implementation and public CI. |
 | **Commercial / financial traction** | Not established by this public GitHub profile. |
 | **Production readiness / customer outcomes** | Not implied unless separately evidenced and explicitly disclosed. |
 
@@ -242,14 +242,14 @@ The dashboard is generated from **public GitHub organization data only**. Privat
 
 ## Public Engineering
 
-AETHER X publishes selected technical references, specifications and reference implementations only after appropriate technical, security, intellectual-property and public-disclosure review.
+AETHER X publishes selected technical references, specifications, machine-readable contracts and reference implementations only after appropriate technical, security, intellectual-property and public-disclosure review.
 
 ### Canonical Public Engineering Repository
 
 **[AETHER X Governed Intelligence →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**  
 `PUBLIC ENGINEERING REPOSITORY · CONTROLLED DISCLOSURE`
 
-The repository is the canonical public source for the current governed-intelligence technical series and its executable reference implementation.
+The repository is the canonical public source for the current governed-intelligence technical series, machine-readable contract and executable reference implementation.
 
 ### Public Technical References
 
@@ -258,6 +258,12 @@ The repository is the canonical public source for the current governed-intellige
 - **[AX-PUB-SPEC-003 — Point-in-Time Knowledge & Provenance Standard](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-003_POINT_IN_TIME_KNOWLEDGE_PROVENANCE_STANDARD.md)** — `PUBLIC TECHNICAL SPECIFICATION · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
 
 Together, these references define a public engineering chain for **governed knowledge, traceable evidence, bounded authority, controlled execution and independently verifiable outcomes**. `AX-PUB-SPEC-003` adds temporal integrity: what was known, when it was known, where it came from, which version was used and how later corrections or revisions are preserved.
+
+### Public Machine-Readable Contract
+
+- **[AX-PUB-SCHEMA-001 — Governed EAV Contract Schema](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-001_EAV_CONTRACT.schema.json)** — `MACHINE-READABLE CONTRACT · JSON SCHEMA · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
+
+The schema makes selected `AX-PUB-SPEC-002` control objects structurally machine-readable through required fields, types, selected enums and timestamp formats. A separate public CI check guards alignment between the schema, reference examples and executable validator. Structural conformance is not authorization, product integration or a verified outcome.
 
 ### Public Reference Implementation
 
