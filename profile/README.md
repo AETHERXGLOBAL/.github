@@ -8,17 +8,9 @@
 
 <h1 align="center">AETHER X GLOBAL</h1>
 
-<p align="center">
-  <strong>A Governed Intelligence Systems Company</strong>
-</p>
-
-<p align="center">
-  <strong>Institutional Intelligence. Governed Autonomy.</strong>
-</p>
-
-<p align="center">
-  <strong>Build Intelligence That Can Be Trusted to Act.</strong>
-</p>
+<p align="center"><strong>A Governed Intelligence Systems Company</strong></p>
+<p align="center"><strong>Institutional Intelligence. Governed Autonomy.</strong></p>
+<p align="center"><strong>Build Intelligence That Can Be Trusted to Act.</strong></p>
 
 <p align="center">
   We engineer governed intelligence systems for consequential financial, research, knowledge, enterprise and institutional workflows.
@@ -52,7 +44,7 @@ The objective is not unrestricted autonomy. The objective is **useful intelligen
 
 ## Portfolio & Research at a Glance
 
-Our current operating portfolio includes **three governed intelligence system initiatives and one dedicated institutional research unit**. The visual architecture below shows **portfolio membership, maturity or organizational state, domain and role** — not technical integration between initiatives.
+Our current operating portfolio includes **three governed intelligence system initiatives and one dedicated institutional research unit**. The visual below represents portfolio membership, maturity or organizational state, domain and role — not technical integration between initiatives.
 
 <p align="center">
   <img
@@ -62,7 +54,7 @@ Our current operating portfolio includes **three governed intelligence system in
   />
 </p>
 
-> **Portfolio boundary:** The visual represents portfolio membership and strategic roles only. Shared ownership, branding or engineering doctrine does not imply technical integration, shared runtime, deployment dependency or production interoperability. Product-to-product integration requires separate approval and implementation evidence.
+> **Portfolio boundary:** Shared ownership, branding or engineering doctrine does not imply technical integration, shared runtime, deployment dependency or production interoperability. Product-to-product integration requires separate approval and implementation evidence.
 
 ### Portfolio Snapshot
 
@@ -73,17 +65,17 @@ Our current operating portfolio includes **three governed intelligence system in
 | **AETHER Intelligence Core (AIC)** | `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION` | Strategic company infrastructure initiative intended to become a durable, high-integrity global financial-information asset, designed to provide point-in-time accuracy, provenance and reusable intelligence foundations for AETHER X platforms and AI systems. |
 | **AETHER X Research** | `INSTITUTIONAL RESEARCH UNIT · ACTIVE` | Dedicated institutional research unit conducting evidence-governed research across data, financial and quantitative intelligence, and artificial intelligence, supporting AETHER X through rigorous investigation, experimentation, validation and reproducible knowledge development. |
 
-Each AETHER X initiative is presented according to its **current verified maturity, authority boundary and public-disclosure state**. AETHER X Quantum is under active development and is not represented as providing guaranteed investment outcomes. AETHER Intelligence Core (AIC) remains at the **approved-architecture / pre-implementation** stage; its strategic role is defined, while implementation remains governed and gated. AETHER X Research operates as the company’s institutional research unit, with research activities remaining subject to evidence, validation, intellectual-property and publication controls.
+Each initiative is presented according to its **current verified maturity, authority boundary and public-disclosure state**. AETHER X Quantum is under active development and is not represented as providing guaranteed investment outcomes. AIC remains at the **approved-architecture / pre-implementation** stage. AETHER X Research operates as the company’s institutional research unit, with individual research activities remaining subject to evidence, validation, intellectual-property and publication controls.
 
-**Public access:** Core development and research repositories remain private. Public GitHub materials consist only of intentionally released corporate, engineering and evidence artifacts. Any future disclosure of implementation details, research results or technical material requires explicit review and approval.
+**Public access:** Core development and research repositories remain private. Public GitHub materials consist only of intentionally released corporate, engineering and evidence artifacts. Future disclosure of implementation details, research results or technical material requires explicit review and approval.
 
-Strategic direction is stated separately from implemented capability. **Research does not imply production readiness, architecture does not imply implementation, and development status does not imply commercial or operational readiness.**
+**Research does not imply production readiness. Architecture does not imply implementation. Development status does not imply commercial or operational readiness.**
 
 ---
 
 ## Investor Evidence
 
-AETHER X is designed to be evaluated on **evidence rather than presentation**. For investors, strategic partners and institutional reviewers, this public GitHub surface provides a bounded diligence layer that separates what can be inspected directly from what requires controlled diligence or remains unestablished.
+AETHER X is designed to be evaluated on **evidence rather than presentation**. This GitHub surface provides a bounded public diligence layer separating what can be inspected directly from what remains private, controlled or unestablished.
 
 ### Governed Portfolio-State Evidence
 
@@ -95,18 +87,18 @@ AETHER X is designed to be evaluated on **evidence rather than presentation**. F
   />
 </p>
 
-The Live Portfolio Pulse publishes selected initiative-state signals from allowlisted governed sources and a bounded public organizational state for the Research unit without exposing private repository content. It does not infer aggregate completion percentages and does not convert commits, merges, research or design into acceptance or production claims.
+The Live Portfolio Pulse publishes selected initiative-state signals from allowlisted governed sources plus a bounded public organizational state for the Research unit. It does not publish private repository bodies, infer aggregate completion percentages or convert commits, merges, research or design into acceptance or production claims.
 
 | Public diligence signal | Current public evidence |
 |---|---|
-| **Corporate thesis & engineering doctrine** | Publicly stated and directly inspectable in this profile. |
+| **Corporate thesis & engineering doctrine** | Publicly stated and directly inspectable. |
 | **Portfolio maturity & research structure** | Explicitly disclosed by initiative or unit and bounded by current maturity / organizational state. |
-| **Governed portfolio-state publication** | Live Portfolio Pulse: a public output generated from allowlisted governed initiative sources plus a bounded Research-unit disclosure state. |
-| **Public technical engineering** | Dedicated public engineering repository with inspectable specifications, machine-readable contracts, reference implementations, bounded conformance evidence and public workflows. |
+| **Governed portfolio-state publication** | Live Portfolio Pulse: selected public-safe state signals with explicit source and disclosure boundaries. |
+| **Public technical engineering** | Dedicated public repository with specifications, three machine-readable structural contracts, three bounded reference validators at their stated evidence states, conformance artifacts and public workflows. |
 | **Commercial / financial traction** | Not established by this public GitHub profile. |
 | **Production readiness / customer outcomes** | Not implied unless separately evidenced and explicitly disclosed. |
 
-For the evidence definitions, limitations, diligence sequence and disclosure rules, see:
+For definitions, limitations, diligence progression and disclosure rules, see:
 
 **[Public Investor Evidence →](./INVESTOR_EVIDENCE.md)**
 
@@ -145,7 +137,7 @@ Individual projects may implement only the parts of this chain appropriate to th
 - **Governance & authority systems** — permissions, policies, approvals, delegated authority, least privilege and bounded execution.
 - **Verification systems** — testable acceptance criteria, independent checks, evidence packages and verified outcomes.
 - **Financial & quantitative intelligence** — data lineage, validation discipline, scenario analysis, reproducibility and risk-aware decision support.
-- **Research & decision integrity** — governed research lifecycle, research registry, evidence, reproducibility, scientific-state boundaries and controlled promotion of research claims.
+- **Research & decision integrity** — governed research lifecycle, evidence, reproducibility, scientific-state boundaries and controlled promotion of research claims.
 - **Operational intelligence** — observable, recoverable, measurable and auditable systems designed for real institutional workflows.
 
 ---
@@ -243,14 +235,14 @@ The dashboard is generated from **public GitHub organization data only**. Privat
 
 ## Public Engineering
 
-AETHER X publishes selected technical references, specifications, machine-readable contracts, bounded conformance artifacts and reference implementations only after appropriate technical, security, intellectual-property and public-disclosure review.
+AETHER X publishes selected technical references, specifications, machine-readable contracts, bounded conformance artifacts and non-production reference implementations only after appropriate technical, security, intellectual-property and public-disclosure review.
 
 ### Canonical Public Engineering Repository
 
 **[AETHER X Governed Intelligence →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**  
 `PUBLIC ENGINEERING REPOSITORY · CONTROLLED DISCLOSURE`
 
-The repository is the canonical public source for the current governed-intelligence technical series, machine-readable contracts, conformance evidence and executable reference implementations.
+The repository is the canonical public source for the governed-intelligence technical series and its explicit compatibility, reproducibility and claim boundaries.
 
 ### Public Technical References
 
@@ -259,48 +251,44 @@ The repository is the canonical public source for the current governed-intellige
 - **[AX-PUB-SPEC-003 — Point-in-Time Knowledge & Provenance Standard](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-003_POINT_IN_TIME_KNOWLEDGE_PROVENANCE_STANDARD.md)** — `PUBLIC TECHNICAL SPECIFICATION · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
 - **[AX-PUB-SPEC-004 — Governed Agent Authority & Tool-Use Boundary Standard](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-004_GOVERNED_AGENT_AUTHORITY_TOOL_USE_STANDARD.md)** — `PUBLIC TECHNICAL SPECIFICATION · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
 
-Together, these references define a public engineering chain for **governed knowledge, traceable evidence, bounded authority, controlled execution and independently verifiable outcomes**. `AX-PUB-SPEC-003` adds temporal integrity: what was known, when it was known, where it came from, which version was used and how later corrections or revisions are preserved. `AX-PUB-SPEC-004` specializes the authority boundary for agent-mediated tool use, including principal identity, action proposals, parameter-level constraints, delegation, untrusted-content boundaries, step-up authority and post-invocation verification.
-
-`AX-PUB-SPEC-004` currently has **no separately published schema, reference validator, SDK or conformance suite**. Publication of the specification does not establish an internal AETHER X agent runtime or authorization implementation.
-
 ### Public Machine-Readable Contracts
 
-- **[AX-PUB-SCHEMA-001 — Governed EAV Contract Schema](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-001_EAV_CONTRACT.schema.json)** — `MACHINE-READABLE CONTRACT · JSON SCHEMA · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
-- **[AX-PUB-SCHEMA-002 — Point-in-Time Knowledge Envelope](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-002_POINT_IN_TIME_KNOWLEDGE_ENVELOPE.schema.json)** — `MACHINE-READABLE TEMPORAL / PROVENANCE CONTRACT · JSON SCHEMA · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
+- **[AX-PUB-SCHEMA-001 — Governed EAV Contract Schema](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-001_EAV_CONTRACT.schema.json)** — `JSON SCHEMA · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
+- **[AX-PUB-SCHEMA-002 — Point-in-Time Knowledge Envelope](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-002_POINT_IN_TIME_KNOWLEDGE_ENVELOPE.schema.json)** — `JSON SCHEMA · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
+- **[AX-PUB-SCHEMA-003 — Agent Tool-Use Authority Envelope](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-003_AGENT_TOOL_USE_AUTHORITY_ENVELOPE.schema.json)** — `JSON SCHEMA · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
 
-The schemas make selected `AX-PUB-SPEC-002` and `AX-PUB-SPEC-003` structures machine-readable through required fields, types, selected enums and temporal metadata. Public CI guards schema and reference-example alignment. Structural conformance is not authorization, product integration, production data quality or a verified outcome.
+`AX-PUB-SCHEMA-003` makes selected agent identity, action proposal, authority context, bounded grant, invocation and tool-result structures machine-readable. It is **not** a production authorization plane or product data model.
 
 ### Public Reference Implementations
 
-- **[AX-PUB-REF-001 — EAV Contract Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/eav-contract-validator)** — `PUBLIC REFERENCE IMPLEMENTATION · CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
-- **[AX-PUB-REF-002 — Point-in-Time Knowledge Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/point-in-time-knowledge-validator)** — `PUBLIC TEMPORAL / PROVENANCE REFERENCE IMPLEMENTATION · CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
+- **[AX-PUB-REF-001 — EAV Contract Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/eav-contract-validator)** — `CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
+- **[AX-PUB-REF-002 — Point-in-Time Knowledge Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/point-in-time-knowledge-validator)** — `CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
+- **[AX-PUB-REF-003 — Agent Tool-Use Authority Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/agent-tool-authority-validator)** — `CI WORKFLOW PUBLISHED · VALIDATION PENDING · EDUCATIONAL / NON-PRODUCTION`
 
-`AX-PUB-REF-001` demonstrates selected evidence / authority / verification invariants. `AX-PUB-REF-002` demonstrates selected point-in-time controls including no-future-leakage relative to a declared knowledge cutoff, source and transformation lineage references, revision/supersession checks, explicit missing states and reproducibility-cutoff consistency.
-
-Both are standard-library Python reference implementations with public tests and CI. They are **not** production authorization systems, production data-quality engines, product SDKs or evidence that AIC or another AETHER X initiative has implemented these public reference contracts.
+`AX-PUB-REF-003` demonstrates selected principal/tool/action/resource/time/environment/parameter authority semantics. A published workflow exists, but successful execution against the published repository state is not claimed until directly verified.
 
 ### Public Conformance Evidence
 
-- **[AX-PUB-TEST-001 — Governed Intelligence Conformance Test Kit](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/conformance/AX-PUB-TEST-001)** — `PUBLIC CONFORMANCE TEST KIT · REPRODUCIBLY VERIFIED · CI RUN UNVERIFIED · NON-PRODUCTION`
+- **[AX-PUB-TEST-001 — Governed Intelligence Conformance Test Kit](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/conformance/AX-PUB-TEST-001)** — `REPRODUCIBLY VERIFIED · CI RUN UNVERIFIED · NON-PRODUCTION`
+- **[AX-PUB-TEST-002 — Agent Authority Conformance Test Kit](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/conformance/AX-PUB-TEST-002)** — `CI WORKFLOW PUBLISHED · VALIDATION PENDING · NON-PRODUCTION`
 
-The current kit defines 15 synthetic public cases across the EAV and point-in-time/provenance reference validators. Byte-identical published Git blobs were reproducibly executed with:
+`AX-PUB-TEST-001` has published reproducibility evidence for `15/15` declared synthetic cases plus a passing public/private dependency-boundary check. `AX-PUB-TEST-002` defines `10` synthetic agent-authority cases but remains validation-pending until execution against the published state is directly verified.
 
-```text
-AX_PUBLIC_CONFORMANCE_PASS cases=15 conforming=15
-AX_PUBLIC_CONFORMANCE_BOUNDARY_PASS
-```
+Current public artifact compatibility is recorded in **`AX-PUB-MANIFEST-001 v1.3`** under **`AX-PUB-POL-001 v1.3`**.
 
-This evidence is deliberately bounded. `REPRODUCIBLY VERIFIED ≠ GITHUB CI VERIFIED`, and conformance to public reference behavior does not establish product implementation, security certification, production readiness or behavior inside private AETHER X initiatives.
+`WORKFLOW PUBLISHED ≠ CI RUN VERIFIED`  
+`REFERENCE VALIDATOR PASS ≠ PRODUCTION AUTHORIZATION`  
+`PUBLIC CONFORMANCE ≠ PRODUCT IMPLEMENTATION`
 
-These public artifacts are technology-neutral and do not assert shared implementation, production readiness or technical integration across AETHER X initiatives.
+These public artifacts do not establish a shared AETHER X agent runtime, authorization plane, production SDK/API, product adoption, production readiness or technical integration across initiatives.
 
-Public repositories and artifacts represent intentionally released engineering work. Proprietary platforms, confidential architecture, credentials, internal security controls, private customer information and unpublished intellectual property remain private.
+Public repositories and artifacts represent intentionally released engineering work. Proprietary platforms, confidential architecture, credentials, internal security controls, private customer information, unpublished research and unpublished intellectual property remain private.
 
 ---
 
 ## Security
 
-Do not report security vulnerabilities through public issues. Responsible-disclosure instructions should be followed when formally published by the organization.
+Do not publish sensitive security details through public issues. See the public engineering repository's `SECURITY.md` for the current public reporting boundary.
 
 ---
 
@@ -312,10 +300,5 @@ Official institutional contact channels are available through the company websit
 
 ---
 
-<p align="center">
-  <strong>Institutional Intelligence. Governed Autonomy.</strong>
-</p>
-
-<p align="center">
-  <sub>© 2026 AETHER X GLOBAL. All rights reserved.</sub>
-</p>
+<p align="center"><strong>Institutional Intelligence. Governed Autonomy.</strong></p>
+<p align="center"><sub>© 2026 AETHER X GLOBAL. All rights reserved.</sub></p>
