@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Apply a strict public-presentation policy to the generated Project Pulse SVG.
 
-The renderer may inspect detailed governed status records. This final publication layer
-reduces next-step wording to allowlisted, public-safe summaries before the SVG is
-validated or committed.
+The renderer may inspect detailed governed status records for selected product/system
+initiatives. This final publication layer reduces next-step wording to allowlisted,
+public-safe summaries and keeps the Research unit at organizational-state level only.
 """
 
 from __future__ import annotations
@@ -73,8 +73,8 @@ def main() -> int:
     )
     svg = replace_next_step(
         svg,
-        "AMII RESEARCH LAB",
-        "No separate next authorized step is asserted by the current governed record.",
+        "AETHER X RESEARCH",
+        "Individual research remains private and governed by evidence, validation, IP and publication controls.",
     )
 
     PATH.write_text(svg, encoding="utf-8")
