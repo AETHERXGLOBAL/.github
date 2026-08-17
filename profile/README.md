@@ -85,23 +85,23 @@ Strategic direction is stated separately from implemented capability. **Research
 
 AETHER X is designed to be evaluated on **evidence rather than presentation**. For investors, strategic partners and institutional reviewers, this public GitHub surface provides a bounded diligence layer that separates what can be inspected directly from what requires controlled diligence or remains unestablished.
 
-### Governed Project-State Evidence
+### Governed Portfolio-State Evidence
 
 <p align="center">
   <img
     src="./assets/aether-x-live-project-pulse.svg"
-    alt="AETHER X Live Project Pulse"
+    alt="AETHER X Live Portfolio Pulse"
     width="100%"
   />
 </p>
 
-The Live Project Pulse publishes selected project-state signals from allowlisted governed sources and a bounded public organizational state for the Research unit without exposing private repository content. It does not infer aggregate completion percentages and does not convert commits, merges, research or design into acceptance or production claims.
+The Live Portfolio Pulse publishes selected initiative-state signals from allowlisted governed sources and a bounded public organizational state for the Research unit without exposing private repository content. It does not infer aggregate completion percentages and does not convert commits, merges, research or design into acceptance or production claims.
 
 | Public diligence signal | Current public evidence |
 |---|---|
 | **Corporate thesis & engineering doctrine** | Publicly stated and directly inspectable in this profile. |
 | **Portfolio maturity & research structure** | Explicitly disclosed by initiative or unit and bounded by current maturity / organizational state. |
-| **Governed project-state publication** | Live Project Pulse: a public output generated from allowlisted governed project sources plus a bounded Research-unit disclosure state. |
+| **Governed portfolio-state publication** | Live Portfolio Pulse: a public output generated from allowlisted governed initiative sources plus a bounded Research-unit disclosure state. |
 | **Public engineering activity** | Engineering Pulse generated from public GitHub organization data. |
 | **Commercial / financial traction** | Not established by this public GitHub profile. |
 | **Production readiness / customer outcomes** | Not implied unless separately evidenced and explicitly disclosed. |
