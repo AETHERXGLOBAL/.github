@@ -94,7 +94,7 @@ The Live Portfolio Pulse publishes selected initiative-state signals from allowl
 | **Corporate thesis & engineering doctrine** | Publicly stated and directly inspectable. |
 | **Portfolio maturity & research structure** | Explicitly disclosed by initiative or unit and bounded by current maturity / organizational state. |
 | **Governed portfolio-state publication** | Live Portfolio Pulse: selected public-safe state signals with explicit source and disclosure boundaries. |
-| **Public technical engineering** | Dedicated public repository with specifications, three machine-readable structural contracts, three bounded reference validators at their stated evidence states, conformance artifacts and public workflows. |
+| **Public technical engineering** | Dedicated public repository with four specifications/references, three machine-readable contracts, three bounded reference validators, two conformance kits, verified CI evidence and a CI-validated vNext snapshot. |
 | **Commercial / financial traction** | Not established by this public GitHub profile. |
 | **Production readiness / customer outcomes** | Not implied unless separately evidenced and explicitly disclosed. |
 
@@ -255,7 +255,7 @@ The repository is the canonical public source for the governed-intelligence tech
 
 - **[AX-PUB-SCHEMA-001 — Governed EAV Contract Schema](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-001_EAV_CONTRACT.schema.json)** — `JSON SCHEMA · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
 - **[AX-PUB-SCHEMA-002 — Point-in-Time Knowledge Envelope](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-002_POINT_IN_TIME_KNOWLEDGE_ENVELOPE.schema.json)** — `JSON SCHEMA · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
-- **[AX-PUB-SCHEMA-003 — Agent Tool-Use Authority Envelope](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-003_AGENT_TOOL_USE_AUTHORITY_ENVELOPE.schema.json)** — `JSON SCHEMA · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
+- **[AX-PUB-SCHEMA-003 — Agent Tool-Use Authority Envelope](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-003_AGENT_TOOL_USE_AUTHORITY_ENVELOPE.schema.json)** — `JSON SCHEMA · CI-VALIDATED · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
 
 `AX-PUB-SCHEMA-003` makes selected agent identity, action proposal, authority context, bounded grant, invocation and tool-result structures machine-readable. It is **not** a production authorization plane or product data model.
 
@@ -263,22 +263,29 @@ The repository is the canonical public source for the governed-intelligence tech
 
 - **[AX-PUB-REF-001 — EAV Contract Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/eav-contract-validator)** — `CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
 - **[AX-PUB-REF-002 — Point-in-Time Knowledge Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/point-in-time-knowledge-validator)** — `CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
-- **[AX-PUB-REF-003 — Agent Tool-Use Authority Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/agent-tool-authority-validator)** — `CI WORKFLOW PUBLISHED · VALIDATION PENDING · EDUCATIONAL / NON-PRODUCTION`
+- **[AX-PUB-REF-003 — Agent Tool-Use Authority Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/agent-tool-authority-validator)** — `CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
 
-`AX-PUB-REF-003` demonstrates selected principal/tool/action/resource/time/environment/parameter authority semantics. A published workflow exists, but successful execution against the published repository state is not claimed until directly verified.
+The `AX-PUB-REF-003` CI evidence is directly recorded in **[AX-PUB-CI-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-001_AGENT_AUTHORITY_VNEXT_VALIDATION.md)**. A validator pass remains bounded to the published reference checks and is not production authorization.
 
 ### Public Conformance Evidence
 
 - **[AX-PUB-TEST-001 — Governed Intelligence Conformance Test Kit](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/conformance/AX-PUB-TEST-001)** — `REPRODUCIBLY VERIFIED · CI RUN UNVERIFIED · NON-PRODUCTION`
-- **[AX-PUB-TEST-002 — Agent Authority Conformance Test Kit](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/conformance/AX-PUB-TEST-002)** — `CI WORKFLOW PUBLISHED · VALIDATION PENDING · NON-PRODUCTION`
+- **[AX-PUB-TEST-002 — Agent Authority Conformance Test Kit](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/conformance/AX-PUB-TEST-002)** — `CI-TESTED · NON-PRODUCTION`
 
-`AX-PUB-TEST-001` has published reproducibility evidence for `15/15` declared synthetic cases plus a passing public/private dependency-boundary check. `AX-PUB-TEST-002` defines `10` synthetic agent-authority cases but remains validation-pending until execution against the published state is directly verified.
+`AX-PUB-TEST-001` has published reproducibility evidence for `15/15` declared synthetic cases plus a passing public/private dependency-boundary check. `AX-PUB-TEST-002` has direct GitHub Actions evidence for its 10 synthetic agent-authority cases and public-only dependency boundary through `AX-PUB-CI-001`.
 
-Current public artifact compatibility is recorded in **`AX-PUB-MANIFEST-001 v1.3`** under **`AX-PUB-POL-001 v1.3`**.
+### Public Governance & Reproducibility
 
-`WORKFLOW PUBLISHED ≠ CI RUN VERIFIED`  
+Current moving public artifact compatibility is recorded in **[AX-PUB-MANIFEST-001 v1.5](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/artifacts/AX-PUB-MANIFEST-001.json)** under **[AX-PUB-POL-001 v1.4](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/COMPATIBILITY_AND_VERSIONING.md)**.
+
+The current fixed review state is **[AX-PUB-SNAP-002 — Governed Intelligence Public vNext](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/snapshots/AX-PUB-SNAP-002_GOVERNED_INTELLIGENCE_PUBLIC_VNEXT.md)** — `COMMIT-ANCHORED · GIT-BLOB-INVENTORIED · SNAPSHOT-CI-VALIDATED · NON-PRODUCT`.
+
+Snapshot and manifest closure evidence is recorded in **[AX-PUB-CI-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-002_VNEXT_SNAPSHOT_VALIDATION.md)**. The final moving manifest state was subsequently verified successfully through the published manifest workflow.
+
+`PUBLIC CI PASS ≠ PRODUCT IMPLEMENTATION`  
 `REFERENCE VALIDATOR PASS ≠ PRODUCTION AUTHORIZATION`  
-`PUBLIC CONFORMANCE ≠ PRODUCT IMPLEMENTATION`
+`PUBLIC CONFORMANCE ≠ PRODUCT IMPLEMENTATION`  
+`PUBLIC SNAPSHOT ≠ PRODUCT RELEASE`
 
 These public artifacts do not establish a shared AETHER X agent runtime, authorization plane, production SDK/API, product adoption, production readiness or technical integration across initiatives.
 
