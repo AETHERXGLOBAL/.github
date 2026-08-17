@@ -41,7 +41,7 @@ A claim should not be promoted because it is persuasive. It should be promoted o
 |---|---|---|
 | **Corporate identity & thesis** | Organization profile, strategic positioning, engineering doctrine and claim boundaries | `PUBLICLY DISCLOSED · INSPECTABLE` |
 | **Portfolio membership, maturity & research structure** | Current portfolio snapshot, initiative maturity labels and the disclosed institutional Research-unit structure | `PUBLICLY DISCLOSED` |
-| **Governed project-state telemetry** | AETHER X Live Project Pulse, generated from allowlisted governed product/system sources plus a bounded Research-unit organizational disclosure | `PUBLICLY INSPECTABLE OUTPUT · PRIVATE SOURCE-BACKED / BOUNDED ORGANIZATIONAL DISCLOSURE` |
+| **Governed portfolio-state telemetry** | AETHER X Live Portfolio Pulse, generated from allowlisted governed product/system sources plus a bounded Research-unit organizational disclosure | `PUBLICLY INSPECTABLE OUTPUT · PRIVATE SOURCE-BACKED / BOUNDED ORGANIZATIONAL DISCLOSURE` |
 | **Public engineering activity** | Engineering Pulse and public GitHub workflow/repository evidence | `PUBLICLY VERIFIABLE` |
 | **Private implementation & research depth** | Core development repositories and the canonical Research repository are private | `NOT PUBLICLY VERIFIABLE HERE` |
 | **Production readiness** | No company-wide production-readiness claim is made by this profile | `NOT ESTABLISHED BY THIS PROFILE` |
@@ -56,21 +56,21 @@ A claim should not be promoted because it is persuasive. It should be promoted o
 - `PUBLICLY DISCLOSED · INSPECTABLE` — the organization has intentionally published the statement or artifact and a reviewer can inspect it directly; this does not convert a self-published statement into independent external verification.
 - `PUBLICLY VERIFIABLE` — the relevant evidence is observable directly in the public GitHub surface or public repository history.
 - `PUBLICLY DISCLOSED` — the status is intentionally disclosed, while supporting private artifacts may remain confidential.
-- `PUBLICLY INSPECTABLE OUTPUT · PRIVATE SOURCE-BACKED / BOUNDED ORGANIZATIONAL DISCLOSURE` — the published output and mechanism can be inspected publicly; selected project states are backed by private governed sources, while the Research card is intentionally limited to an approved organizational-state disclosure rather than private research telemetry.
+- `PUBLICLY INSPECTABLE OUTPUT · PRIVATE SOURCE-BACKED / BOUNDED ORGANIZATIONAL DISCLOSURE` — the published output and mechanism can be inspected publicly; selected initiative states are backed by private governed sources, while the Research card is intentionally limited to an approved organizational-state disclosure rather than private research telemetry.
 - `NOT PUBLICLY VERIFIABLE HERE` — the evidence may be private or outside the public GitHub surface; no public conclusion should be inferred.
 - `NOT PUBLICLY ESTABLISHED` — this GitHub profile does not currently establish the claim.
 - `NOT ASSERTED` — the organization intentionally makes no claim in that category without suitable evidence and authority.
 
 ---
 
-## Governed Project-State Evidence
+## Governed Portfolio-State Evidence
 
-The current public project-state view is the **AETHER X Live Project Pulse**:
+The current public portfolio-state view is the **AETHER X Live Portfolio Pulse**:
 
 <p align="center">
   <img
     src="./assets/aether-x-live-project-pulse.svg"
-    alt="AETHER X Live Project Pulse"
+    alt="AETHER X Live Portfolio Pulse"
     width="100%"
   />
 </p>
@@ -82,7 +82,7 @@ The publication mechanism is intentionally bounded:
 - published fields are condensed and public-safe;
 - private source bodies are not copied into the public repository;
 - the AETHER X Research card discloses only approved organizational state and does not publish private scientific records or unpublished research results;
-- if required project evidence cannot be read or parsed, publication fails closed;
+- if required initiative evidence cannot be read or parsed, publication fails closed;
 - no aggregate completion percentage is inferred without an approved deterministic weighting contract.
 
 The publication semantics remain:
@@ -94,7 +94,7 @@ RESEARCH ≠ PRODUCTION
 DESIGN ≠ IMPLEMENTATION
 ```
 
-See the public methodology record: [AETHER X Live Project Pulse](./PROJECT_PULSE.md).
+See the public methodology record: [AETHER X Live Portfolio Pulse](./PROJECT_PULSE.md).
 
 ---
 
@@ -104,9 +104,9 @@ A public reviewer can reasonably use this GitHub surface as evidence that AETHER
 
 1. a defined corporate thesis around governed intelligence systems;
 2. explicit maturity boundaries across the disclosed system initiatives;
-3. a dedicated institutional Research unit, with AMII presented as a research program within that unit rather than a standalone portfolio initiative;
+3. a dedicated institutional Research unit with a separate research-governance and disclosure boundary;
 4. public claim-integrity rules that distinguish research, design, implementation and production;
-5. a governed public project-state publication mechanism backed by allowlisted private sources for selected product/system initiatives;
+5. a governed public portfolio-state publication mechanism backed by allowlisted private sources for selected product/system initiatives;
 6. public engineering automation and disclosure controls around that publication mechanism.
 
 These are **evidence of public disclosure discipline and engineering control design**.
@@ -207,9 +207,9 @@ The objective is **credible evidence without unnecessary information exposure**.
 ## Current Public Sources
 
 - [AETHER X GLOBAL organization profile](./README.md)
-- [AETHER X Live Project Pulse methodology](./PROJECT_PULSE.md)
-- [AETHER X Live Project Pulse](./assets/aether-x-live-project-pulse.svg)
-- [Project Pulse publication workflow](../.github/workflows/update-project-pulse.yml)
+- [AETHER X Live Portfolio Pulse methodology](./PROJECT_PULSE.md)
+- [AETHER X Live Portfolio Pulse](./assets/aether-x-live-project-pulse.svg)
+- [Portfolio Pulse publication workflow](../.github/workflows/update-project-pulse.yml)
 - [Engineering Pulse publication workflow](../.github/workflows/update-engineering-pulse.yml)
 
 ---
