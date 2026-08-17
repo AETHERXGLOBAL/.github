@@ -42,10 +42,10 @@ A claim should not be promoted because it is persuasive. It should be promoted o
 | **Corporate identity & thesis** | Organization profile, strategic positioning, engineering doctrine and claim boundaries | `PUBLICLY DISCLOSED · INSPECTABLE` |
 | **Portfolio membership, maturity & research structure** | Current portfolio snapshot, initiative maturity labels and the disclosed institutional Research-unit structure | `PUBLICLY DISCLOSED` |
 | **Governed portfolio-state telemetry** | AETHER X Live Portfolio Pulse, generated from allowlisted governed product/system sources plus a bounded Research-unit organizational disclosure | `PUBLICLY INSPECTABLE OUTPUT · PRIVATE SOURCE-BACKED / BOUNDED ORGANIZATIONAL DISCLOSURE` |
-| **Canonical public engineering repository** | `AETHERXGLOBAL/aether-x-governed-intelligence`: reference architecture, control specifications, point-in-time knowledge standard, machine-readable contract and executable reference implementation | `PUBLICLY INSPECTABLE · CONTROLLED DISCLOSURE` |
+| **Canonical public engineering repository** | `AETHERXGLOBAL/aether-x-governed-intelligence`: reference architecture, control specifications, point-in-time knowledge standard, machine-readable contracts and executable reference implementations | `PUBLICLY INSPECTABLE · CONTROLLED DISCLOSURE` |
 | **Public technical architecture & control specifications** | `AX-PUB-ARCH-001`, `AX-PUB-SPEC-002` and `AX-PUB-SPEC-003` | `PUBLICLY INSPECTABLE · CONCEPTUAL / NON-PRODUCT-SPECIFIC` |
-| **Public machine-readable contract** | `AX-PUB-SCHEMA-001` Governed EAV Contract Schema and public schema-alignment workflow | `PUBLICLY INSPECTABLE · MACHINE-READABLE · CONCEPTUAL / NON-PRODUCT-SPECIFIC` |
-| **Public executable reference implementation** | `AX-PUB-REF-001` EAV Contract Validator, examples, unit tests and public validation workflow | `PUBLICLY INSPECTABLE · CI-TESTED · EDUCATIONAL / NON-PRODUCTION` |
+| **Public machine-readable contracts** | `AX-PUB-SCHEMA-001` Governed EAV Contract Schema and `AX-PUB-SCHEMA-002` Point-in-Time Knowledge Envelope with public schema-alignment workflows | `PUBLICLY INSPECTABLE · MACHINE-READABLE · CONCEPTUAL / NON-PRODUCT-SPECIFIC` |
+| **Public executable reference implementations** | `AX-PUB-REF-001` EAV Contract Validator and `AX-PUB-REF-002` Point-in-Time Knowledge Validator, with examples, unit tests and public CI | `PUBLICLY INSPECTABLE · CI-TESTED · EDUCATIONAL / NON-PRODUCTION` |
 | **Public engineering activity** | Engineering Pulse and public GitHub repository/workflow evidence | `PUBLICLY VERIFIABLE` |
 | **Private implementation & research depth** | Core development repositories and the canonical Research repository are private | `NOT PUBLICLY VERIFIABLE HERE` |
 | **Production readiness** | No company-wide production-readiness claim is made by this profile | `NOT ESTABLISHED BY THIS PROFILE` |
@@ -63,7 +63,7 @@ A claim should not be promoted because it is persuasive. It should be promoted o
 - `PUBLICLY INSPECTABLE · CONTROLLED DISCLOSURE` — an intentionally public repository or artifact is inspectable directly while remaining bounded by explicit claim, security and intellectual-property limits.
 - `PUBLICLY INSPECTABLE · CONCEPTUAL / NON-PRODUCT-SPECIFIC` — a technical reference or specification is intentionally public and can be inspected directly, while remaining a conceptual engineering artifact rather than evidence of full product implementation.
 - `PUBLICLY INSPECTABLE · MACHINE-READABLE · CONCEPTUAL / NON-PRODUCT-SPECIFIC` — a structural contract is published in machine-readable form and its repository alignment checks are inspectable; this does not establish a production API, product data model, authorization system or integration contract.
-- `PUBLICLY INSPECTABLE · CI-TESTED · EDUCATIONAL / NON-PRODUCTION` — executable reference code, examples and tests are public and a GitHub Actions workflow has successfully exercised the defined checks; this does not establish production fitness, security certification or product integration.
+- `PUBLICLY INSPECTABLE · CI-TESTED · EDUCATIONAL / NON-PRODUCTION` — executable reference code, examples and tests are public and GitHub Actions workflows have successfully exercised the defined checks; this does not establish production fitness, security certification, production data quality or product integration.
 - `PUBLICLY INSPECTABLE OUTPUT · PRIVATE SOURCE-BACKED / BOUNDED ORGANIZATIONAL DISCLOSURE` — the published output and mechanism can be inspected publicly; selected initiative states are backed by private governed sources, while the Research card is intentionally limited to an approved organizational-state disclosure rather than private research telemetry.
 - `NOT PUBLICLY VERIFIABLE HERE` — the evidence may be private or outside the public GitHub surface; no public conclusion should be inferred.
 - `NOT PUBLICLY ESTABLISHED` — this GitHub profile does not currently establish the claim.
@@ -118,19 +118,27 @@ AETHER X currently publishes the following non-product-specific engineering refe
 - **[AX-PUB-SPEC-002 — Evidence, Authority & Verification Contract](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-002_EVIDENCE_AUTHORITY_VERIFICATION_CONTRACT.md)** — defines reference control objects, integrity invariants and state-transition boundaries connecting evidence to verified outcomes.
 - **[AX-PUB-SPEC-003 — Point-in-Time Knowledge & Provenance Standard](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-003_POINT_IN_TIME_KNOWLEDGE_PROVENANCE_STANDARD.md)** — defines reference temporal, provenance, revision, lineage and reproducibility controls for knowledge used in consequential intelligence workflows.
 
-AETHER X also publishes a machine-readable companion:
+AETHER X also publishes two machine-readable companions:
 
-- **[AX-PUB-SCHEMA-001 — Governed EAV Contract Schema](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-001_EAV_CONTRACT.schema.json)** — expresses selected EAV control-object structure, required fields, types, selected enums and timestamp formats using the JSON Schema Draft 2020-12 dialect.
+- **[AX-PUB-SCHEMA-001 — Governed EAV Contract Schema](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-001_EAV_CONTRACT.schema.json)** — expresses selected EAV control-object structure, required fields, types, selected enums and timestamp formats.
+- **[AX-PUB-SCHEMA-002 — Point-in-Time Knowledge Envelope](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-002_POINT_IN_TIME_KNOWLEDGE_ENVELOPE.schema.json)** — expresses selected query-context, source, transformation, knowledge-assertion, revision, freshness, missing-state and temporal metadata from `AX-PUB-SPEC-003`.
 
-Its schema-alignment workflow is directly inspectable: **[Validate EAV Machine-Readable Contract](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-eav-schema.yml)**. The check parses the schema and examples and verifies deterministic alignment between the schema metadata, selected enum contracts, reference examples and executable validator.
+The schema-alignment workflows are directly inspectable:
 
-AETHER X also publishes one executable companion:
+- **[Validate EAV Machine-Readable Contract](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-eav-schema.yml)**
+- **[Validate Point-in-Time Knowledge Contract](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-ptk-schema.yml)**
+
+AETHER X also publishes two executable reference companions:
 
 - **[AX-PUB-REF-001 — EAV Contract Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/eav-contract-validator)** — a standard-library Python reference implementation of selected `AX-PUB-SPEC-002` invariants, with conforming and intentionally invalid examples, unit tests and public CI validation.
+- **[AX-PUB-REF-002 — Point-in-Time Knowledge Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/point-in-time-knowledge-validator)** — a standard-library Python reference implementation of selected `AX-PUB-SPEC-003` invariants including no-future-leakage relative to a declared knowledge cutoff, source/lineage references, revision/supersession checks, explicit missing states and reproducibility-cutoff consistency.
 
-Its validation workflow is directly inspectable in the canonical repository: **[Validate EAV Reference Implementation](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-eav-reference.yml)**.
+Their validation workflows are directly inspectable:
 
-These artifacts are evidence of **published engineering doctrine, temporal data-integrity design, control-system design, machine-readable reference contract design and a bounded executable reference implementation**. The specifications and schema remain conceptual and non-product-specific. The reference validator is educational / non-production. None of these artifacts establishes complete product implementation, production-scale financial-data infrastructure, a production API or SDK, secure authorization enforcement, shared runtime or technical integration across AETHER X initiatives.
+- **[Validate EAV Reference Implementation](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-eav-reference.yml)**
+- **[Validate Point-in-Time Knowledge Reference Implementation](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-ptk-reference.yml)**
+
+These artifacts are evidence of **published engineering doctrine, temporal data-integrity design, control-system design, machine-readable reference contract design and bounded executable reference implementations**. The specifications and schemas remain conceptual and non-product-specific. The reference validators are educational / non-production. None of these artifacts establishes complete product implementation, production-scale financial-data infrastructure, a production API or SDK, secure authorization enforcement, production data-quality guarantees, shared runtime or technical integration across AETHER X initiatives.
 
 ---
 
@@ -145,12 +153,12 @@ A public reviewer can reasonably use this GitHub surface as evidence that AETHER
 5. a governed public portfolio-state publication mechanism backed by allowlisted private sources for selected product/system initiatives;
 6. public engineering automation and disclosure controls around that publication mechanism;
 7. a dedicated canonical public engineering repository containing technology-neutral architecture and specifications covering governed control semantics and point-in-time knowledge / provenance integrity;
-8. a machine-readable structural contract for selected EAV control objects with public alignment CI;
-9. a CI-tested, non-production public reference implementation demonstrating selected evidence / authority / verification invariants in executable code.
+8. machine-readable structural contracts for selected EAV and point-in-time knowledge / provenance objects with public alignment CI;
+9. CI-tested, non-production public reference implementations demonstrating selected EAV and point-in-time temporal / provenance invariants in executable code.
 
 These are **evidence of public disclosure discipline, engineering doctrine, control design, machine-readable contract design and inspectable reference engineering**.
 
-They are not, by themselves, independent verification of private implementation depth, scientific validity, commercial success, production scale, security certification or investment returns.
+They are not, by themselves, independent verification of private implementation depth, scientific validity, commercial success, production scale, production data quality, security certification or investment returns.
 
 ---
 
@@ -251,9 +259,13 @@ The objective is **credible evidence without unnecessary information exposure**.
 - [AX-PUB-SPEC-002 — Evidence, Authority & Verification Contract](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-002_EVIDENCE_AUTHORITY_VERIFICATION_CONTRACT.md)
 - [AX-PUB-SPEC-003 — Point-in-Time Knowledge & Provenance Standard](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-003_POINT_IN_TIME_KNOWLEDGE_PROVENANCE_STANDARD.md)
 - [AX-PUB-SCHEMA-001 — Governed EAV Contract Schema](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-001_EAV_CONTRACT.schema.json)
-- [EAV machine-readable contract validation workflow](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-eav-schema.yml)
+- [AX-PUB-SCHEMA-002 — Point-in-Time Knowledge Envelope](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-002_POINT_IN_TIME_KNOWLEDGE_ENVELOPE.schema.json)
 - [AX-PUB-REF-001 — EAV Contract Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/eav-contract-validator)
+- [AX-PUB-REF-002 — Point-in-Time Knowledge Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/point-in-time-knowledge-validator)
+- [EAV machine-readable contract validation workflow](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-eav-schema.yml)
+- [Point-in-time schema validation workflow](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-ptk-schema.yml)
 - [EAV reference validation workflow](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-eav-reference.yml)
+- [Point-in-time reference validation workflow](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/.github/workflows/validate-ptk-reference.yml)
 - [AETHER X Live Portfolio Pulse methodology](./PROJECT_PULSE.md)
 - [AETHER X Live Portfolio Pulse](./assets/aether-x-live-project-pulse.svg)
 - [Portfolio Pulse publication workflow](../.github/workflows/update-project-pulse.yml)
