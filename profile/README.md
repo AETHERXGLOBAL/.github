@@ -73,11 +73,11 @@ Our current operating portfolio includes **three governed intelligence system in
 | **AETHER Intelligence Core (AIC)** | `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION` | Strategic company infrastructure initiative intended to become a durable, high-integrity global financial-information asset, designed to provide point-in-time accuracy, provenance and reusable intelligence foundations for AETHER X platforms and AI systems. |
 | **AETHER X Research** | `INSTITUTIONAL RESEARCH UNIT · ACTIVE` | Dedicated institutional research unit conducting evidence-governed research across data, financial and quantitative intelligence, and artificial intelligence, supporting AETHER X through rigorous investigation, experimentation, validation and reproducible knowledge development. |
 
-Quantum does not promise or guarantee investment outcomes. AIC implementation has not started under the current baseline and remains gated. **AMII is no longer presented as a standalone portfolio initiative; it is a research program within AETHER X Research.** This organizational consolidation does not establish empirical AMII validity, predictive performance, profitability, production readiness or authorized integration with AETHER X Quantum.
+Each AETHER X initiative is presented according to its **current verified maturity, authority boundary and public-disclosure state**. AETHER X Quantum is under active development and is not represented as providing guaranteed investment outcomes. AETHER Intelligence Core (AIC) remains at the **approved-architecture / pre-implementation** stage; its strategic role is defined, while implementation remains governed and gated. AETHER X Research operates as the company’s institutional research unit, with research activities remaining subject to evidence, validation, intellectual-property and publication controls.
 
-**Public access:** Current core development repositories and the canonical research repository are private. Public GitHub materials represent intentionally released engineering and institutional material only; any future public release of research or implementation detail remains subject to explicit review and approval.
+**Public access:** Core development and research repositories remain private. Public GitHub materials consist only of intentionally released corporate, engineering and evidence artifacts. Any future disclosure of implementation details, research results or technical material requires explicit review and approval.
 
-These initiatives and units are intentionally described by their **current maturity or organizational state**, not by future ambition.
+Strategic direction is stated separately from implemented capability. **Research does not imply production readiness, architecture does not imply implementation, and development status does not imply commercial or operational readiness.**
 
 ---
 
