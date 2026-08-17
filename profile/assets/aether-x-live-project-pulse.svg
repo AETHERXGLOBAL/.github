@@ -27,7 +27,7 @@
 <text x="70" y="122" class="title">LIVE PROJECT PULSE</text>
 <text x="70" y="154" class="subtitle">Selected live project telemetry · governed sources · bounded Research-unit disclosure</text>
 <text x="1530" y="72" text-anchor="end" class="footerGold">AUTO-REFRESH · PUBLIC-SAFE</text>
-<text x="1530" y="100" text-anchor="end" class="footer">Last published state update: 2026-08-17 19:43 UTC</text>
+<text x="1530" y="100" text-anchor="end" class="footer">Last published state update: 2026-08-17 19:54 UTC</text>
 <line x1="70" y1="184" x2="1530" y2="184" stroke="#9D753C" stroke-opacity=".7"/>
 
   <g transform="translate(70 210)">
@@ -91,13 +91,13 @@
     <rect width="700" height="390" rx="24" fill="url(#panel)" stroke="#8B5CA8" stroke-width="1.6"/>
     <rect x="30" y="28" width="112" height="3" rx="1.5" fill="#8B5CA8"/>
     <text x="34" y="76" class="cardTitle">AETHER X RESEARCH</text>
-    <text x="34" y="106" class="domain">RESEARCH &amp; DECISION INTEGRITY</text>
+    <text x="34" y="106" class="domain">DATA · FINANCIAL · AI RESEARCH</text>
     <rect x="34" y="128" width="632" height="58" rx="11" fill="#25192E" stroke="#8B5CA8" stroke-opacity=".75"/>
     <text x="52" y="155" class="phase">INSTITUTIONAL RESEARCH UNIT · ACTIVE</text>
 
-    <text x="34" y="222" class="label">VERIFIED SIGNAL</text>
-    <text x="34" y="247" class="body">Dedicated company Research unit established; AMII is managed as a research program within</text>
-<text x="34" y="269" class="body">the governed research lifecycle.</text>
+    <text x="34" y="222" class="label">ORGANIZATIONAL STATE</text>
+    <text x="34" y="247" class="body">Dedicated institutional research unit spanning data, financial and quantitative</text>
+<text x="34" y="269" class="body">intelligence, and artificial intelligence.</text>
 
     <text x="34" y="304" class="label">NEXT AUTHORIZED / GOVERNED STEP</text>
     <text x="34" y="329" class="body">Individual research remains private and governed by evidence, validation, IP and publication controls.</text>
