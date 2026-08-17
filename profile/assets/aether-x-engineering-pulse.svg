@@ -21,14 +21,14 @@
   <text x="80" y="108" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">AETHER X • LIVE GITHUB ACTIVITY</text>
   <text x="80" y="140" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">Professional pull-request telemetry generated directly from public GitHub organization data.</text>
   <text x="1520" y="92" text-anchor="end" fill="#DEB459" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800">PUBLIC-ONLY • AUTO-REFRESH</text>
-  <text x="1520" y="120" text-anchor="end" fill="#6F7D89" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Latest PR activity: 2026-08-17 22:57 UTC</text>
+  <text x="1520" y="120" text-anchor="end" fill="#6F7D89" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Latest PR activity: 2026-08-17 23:11 UTC</text>
 
   
   <g transform="translate(80 178)">
     <rect width="330" height="142" rx="20" fill="#0F1726" stroke="#243247" stroke-width="1.5"/>
     <rect width="5" height="142" rx="2.5" fill="#DEB459"/>
     <text x="27" y="35" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.1">PUBLIC PULL REQUESTS</text>
-    <text x="27" y="85" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">9</text>
+    <text x="27" y="85" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">12</text>
     <text x="27" y="116" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">All-time public PR records</text>
   </g>
   <g transform="translate(430 178)">
@@ -36,7 +36,7 @@
     <rect width="5" height="142" rx="2.5" fill="#8B5CF6"/>
     <text x="27" y="35" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.1">MERGED</text>
     <text x="27" y="85" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">8</text>
-    <text x="27" y="116" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">88.9% of public PRs</text>
+    <text x="27" y="116" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">66.7% of public PRs</text>
   </g>
   <g transform="translate(780 178)">
     <rect width="330" height="142" rx="20" fill="#0F1726" stroke="#243247" stroke-width="1.5"/>
@@ -71,8 +71,8 @@
   <rect x="390" y="504" width="620" height="26" rx="7" fill="#111C2C"/>
   <rect x="390" y="504" width="0.00" height="26" rx="7" fill="#2EA043"/>
   <rect x="390.00" y="504" width="0.00" height="26" fill="#8B5CF6"/>
-  <rect x="390.00" y="504" width="77.50" height="26" rx="7" fill="#F85149"/>
-  <text x="1032" y="522" text-anchor="end" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700">1</text>
+  <rect x="390.00" y="504" width="310.00" height="26" rx="7" fill="#F85149"/>
+  <text x="1032" y="522" text-anchor="end" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700">4</text>
   
   <g transform="translate(1100 350)">
     <rect width="420" height="410" rx="22" fill="#0D1522" stroke="#243247" stroke-width="1.5"/>
@@ -80,15 +80,15 @@
     <text x="28" y="69" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Live public GitHub telemetry</text>
   </g>
   <circle cx="1270" cy="493" r="68" fill="none" stroke="#162235" stroke-width="24"/>
-  <circle cx="1270" cy="493" r="68" fill="none" stroke="#8B5CF6" stroke-width="24" stroke-dasharray="379.78 47.47" stroke-dashoffset="-0.00" transform="rotate(-90 1270 493)"/><circle cx="1270" cy="493" r="68" fill="none" stroke="#F85149" stroke-width="24" stroke-dasharray="47.47 379.78" stroke-dashoffset="-379.78" transform="rotate(-90 1270 493)"/>
-  <text x="1270" y="489" text-anchor="middle" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="30" font-weight="800">9</text>
+  <circle cx="1270" cy="493" r="68" fill="none" stroke="#8B5CF6" stroke-width="24" stroke-dasharray="284.84 142.42" stroke-dashoffset="-0.00" transform="rotate(-90 1270 493)"/><circle cx="1270" cy="493" r="68" fill="none" stroke="#F85149" stroke-width="24" stroke-dasharray="142.42 284.84" stroke-dashoffset="-284.84" transform="rotate(-90 1270 493)"/>
+  <text x="1270" y="489" text-anchor="middle" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="30" font-weight="800">12</text>
   <text x="1270" y="514" text-anchor="middle" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">PUBLIC PRs</text>
 
   <text x="1392" y="445" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">MERGE RATE</text>
-  <text x="1392" y="474" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">88.9%</text>
+  <text x="1392" y="474" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">66.7%</text>
 
   <text x="1130" y="602" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">RECENT ACTIVITY / 90D</text>
-  <text x="1130" y="632" fill="#3E8BFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">9 PRs</text>
+  <text x="1130" y="632" fill="#3E8BFF" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">12 PRs</text>
 
   <text x="1130" y="682" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">TOP PUBLIC REPOSITORY</text>
   <text x="1130" y="710" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">.github</text>
