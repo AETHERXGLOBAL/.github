@@ -247,8 +247,9 @@ AETHER X publishes selected technical references, specifications and tools only 
 ### Public Technical References
 
 - **[AX-PUB-ARCH-001 — Governed Intelligence Reference Architecture](../public-specs/AX-PUB-ARCH-001_GOVERNED_INTELLIGENCE_REFERENCE_ARCHITECTURE.md)** — `PUBLIC TECHNICAL REFERENCE · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
+- **[AX-PUB-SPEC-002 — Evidence, Authority & Verification Contract](../public-specs/AX-PUB-SPEC-002_EVIDENCE_AUTHORITY_VERIFICATION_CONTRACT.md)** — `PUBLIC TECHNICAL SPECIFICATION · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
 
-This reference architecture describes the company-level governed-intelligence control pattern around **evidence, reasoning, decision, authority, controlled execution, verification and institutional learning**. It is technology-neutral and does not assert shared implementation or technical integration across AETHER X initiatives.
+Together, these references define the public **architecture and control semantics** behind AETHER X's governed-intelligence doctrine: evidence remains traceable, recommendations remain distinct from decisions, authority remains bounded, execution remains controlled, and acceptance requires verification. They are technology-neutral and do not assert shared implementation or technical integration across AETHER X initiatives.
 
 Public repositories and artifacts represent intentionally released engineering work. Proprietary platforms, confidential architecture, credentials, internal security controls, private customer information and unpublished intellectual property remain private.
 
