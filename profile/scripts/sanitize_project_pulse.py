@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Apply a strict public-presentation policy to the generated Project Pulse SVG.
+"""Apply a strict public-presentation policy to the generated Portfolio Pulse SVG.
 
 The renderer may inspect detailed governed status records for selected product/system
 initiatives. This final publication layer reduces next-step wording to allowlisted,
@@ -76,6 +76,15 @@ def refine_research_card(svg: str) -> str:
 def main() -> int:
     svg = PATH.read_text(encoding="utf-8")
 
+    # Public naming: the surface spans system initiatives plus the institutional
+    # Research unit, so Portfolio Pulse is the accurate public label.
+    svg = svg.replace("AETHER X Live Project Pulse", "AETHER X Live Portfolio Pulse")
+    svg = svg.replace(">LIVE PROJECT PULSE<", ">LIVE PORTFOLIO PULSE<")
+    svg = svg.replace(
+        "Selected live project telemetry · governed sources · bounded Research-unit disclosure",
+        "Selected live portfolio telemetry · governed sources · bounded Research-unit disclosure",
+    )
+
     # This timestamp is the time of the last state that was actually published,
     # not proof that every scheduled poll produced a new public state.
     svg = svg.replace("Last verified refresh:", "Last published state update:")
@@ -114,7 +123,7 @@ def main() -> int:
     )
 
     PATH.write_text(svg, encoding="utf-8")
-    print("PROJECT_PULSE_PUBLIC_SANITIZE_PASS")
+    print("PORTFOLIO_PULSE_PUBLIC_SANITIZE_PASS")
     return 0
 
 
