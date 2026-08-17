@@ -15,9 +15,13 @@ PATH = Path("profile/assets/aether-x-live-project-pulse.svg")
 CARD_PATTERN = re.compile(r'<g transform="translate\([^\"]+\)">[\s\S]*?</g>')
 
 
-def replace_next_step(svg: str, project: str, summary: str) -> str:
+def card_match(svg: str, project: str):
     marker = f'class="cardTitle">{project}</text>'
-    match = next((item for item in CARD_PATTERN.finditer(svg) if marker in item.group(0)), None)
+    return next((item for item in CARD_PATTERN.finditer(svg) if marker in item.group(0)), None)
+
+
+def replace_next_step(svg: str, project: str, summary: str) -> str:
+    match = card_match(svg, project)
     if not match:
         raise RuntimeError(f"Card not found for public sanitization: {project}")
 
@@ -36,6 +40,37 @@ def replace_next_step(svg: str, project: str, summary: str) -> str:
     if count != 1:
         raise RuntimeError(f"Next-step section not found for public sanitization: {project}")
     return svg[: match.start()] + new_block + svg[match.end() :]
+
+
+def refine_research_card(svg: str) -> str:
+    project = "AETHER X RESEARCH"
+    match = card_match(svg, project)
+    if not match:
+        raise RuntimeError("Research card not found for public identity refinement")
+
+    block = match.group(0)
+    block = block.replace(
+        '<text x="34" y="106" class="domain">RESEARCH &amp; DECISION INTEGRITY</text>',
+        '<text x="34" y="106" class="domain">DATA · FINANCIAL · AI RESEARCH</text>',
+    )
+    block = block.replace(
+        '<text x="34" y="222" class="label">VERIFIED SIGNAL</text>',
+        '<text x="34" y="222" class="label">ORGANIZATIONAL STATE</text>',
+    )
+    signal_pattern = re.compile(
+        r'(<text x="34" y="222" class="label">ORGANIZATIONAL STATE</text>\s*)'
+        r'[\s\S]*?'
+        r'(\s*<text x="34" y="304" class="label">NEXT AUTHORIZED / GOVERNED STEP</text>)'
+    )
+    signal = (
+        '<text x="34" y="247" class="body">Dedicated institutional research unit spanning data, financial and quantitative</text>\n'
+        '<text x="34" y="269" class="body">intelligence, and artificial intelligence.</text>'
+    )
+    block, count = signal_pattern.subn(r'\1' + signal + r'\2', block, count=1)
+    if count != 1:
+        raise RuntimeError("Research organizational-state section not found")
+
+    return svg[: match.start()] + block + svg[match.end() :]
 
 
 def main() -> int:
@@ -71,6 +106,7 @@ def main() -> int:
             else "The next authorized pre-implementation step is recorded in the current state."
         ),
     )
+    svg = refine_research_card(svg)
     svg = replace_next_step(
         svg,
         "AETHER X RESEARCH",
