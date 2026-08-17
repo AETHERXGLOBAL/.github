@@ -66,14 +66,18 @@ jobs:
               r"Bearer\s+[A-Za-z0-9_.-]+",
               r"Do not start T\d+",
               r"Last verified refresh:",
+              r"AMII RESEARCH LAB",
+              r"amii-research-lab",
           ]
           for pattern in forbidden:
-              if re.search(pattern, text):
+              if re.search(pattern, text, re.IGNORECASE):
                   raise SystemExit(f"PUBLIC_OUTPUT_POLICY_FAIL: forbidden pattern {pattern}")
           required = [
               "Last published state update:",
-              "COMMIT ≠ PROGRESS",
+              "AETHER X RESEARCH",
+              "INSTITUTIONAL RESEARCH UNIT · ACTIVE",
               "RESEARCH ≠ PRODUCTION",
+              "PUBLIC DISCLOSURE REQUIRES APPROVAL",
           ]
           for value in required:
               if value not in text:
@@ -107,7 +111,6 @@ jobs:
                   "Last published state update: <normalized>",
                   value,
               )
-              # One-time compatibility with the pre-refinement asset.
               value = re.sub(
                   r"Last verified refresh:\s*[^<]+",
                   "Last published state update: <normalized>",
