@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
 <title id="title">AETHER X Live Project Pulse</title>
-<desc id="desc">Automatically refreshed, public-safe project-state telemetry derived from governed private AETHER X project status sources. No completion percentages are inferred.</desc>
+<desc id="desc">Automatically refreshed, public-safe project-state telemetry for selected AETHER X system initiatives plus a bounded public organizational-state disclosure for the Research unit. No completion percentages are inferred.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#010D1D"/><stop offset="0.55" stop-color="#071426"/><stop offset="1" stop-color="#0B1A2C"/></linearGradient>
   <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101B2B"/><stop offset="1" stop-color="#0B1524"/></linearGradient>
@@ -25,9 +25,9 @@
 <rect x="24" y="24" width="1552" height="1052" rx="24" fill="none" stroke="#243247" stroke-width="1.5"/>
 <text x="70" y="70" class="brand">AETHER X GLOBAL</text>
 <text x="70" y="122" class="title">LIVE PROJECT PULSE</text>
-<text x="70" y="154" class="subtitle">Verified execution telemetry · governed sources · no inferred completion percentages</text>
+<text x="70" y="154" class="subtitle">Selected live project telemetry · governed sources · bounded Research-unit disclosure</text>
 <text x="1530" y="72" text-anchor="end" class="footerGold">AUTO-REFRESH · PUBLIC-SAFE</text>
-<text x="1530" y="100" text-anchor="end" class="footer">Last published state update: 2026-08-16 20:10 UTC</text>
+<text x="1530" y="100" text-anchor="end" class="footer">Last published state update: 2026-08-17 19:43 UTC</text>
 <line x1="70" y1="184" x2="1530" y2="184" stroke="#9D753C" stroke-opacity=".7"/>
 
   <g transform="translate(70 210)">
@@ -90,20 +90,21 @@
   <g transform="translate(830 630)">
     <rect width="700" height="390" rx="24" fill="url(#panel)" stroke="#8B5CA8" stroke-width="1.6"/>
     <rect x="30" y="28" width="112" height="3" rx="1.5" fill="#8B5CA8"/>
-    <text x="34" y="76" class="cardTitle">AMII RESEARCH LAB</text>
-    <text x="34" y="106" class="domain">QUANTITATIVE MARKET RESEARCH</text>
+    <text x="34" y="76" class="cardTitle">AETHER X RESEARCH</text>
+    <text x="34" y="106" class="domain">RESEARCH &amp; DECISION INTEGRITY</text>
     <rect x="34" y="128" width="632" height="58" rx="11" fill="#25192E" stroke="#8B5CA8" stroke-opacity=".75"/>
-    <text x="52" y="155" class="phase">RESEARCH · CURRENT RESEARCH PHASE</text>
+    <text x="52" y="155" class="phase">INSTITUTIONAL RESEARCH UNIT · ACTIVE</text>
 
     <text x="34" y="222" class="label">VERIFIED SIGNAL</text>
-    <text x="34" y="247" class="body">Latest governed acceptance record is established for the current research phase.</text>
+    <text x="34" y="247" class="body">Dedicated company Research unit established; AMII is managed as a research program within</text>
+<text x="34" y="269" class="body">the governed research lifecycle.</text>
 
     <text x="34" y="304" class="label">NEXT AUTHORIZED / GOVERNED STEP</text>
-    <text x="34" y="329" class="body">No separate next authorized step is asserted by the current governed record.</text>
+    <text x="34" y="329" class="body">Individual research remains private and governed by evidence, validation, IP and publication controls.</text>
 
     <line x1="34" y1="365" x2="666" y2="365" stroke="#26364b"/>
-    <text x="34" y="383" class="source">AMII_RECOVERY_ACCEPTANCE_2026-08-14.md · latest acceptance record</text>
-    <text x="666" y="383" class="boundaryEnd">No empirical validity, predictive performance, profitability, production readiness or Quantum…</text>
+    <text x="34" y="383" class="source">AETHER X public organizational state</text>
+    <text x="666" y="383" class="boundaryEnd">RESEARCH ≠ PRODUCTION · PUBLIC DISCLOSURE REQUIRES APPROVAL</text>
   </g>
 <rect x="70" y="1040" width="1460" height="38" rx="12" fill="#0A1422" stroke="#243247"/>
 <text x="95" y="1064" class="footerGold">PROGRESS SIGNAL = GOVERNED STATE CHANGE / ACCEPTED MILESTONE</text>
