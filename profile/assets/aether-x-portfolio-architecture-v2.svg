@@ -110,7 +110,7 @@
 <rect x="920" y="575" width="610" height="215" rx="26" fill="url(#panel)" stroke="#b18d4c" stroke-width="1.8"/>
 <rect x="950" y="605" width="135" height="3" fill="url(#gold)"/>
 <text x="960" y="655" class="cardTitle">AETHER X RESEARCH</text>
-<text x="960" y="696" class="domain">RESEARCH &amp; DECISION INTEGRITY</text>
+<text x="960" y="696" class="domain">DATA · FINANCIAL · AI RESEARCH</text>
 <rect x="960" y="725" width="355" height="40" rx="10" fill="#2a1c35" stroke="#80519b"/>
 <text x="1137.5" y="751" text-anchor="middle" class="pillPurple">INSTITUTIONAL RESEARCH UNIT · ACTIVE</text>
 </svg>
