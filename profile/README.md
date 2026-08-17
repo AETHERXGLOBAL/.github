@@ -102,7 +102,7 @@ The Live Portfolio Pulse publishes selected initiative-state signals from allowl
 | **Corporate thesis & engineering doctrine** | Publicly stated and directly inspectable in this profile. |
 | **Portfolio maturity & research structure** | Explicitly disclosed by initiative or unit and bounded by current maturity / organizational state. |
 | **Governed portfolio-state publication** | Live Portfolio Pulse: a public output generated from allowlisted governed initiative sources plus a bounded Research-unit disclosure state. |
-| **Public technical engineering** | Dedicated public engineering repository with inspectable specifications, machine-readable contracts, reference implementations and public CI. |
+| **Public technical engineering** | Dedicated public engineering repository with inspectable specifications, machine-readable contracts, reference implementations, bounded conformance evidence and public workflows. |
 | **Commercial / financial traction** | Not established by this public GitHub profile. |
 | **Production readiness / customer outcomes** | Not implied unless separately evidenced and explicitly disclosed. |
 
@@ -206,6 +206,7 @@ We care about verified outcomes, reliability, risk, rework and cost — not mode
 ## Operating Principles
 
 `CAPABILITY ≠ AUTHORITY`  
+`TOOL AVAILABILITY ≠ TOOL PERMISSION`  
 `OUTPUT ≠ FACT`  
 `RECOMMENDATION ≠ DECISION`  
 `EXECUTION COMPLETE ≠ VERIFIED`  
@@ -242,22 +243,25 @@ The dashboard is generated from **public GitHub organization data only**. Privat
 
 ## Public Engineering
 
-AETHER X publishes selected technical references, specifications, machine-readable contracts and reference implementations only after appropriate technical, security, intellectual-property and public-disclosure review.
+AETHER X publishes selected technical references, specifications, machine-readable contracts, bounded conformance artifacts and reference implementations only after appropriate technical, security, intellectual-property and public-disclosure review.
 
 ### Canonical Public Engineering Repository
 
 **[AETHER X Governed Intelligence →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**  
 `PUBLIC ENGINEERING REPOSITORY · CONTROLLED DISCLOSURE`
 
-The repository is the canonical public source for the current governed-intelligence technical series, machine-readable contracts and executable reference implementations.
+The repository is the canonical public source for the current governed-intelligence technical series, machine-readable contracts, conformance evidence and executable reference implementations.
 
 ### Public Technical References
 
 - **[AX-PUB-ARCH-001 — Governed Intelligence Reference Architecture](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-ARCH-001_GOVERNED_INTELLIGENCE_REFERENCE_ARCHITECTURE.md)** — `PUBLIC TECHNICAL REFERENCE · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
 - **[AX-PUB-SPEC-002 — Evidence, Authority & Verification Contract](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-002_EVIDENCE_AUTHORITY_VERIFICATION_CONTRACT.md)** — `PUBLIC TECHNICAL SPECIFICATION · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
 - **[AX-PUB-SPEC-003 — Point-in-Time Knowledge & Provenance Standard](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-003_POINT_IN_TIME_KNOWLEDGE_PROVENANCE_STANDARD.md)** — `PUBLIC TECHNICAL SPECIFICATION · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
+- **[AX-PUB-SPEC-004 — Governed Agent Authority & Tool-Use Boundary Standard](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-004_GOVERNED_AGENT_AUTHORITY_TOOL_USE_STANDARD.md)** — `PUBLIC TECHNICAL SPECIFICATION · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
 
-Together, these references define a public engineering chain for **governed knowledge, traceable evidence, bounded authority, controlled execution and independently verifiable outcomes**. `AX-PUB-SPEC-003` adds temporal integrity: what was known, when it was known, where it came from, which version was used and how later corrections or revisions are preserved.
+Together, these references define a public engineering chain for **governed knowledge, traceable evidence, bounded authority, controlled execution and independently verifiable outcomes**. `AX-PUB-SPEC-003` adds temporal integrity: what was known, when it was known, where it came from, which version was used and how later corrections or revisions are preserved. `AX-PUB-SPEC-004` specializes the authority boundary for agent-mediated tool use, including principal identity, action proposals, parameter-level constraints, delegation, untrusted-content boundaries, step-up authority and post-invocation verification.
+
+`AX-PUB-SPEC-004` currently has **no separately published schema, reference validator, SDK or conformance suite**. Publication of the specification does not establish an internal AETHER X agent runtime or authorization implementation.
 
 ### Public Machine-Readable Contracts
 
@@ -274,6 +278,19 @@ The schemas make selected `AX-PUB-SPEC-002` and `AX-PUB-SPEC-003` structures mac
 `AX-PUB-REF-001` demonstrates selected evidence / authority / verification invariants. `AX-PUB-REF-002` demonstrates selected point-in-time controls including no-future-leakage relative to a declared knowledge cutoff, source and transformation lineage references, revision/supersession checks, explicit missing states and reproducibility-cutoff consistency.
 
 Both are standard-library Python reference implementations with public tests and CI. They are **not** production authorization systems, production data-quality engines, product SDKs or evidence that AIC or another AETHER X initiative has implemented these public reference contracts.
+
+### Public Conformance Evidence
+
+- **[AX-PUB-TEST-001 — Governed Intelligence Conformance Test Kit](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/conformance/AX-PUB-TEST-001)** — `PUBLIC CONFORMANCE TEST KIT · REPRODUCIBLY VERIFIED · CI RUN UNVERIFIED · NON-PRODUCTION`
+
+The current kit defines 15 synthetic public cases across the EAV and point-in-time/provenance reference validators. Byte-identical published Git blobs were reproducibly executed with:
+
+```text
+AX_PUBLIC_CONFORMANCE_PASS cases=15 conforming=15
+AX_PUBLIC_CONFORMANCE_BOUNDARY_PASS
+```
+
+This evidence is deliberately bounded. `REPRODUCIBLY VERIFIED ≠ GITHUB CI VERIFIED`, and conformance to public reference behavior does not establish product implementation, security certification, production readiness or behavior inside private AETHER X initiatives.
 
 These public artifacts are technology-neutral and do not assert shared implementation, production readiness or technical integration across AETHER X initiatives.
 
