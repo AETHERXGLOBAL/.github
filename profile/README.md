@@ -102,7 +102,7 @@ The Live Portfolio Pulse publishes selected initiative-state signals from allowl
 | **Corporate thesis & engineering doctrine** | Publicly stated and directly inspectable in this profile. |
 | **Portfolio maturity & research structure** | Explicitly disclosed by initiative or unit and bounded by current maturity / organizational state. |
 | **Governed portfolio-state publication** | Live Portfolio Pulse: a public output generated from allowlisted governed initiative sources plus a bounded Research-unit disclosure state. |
-| **Public technical engineering** | Dedicated public engineering repository with inspectable specifications, machine-readable contract, reference implementation and public CI. |
+| **Public technical engineering** | Dedicated public engineering repository with inspectable specifications, machine-readable contracts, reference implementations and public CI. |
 | **Commercial / financial traction** | Not established by this public GitHub profile. |
 | **Production readiness / customer outcomes** | Not implied unless separately evidenced and explicitly disclosed. |
 
@@ -249,7 +249,7 @@ AETHER X publishes selected technical references, specifications, machine-readab
 **[AETHER X Governed Intelligence →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**  
 `PUBLIC ENGINEERING REPOSITORY · CONTROLLED DISCLOSURE`
 
-The repository is the canonical public source for the current governed-intelligence technical series, machine-readable contract and executable reference implementation.
+The repository is the canonical public source for the current governed-intelligence technical series, machine-readable contracts and executable reference implementations.
 
 ### Public Technical References
 
@@ -259,17 +259,21 @@ The repository is the canonical public source for the current governed-intellige
 
 Together, these references define a public engineering chain for **governed knowledge, traceable evidence, bounded authority, controlled execution and independently verifiable outcomes**. `AX-PUB-SPEC-003` adds temporal integrity: what was known, when it was known, where it came from, which version was used and how later corrections or revisions are preserved.
 
-### Public Machine-Readable Contract
+### Public Machine-Readable Contracts
 
 - **[AX-PUB-SCHEMA-001 — Governed EAV Contract Schema](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-001_EAV_CONTRACT.schema.json)** — `MACHINE-READABLE CONTRACT · JSON SCHEMA · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
+- **[AX-PUB-SCHEMA-002 — Point-in-Time Knowledge Envelope](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-002_POINT_IN_TIME_KNOWLEDGE_ENVELOPE.schema.json)** — `MACHINE-READABLE TEMPORAL / PROVENANCE CONTRACT · JSON SCHEMA · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
 
-The schema makes selected `AX-PUB-SPEC-002` control objects structurally machine-readable through required fields, types, selected enums and timestamp formats. A separate public CI check guards alignment between the schema, reference examples and executable validator. Structural conformance is not authorization, product integration or a verified outcome.
+The schemas make selected `AX-PUB-SPEC-002` and `AX-PUB-SPEC-003` structures machine-readable through required fields, types, selected enums and temporal metadata. Public CI guards schema and reference-example alignment. Structural conformance is not authorization, product integration, production data quality or a verified outcome.
 
-### Public Reference Implementation
+### Public Reference Implementations
 
 - **[AX-PUB-REF-001 — EAV Contract Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/eav-contract-validator)** — `PUBLIC REFERENCE IMPLEMENTATION · CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
+- **[AX-PUB-REF-002 — Point-in-Time Knowledge Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/point-in-time-knowledge-validator)** — `PUBLIC TEMPORAL / PROVENANCE REFERENCE IMPLEMENTATION · CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
 
-The validator implements selected `AX-PUB-SPEC-002` invariants as deterministic, standard-library Python checks. Public CI compiles the validator, runs unit tests, validates a conforming example and confirms that an intentionally invalid example is rejected. It is **not** a production authorization system, security control plane or product SDK.
+`AX-PUB-REF-001` demonstrates selected evidence / authority / verification invariants. `AX-PUB-REF-002` demonstrates selected point-in-time controls including no-future-leakage relative to a declared knowledge cutoff, source and transformation lineage references, revision/supersession checks, explicit missing states and reproducibility-cutoff consistency.
+
+Both are standard-library Python reference implementations with public tests and CI. They are **not** production authorization systems, production data-quality engines, product SDKs or evidence that AIC or another AETHER X initiative has implemented these public reference contracts.
 
 These public artifacts are technology-neutral and do not assert shared implementation, production readiness or technical integration across AETHER X initiatives.
 
