@@ -242,9 +242,15 @@ The dashboard is generated from **public GitHub organization data only**. Privat
 
 ## Public Engineering
 
-Selected reference implementations, specifications and tools are published publicly only after appropriate security, intellectual-property and release-readiness review.
+AETHER X publishes selected technical references, specifications and tools only after appropriate security, intellectual-property and public-disclosure review.
 
-Public repositories represent intentionally released engineering work. Proprietary platforms, confidential architecture, credentials, internal security controls, private customer information and unpublished intellectual property remain private.
+### Public Technical References
+
+- **[AX-PUB-ARCH-001 — Governed Intelligence Reference Architecture](../public-specs/AX-PUB-ARCH-001_GOVERNED_INTELLIGENCE_REFERENCE_ARCHITECTURE.md)** — `PUBLIC TECHNICAL REFERENCE · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
+
+This reference architecture describes the company-level governed-intelligence control pattern around **evidence, reasoning, decision, authority, controlled execution, verification and institutional learning**. It is technology-neutral and does not assert shared implementation or technical integration across AETHER X initiatives.
+
+Public repositories and artifacts represent intentionally released engineering work. Proprietary platforms, confidential architecture, credentials, internal security controls, private customer information and unpublished intellectual property remain private.
 
 ---
 
