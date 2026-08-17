@@ -1,36 +1,13 @@
-# AETHER X Public Reference Implementations
+# AETHER X Public Reference Implementations — Canonical Location
 
-**Status:** `PUBLIC ENGINEERING MATERIAL · NON-PRODUCTION`  
-**Organization:** AETHER X GLOBAL  
+The canonical public reference implementations now live in:
 
-This directory contains selected public reference implementations that make parts of AETHER X's published engineering doctrine inspectable in executable form.
+**[AETHERXGLOBAL/aether-x-governed-intelligence](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**
 
-These artifacts are intentionally bounded examples. They are not product source code, production SDKs, production security controls or evidence of shared implementation across AETHER X initiatives.
+Current executable reference artifact:
 
-## Current Public Implementations
+- **[`AX-PUB-REF-001 — EAV Contract Validator`](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/eav-contract-validator)** — `CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
 
-| ID | Artifact | Related specification | State |
-|---|---|---|---|
-| `AX-PUB-REF-001` | [EAV Contract Validator](./eav-contract-validator/README.md) | `AX-PUB-SPEC-002` | `CI-TESTED · EDUCATIONAL / NON-PRODUCTION` |
+This file remains only as a compatibility pointer for previously published links.
 
-## Publication Rule
-
-A public reference implementation should:
-
-- correspond to an intentionally published technical reference or specification;
-- avoid proprietary product implementation detail;
-- contain an explicit claim and security boundary;
-- be independently inspectable;
-- include deterministic tests where practical;
-- avoid implying production readiness, integration or certification.
-
-`REFERENCE IMPLEMENTATION ≠ PRODUCT IMPLEMENTATION`
-
-`TEST PASS ≠ SECURITY CERTIFICATION`
-
-Additional implementations may be published only after appropriate technical, security, intellectual-property and disclosure review.
-
----
-
-**AETHER X GLOBAL**  
-**Institutional Intelligence. Governed Autonomy.**
+`CANONICAL SOURCE = aether-x-governed-intelligence`
