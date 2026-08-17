@@ -2,9 +2,10 @@
 """Render AETHER X Live Project Pulse from governed project-state sources.
 
 Public-output rule:
-- Read only explicitly selected canonical/handoff status sources.
+- Read only explicitly selected canonical/handoff status sources for product/system initiatives.
+- Represent the Research unit only through a bounded approved organizational-state disclosure.
 - Publish only a small allowlisted set of derived status fields.
-- Never publish source bodies, secrets, private paths, security findings, or arbitrary text.
+- Never publish source bodies, secrets, private paths, security findings, unpublished research state, or arbitrary text.
 - Do not infer completion percentages.
 """
 
@@ -74,15 +75,6 @@ def fetch_text(repo: str, path: str) -> str:
     if data.get("type") != "file" or "content" not in data:
         raise RuntimeError(f"Unexpected contents response for {repo}:{path}")
     return base64.b64decode(data["content"]).decode("utf-8", errors="replace")
-
-
-def fetch_dir(repo: str, path: str):
-    data = request_json(
-        f"{API}/repos/{ORG}/{repo}/contents/{quote(path, safe='/')}?ref=main"
-    )
-    if not isinstance(data, list):
-        raise RuntimeError(f"Unexpected directory response for {repo}:{path}")
-    return data
 
 
 def section_first_line(text: str, heading: str) -> str:
@@ -191,36 +183,20 @@ def parse_aic() -> Pulse:
     )
 
 
-def parse_amii() -> Pulse:
-    entries = fetch_dir("amii-research-lab", "governance")
-    candidates = sorted(
-        item["path"]
-        for item in entries
-        if item.get("type") == "file"
-        and "ACCEPTANCE" in item.get("name", "").upper()
-        and item.get("name", "").lower().endswith(".md")
-    )
-    if not candidates:
-        raise RuntimeError("No AMII acceptance record found")
+def research_unit_state() -> Pulse:
+    """Return only the approved public organizational state of AETHER X Research.
 
-    path = candidates[-1]
-    text = fetch_text("amii-research-lab", path)
-    status_match = re.search(r"\*\*Status:\*\*\s*`?([^`\n]+)`?", text)
-    status = clean(status_match.group(1), 90) if status_match else "CURRENT RESEARCH PHASE"
-    phase = (
-        "RESEARCH · CURRENT RESEARCH PHASE"
-        if "CURRENT RESEARCH PHASE" in status.upper()
-        else status
-    )
-
+    Individual research records remain private by default and are intentionally not
+    queried or summarized by the public pulse.
+    """
     return Pulse(
-        "AMII RESEARCH LAB",
-        "QUANTITATIVE MARKET RESEARCH",
-        phase,
-        "Latest governed acceptance record is established for the current research phase.",
-        "No separate next authorized step is asserted by the latest acceptance record.",
-        "No empirical validity, predictive performance, profitability, production readiness or Quantum integration is asserted.",
-        f"{Path(path).name} · latest acceptance record",
+        "AETHER X RESEARCH",
+        "RESEARCH & DECISION INTEGRITY",
+        "INSTITUTIONAL RESEARCH UNIT · ACTIVE",
+        "Dedicated company Research unit established; AMII is managed as a research program within the governed research lifecycle.",
+        "Individual research remains private and subject to evidence, validation, IP and publication controls.",
+        "RESEARCH ≠ PRODUCTION · PUBLIC DISCLOSURE REQUIRES APPROVAL",
+        "AETHER X public organizational state",
     )
 
 
@@ -286,7 +262,7 @@ def render(pulses: list[Pulse]) -> str:
     ]
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
 <title id="title">AETHER X Live Project Pulse</title>
-<desc id="desc">Automatically refreshed, public-safe project-state telemetry derived from governed private AETHER X project status sources. No completion percentages are inferred.</desc>
+<desc id="desc">Automatically refreshed, public-safe project-state telemetry for selected AETHER X system initiatives plus a bounded public organizational-state disclosure for the Research unit. No completion percentages are inferred.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#010D1D"/><stop offset="0.55" stop-color="#071426"/><stop offset="1" stop-color="#0B1A2C"/></linearGradient>
   <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101B2B"/><stop offset="1" stop-color="#0B1524"/></linearGradient>
@@ -311,7 +287,7 @@ def render(pulses: list[Pulse]) -> str:
 <rect x="24" y="24" width="1552" height="1052" rx="24" fill="none" stroke="#243247" stroke-width="1.5"/>
 <text x="70" y="70" class="brand">AETHER X GLOBAL</text>
 <text x="70" y="122" class="title">LIVE PROJECT PULSE</text>
-<text x="70" y="154" class="subtitle">Verified execution telemetry · governed sources · no inferred completion percentages</text>
+<text x="70" y="154" class="subtitle">Selected live project telemetry · governed sources · bounded Research-unit disclosure</text>
 <text x="1530" y="72" text-anchor="end" class="footerGold">AUTO-REFRESH · PUBLIC-SAFE</text>
 <text x="1530" y="100" text-anchor="end" class="footer">Last verified refresh: {esc(now)}</text>
 <line x1="70" y1="184" x2="1530" y2="184" stroke="#9D753C" stroke-opacity=".7"/>
@@ -324,7 +300,7 @@ def render(pulses: list[Pulse]) -> str:
 
 def main() -> int:
     try:
-        pulses = [parse_quantum(), parse_axos(), parse_aic(), parse_amii()]
+        pulses = [parse_quantum(), parse_axos(), parse_aic(), research_unit_state()]
         OUTPUT.parent.mkdir(parents=True, exist_ok=True)
         OUTPUT.write_text(render(pulses), encoding="utf-8")
         print("PROJECT_PULSE_RENDER_PASS")
