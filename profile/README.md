@@ -68,9 +68,9 @@ Our current operating portfolio includes **three governed intelligence system in
 
 | Initiative / Unit | Current maturity / state | Primary role |
 |---|---|---|
-| **AETHER X Quantum** | `UNDER ACTIVE DEVELOPMENT` | Evidence-governed financial strategy engineering and controlled workflow intelligence. |
+| **AETHER X Quantum** | `UNDER ACTIVE DEVELOPMENT` | Advanced technical-analysis and strategy-engineering platform, designed to support evidence-governed market analysis, strategy construction, quantitative validation and controlled decision workflows. |
 | **AX-OS** | `UNDER DEVELOPMENT · ACTIVE BUILD` | Internal-first governed AI operations, authority, execution, verification and institutional learning. |
-| **AETHER Intelligence Core (AIC)** | `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION` | Governed temporal financial-intelligence infrastructure for point-in-time data, provenance and reusable intelligence foundations. |
+| **AETHER Intelligence Core (AIC)** | `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION` | Strategic company infrastructure initiative intended to become a durable, high-integrity global financial-information asset, designed to provide point-in-time accuracy, provenance and reusable intelligence foundations for AETHER X platforms and AI systems. |
 | **AETHER X Research** | `INSTITUTIONAL RESEARCH UNIT · ACTIVE` | Dedicated institutional research unit conducting evidence-governed research across data, financial and quantitative intelligence, and artificial intelligence, supporting AETHER X through rigorous investigation, experimentation, validation and reproducible knowledge development. |
 
 Quantum does not promise or guarantee investment outcomes. AIC implementation has not started under the current baseline and remains gated. **AMII is no longer presented as a standalone portfolio initiative; it is a research program within AETHER X Research.** This organizational consolidation does not establish empirical AMII validity, predictive performance, profitability, production readiness or authorized integration with AETHER X Quantum.
