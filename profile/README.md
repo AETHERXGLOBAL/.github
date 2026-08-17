@@ -242,9 +242,9 @@ The dashboard is generated from **public GitHub organization data only**. Privat
 
 ## Public Engineering
 
-AETHER X publishes selected technical references, specifications and tools only after appropriate security, intellectual-property and public-disclosure review.
+AETHER X publishes selected technical references, specifications and reference implementations only after appropriate technical, security, intellectual-property and public-disclosure review.
 
-**[Public Technical Standards Index →](../public-specs/README.md)**
+**[Public Technical Standards Index →](../public-specs/README.md)** · **[Public Reference Implementations →](../reference-implementations/README.md)**
 
 ### Public Technical References
 
@@ -252,7 +252,15 @@ AETHER X publishes selected technical references, specifications and tools only 
 - **[AX-PUB-SPEC-002 — Evidence, Authority & Verification Contract](../public-specs/AX-PUB-SPEC-002_EVIDENCE_AUTHORITY_VERIFICATION_CONTRACT.md)** — `PUBLIC TECHNICAL SPECIFICATION · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
 - **[AX-PUB-SPEC-003 — Point-in-Time Knowledge & Provenance Standard](../public-specs/AX-PUB-SPEC-003_POINT_IN_TIME_KNOWLEDGE_PROVENANCE_STANDARD.md)** — `PUBLIC TECHNICAL SPECIFICATION · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
 
-Together, these references define a public engineering chain for **governed knowledge, traceable evidence, bounded authority, controlled execution and independently verifiable outcomes**. `AX-PUB-SPEC-003` adds temporal integrity: what was known, when it was known, where it came from, which version was used and how later corrections or revisions are preserved. These artifacts are technology-neutral and do not assert shared implementation or technical integration across AETHER X initiatives.
+Together, these references define a public engineering chain for **governed knowledge, traceable evidence, bounded authority, controlled execution and independently verifiable outcomes**. `AX-PUB-SPEC-003` adds temporal integrity: what was known, when it was known, where it came from, which version was used and how later corrections or revisions are preserved.
+
+### Public Reference Implementation
+
+- **[AX-PUB-REF-001 — EAV Contract Validator](../reference-implementations/eav-contract-validator/README.md)** — `PUBLIC REFERENCE IMPLEMENTATION · CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
+
+The validator implements selected `AX-PUB-SPEC-002` invariants as deterministic, standard-library Python checks. Its public CI compiles the validator, runs unit tests, validates a conforming example and confirms that an intentionally invalid example is rejected. It is **not** a production authorization system, security control plane or product SDK.
+
+These public artifacts are technology-neutral and do not assert shared implementation, production readiness or technical integration across AETHER X initiatives.
 
 Public repositories and artifacts represent intentionally released engineering work. Proprietary platforms, confidential architecture, credentials, internal security controls, private customer information and unpublished intellectual property remain private.
 
