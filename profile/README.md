@@ -27,7 +27,7 @@
 <p align="center">
   <a href="https://www.aetherxglobal.com"><strong>Official Website</strong></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#portfolio-at-a-glance">Portfolio</a>
+  <a href="#portfolio--research-at-a-glance">Portfolio & Research</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#investor-evidence">Investor Evidence</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
@@ -50,14 +50,14 @@ The objective is not unrestricted autonomy. The objective is **useful intelligen
 
 ---
 
-## Portfolio at a Glance
+## Portfolio & Research at a Glance
 
-Our current portfolio spans four distinct areas of governed intelligence. The visual architecture below shows **portfolio membership, maturity, domain and role** — not technical integration between projects.
+Our current operating portfolio includes **three governed intelligence system initiatives and one dedicated institutional research unit**. The visual architecture below shows **portfolio membership, maturity or organizational state, domain and role** — not technical integration between initiatives.
 
 <p align="center">
   <img
     src="./assets/aether-x-portfolio-architecture-v2.svg"
-    alt="AETHER X GLOBAL Portfolio Architecture"
+    alt="AETHER X GLOBAL Portfolio and Research Architecture"
     width="100%"
   />
 </p>
@@ -66,18 +66,18 @@ Our current portfolio spans four distinct areas of governed intelligence. The vi
 
 ### Portfolio Snapshot
 
-| Initiative | Current maturity | Primary role |
+| Initiative / Unit | Current maturity / state | Primary role |
 |---|---|---|
 | **AETHER X Quantum** | `UNDER ACTIVE DEVELOPMENT` | Evidence-governed financial strategy engineering and controlled workflow intelligence. |
 | **AX-OS** | `UNDER DEVELOPMENT · ACTIVE BUILD` | Internal-first governed AI operations, authority, execution, verification and institutional learning. |
 | **AETHER Intelligence Core (AIC)** | `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION` | Governed temporal financial-intelligence infrastructure for point-in-time data, provenance and reusable intelligence foundations. |
-| **AMII Research Lab** | `RESEARCH · CURRENT RESEARCH PHASE` | Quantitative market-intent research focused on methodology, validation, evidence strength, participation and risk. |
+| **AETHER X Research** | `INSTITUTIONAL RESEARCH UNIT · ACTIVE` | Private, evidence-governed research operating layer for research registry, methods, experiments, evidence, reproducibility and governed research continuity. **AMII / AETHER Market Intent Index** is managed as a research program within this unit. |
 
-Quantum does not promise or guarantee investment outcomes. AIC implementation has not started under the current baseline and remains gated. The AMII research baseline does not establish empirical validity, predictive performance, profitability, production readiness or authorized integration with AETHER X Quantum.
+Quantum does not promise or guarantee investment outcomes. AIC implementation has not started under the current baseline and remains gated. **AMII is no longer presented as a standalone portfolio initiative; it is a research program within AETHER X Research.** This organizational consolidation does not establish empirical AMII validity, predictive performance, profitability, production readiness or authorized integration with AETHER X Quantum.
 
-**Public access:** Current core development and research repositories are private. Public GitHub materials represent intentionally released engineering work only; any future public release remains subject to explicit review and approval.
+**Public access:** Current core development repositories and the canonical research repository are private. Public GitHub materials represent intentionally released engineering and institutional material only; any future public release of research or implementation detail remains subject to explicit review and approval.
 
-These initiatives are intentionally described by their **current maturity**, not by future ambition.
+These initiatives and units are intentionally described by their **current maturity or organizational state**, not by future ambition.
 
 ---
 
@@ -95,13 +95,13 @@ AETHER X is designed to be evaluated on **evidence rather than presentation**. F
   />
 </p>
 
-The Live Project Pulse publishes selected project-state signals from allowlisted governed sources without exposing private repository content. It does not infer aggregate completion percentages and does not convert commits, merges, research or design into acceptance or production claims.
+The Live Project Pulse publishes selected project-state signals from allowlisted governed sources and a bounded public organizational state for the Research unit without exposing private repository content. It does not infer aggregate completion percentages and does not convert commits, merges, research or design into acceptance or production claims.
 
 | Public diligence signal | Current public evidence |
 |---|---|
 | **Corporate thesis & engineering doctrine** | Publicly stated and directly inspectable in this profile. |
-| **Portfolio maturity** | Explicitly disclosed by initiative and bounded by current maturity. |
-| **Governed project-state publication** | Live Project Pulse: a public output generated from allowlisted private governed sources. |
+| **Portfolio maturity & research structure** | Explicitly disclosed by initiative or unit and bounded by current maturity / organizational state. |
+| **Governed project-state publication** | Live Project Pulse: a public output generated from allowlisted governed project sources plus a bounded Research-unit disclosure state. |
 | **Public engineering activity** | Engineering Pulse generated from public GitHub organization data. |
 | **Commercial / financial traction** | Not established by this public GitHub profile. |
 | **Production readiness / customer outcomes** | Not implied unless separately evidenced and explicitly disclosed. |
@@ -145,6 +145,7 @@ Individual projects may implement only the parts of this chain appropriate to th
 - **Governance & authority systems** — permissions, policies, approvals, delegated authority, least privilege and bounded execution.
 - **Verification systems** — testable acceptance criteria, independent checks, evidence packages and verified outcomes.
 - **Financial & quantitative intelligence** — data lineage, validation discipline, scenario analysis, reproducibility and risk-aware decision support.
+- **Research & decision integrity** — governed research lifecycle, research registry, evidence, reproducibility, scientific-state boundaries and controlled promotion of research claims.
 - **Operational intelligence** — observable, recoverable, measurable and auditable systems designed for real institutional workflows.
 
 ---
