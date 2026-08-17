@@ -35,7 +35,7 @@
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#engineering-doctrine">Engineering Doctrine</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#engineering-pulse">Engineering Pulse</a>
+  <a href="#public-engineering">Public Engineering</a>
 </p>
 
 ---
@@ -102,7 +102,7 @@ The Live Portfolio Pulse publishes selected initiative-state signals from allowl
 | **Corporate thesis & engineering doctrine** | Publicly stated and directly inspectable in this profile. |
 | **Portfolio maturity & research structure** | Explicitly disclosed by initiative or unit and bounded by current maturity / organizational state. |
 | **Governed portfolio-state publication** | Live Portfolio Pulse: a public output generated from allowlisted governed initiative sources plus a bounded Research-unit disclosure state. |
-| **Public engineering activity** | Engineering Pulse generated from public GitHub organization data. |
+| **Public technical engineering** | Dedicated public engineering repository with inspectable specifications, reference implementation and public CI. |
 | **Commercial / financial traction** | Not established by this public GitHub profile. |
 | **Production readiness / customer outcomes** | Not implied unless separately evidenced and explicitly disclosed. |
 
@@ -244,21 +244,26 @@ The dashboard is generated from **public GitHub organization data only**. Privat
 
 AETHER X publishes selected technical references, specifications and reference implementations only after appropriate technical, security, intellectual-property and public-disclosure review.
 
-**[Public Technical Standards Index →](../public-specs/README.md)** · **[Public Reference Implementations →](../reference-implementations/README.md)**
+### Canonical Public Engineering Repository
+
+**[AETHER X Governed Intelligence →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**  
+`PUBLIC ENGINEERING REPOSITORY · CONTROLLED DISCLOSURE`
+
+The repository is the canonical public source for the current governed-intelligence technical series and its executable reference implementation.
 
 ### Public Technical References
 
-- **[AX-PUB-ARCH-001 — Governed Intelligence Reference Architecture](../public-specs/AX-PUB-ARCH-001_GOVERNED_INTELLIGENCE_REFERENCE_ARCHITECTURE.md)** — `PUBLIC TECHNICAL REFERENCE · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
-- **[AX-PUB-SPEC-002 — Evidence, Authority & Verification Contract](../public-specs/AX-PUB-SPEC-002_EVIDENCE_AUTHORITY_VERIFICATION_CONTRACT.md)** — `PUBLIC TECHNICAL SPECIFICATION · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
-- **[AX-PUB-SPEC-003 — Point-in-Time Knowledge & Provenance Standard](../public-specs/AX-PUB-SPEC-003_POINT_IN_TIME_KNOWLEDGE_PROVENANCE_STANDARD.md)** — `PUBLIC TECHNICAL SPECIFICATION · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
+- **[AX-PUB-ARCH-001 — Governed Intelligence Reference Architecture](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-ARCH-001_GOVERNED_INTELLIGENCE_REFERENCE_ARCHITECTURE.md)** — `PUBLIC TECHNICAL REFERENCE · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
+- **[AX-PUB-SPEC-002 — Evidence, Authority & Verification Contract](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-002_EVIDENCE_AUTHORITY_VERIFICATION_CONTRACT.md)** — `PUBLIC TECHNICAL SPECIFICATION · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
+- **[AX-PUB-SPEC-003 — Point-in-Time Knowledge & Provenance Standard](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-003_POINT_IN_TIME_KNOWLEDGE_PROVENANCE_STANDARD.md)** — `PUBLIC TECHNICAL SPECIFICATION · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
 
 Together, these references define a public engineering chain for **governed knowledge, traceable evidence, bounded authority, controlled execution and independently verifiable outcomes**. `AX-PUB-SPEC-003` adds temporal integrity: what was known, when it was known, where it came from, which version was used and how later corrections or revisions are preserved.
 
 ### Public Reference Implementation
 
-- **[AX-PUB-REF-001 — EAV Contract Validator](../reference-implementations/eav-contract-validator/README.md)** — `PUBLIC REFERENCE IMPLEMENTATION · CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
+- **[AX-PUB-REF-001 — EAV Contract Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/eav-contract-validator)** — `PUBLIC REFERENCE IMPLEMENTATION · CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
 
-The validator implements selected `AX-PUB-SPEC-002` invariants as deterministic, standard-library Python checks. Its public CI compiles the validator, runs unit tests, validates a conforming example and confirms that an intentionally invalid example is rejected. It is **not** a production authorization system, security control plane or product SDK.
+The validator implements selected `AX-PUB-SPEC-002` invariants as deterministic, standard-library Python checks. Public CI compiles the validator, runs unit tests, validates a conforming example and confirms that an intentionally invalid example is rejected. It is **not** a production authorization system, security control plane or product SDK.
 
 These public artifacts are technology-neutral and do not assert shared implementation, production readiness or technical integration across AETHER X initiatives.
 
