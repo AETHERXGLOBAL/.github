@@ -13,8 +13,6 @@
 </p>
 
 <p align="center">
-  <a href="https://www.aetherxglobal.com"><strong>Official Website</strong></a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#portfolio--research-at-a-glance">Portfolio & Research</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#investor-evidence">Investor Evidence</a>
@@ -205,9 +203,7 @@ Do not publish sensitive security details through public issues. See the public 
 
 ## Contact
 
-Official institutional contact channels are available through the company website.
-
-**Official website:** [aetherxglobal.com](https://www.aetherxglobal.com)
+Official institutional contact channels will be published when the company website is publicly available.
 
 ---
 
