@@ -71,8 +71,9 @@ The Live Portfolio Pulse publishes selected initiative-state signals from allowl
 | **Portfolio maturity & research structure** | Explicitly disclosed by initiative or unit and bounded by current maturity / organizational state. |
 | **Governed portfolio-state publication** | Live Portfolio Pulse with explicit source and disclosure boundaries. |
 | **Public technical engineering** | Dedicated public repository with specifications, machine-readable contracts, bounded reference validators, conformance evidence, verified CI, a fixed reproducibility snapshot and a formal public engineering release. |
-| **Developer adoption & SDK readiness** | `AX-PUB-DEV-001` is active / under development; `DEV-GATE-00 — Contract Baseline` is closed and `DEV-GATE-01 — Reproducible Developer Experience` is the current engineering objective. No SDK candidate is yet established. |
-| **Developer contract baseline** | `AX-PUB-DEV-002` establishes the bounded public developer contract baseline; candidate validation is recorded by `AX-PUB-CI-003`. |
+| **Developer adoption & SDK readiness** | `AX-PUB-DEV-001` is active / under development; `DEV-GATE-00` and `DEV-GATE-01` are closed; `DEV-GATE-02 — SDK Candidate` is the current engineering objective. No SDK candidate is yet established. |
+| **Developer contract baseline** | `AX-PUB-DEV-002` establishes the bounded public developer contract baseline; validation is recorded by `AX-PUB-CI-003`. |
+| **Reproducible developer experience** | `AX-PUB-DEV-003` is `DEV-GATE-01 CLOSED`; `AX-PUB-CI-004` directly records successful clean-environment validation across Python 3.10, 3.11, 3.12 and 3.13 for the bounded public reference experience. |
 | **Developer SDK publication** | Governed by `AX-PUB-GATE-001`; current disposition `SDK PUBLICATION NOT AUTHORIZED`. |
 | **Commercial / financial traction** | Not established by this public GitHub profile. |
 | **Production readiness / customer outcomes** | Not implied unless separately evidenced and explicitly disclosed. |
@@ -169,12 +170,13 @@ AX-PUB-SPEC-004 → AX-PUB-SCHEMA-003 → AX-PUB-REF-003 → AX-PUB-TEST-002
 
 ### Public Governance & Reproducibility
 
-- **[AX-PUB-MANIFEST-001 v1.10](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/artifacts/AX-PUB-MANIFEST-001.json)** — current machine-readable public artifact state.
+- **[AX-PUB-MANIFEST-001 v1.12](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/artifacts/AX-PUB-MANIFEST-001.json)** — current machine-readable public artifact state.
 - **[AX-PUB-POL-001 v1.6](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/COMPATIBILITY_AND_VERSIONING.md)** — compatibility, snapshot, release and publication-readiness policy.
 - **[AX-PUB-SNAP-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/snapshots/AX-PUB-SNAP-002_GOVERNED_INTELLIGENCE_PUBLIC_VNEXT.md)** — fixed, commit-anchored, CI-validated reproducibility state.
 - **[AX-PUB-CI-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-001_AGENT_AUTHORITY_VNEXT_VALIDATION.md)** — agent-authority path CI evidence.
 - **[AX-PUB-CI-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-002_VNEXT_SNAPSHOT_VALIDATION.md)** — vNext snapshot and manifest closure evidence.
-- **[AX-PUB-CI-003](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-003_DEVELOPER_CONTRACT_BASELINE_VALIDATION.md)** — DEV-GATE-00 candidate-validation evidence.
+- **[AX-PUB-CI-003](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-003_DEVELOPER_CONTRACT_BASELINE_VALIDATION.md)** — DEV-GATE-00 validation evidence.
+- **[AX-PUB-CI-004](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-004_REPRODUCIBLE_DEVELOPER_EXPERIENCE_VALIDATION.md)** — DEV-GATE-01 clean-environment runtime-matrix evidence.
 
 ### Developer Adoption & SDK Readiness
 
@@ -185,15 +187,29 @@ Current public state:
 ```text
 PROGRAM: ACTIVE / UNDER DEVELOPMENT
 DEV-GATE-00: CLOSED
-CURRENT ENGINEERING OBJECTIVE: DEV-GATE-01 — Reproducible Developer Experience
+DEV-GATE-01: CLOSED
+CURRENT ENGINEERING OBJECTIVE: DEV-GATE-02 — SDK CANDIDATE
 SDK CANDIDATE: NOT YET ESTABLISHED
+PUBLIC SDK: NOT PUBLISHED
 ```
 
 **[AX-PUB-DEV-002 — Developer Contract Baseline](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-002_DEVELOPER_CONTRACT_BASELINE.md)** establishes the initial public developer contract baseline with explicit non-goals, error taxonomy, fail-closed rules, compatibility semantics and a public/private dependency boundary.
 
-The program defines a gated path toward a reproducible developer experience, SDK candidate, supply-chain evidence and external evaluation readiness. It does not authorize SDK publication or create a support commitment.
+**[AX-PUB-DEV-003 — Reproducible Developer Experience](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-003_REPRODUCIBLE_DEVELOPER_EXPERIENCE.md)** establishes the bounded reproducible public reference developer experience. Its directly observed candidate-validation evidence is recorded in **[AX-PUB-CI-004](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-004_REPRODUCIBLE_DEVELOPER_EXPERIENCE_VALIDATION.md)**.
 
-`DEV-GATE-00 CLOSED ≠ SDK CANDIDATE`  
+The directly verified Gate-01 reference matrix is:
+
+```text
+Python 3.10
+Python 3.11
+Python 3.12
+Python 3.13
+```
+
+The final published `DEV-GATE-01 CLOSED` state was subsequently revalidated through verification-only workflows: `Validate Developer Experience` run `32139341536` / #12 and `Validate Public Artifact Manifest` run `32139341531` / #120, both with conclusion `SUCCESS`. This is repository CI evidence, not external certification.
+
+`DEV-GATE-01 CLOSED ≠ SDK CANDIDATE`  
+`VERIFIED RUNTIME MATRIX ≠ GENERAL SDK SUPPORT COMMITMENT`  
 `DEVELOPER ADOPTION PROGRAM ≠ SDK RELEASE`
 
 ### Developer SDK Publication Boundary
