@@ -44,9 +44,10 @@ A claim should be promoted only when the evidence is appropriate to the claim an
 | **Reference implementations** | `AX-PUB-REF-001`, `AX-PUB-REF-002`, `AX-PUB-REF-003` | `PUBLICLY INSPECTABLE · CI-TESTED · EDUCATIONAL / NON-PRODUCTION` |
 | **Governed-intelligence conformance** | `AX-PUB-TEST-001` with 15 declared synthetic cases and public/private boundary verification | `REPRODUCIBLY VERIFIED · CI RUN UNVERIFIED · NON-PRODUCTION` |
 | **Agent-authority conformance** | `AX-PUB-TEST-002` with 10 synthetic cases | `PUBLICLY INSPECTABLE · CI-TESTED · NON-PRODUCTION` |
-| **Artifact governance** | `AX-PUB-MANIFEST-001 v1.6`, `AX-PUB-POL-001 v1.5` | `PUBLICLY INSPECTABLE · MACHINE-READABLE / POLICY-GOVERNED` |
+| **Artifact governance** | `AX-PUB-MANIFEST-001 v1.7`, `AX-PUB-POL-001 v1.6` | `PUBLICLY INSPECTABLE · MACHINE-READABLE / POLICY-GOVERNED` |
 | **Fixed reproducibility state** | `AX-PUB-SNAP-002` with commit anchor, Git-blob inventory and snapshot CI evidence | `COMMIT-ANCHORED · SNAPSHOT-CI-VALIDATED · NON-PRODUCT` |
 | **Formal public engineering release** | Tag `public-engineering-vnext-1.0` and `AX-PUB-REL-001` | `FORMAL PUBLIC ENGINEERING RELEASE · NON-PRODUCT` |
+| **Developer SDK publication** | `AX-PUB-GATE-001` | `SDK PUBLICATION NOT AUTHORIZED` |
 | **Private implementation & research depth** | Core development repositories and canonical Research repository remain private | `NOT PUBLICLY VERIFIABLE HERE` |
 | **Production readiness** | No company-wide production-readiness claim is made here | `NOT ESTABLISHED BY THIS PROFILE` |
 | **Customer / pilot / design-partner traction** | No such evidence is established by this public GitHub profile | `NOT PUBLICLY ESTABLISHED` |
@@ -61,6 +62,7 @@ A claim should be promoted only when the evidence is appropriate to the claim an
 - `CI-TESTED · EDUCATIONAL / NON-PRODUCTION` — public reference code with verified CI for its defined checks; not production fitness or certification.
 - `REPRODUCIBLY VERIFIED · CI RUN UNVERIFIED` — declared public Git content was independently reproduced/executed while GitHub Actions status remains separately bounded.
 - `FORMAL PUBLIC ENGINEERING RELEASE · NON-PRODUCT` — an intentionally published public engineering state; not a product release, deployment or customer-availability claim.
+- `SDK PUBLICATION NOT AUTHORIZED` — the public reference repository is not represented as an officially supported SDK; promotion requires separate evidence and explicit authority under the readiness gate.
 - `NOT PUBLICLY ESTABLISHED` / `NOT ASSERTED` — no positive claim should be inferred from this GitHub surface.
 
 ---
@@ -146,11 +148,44 @@ The release packages a public engineering state. The fixed technical-review snap
 6dfdec04a4d8375bc2da0bb6a3830ff07eeb1711
 ```
 
-The two identifiers have different roles and must not be conflated.
-
 `PUBLIC ENGINEERING RELEASE ≠ PRODUCT RELEASE`  
 `PUBLIC RELEASE ≠ CUSTOMER DEPLOYMENT`  
 `PUBLIC RELEASE ≠ INTERNAL PRODUCT ADOPTION`
+
+---
+
+## Developer SDK Publication Readiness
+
+AETHER X does **not** currently represent the public reference repository as an officially supported SDK.
+
+The governing public readiness artifact is:
+
+**[AX-PUB-GATE-001 — Developer SDK Publication Readiness Gate](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-GATE-001_DEVELOPER_SDK_PUBLICATION_READINESS.md)**
+
+Current disposition:
+
+```text
+SDK PUBLICATION NOT AUTHORIZED
+```
+
+The gate requires explicit evidence and authority for:
+
+- public licence / IP and reuse terms;
+- stable SDK interface compatibility;
+- package identity and distribution;
+- authentication, credentials and authority boundaries;
+- error/failure semantics;
+- SDK-specific conformance and regression evidence;
+- dependency and supply-chain controls;
+- developer documentation;
+- maintenance/support commitments;
+- release authority.
+
+This gate is not a promise that an SDK will be released.
+
+`PUBLIC REFERENCE IMPLEMENTATION ≠ SUPPORTED SDK`  
+`PUBLIC ENGINEERING RELEASE ≠ SDK RELEASE`  
+`SDK READINESS GATE ≠ SDK COMMITMENT`
 
 ---
 
@@ -159,15 +194,16 @@ The two identifiers have different roles and must not be conflated.
 Current moving state:
 
 ```text
-AX-PUB-MANIFEST-001 v1.6
-AX-PUB-POL-001 v1.5
+AX-PUB-MANIFEST-001 v1.7
+AX-PUB-POL-001 v1.6
 AX-PUB-CI-001
 AX-PUB-CI-002
 AX-PUB-SNAP-002 v1.0
 AX-PUB-REL-001 v1.0
+AX-PUB-GATE-001 v1.0
 ```
 
-The public manifest workflow verifies current artifact identity, paths, compatibility relationships, snapshot identity, release registration and public-only boundaries.
+The public manifest workflow verifies current artifact identity, paths, compatibility relationships, snapshot identity, release registration, readiness-gate registration and public-only boundaries. The readiness-gate state itself has been verified through the manifest workflow for the declared public repository state.
 
 ---
 
@@ -186,7 +222,8 @@ A public reviewer can reasonably use this GitHub surface as evidence that AETHER
 9. fail-closed public/private dependency-boundary controls;
 10. machine-readable artifact compatibility and version governance;
 11. a commit-anchored, CI-validated reproducibility snapshot;
-12. a formal public engineering Git tag / GitHub Release with an explicit non-product claim boundary.
+12. a formal public engineering Git tag / GitHub Release with an explicit non-product claim boundary;
+13. an explicit SDK publication-readiness gate preventing reference code from being misrepresented as a supported SDK.
 
 These are evidence of **public disclosure discipline, engineering doctrine, control design, machine-readable contract design, conformance discipline and reproducibility discipline**.
 
@@ -204,6 +241,7 @@ This public profile must not be treated as proof of:
 - predictive or investment performance;
 - scientific validation merely because a research program exists;
 - a production agent runtime, production authorization plane or autonomous authority;
+- a supported public SDK merely because reference implementations exist;
 - shared runtime, deployment dependency or technical integration across AETHER X initiatives;
 - regulatory approval, licence or certification;
 - a product release merely because a public engineering release exists.
@@ -211,7 +249,8 @@ This public profile must not be treated as proof of:
 `PUBLIC PROFILE ≠ DATA ROOM`  
 `TECHNICAL QUALITY ≠ COMMERCIAL TRACTION`  
 `PUBLIC REFERENCE ENGINEERING ≠ PRIVATE PRODUCT IMPLEMENTATION`  
-`PUBLIC ENGINEERING RELEASE ≠ PRODUCT RELEASE`
+`PUBLIC ENGINEERING RELEASE ≠ PRODUCT RELEASE`  
+`PUBLIC REFERENCE IMPLEMENTATION ≠ SUPPORTED SDK`
 
 ---
 
@@ -229,26 +268,6 @@ PUBLIC EVIDENCE REVIEW
 ```
 
 Where appropriate and authorized, deeper diligence may use controlled access to non-public artifacts. Private repositories, confidential architecture, research records, customer information, security details and unpublished IP remain outside the public GitHub surface unless separately approved for disclosure.
-
----
-
-## Evidence Promotion Rule
-
-A new investor-facing claim should not enter the public evidence layer until it has, as applicable:
-
-```text
-TRACEABLE SOURCE
-+
-CURRENT DATE / CONTEXT
-+
-DEFINED CLAIM SCOPE
-+
-MATERIAL LIMITATIONS
-+
-PUBLIC-DISCLOSURE AUTHORITY
-```
-
-A pilot is not automatically a production deployment. A design partner is not automatically a paying customer. A benchmark is not automatically customer value. Research is not automatically predictive validity or profitability.
 
 ---
 
@@ -271,6 +290,7 @@ The objective is **credible evidence without unnecessary information exposure**.
 - [AX-PUB-CI-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-001_AGENT_AUTHORITY_VNEXT_VALIDATION.md)
 - [AX-PUB-CI-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-002_VNEXT_SNAPSHOT_VALIDATION.md)
 - [AX-PUB-REL-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-REL-001_PUBLIC_ENGINEERING_VNEXT_RELEASE.md)
+- [AX-PUB-GATE-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-GATE-001_DEVELOPER_SDK_PUBLICATION_READINESS.md)
 
 ---
 
