@@ -94,7 +94,7 @@ The Live Portfolio Pulse publishes selected initiative-state signals from allowl
 | **Corporate thesis & engineering doctrine** | Publicly stated and directly inspectable. |
 | **Portfolio maturity & research structure** | Explicitly disclosed by initiative or unit and bounded by current maturity / organizational state. |
 | **Governed portfolio-state publication** | Live Portfolio Pulse: selected public-safe state signals with explicit source and disclosure boundaries. |
-| **Public technical engineering** | Dedicated public repository with four specifications/references, three machine-readable contracts, three bounded reference validators, two conformance kits, verified CI evidence and a CI-validated vNext snapshot. |
+| **Public technical engineering** | Dedicated public repository with four public technical references/specifications, three machine-readable contracts, three bounded reference validators, two conformance kits, verified CI evidence, a CI-validated vNext snapshot and a formal public engineering release. |
 | **Commercial / financial traction** | Not established by this public GitHub profile. |
 | **Production readiness / customer outcomes** | Not implied unless separately evidenced and explicitly disclosed. |
 
@@ -242,7 +242,17 @@ AETHER X publishes selected technical references, specifications, machine-readab
 **[AETHER X Governed Intelligence →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**  
 `PUBLIC ENGINEERING REPOSITORY · CONTROLLED DISCLOSURE`
 
-The repository is the canonical public source for the governed-intelligence technical series and its explicit compatibility, reproducibility and claim boundaries.
+The repository is the canonical public source for the governed-intelligence technical series and its explicit compatibility, reproducibility, release and claim boundaries.
+
+### Formal Public Engineering Release
+
+**`public-engineering-vnext-1.0` — AETHER X Governed Intelligence — Public Engineering vNext 1.0**
+
+- release tag target: `4f067c9fd3d3ac065ac50b10faf1abd1bdb91bb6`;
+- fixed technical-review state: `AX-PUB-SNAP-002`;
+- publication evidence: **[AX-PUB-REL-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-REL-001_PUBLIC_ENGINEERING_VNEXT_RELEASE.md)**.
+
+`PUBLIC ENGINEERING RELEASE ≠ PRODUCT RELEASE`
 
 ### Public Technical References
 
@@ -276,16 +286,17 @@ The `AX-PUB-REF-003` CI evidence is directly recorded in **[AX-PUB-CI-001](https
 
 ### Public Governance & Reproducibility
 
-Current moving public artifact compatibility is recorded in **[AX-PUB-MANIFEST-001 v1.5](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/artifacts/AX-PUB-MANIFEST-001.json)** under **[AX-PUB-POL-001 v1.4](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/COMPATIBILITY_AND_VERSIONING.md)**.
+Current moving public artifact compatibility is recorded in **[AX-PUB-MANIFEST-001 v1.6](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/artifacts/AX-PUB-MANIFEST-001.json)** under **[AX-PUB-POL-001 v1.5](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/COMPATIBILITY_AND_VERSIONING.md)**.
 
-The current fixed review state is **[AX-PUB-SNAP-002 — Governed Intelligence Public vNext](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/snapshots/AX-PUB-SNAP-002_GOVERNED_INTELLIGENCE_PUBLIC_VNEXT.md)** — `COMMIT-ANCHORED · GIT-BLOB-INVENTORIED · SNAPSHOT-CI-VALIDATED · NON-PRODUCT`.
+The current fixed technical-review state is **[AX-PUB-SNAP-002 — Governed Intelligence Public vNext](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/snapshots/AX-PUB-SNAP-002_GOVERNED_INTELLIGENCE_PUBLIC_VNEXT.md)** — `COMMIT-ANCHORED · GIT-BLOB-INVENTORIED · SNAPSHOT-CI-VALIDATED · NON-PRODUCT`.
 
-Snapshot and manifest closure evidence is recorded in **[AX-PUB-CI-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-002_VNEXT_SNAPSHOT_VALIDATION.md)**. The final moving manifest state was subsequently verified successfully through the published manifest workflow.
+Snapshot and manifest closure evidence is recorded in **[AX-PUB-CI-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-002_VNEXT_SNAPSHOT_VALIDATION.md)**. Post-release governance registration is enforced by the public manifest workflow.
 
 `PUBLIC CI PASS ≠ PRODUCT IMPLEMENTATION`  
 `REFERENCE VALIDATOR PASS ≠ PRODUCTION AUTHORIZATION`  
 `PUBLIC CONFORMANCE ≠ PRODUCT IMPLEMENTATION`  
-`PUBLIC SNAPSHOT ≠ PRODUCT RELEASE`
+`PUBLIC SNAPSHOT ≠ PRODUCT RELEASE`  
+`PUBLIC ENGINEERING RELEASE ≠ PRODUCT RELEASE`
 
 These public artifacts do not establish a shared AETHER X agent runtime, authorization plane, production SDK/API, product adoption, production readiness or technical integration across initiatives.
 
