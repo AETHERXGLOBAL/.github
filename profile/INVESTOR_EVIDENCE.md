@@ -44,14 +44,15 @@ A claim should be promoted only when the evidence is appropriate to the claim an
 | **Reference implementations** | `AX-PUB-REF-001`, `AX-PUB-REF-002`, `AX-PUB-REF-003` | `PUBLICLY INSPECTABLE · CI-TESTED · EDUCATIONAL / NON-PRODUCTION` |
 | **Governed-intelligence conformance** | `AX-PUB-TEST-001` with 15 declared synthetic cases and public/private boundary verification | `REPRODUCIBLY VERIFIED · CI RUN UNVERIFIED · NON-PRODUCTION` |
 | **Agent-authority conformance** | `AX-PUB-TEST-002` with 10 synthetic cases | `PUBLICLY INSPECTABLE · CI-TESTED · NON-PRODUCTION` |
-| **Artifact governance** | `AX-PUB-MANIFEST-001 v1.16`, `AX-PUB-POL-001 v1.6` | `PUBLICLY INSPECTABLE · MACHINE-READABLE / POLICY-GOVERNED` |
+| **Artifact governance** | `AX-PUB-MANIFEST-001 v1.18`, `AX-PUB-POL-001 v1.6` | `PUBLICLY INSPECTABLE · MACHINE-READABLE / POLICY-GOVERNED` |
 | **Fixed reproducibility state** | `AX-PUB-SNAP-002` with commit anchor, Git-blob inventory and snapshot CI evidence | `COMMIT-ANCHORED · SNAPSHOT-CI-VALIDATED · NON-PRODUCT` |
 | **Formal public engineering release** | Tag `public-engineering-vnext-1.0` and `AX-PUB-REL-001` | `FORMAL PUBLIC ENGINEERING RELEASE · NON-PRODUCT` |
 | **Developer contract baseline** | `AX-PUB-DEV-002` plus `AX-PUB-CI-003` | `DEV-GATE-00 CLOSED · PUBLIC CONTRACT BASELINE ESTABLISHED` |
 | **Reproducible developer experience** | `AX-PUB-DEV-003` plus `AX-PUB-CI-004`; Python 3.10–3.13 clean-environment reference matrix | `DEV-GATE-01 CLOSED · DIRECTLY CI-VALIDATED · NON-PRODUCTION` |
 | **Bounded SDK candidate** | `AX-PUB-DEV-004` plus `AX-PUB-CI-005`; repository-local candidate with Python 3.10–3.13 validated matrix | `DEV-GATE-02 CLOSED · SDK CANDIDATE ESTABLISHED · NON-DISTRIBUTABLE / NON-PRODUCTION` |
 | **Supply-chain & engineering release candidate** | `AX-PUB-DEV-005`, `AX-PUB-RC-001 v0.1.0-rc1` and `AX-PUB-CI-006 v1.1` | `DEV-GATE-03 CLOSED · RELEASE-CANDIDATE VALIDATED · NON-PUBLISHED / CI-ONLY` |
-| **External evaluation readiness** | `DEV-GATE-04` is the current engineering objective | `UNDER DEVELOPMENT · EXTERNAL EVALUATION NOT ESTABLISHED` |
+| **External evaluation readiness** | `AX-PUB-DEV-006` plus `AX-PUB-CI-007`; self-service evaluator surface and Python 3.10–3.13 readiness/report matrix | `DEV-GATE-04 CLOSED · EXTERNAL EVALUATION READINESS ESTABLISHED · HUMAN EXTERNAL EVALUATION / ADOPTION NOT ESTABLISHED` |
+| **SDK release decision** | `DEV-GATE-05` is the current engineering / decision objective under `AX-PUB-GATE-001` | `ACTIVE DECISION OBJECTIVE · SDK PUBLICATION NOT AUTHORIZED` |
 | **Developer SDK publication** | `AX-PUB-GATE-001` | `SDK PUBLICATION NOT AUTHORIZED` |
 | **Package identity / registry / public SDK licence** | No approved public package identity, registry publication or public SDK licence is represented here | `NOT APPROVED / NOT AUTHORIZED / NOT DECIDED` |
 | **Private implementation & research depth** | Core development repositories and canonical Research repository remain private | `NOT PUBLICLY VERIFIABLE HERE` |
@@ -71,7 +72,8 @@ A claim should be promoted only when the evidence is appropriate to the claim an
 - `DEV-GATE-01 CLOSED · DIRECTLY CI-VALIDATED · NON-PRODUCTION` — the bounded public reference developer experience has been directly validated across its declared runtime matrix; this is not an SDK support commitment.
 - `DEV-GATE-02 CLOSED · SDK CANDIDATE ESTABLISHED` — a bounded repository-local candidate exists and passed the declared candidate checks; it is not a supported or published SDK.
 - `DEV-GATE-03 CLOSED · RELEASE-CANDIDATE VALIDATED` — a bounded non-published engineering artifact has directly verified build, provenance, SBOM, extracted-bundle and public-boundary evidence; it is not a supported SDK, package release or security certification.
-- `SDK PUBLICATION NOT AUTHORIZED` — no public SDK release may be inferred from candidate or release-candidate status.
+- `DEV-GATE-04 CLOSED · EXTERNAL EVALUATION READINESS ESTABLISHED` — the bounded public surface has directly validated self-service readiness, report-generation and runtime-matrix evidence; it does not mean a human external evaluator has participated or that adoption exists.
+- `SDK PUBLICATION NOT AUTHORIZED` — no public SDK release may be inferred from candidate, release-candidate or evaluation-readiness status.
 - `NOT PUBLICLY ESTABLISHED` / `NOT ASSERTED` — no positive claim should be inferred from this GitHub surface.
 
 ---
@@ -125,7 +127,7 @@ AX-PUB-SPEC-004
 → AX-PUB-TEST-002
 ```
 
-The third path has directly recorded GitHub Actions evidence through `AX-PUB-CI-001`. Snapshot and manifest closure evidence is recorded through `AX-PUB-CI-002`. Developer-contract validation is recorded through `AX-PUB-CI-003`. Reproducible-developer-experience validation is recorded through `AX-PUB-CI-004`. Bounded SDK-candidate validation is recorded through `AX-PUB-CI-005`. Supply-chain and engineering release-candidate validation is recorded through `AX-PUB-CI-006 v1.1`.
+The third path has directly recorded GitHub Actions evidence through `AX-PUB-CI-001`. Snapshot and manifest closure evidence is recorded through `AX-PUB-CI-002`. Developer-contract validation is recorded through `AX-PUB-CI-003`. Reproducible-developer-experience validation is recorded through `AX-PUB-CI-004`. Bounded SDK-candidate validation is recorded through `AX-PUB-CI-005`. Supply-chain and engineering release-candidate validation is recorded through `AX-PUB-CI-006 v1.1`. External-evaluation-readiness validation is recorded through `AX-PUB-CI-007`.
 
 `PUBLIC CI PASS ≠ PRODUCT IMPLEMENTATION`  
 `REFERENCE VALIDATOR PASS ≠ PRODUCTION AUTHORIZATION`
@@ -177,7 +179,11 @@ DEV-GATE-00: CLOSED
 DEV-GATE-01: CLOSED
 DEV-GATE-02: CLOSED
 DEV-GATE-03: CLOSED
-CURRENT ENGINEERING OBJECTIVE: DEV-GATE-04 — EXTERNAL EVALUATION READINESS
+DEV-GATE-04: CLOSED
+CURRENT ENGINEERING / DECISION OBJECTIVE: DEV-GATE-05 — SDK RELEASE DECISION
+EXTERNAL EVALUATION READINESS: ESTABLISHED
+HUMAN EXTERNAL EVALUATION: NOT ESTABLISHED
+EXTERNAL ADOPTION: NOT ESTABLISHED
 SDK CANDIDATE: ESTABLISHED
 RELEASE CANDIDATE: VALIDATED / NON-PUBLISHED
 PUBLIC SDK: NOT PUBLISHED
@@ -187,7 +193,7 @@ PUBLIC SDK LICENCE: NOT DECIDED
 SDK PUBLICATION: NOT AUTHORIZED
 ```
 
-The program has reached the **RELEASE-CANDIDATE VALIDATED** stage of its public-engineering progression. This means a bounded repository-local SDK candidate and a validated non-published engineering release candidate exist for the declared public contract surface. It does not mean a distributable package, supported SDK or production service exists.
+The program has reached the **EXTERNAL-EVALUATION READY** stage of its public-engineering progression. This means a bounded repository-local SDK candidate, a validated non-published engineering release candidate and a self-service evaluation-ready surface exist for the declared public contract surface. It does not mean a human external evaluator has participated, a distributable package exists, the SDK is supported, or a production service exists.
 
 ### DEV-GATE-00 — Developer Contract Baseline
 
@@ -383,11 +389,75 @@ This establishes only a **validated non-published engineering release candidate*
 
 ### DEV-GATE-04 — External Evaluation Readiness
 
-`DEV-GATE-04` is now the current engineering objective.
+The closed Gate-04 baseline is:
 
-Its activation means the program may work toward an externally understandable and evaluable developer surface under the exit criteria defined by `AX-PUB-DEV-001`.
+**[AX-PUB-DEV-006 — External Evaluation Readiness](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-006_EXTERNAL_EVALUATION_READINESS.md)**
 
-It does **not** establish that external evaluation has occurred, that external developers or partners have adopted the candidate, that support commitments exist, or that SDK publication is authorized.
+Validation evidence:
+
+**[AX-PUB-CI-007 — External Evaluation Readiness Validation Evidence](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-007_EXTERNAL_EVALUATION_READINESS_VALIDATION.md)**
+
+`AX-PUB-CI-007` records the self-service readiness evidence captured from the merged candidate baseline:
+
+```text
+Validate External Evaluation Readiness
+run ID: 32162256262
+run number: 6
+conclusion: SUCCESS
+
+Validate Public Artifact Manifest
+run ID: 32162256504
+run number: 145
+conclusion: SUCCESS
+```
+
+The declared readiness runtime matrix was directly validated across:
+
+```text
+Python 3.10
+Python 3.11
+Python 3.12
+Python 3.13
+```
+
+Each readiness runtime job passed the Gate-04 governance-state check, eight bounded self-service public checks, machine-readable evaluation-report validation and CI-only report upload.
+
+The Gate-04 closure was squash-merged to `main` at:
+
+```text
+1f9f6e57f1126f205989b80e7989418cdb3882cf
+```
+
+The exact merged closed state was then independently revalidated through a verification-only PR:
+
+```text
+Validate External Evaluation Readiness
+run ID: 32164554496
+run number: 12
+conclusion: SUCCESS
+
+Validate Public Artifact Manifest
+run ID: 32164554490
+run number: 151
+conclusion: SUCCESS
+```
+
+All four Python 3.10–3.13 final-state jobs passed closed Gate-04 governance, the eight-check self-service evaluation path and evaluation-report validation. The verification PR was closed without merge and its branch was reset to an identical state with `main`.
+
+This establishes only **external evaluation readiness** for the bounded public surface.
+
+It does not establish that:
+
+- a human external evaluator has participated;
+- an external developer or partner has adopted the candidate;
+- an integration or endorsement exists;
+- support commitments exist;
+- SDK publication is authorized.
+
+`EXTERNAL EVALUATION READINESS ESTABLISHED ≠ HUMAN EXTERNAL EVALUATION`  
+`EXTERNAL EVALUATION READINESS ≠ EXTERNAL ADOPTION`  
+`READINESS CI PASS ≠ EXTERNAL ENDORSEMENT`  
+`SDK PUBLICATION NOT AUTHORIZED`
 
 ---
 
@@ -405,16 +475,22 @@ Current disposition:
 SDK PUBLICATION NOT AUTHORIZED
 ```
 
-Material unresolved publication decisions include:
+`DEV-GATE-05 — SDK Release Decision` is now the current engineering / decision objective. The refreshed `AX-PUB-GATE-001` assessment recognizes direct progress in contract, candidate, conformance, supply-chain and evaluation-readiness evidence while preserving unresolved publication obligations.
+
+Material unresolved or partial publication decisions include:
 
 - public licence / IP and reuse terms;
 - approved package identity and registry;
-- supported public runtime/compatibility commitment;
-- security and credential boundaries appropriate to any future distributed surface;
-- documentation and maintenance/support commitments;
-- explicit release authority.
+- supported public API/runtime compatibility commitment;
+- production security, authentication, credential and authority boundaries appropriate to any future distributed surface;
+- supported SDK error/retry/timeout/cancellation semantics where applicable;
+- distributed-package dependency/update/publishing policy;
+- maintenance/support ownership and support window;
+- explicit SDK release authority.
 
-Gate-03 supply-chain evidence reduces uncertainty around the bounded engineering candidate. It does not resolve those publication-authority decisions and is not a promise that an SDK will be released.
+Gate-00 through Gate-04 evidence reduces engineering uncertainty. It does not resolve these publication-authority decisions and is not a promise that an SDK will be released.
+
+`DEV-GATE-05 ACTIVE ≠ SDK PUBLICATION AUTHORIZED`
 
 ---
 
@@ -423,7 +499,7 @@ Gate-03 supply-chain evidence reduces uncertainty around the bounded engineering
 Current moving state:
 
 ```text
-AX-PUB-MANIFEST-001 v1.16
+AX-PUB-MANIFEST-001 v1.18
 AX-PUB-POL-001 v1.6
 AX-PUB-CI-001
 AX-PUB-CI-002
@@ -431,6 +507,7 @@ AX-PUB-CI-003
 AX-PUB-CI-004
 AX-PUB-CI-005
 AX-PUB-CI-006 v1.1
+AX-PUB-CI-007 v1.0
 AX-PUB-SNAP-002 v1.0
 AX-PUB-REL-001 v1.0
 AX-PUB-GATE-001 v1.0
@@ -439,12 +516,13 @@ AX-PUB-DEV-002 v1.0 — DEV-GATE-00 CLOSED
 AX-PUB-DEV-003 v1.0 — DEV-GATE-01 CLOSED
 AX-PUB-DEV-004 v1.0 — DEV-GATE-02 CLOSED / SDK CANDIDATE ESTABLISHED
 AX-PUB-DEV-005 v1.0 — DEV-GATE-03 CLOSED / RELEASE-CANDIDATE VALIDATED
+AX-PUB-DEV-006 v1.0 — DEV-GATE-04 CLOSED / EXTERNAL EVALUATION READINESS ESTABLISHED / HUMAN EVALUATION NOT ESTABLISHED
 AX-PUB-RC-001 v0.1.0-rc1 — VALIDATED / NON-PUBLISHED / CI-ONLY
-CURRENT ENGINEERING OBJECTIVE — DEV-GATE-04 EXTERNAL EVALUATION READINESS
+CURRENT ENGINEERING / DECISION OBJECTIVE — DEV-GATE-05 SDK RELEASE DECISION
 SDK PUBLICATION — NOT AUTHORIZED
 ```
 
-The moving public manifest verifies current artifact identity, paths, compatibility relationships, snapshot identity, release registration, readiness-gate registration, developer-program state, closed Gate-00/01/02/03 state and public-only boundaries.
+The moving public manifest verifies current artifact identity, paths, compatibility relationships, snapshot identity, release registration, readiness-gate registration, developer-program state, closed Gate-00/01/02/03/04 state, `AX-PUB-CI-007`, and public-only boundaries.
 
 ---
 
@@ -468,11 +546,12 @@ A public reviewer can reasonably use this GitHub surface as evidence that AETHER
 14. a closed reproducible public reference developer experience with direct Python 3.10–3.13 CI evidence;
 15. a bounded repository-local SDK candidate with explicit interfaces, error mapping, unit/conformance checks, public-boundary controls and direct Python 3.10–3.13 candidate validation;
 16. a validated non-published engineering release candidate with directly verified deterministic-build identity, build manifest, SPDX SBOM, GitHub provenance/SBOM attestations, extracted-bundle validation and CI-only distribution boundary;
-17. an explicit SDK publication-readiness gate preventing candidate engineering from being represented as a supported public SDK.
+17. a closed external-evaluation-readiness surface with self-service evaluator instructions, explicit limitations, migration/deprecation draft, structured feedback/triage, machine-readable evaluation reports and direct Python 3.10–3.13 readiness evidence;
+18. an explicit SDK publication-readiness gate preventing candidate/release/readiness engineering from being represented as a supported public SDK without separate authority.
 
-These are evidence of **public disclosure discipline, engineering doctrine, control design, machine-readable contract design, conformance discipline, reproducibility discipline and bounded software-supply-chain engineering**.
+These are evidence of **public disclosure discipline, engineering doctrine, control design, machine-readable contract design, conformance discipline, reproducibility discipline, bounded software-supply-chain engineering and external-evaluation readiness**.
 
-They are not independent verification of private implementation depth, commercial traction, scientific validity, production scale, production data quality, security certification, external developer adoption or financial performance.
+They are not independent verification of private implementation depth, commercial traction, scientific validity, production scale, production data quality, security certification, human external evaluation, external developer adoption or financial performance.
 
 ---
 
@@ -486,9 +565,10 @@ This public profile must not be treated as proof of:
 - predictive or investment performance;
 - scientific validation merely because a research program exists;
 - a production agent runtime, production authorization plane or autonomous authority;
-- a supported or published SDK merely because a bounded SDK candidate and validated engineering release candidate exist;
+- a supported or published SDK merely because a bounded SDK candidate, validated engineering release candidate and external-evaluation-ready surface exist;
 - an approved package identity, registry or reuse licence;
-- external developer or partner evaluation/adoption merely because DEV-GATE-04 is active;
+- human external developer/partner evaluation, endorsement or adoption merely because DEV-GATE-04 is closed;
+- SDK publication authority merely because DEV-GATE-05 is active;
 - shared runtime, deployment dependency or technical integration across AETHER X initiatives;
 - regulatory approval, licence, security certification or standards certification;
 - a product release merely because a public engineering release exists.
@@ -498,7 +578,9 @@ This public profile must not be treated as proof of:
 `PUBLIC REFERENCE ENGINEERING ≠ PRIVATE PRODUCT IMPLEMENTATION`  
 `PUBLIC ENGINEERING RELEASE ≠ PRODUCT RELEASE`  
 `SDK CANDIDATE ESTABLISHED ≠ SUPPORTED SDK`  
-`RELEASE-CANDIDATE VALIDATED ≠ SDK RELEASE`
+`RELEASE-CANDIDATE VALIDATED ≠ SDK RELEASE`  
+`EXTERNAL-EVALUATION READY ≠ EXTERNAL ADOPTION`  
+`DEV-GATE-05 ACTIVE ≠ SDK PUBLICATION AUTHORIZED`
 
 ---
 
@@ -537,6 +619,9 @@ The objective is **credible evidence without unnecessary information exposure**.
 - [SDK Candidate Validation Evidence](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-005_SDK_CANDIDATE_VALIDATION.md)
 - [Supply-Chain & Release Candidate](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-005_SUPPLY_CHAIN_RELEASE_CANDIDATE.md)
 - [Supply-Chain Release-Candidate Validation Evidence](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-006_SUPPLY_CHAIN_RELEASE_CANDIDATE_VALIDATION.md)
+- [External Evaluation Readiness](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-006_EXTERNAL_EVALUATION_READINESS.md)
+- [External Evaluator Guide](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/EXTERNAL_EVALUATOR_GUIDE.md)
+- [External Evaluation Readiness Validation Evidence](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-007_EXTERNAL_EVALUATION_READINESS_VALIDATION.md)
 - [SDK Publication Readiness Gate](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-GATE-001_DEVELOPER_SDK_PUBLICATION_READINESS.md)
 
 ---
