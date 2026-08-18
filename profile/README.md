@@ -71,10 +71,11 @@ The Live Portfolio Pulse publishes selected initiative-state signals from allowl
 | **Portfolio maturity & research structure** | Explicitly disclosed by initiative or unit and bounded by current maturity / organizational state. |
 | **Governed portfolio-state publication** | Live Portfolio Pulse with explicit source and disclosure boundaries. |
 | **Public technical engineering** | Dedicated public repository with specifications, machine-readable contracts, bounded reference validators, conformance evidence, verified CI, a fixed reproducibility snapshot and a formal public engineering release. |
-| **Developer adoption & SDK readiness** | `AX-PUB-DEV-001` is active / under development; `DEV-GATE-00`, `DEV-GATE-01` and `DEV-GATE-02` are closed; `DEV-GATE-03 — Supply-Chain & Release Candidate` is the current engineering objective. |
+| **Developer adoption & SDK readiness** | `AX-PUB-DEV-001` is active / under development; `DEV-GATE-00`, `DEV-GATE-01`, `DEV-GATE-02` and `DEV-GATE-03` are closed; `DEV-GATE-04 — External Evaluation Readiness` is the current engineering objective. |
 | **Developer contract baseline** | `AX-PUB-DEV-002` establishes the bounded public developer contract baseline; validation is recorded by `AX-PUB-CI-003`. |
 | **Reproducible developer experience** | `AX-PUB-DEV-003` is `DEV-GATE-01 CLOSED`; `AX-PUB-CI-004` directly records successful clean-environment validation across Python 3.10–3.13 for the bounded public reference experience. |
 | **Bounded SDK candidate** | `AX-PUB-DEV-004` is `DEV-GATE-02 CLOSED`; `AX-PUB-CI-005` records the candidate validation used for closure. The candidate remains repository-local and non-distributable, with no approved package identity, registry or public SDK licence. |
+| **Validated engineering release candidate** | `AX-PUB-DEV-005` is `DEV-GATE-03 CLOSED`; `AX-PUB-CI-006 v1.1` records deterministic-build, SBOM, provenance/attestation, extracted-bundle and public-boundary evidence for `AX-PUB-RC-001 v0.1.0-rc1`. The artifact remains non-published and CI-only. |
 | **Developer SDK publication** | Governed by `AX-PUB-GATE-001`; current disposition `SDK PUBLICATION NOT AUTHORIZED`. |
 | **Commercial / financial traction** | Not established by this public GitHub profile. |
 | **Production readiness / customer outcomes** | Not implied unless separately evidenced and explicitly disclosed. |
@@ -171,7 +172,7 @@ AX-PUB-SPEC-004 → AX-PUB-SCHEMA-003 → AX-PUB-REF-003 → AX-PUB-TEST-002
 
 ### Public Governance & Reproducibility
 
-- **[AX-PUB-MANIFEST-001 v1.14](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/artifacts/AX-PUB-MANIFEST-001.json)** — current machine-readable public artifact state.
+- **[AX-PUB-MANIFEST-001 v1.16](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/artifacts/AX-PUB-MANIFEST-001.json)** — current machine-readable public artifact state.
 - **[AX-PUB-POL-001 v1.6](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/COMPATIBILITY_AND_VERSIONING.md)** — compatibility, snapshot, release and publication-readiness policy.
 - **[AX-PUB-SNAP-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/snapshots/AX-PUB-SNAP-002_GOVERNED_INTELLIGENCE_PUBLIC_VNEXT.md)** — fixed, commit-anchored, CI-validated reproducibility state.
 - **[AX-PUB-CI-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-001_AGENT_AUTHORITY_VNEXT_VALIDATION.md)** — agent-authority path CI evidence.
@@ -179,6 +180,7 @@ AX-PUB-SPEC-004 → AX-PUB-SCHEMA-003 → AX-PUB-REF-003 → AX-PUB-TEST-002
 - **[AX-PUB-CI-003](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-003_DEVELOPER_CONTRACT_BASELINE_VALIDATION.md)** — DEV-GATE-00 validation evidence.
 - **[AX-PUB-CI-004](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-004_REPRODUCIBLE_DEVELOPER_EXPERIENCE_VALIDATION.md)** — DEV-GATE-01 clean-environment runtime-matrix evidence.
 - **[AX-PUB-CI-005](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-005_SDK_CANDIDATE_VALIDATION.md)** — DEV-GATE-02 bounded SDK-candidate validation evidence.
+- **[AX-PUB-CI-006 v1.1](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-006_SUPPLY_CHAIN_RELEASE_CANDIDATE_VALIDATION.md)** — DEV-GATE-03 deterministic-build, SBOM, provenance/attestation, extracted-bundle and public-boundary validation evidence.
 
 ### Developer Adoption & SDK Readiness
 
@@ -191,8 +193,10 @@ PROGRAM: ACTIVE / UNDER DEVELOPMENT
 DEV-GATE-00: CLOSED
 DEV-GATE-01: CLOSED
 DEV-GATE-02: CLOSED
-CURRENT ENGINEERING OBJECTIVE: DEV-GATE-03 — SUPPLY-CHAIN & RELEASE CANDIDATE
+DEV-GATE-03: CLOSED
+CURRENT ENGINEERING OBJECTIVE: DEV-GATE-04 — EXTERNAL EVALUATION READINESS
 SDK CANDIDATE: ESTABLISHED
+RELEASE CANDIDATE: VALIDATED / NON-PUBLISHED
 PUBLIC SDK: NOT PUBLISHED
 PACKAGE IDENTITY: NOT APPROVED
 PACKAGE REGISTRY: NOT AUTHORIZED
@@ -215,11 +219,21 @@ Python 3.12
 Python 3.13
 ```
 
-The published closed state was independently revalidated after merge through verification-only workflows: `Validate SDK Candidate` run `32146395294` / #6 and `Validate Public Artifact Manifest` run `32146395289` / #128, both with conclusion `SUCCESS`. The verification PR was closed without merge and its branch was reset to an identical state with `main`.
+**[AX-PUB-DEV-005 — Supply-Chain & Release Candidate](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-005_SUPPLY_CHAIN_RELEASE_CANDIDATE.md)** is `DEV-GATE-03 CLOSED`. `AX-PUB-CI-006 v1.1` records the validation used for closure of the bounded non-published engineering release candidate `AX-PUB-RC-001 v0.1.0-rc1`.
+
+Verified engineering-bundle identity:
+
+```text
+SHA-256: 8444e7c01621f3d63019b407d9379bc82176f892dce64760cc93e84064ac8c21
+SOURCE_DATE_EPOCH: 1787064230
+```
+
+The merged Gate-03 state was independently revalidated after merge through `Validate Supply-Chain Release Candidate` run `32155658734` / #11 and `Validate Public Artifact Manifest` run `32155658918` / #139, both `SUCCESS`. The verification PR was closed without merge and its branch was reset to an identical state with `main`.
 
 `SDK CANDIDATE ESTABLISHED ≠ SUPPORTED SDK`  
-`SDK CANDIDATE ≠ SDK RELEASE`  
-`VERIFIED CANDIDATE MATRIX ≠ GENERAL SDK SUPPORT COMMITMENT`  
+`RELEASE-CANDIDATE VALIDATED ≠ SDK RELEASE`  
+`VERIFIED BUILD / ATTESTATION ≠ SECURITY CERTIFICATION`  
+`CI-ONLY ARTIFACT ≠ PUBLIC PACKAGE`  
 `REPOSITORY-LOCAL MODULE ≠ APPROVED PACKAGE IDENTITY`
 
 ### Developer SDK Publication Boundary
@@ -232,9 +246,10 @@ Current disposition:
 SDK PUBLICATION NOT AUTHORIZED
 ```
 
-The gate prevents the bounded candidate from being represented as an officially supported or published SDK before licensing/IP authority, interface compatibility, distribution identity, security and credential boundaries, supply-chain controls, documentation and maintenance/support commitments are explicitly established.
+The gate prevents the bounded candidate and validated engineering release candidate from being represented as an officially supported or published SDK before licensing/IP authority, interface compatibility, distribution identity, security and credential boundaries, documentation and maintenance/support commitments, and explicit release authority are established.
 
 `SDK CANDIDATE ≠ SUPPORTED SDK`  
+`RELEASE-CANDIDATE VALIDATED ≠ SDK RELEASE`  
 `PUBLIC ENGINEERING RELEASE ≠ SDK RELEASE`  
 `SDK READINESS GATE ≠ SDK COMMITMENT`
 
