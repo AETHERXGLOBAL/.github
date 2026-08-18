@@ -9,91 +9,26 @@
 <p align="center"><strong>Build Intelligence That Can Be Trusted to Act.</strong></p>
 
 <p align="center">
-  We engineer governed intelligence systems for consequential financial, research, knowledge, enterprise and institutional workflows.
+  Engineering intelligence systems for consequential financial, research, knowledge, enterprise and institutional workflows.
 </p>
 
 <p align="center">
-  <a href="#portfolio--research-at-a-glance">Portfolio & Research</a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="#investor-evidence">Investor Evidence</a>
+  <a href="#engineering-doctrine">Engineering Doctrine</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="#public-engineering">Public Engineering</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="./INVESTOR_EVIDENCE.md">Public Diligence</a>
 </p>
 
 ---
 
 ## Company
 
-AETHER X GLOBAL builds the system layer around advanced intelligence: the evidence, authority, controls, verification and institutional memory required to make AI useful in consequential work.
+AETHER X GLOBAL engineers the system layer around advanced intelligence: **evidence, bounded authority, controlled execution, verification, institutional memory and measurable outcomes**.
 
-Our engineering approach is designed around **multi-model intelligence, specialized agents, governed data and knowledge, bounded authority, controlled execution, independent verification and measurable outcomes**.
+We do not define intelligence as model output alone. The company thesis is that advanced AI becomes institutionally useful when capability is connected to explicit evidence, authority, security, verification and accountable outcomes.
 
-The objective is not unrestricted autonomy. The objective is **useful intelligence with explicit evidence, authority and accountability**.
-
----
-
-## Portfolio & Research at a Glance
-
-Our current operating portfolio includes **three governed intelligence system initiatives and one dedicated institutional research unit**. The visual below represents portfolio membership, maturity or organizational state, domain and role — not technical integration between initiatives.
-
-<p align="center">
-  <img src="./assets/aether-x-portfolio-architecture-v2.svg" alt="AETHER X GLOBAL Portfolio and Research Architecture" width="100%" />
-</p>
-
-> **Portfolio boundary:** Shared ownership, branding or engineering doctrine does not imply technical integration, shared runtime, deployment dependency or production interoperability. Product-to-product integration requires separate approval and implementation evidence.
-
-| Initiative / Unit | Current maturity / state | Primary role |
-|---|---|---|
-| **AETHER X Quantum** | `UNDER ACTIVE DEVELOPMENT` | Advanced technical-analysis and strategy-engineering platform designed to support evidence-governed market analysis, strategy construction, quantitative validation and controlled decision workflows. |
-| **AX-OS** | `UNDER DEVELOPMENT · ACTIVE BUILD` | Internal-first governed AI operations, authority, execution, verification and institutional learning. |
-| **AETHER Intelligence Core (AIC)** | `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION` | Strategic infrastructure initiative intended to become a durable, high-integrity financial-information asset with point-in-time accuracy, provenance and reusable intelligence foundations. |
-| **AETHER X Research** | `INSTITUTIONAL RESEARCH UNIT · ACTIVE` | Dedicated institutional research unit for evidence-governed research across data, financial and quantitative intelligence, and artificial intelligence. |
-
-Each initiative is presented according to its **current verified maturity, authority boundary and public-disclosure state**. Research does not imply production readiness. Architecture does not imply implementation. Development status does not imply commercial or operational readiness.
-
-**Public access:** Core development and research repositories remain private. Public GitHub materials consist only of intentionally released corporate, engineering and evidence artifacts.
-
----
-
-## Investor Evidence
-
-AETHER X is designed to be evaluated on **evidence rather than presentation**. This GitHub surface provides a bounded public diligence layer separating what can be inspected directly from what remains private, controlled or unestablished.
-
-<p align="center">
-  <img src="./assets/aether-x-live-project-pulse.svg" alt="AETHER X Live Portfolio Pulse" width="100%" />
-</p>
-
-The Live Portfolio Pulse publishes selected initiative-state signals from allowlisted governed sources plus a bounded public organizational state for the Research unit. It does not publish private repository bodies, infer aggregate completion percentages or convert commits, merges, research or design into acceptance or production claims.
-
-| Public diligence signal | Current public evidence |
-|---|---|
-| **Corporate thesis & engineering doctrine** | Publicly stated and directly inspectable. |
-| **Portfolio maturity & research structure** | Explicitly disclosed by initiative or unit and bounded by current maturity / organizational state. |
-| **Governed portfolio-state publication** | Live Portfolio Pulse with explicit source and disclosure boundaries. |
-| **Public technical engineering** | Dedicated public repository with specifications, machine-readable contracts, bounded reference validators, conformance evidence, verified CI, a fixed reproducibility snapshot and a formal public engineering release. |
-| **Developer adoption & SDK readiness** | `AX-PUB-DEV-001` is active / under development; `DEV-GATE-00` through `DEV-GATE-04` are closed; `DEV-GATE-05 — SDK Release Decision` is the current engineering / decision objective. |
-| **Developer contract baseline** | `AX-PUB-DEV-002` establishes the bounded public developer contract baseline; validation is recorded by `AX-PUB-CI-003`. |
-| **Reproducible developer experience** | `AX-PUB-DEV-003` is `DEV-GATE-01 CLOSED`; `AX-PUB-CI-004` directly records successful clean-environment validation across Python 3.10–3.13 for the bounded public reference experience. |
-| **Bounded SDK candidate** | `AX-PUB-DEV-004` is `DEV-GATE-02 CLOSED`; `AX-PUB-CI-005` records the candidate validation used for closure. The candidate remains repository-local and non-distributable, with no approved package identity, registry or public SDK licence. |
-| **Validated engineering release candidate** | `AX-PUB-DEV-005` is `DEV-GATE-03 CLOSED`; `AX-PUB-CI-006 v1.1` records deterministic-build, SBOM, provenance/attestation, extracted-bundle and public-boundary evidence for `AX-PUB-RC-001 v0.1.0-rc1`. The artifact remains non-published and CI-only. |
-| **External evaluation readiness** | `AX-PUB-DEV-006` is `DEV-GATE-04 CLOSED`; `AX-PUB-CI-007` records the self-service readiness path and Python 3.10–3.13 evaluation-report matrix. `HUMAN EXTERNAL EVALUATION` and `EXTERNAL ADOPTION` remain `NOT ESTABLISHED`. |
-| **Developer SDK publication** | Governed by `AX-PUB-GATE-001`; current disposition `SDK PUBLICATION NOT AUTHORIZED`. |
-| **Commercial / financial traction** | Not established by this public GitHub profile. |
-| **Production readiness / customer outcomes** | Not implied unless separately evidenced and explicitly disclosed. |
-
-**[Public Investor Evidence →](./INVESTOR_EVIDENCE.md)**
-
-> **Diligence boundary:** GitHub evidence is not a substitute for technical, commercial, financial, capitalization, legal, security or intellectual-property due diligence.
-
----
-
-## Our Thesis
-
-Artificial intelligence becomes institutionally valuable when capability is connected to **evidence, bounded authority, controlled execution, independent verification and accountable outcomes**.
-
-AETHER X does not organize its core strategy around building the largest general-purpose foundation model. We engineer the governed intelligence layer that can enable models, specialized agents, institutional knowledge and deterministic controls to operate inside accountable systems.
-
-> **The durable value of advanced AI systems is not raw model capability alone. It is the system that makes intelligence governable, evidence-backed, secure, measurable and safe to use in real decisions and controlled execution.**
+AETHER X does **not** organize its core strategy around building the largest general-purpose foundation model. We build governed, multi-model systems and specialized intelligence components around consequential workflows. fileciteturn489file1
 
 ---
 
@@ -103,7 +38,29 @@ AETHER X does not organize its core strategy around building the largest general
   <img src="./assets/aether-x-intelligence-chain.svg" alt="AETHER X Intelligence Chain" width="100%" />
 </p>
 
-Individual projects may implement only the parts of this chain appropriate to their domain and risk.
+```text
+INTENT
+  ↓
+DATA / KNOWLEDGE
+  ↓
+EVIDENCE
+  ↓
+ANALYSIS / REASONING
+  ↓
+DECISION
+  ↓
+AUTHORITY
+  ↓
+CONTROLLED EXECUTION
+  ↓
+VERIFICATION
+  ↓
+VERIFIED OUTCOME
+  ↓
+AUDIT / LEARNING
+```
+
+Individual initiatives implement only the layers appropriate to their domain and risk.
 
 ---
 
@@ -117,12 +74,215 @@ Individual projects may implement only the parts of this chain appropriate to th
 `RESEARCH ≠ PRODUCTION`  
 `DESIGN ≠ IMPLEMENTATION`
 
-- **Evidence before confidence** — important claims remain traceable to evidence, provenance, assumptions and time.
-- **Authority before action** — capability does not imply permission.
-- **Verification before acceptance** — execution completion is not acceptance.
-- **Security by design** — identity, least privilege, trust boundaries, recovery and audit are architectural concerns.
-- **Multi-model resilience** — models are components; domain logic and institutional memory should remain portable where justified.
-- **Measurable outcomes** — verified outcomes, reliability, risk and cost matter more than model activity.
+### Evidence before confidence
+
+Important claims should remain traceable to source, provenance, time, assumptions and verification state.
+
+### Authority before action
+
+A system being technically capable of an action does not mean it is permitted to perform it. Consequential actions require explicit, bounded authority.
+
+### Verification before acceptance
+
+Generation or execution completion is not acceptance. Critical outcomes require an independent verification path appropriate to risk.
+
+### Governance in architecture
+
+Governance is expressed through contracts, permissions, state transitions, approval gates, evidence and tests — not only policy documents.
+
+### Bounded autonomy
+
+Autonomy is proportional to impact, reversibility, evidence quality, authority, monitoring and blast radius.
+
+### Security by design
+
+Identity, least privilege, trust boundaries, secrets, supply chain, containment, recovery and revoke/kill paths are engineering concerns from the beginning.
+
+### Multi-model resilience
+
+Models are components. Domain logic and institutional memory should remain portable where technically and economically justified.
+
+### Measurable outcomes
+
+Activity is not the final engineering metric. Reliability, risk, verified outcomes and **cost per verified outcome** matter more than model-call volume.
+
+---
+
+## Architecture Grammar
+
+AETHER X systems are designed around a recurring control grammar:
+
+```text
+KNOWLEDGE
+→ EVIDENCE
+→ DECISION
+→ AUTHORITY
+→ EFFECT
+→ VERIFICATION
+→ AUDIT
+```
+
+This grammar is visible in public specifications and machine-readable contracts without implying that every private AETHER X product shares one runtime or implementation.
+
+> **Portfolio boundary:** common ownership, branding or engineering doctrine does not establish product-to-product integration.
+
+---
+
+## Portfolio & Research
+
+<p align="center">
+  <img src="./assets/aether-x-portfolio-architecture-v2.svg" alt="AETHER X GLOBAL Portfolio and Research Architecture" width="100%" />
+</p>
+
+| Initiative / Unit | Current disclosed state | Primary role |
+|---|---|---|
+| **AETHER X Quantum** | `UNDER ACTIVE DEVELOPMENT` | Evidence-governed market analysis, strategy engineering, quantitative validation and controlled decision workflows. |
+| **AX-OS** | `UNDER DEVELOPMENT · ACTIVE BUILD` | Internal-first governed AI operations, authority, execution, verification and institutional learning. |
+| **AETHER Intelligence Core (AIC)** | `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION` | Strategic infrastructure direction for high-integrity financial information, point-in-time correctness and provenance. |
+| **AETHER X Research** | `INSTITUTIONAL RESEARCH UNIT · ACTIVE` | Evidence-governed technical, quantitative, data and AI research. |
+
+Research does not imply production readiness. Architecture does not imply implementation. Development does not imply commercial availability.
+
+---
+
+## Public Engineering
+
+### Canonical Repository
+
+**[AETHER X Governed Intelligence](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**  
+`PUBLIC ENGINEERING REPOSITORY · CONTROLLED DISCLOSURE · NON-PRODUCTION`
+
+The repository exposes a bounded engineering surface:
+
+- governed-intelligence reference architecture;
+- Evidence / Authority / Verification contracts;
+- point-in-time knowledge and provenance contracts;
+- governed agent authority and tool-use boundaries;
+- machine-readable JSON Schemas;
+- bounded Python reference validators;
+- synthetic conformance kits;
+- deterministic build, SBOM and provenance evidence;
+- developer-readiness gates;
+- installable Python SDK candidate engineering;
+- local-index distribution validation.
+
+### Current Developer / SDK State
+
+```text
+DEV-GATE-00  CLOSED
+DEV-GATE-01  CLOSED
+DEV-GATE-02  CLOSED
+DEV-GATE-03  CLOSED
+DEV-GATE-04  CLOSED
+
+DEV-GATE-05  ACTIVE
+  05A  CLOSED
+  05B  CLOSED
+  05C  ACTIVE
+  05D  NOT AUTHORIZED
+```
+
+Current bounded engineering state:
+
+```text
+INSTALLABLE PACKAGE CANDIDATE: ESTABLISHED
+DISTRIBUTION CANDIDATE: aetherxglobal-governed-intelligence
+VERSION CANDIDATE: 0.1.0rc1
+IMPORT NAMESPACE: aetherxglobal.governed_intelligence
+VERIFIED PACKAGE RUNTIME MATRIX: Python 3.11–3.14
+LOCAL INDEX DISTRIBUTION VALIDATION: VERIFIED / LOCAL ONLY
+EXTERNAL REGISTRY VALIDATION: NOT ESTABLISHED / NOT AUTHORIZED
+HUMAN EXTERNAL EVALUATION: NOT ESTABLISHED
+EXTERNAL ADOPTION: NOT ESTABLISHED
+REGISTRY OWNERSHIP: NOT ESTABLISHED
+PUBLIC SDK LICENCE: NOT GRANTED
+SUPPORTED SDK: NOT ESTABLISHED
+SDK PUBLICATION: NOT AUTHORIZED
+```
+
+**[Current Public Engineering State →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/PUBLIC_ENGINEERING_STATE.md)**
+
+### Public Evidence Progression
+
+```text
+SPECIFICATION
+→ MACHINE-READABLE CONTRACT
+→ REFERENCE / SDK BEHAVIOR
+→ CONFORMANCE
+→ CI
+→ EVIDENCE RECORD
+→ GOVERNED MATURITY STATE
+```
+
+Recent developer evidence includes:
+
+- `AX-PUB-CI-008` — SDK release-decision baseline validation;
+- `AX-PUB-CI-009` — deterministic installable-package candidate validation;
+- `AX-PUB-CI-010` — local-index distribution validation across Python 3.11–3.14.
+
+`LOCAL INDEX PASS ≠ TESTPYPI PASS`  
+`INSTALLABLE CANDIDATE ≠ SUPPORTED SDK`  
+`SDK PUBLICATION NOT AUTHORIZED`
+
+---
+
+## Formal Public Engineering Release
+
+The fixed public engineering release is:
+
+**`public-engineering-vnext-1.0` — AETHER X Governed Intelligence — Public Engineering vNext 1.0**
+
+This is a public engineering state, not a product or SDK release.
+
+`PUBLIC ENGINEERING RELEASE ≠ PRODUCT RELEASE`
+
+---
+
+## Public Diligence
+
+AETHER X GitHub is designed as a bounded technical diligence surface, not as a substitute for commercial, legal, financial, security or IP diligence.
+
+**[Public Investor Evidence →](./INVESTOR_EVIDENCE.md)**
+
+What can be inspected publicly includes:
+
+- company engineering doctrine;
+- public reference architecture and specifications;
+- machine-readable contracts;
+- reference validators and conformance paths;
+- CI evidence;
+- deterministic package-candidate evidence;
+- explicit maturity and claim boundaries.
+
+What is **not** established merely by this GitHub surface includes:
+
+- customer traction;
+- revenue or financial performance;
+- production deployment;
+- supported public SDK availability;
+- external developer adoption;
+- regulatory or security certification;
+- private research depth or patentability.
+
+---
+
+## Public / Private Boundary
+
+Core product development and research repositories remain private unless intentionally released.
+
+The public engineering repository is self-contained within its declared boundary. It does not require a private AETHER X repository, private endpoint or private credential to reproduce its bounded public reference paths.
+
+Confidential research and invention work is not represented as public engineering capability.
+
+---
+
+## Licensing Boundary
+
+Public visibility does not create an open-source licence.
+
+The current public SDK release-direction record identifies Apache-2.0 only as a **target direction after IP/copyright clearance** for a separately scoped future SDK distribution. No public SDK licence has been granted.
+
+`PUBLIC VISIBILITY ≠ OPEN-SOURCE LICENCE`
 
 ---
 
@@ -140,149 +300,25 @@ Individual projects may implement only the parts of this chain appropriate to th
   <img src="./assets/aether-x-engineering-pulse.svg" alt="AETHER X Live Engineering Pulse" width="100%" />
 </p>
 
-The dashboard is generated from **public GitHub organization data only**. Private repositories, private activity and confidential engineering metadata are neither queried nor published by this public view.
+Public pulse views use public-safe sources and must not be interpreted as proof of private product completion, acceptance or production readiness.
 
 ---
 
-## Public Engineering
+## Communication Standard
 
-### Canonical Public Engineering Repository
+AETHER X technical claims are intended to remain:
 
-**[AETHER X Governed Intelligence →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**  
-`PUBLIC ENGINEERING REPOSITORY · CONTROLLED DISCLOSURE`
+**Precise · Institutional · Evidence-aware · Calm · Technically credible · Explicit about maturity**
 
-### Formal Public Engineering Release
+We distinguish:
 
-**`public-engineering-vnext-1.0` — AETHER X Governed Intelligence — Public Engineering vNext 1.0**
-
-- release tag target: `4f067c9fd3d3ac065ac50b10faf1abd1bdb91bb6`;
-- fixed technical-review state: `AX-PUB-SNAP-002`;
-- publication evidence: **[AX-PUB-REL-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-REL-001_PUBLIC_ENGINEERING_VNEXT_RELEASE.md)**.
-
-`PUBLIC ENGINEERING RELEASE ≠ PRODUCT RELEASE`
-
-### Public Evidence Paths
-
-```text
-AX-PUB-SPEC-002 → AX-PUB-SCHEMA-001 → AX-PUB-REF-001 → AX-PUB-TEST-001
-AX-PUB-SPEC-003 → AX-PUB-SCHEMA-002 → AX-PUB-REF-002 → AX-PUB-TEST-001
-AX-PUB-SPEC-004 → AX-PUB-SCHEMA-003 → AX-PUB-REF-003 → AX-PUB-TEST-002
-```
-
-`AX-PUB-REF-001`, `AX-PUB-REF-002` and `AX-PUB-REF-003` are bounded public reference implementations; they are not production systems. `AX-PUB-TEST-002` is CI-tested for its declared synthetic reference cases. `AX-PUB-TEST-001` remains explicitly bounded as reproducibly verified with its GitHub CI run unverified.
-
-### Public Governance & Reproducibility
-
-- **[AX-PUB-MANIFEST-001 v1.18](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/artifacts/AX-PUB-MANIFEST-001.json)** — current machine-readable public artifact state.
-- **[AX-PUB-POL-001 v1.6](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/COMPATIBILITY_AND_VERSIONING.md)** — compatibility, snapshot, release and publication-readiness policy.
-- **[AX-PUB-SNAP-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/snapshots/AX-PUB-SNAP-002_GOVERNED_INTELLIGENCE_PUBLIC_VNEXT.md)** — fixed, commit-anchored, CI-validated reproducibility state.
-- **[AX-PUB-CI-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-001_AGENT_AUTHORITY_VNEXT_VALIDATION.md)** — agent-authority path CI evidence.
-- **[AX-PUB-CI-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-002_VNEXT_SNAPSHOT_VALIDATION.md)** — vNext snapshot and manifest closure evidence.
-- **[AX-PUB-CI-003](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-003_DEVELOPER_CONTRACT_BASELINE_VALIDATION.md)** — DEV-GATE-00 validation evidence.
-- **[AX-PUB-CI-004](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-004_REPRODUCIBLE_DEVELOPER_EXPERIENCE_VALIDATION.md)** — DEV-GATE-01 clean-environment runtime-matrix evidence.
-- **[AX-PUB-CI-005](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-005_SDK_CANDIDATE_VALIDATION.md)** — DEV-GATE-02 bounded SDK-candidate validation evidence.
-- **[AX-PUB-CI-006 v1.1](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-006_SUPPLY_CHAIN_RELEASE_CANDIDATE_VALIDATION.md)** — DEV-GATE-03 deterministic-build, SBOM, provenance/attestation, extracted-bundle and public-boundary validation evidence.
-- **[AX-PUB-CI-007](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-007_EXTERNAL_EVALUATION_READINESS_VALIDATION.md)** — DEV-GATE-04 self-service readiness path, machine-readable evaluation-report and Python 3.10–3.13 readiness-matrix evidence.
-
-### Developer Adoption & SDK Readiness
-
-**[AX-PUB-DEV-001 — Developer Adoption & SDK Readiness Program](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-001_DEVELOPER_ADOPTION_SDK_READINESS_PROGRAM.md)**
-
-Current public state:
-
-```text
-PROGRAM: ACTIVE / UNDER DEVELOPMENT
-DEV-GATE-00: CLOSED
-DEV-GATE-01: CLOSED
-DEV-GATE-02: CLOSED
-DEV-GATE-03: CLOSED
-DEV-GATE-04: CLOSED
-CURRENT ENGINEERING / DECISION OBJECTIVE: DEV-GATE-05 — SDK RELEASE DECISION
-EXTERNAL EVALUATION READINESS: ESTABLISHED
-HUMAN EXTERNAL EVALUATION: NOT ESTABLISHED
-EXTERNAL ADOPTION: NOT ESTABLISHED
-SDK CANDIDATE: ESTABLISHED
-RELEASE CANDIDATE: VALIDATED / NON-PUBLISHED
-PUBLIC SDK: NOT PUBLISHED
-PACKAGE IDENTITY: NOT APPROVED
-PACKAGE REGISTRY: NOT AUTHORIZED
-PUBLIC SDK LICENCE: NOT DECIDED
-SDK PUBLICATION: NOT AUTHORIZED
-```
-
-**[AX-PUB-DEV-002 — Developer Contract Baseline](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-002_DEVELOPER_CONTRACT_BASELINE.md)** establishes the initial public developer contract baseline with explicit non-goals, error taxonomy, fail-closed rules, compatibility semantics and a public/private dependency boundary.
-
-**[AX-PUB-DEV-003 — Reproducible Developer Experience](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-003_REPRODUCIBLE_DEVELOPER_EXPERIENCE.md)** establishes the bounded reproducible public reference developer experience. Its direct validation evidence is recorded in **[AX-PUB-CI-004](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-004_REPRODUCIBLE_DEVELOPER_EXPERIENCE_VALIDATION.md)**.
-
-**[AX-PUB-DEV-004 — SDK Candidate Engineering Baseline](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-004_SDK_CANDIDATE_ENGINEERING_BASELINE.md)** establishes a bounded repository-local Python candidate over the three declared public contract paths. `AX-PUB-CI-005` records the candidate validation used for Gate-02 closure.
-
-The directly verified Gate-02 candidate matrix is:
-
-```text
-Python 3.10
-Python 3.11
-Python 3.12
-Python 3.13
-```
-
-**[AX-PUB-DEV-005 — Supply-Chain & Release Candidate](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-005_SUPPLY_CHAIN_RELEASE_CANDIDATE.md)** is `DEV-GATE-03 CLOSED`. `AX-PUB-CI-006 v1.1` records the validation used for closure of the bounded non-published engineering release candidate `AX-PUB-RC-001 v0.1.0-rc1`.
-
-Verified engineering-bundle identity:
-
-```text
-SHA-256: 8444e7c01621f3d63019b407d9379bc82176f892dce64760cc93e84064ac8c21
-SOURCE_DATE_EPOCH: 1787064230
-```
-
-The merged Gate-03 state was independently revalidated after merge through `Validate Supply-Chain Release Candidate` run `32155658734` / #11 and `Validate Public Artifact Manifest` run `32155658918` / #139, both `SUCCESS`. The verification PR was closed without merge and its branch was reset to an identical state with `main`.
-
-**[AX-PUB-DEV-006 — External Evaluation Readiness](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-006_EXTERNAL_EVALUATION_READINESS.md)** is `DEV-GATE-04 CLOSED`. `AX-PUB-CI-007` records successful self-service readiness execution and machine-readable evaluation-report validation across Python 3.10–3.13.
-
-The merged Gate-04 state was independently revalidated after merge through `Validate External Evaluation Readiness` run `32164554496` / #12 and `Validate Public Artifact Manifest` run `32164554490` / #151, both `SUCCESS`. The verification PR was closed without merge and its branch was reset to an identical state with `main`.
-
-`EXTERNAL EVALUATION READINESS ESTABLISHED ≠ HUMAN EXTERNAL EVALUATION`  
-`EXTERNAL EVALUATION READINESS ≠ EXTERNAL ADOPTION`  
-`SDK CANDIDATE ESTABLISHED ≠ SUPPORTED SDK`  
-`RELEASE-CANDIDATE VALIDATED ≠ SDK RELEASE`  
-`VERIFIED BUILD / ATTESTATION ≠ SECURITY CERTIFICATION`  
-`CI-ONLY ARTIFACT ≠ PUBLIC PACKAGE`  
-`REPOSITORY-LOCAL MODULE ≠ APPROVED PACKAGE IDENTITY`
-
-### Developer SDK Publication Boundary
-
-**[AX-PUB-GATE-001 — Developer SDK Publication Readiness Gate](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-GATE-001_DEVELOPER_SDK_PUBLICATION_READINESS.md)**
-
-Current disposition:
-
-```text
-SDK PUBLICATION NOT AUTHORIZED
-```
-
-`DEV-GATE-05 — SDK Release Decision` is the current engineering / decision objective. The gate still requires explicit resolution of licensing/IP authority, supported interface compatibility, package/distribution identity, production security and credential boundaries, documentation and maintenance/support commitments, and explicit release authority before SDK publication can be represented as approved.
-
-`DEV-GATE-05 ACTIVE ≠ SDK PUBLICATION AUTHORIZED`  
-`SDK CANDIDATE ≠ SUPPORTED SDK`  
-`RELEASE-CANDIDATE VALIDATED ≠ SDK RELEASE`  
-`PUBLIC ENGINEERING RELEASE ≠ SDK RELEASE`  
-`SDK READINESS GATE ≠ SDK COMMITMENT`
-
-These public artifacts do not establish a shared AETHER X runtime, production authorization plane, product adoption, production readiness or technical integration across initiatives.
-
-Proprietary platforms, confidential architecture, credentials, internal security controls, private customer information, unpublished research and unpublished intellectual property remain private.
+`VERIFIED CAPABILITY`  
+`UNDER DEVELOPMENT`  
+`APPROVED DESIGN`  
+`RESEARCH`  
+`FUTURE DIRECTION`
 
 ---
 
-## Security
-
-Do not publish sensitive security details through public issues. See the public engineering repository's `SECURITY.md` for the current public reporting boundary.
-
----
-
-## Contact
-
-Official institutional contact channels will be published when the company website is publicly available.
-
----
-
+<p align="center"><strong>AETHER X GLOBAL</strong></p>
 <p align="center"><strong>Institutional Intelligence. Governed Autonomy.</strong></p>
-<p align="center"><sub>© 2026 AETHER X GLOBAL. All rights reserved.</sub></p>
