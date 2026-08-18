@@ -27,7 +27,7 @@ PUBLIC CLAIM
 → MATERIAL LIMITATION
 ```
 
-A claim should be promoted only when evidence is appropriate to the claim and public-disclosure authority exists.
+A claim should be promoted only when the evidence is appropriate to the claim and public-disclosure authority exists.
 
 ---
 
@@ -36,18 +36,17 @@ A claim should be promoted only when evidence is appropriate to the claim and pu
 | Evidence dimension | What can be checked publicly today | Public evidence state |
 |---|---|---|
 | **Corporate identity & thesis** | Organization profile, strategic positioning, engineering doctrine and claim boundaries | `PUBLICLY DISCLOSED · INSPECTABLE` |
-| **Portfolio membership & maturity** | Current initiative/unit labels and bounded role descriptions | `PUBLICLY DISCLOSED` |
-| **Governed portfolio-state telemetry** | AETHER X Live Portfolio Pulse with bounded public-safe state publication | `PUBLICLY INSPECTABLE OUTPUT · PRIVATE SOURCE-BACKED / BOUNDED DISCLOSURE` |
+| **Portfolio membership, maturity & research structure** | Portfolio snapshot, initiative maturity labels and institutional Research-unit structure | `PUBLICLY DISCLOSED` |
+| **Governed portfolio-state telemetry** | AETHER X Live Portfolio Pulse with selected public-safe state signals and bounded Research-unit disclosure | `PUBLICLY INSPECTABLE OUTPUT · PRIVATE SOURCE-BACKED / BOUNDED DISCLOSURE` |
 | **Canonical public engineering repository** | `AETHERXGLOBAL/aether-x-governed-intelligence` | `PUBLICLY INSPECTABLE · CONTROLLED DISCLOSURE` |
-| **Architecture & specifications** | `AX-PUB-ARCH-001`, `AX-PUB-SPEC-002`, `AX-PUB-SPEC-003`, `AX-PUB-SPEC-004` | `PUBLICLY INSPECTABLE · CONCEPTUAL / NON-PRODUCT-SPECIFIC` |
-| **Machine-readable contracts** | `AX-PUB-SCHEMA-001`, `AX-PUB-SCHEMA-002`, `AX-PUB-SCHEMA-003` | `PUBLICLY INSPECTABLE · MACHINE-READABLE · NON-PRODUCT-SPECIFIC` |
+| **Public architecture & specifications** | `AX-PUB-ARCH-001`, `AX-PUB-SPEC-002`, `AX-PUB-SPEC-003`, `AX-PUB-SPEC-004` | `PUBLICLY INSPECTABLE · CONCEPTUAL / NON-PRODUCT-SPECIFIC` |
+| **Machine-readable contracts** | `AX-PUB-SCHEMA-001`, `AX-PUB-SCHEMA-002`, `AX-PUB-SCHEMA-003` | `PUBLICLY INSPECTABLE · MACHINE-READABLE · CONCEPTUAL / NON-PRODUCT-SPECIFIC` |
 | **Reference implementations** | `AX-PUB-REF-001`, `AX-PUB-REF-002`, `AX-PUB-REF-003` | `PUBLICLY INSPECTABLE · CI-TESTED · EDUCATIONAL / NON-PRODUCTION` |
-| **Governed-intelligence conformance** | `AX-PUB-TEST-001`: 15 declared synthetic cases with published reproducibility evidence | `PUBLICLY INSPECTABLE · REPRODUCIBLY VERIFIED · CI RUN UNVERIFIED · NON-PRODUCTION` |
-| **Agent-authority conformance** | `AX-PUB-TEST-002`: 10 synthetic cases with directly verified GitHub Actions evidence | `PUBLICLY INSPECTABLE · CI-TESTED · NON-PRODUCTION` |
-| **Agent-authority CI evidence** | `AX-PUB-CI-001`: schema, reference, conformance and manifest runs directly observed successful | `PUBLIC CI EVIDENCE · VERIFIED` |
-| **Current artifact governance** | `AX-PUB-MANIFEST-001 v1.5`, `AX-PUB-POL-001 v1.4` | `PUBLICLY INSPECTABLE · MACHINE-READABLE / POLICY-GOVERNED` |
-| **Current fixed public snapshot** | `AX-PUB-SNAP-002 — Governed Intelligence Public vNext` | `PUBLICLY INSPECTABLE · COMMIT-ANCHORED · SNAPSHOT-CI-VALIDATED · NON-PRODUCT` |
-| **Snapshot closure evidence** | `AX-PUB-CI-002`: vNext snapshot and manifest validation runs directly observed successful | `PUBLIC CI EVIDENCE · VERIFIED` |
+| **Governed-intelligence conformance** | `AX-PUB-TEST-001` with 15 declared synthetic cases and public/private boundary verification | `REPRODUCIBLY VERIFIED · CI RUN UNVERIFIED · NON-PRODUCTION` |
+| **Agent-authority conformance** | `AX-PUB-TEST-002` with 10 synthetic cases | `PUBLICLY INSPECTABLE · CI-TESTED · NON-PRODUCTION` |
+| **Artifact governance** | `AX-PUB-MANIFEST-001 v1.6`, `AX-PUB-POL-001 v1.5` | `PUBLICLY INSPECTABLE · MACHINE-READABLE / POLICY-GOVERNED` |
+| **Fixed reproducibility state** | `AX-PUB-SNAP-002` with commit anchor, Git-blob inventory and snapshot CI evidence | `COMMIT-ANCHORED · SNAPSHOT-CI-VALIDATED · NON-PRODUCT` |
+| **Formal public engineering release** | Tag `public-engineering-vnext-1.0` and `AX-PUB-REL-001` | `FORMAL PUBLIC ENGINEERING RELEASE · NON-PRODUCT` |
 | **Private implementation & research depth** | Core development repositories and canonical Research repository remain private | `NOT PUBLICLY VERIFIABLE HERE` |
 | **Production readiness** | No company-wide production-readiness claim is made here | `NOT ESTABLISHED BY THIS PROFILE` |
 | **Customer / pilot / design-partner traction** | No such evidence is established by this public GitHub profile | `NOT PUBLICLY ESTABLISHED` |
@@ -55,26 +54,27 @@ A claim should be promoted only when evidence is appropriate to the claim and pu
 | **Predictive / investment performance** | No profitability or guaranteed investment-outcome claim is established here | `NOT ESTABLISHED` |
 | **Regulatory / certification status** | No approval, licence, certification or compliance status is implied without separate evidence | `NOT ASSERTED` |
 
+### Evidence-State Semantics
+
+- `PUBLICLY DISCLOSED · INSPECTABLE` — intentionally published and directly inspectable; not independent third-party verification.
+- `CONCEPTUAL / NON-PRODUCT-SPECIFIC` — a public technical reference; not evidence of product implementation.
+- `CI-TESTED · EDUCATIONAL / NON-PRODUCTION` — public reference code with verified CI for its defined checks; not production fitness or certification.
+- `REPRODUCIBLY VERIFIED · CI RUN UNVERIFIED` — declared public Git content was independently reproduced/executed while GitHub Actions status remains separately bounded.
+- `FORMAL PUBLIC ENGINEERING RELEASE · NON-PRODUCT` — an intentionally published public engineering state; not a product release, deployment or customer-availability claim.
+- `NOT PUBLICLY ESTABLISHED` / `NOT ASSERTED` — no positive claim should be inferred from this GitHub surface.
+
 ---
 
 ## Governed Portfolio-State Evidence
 
-The public portfolio-state view is the **AETHER X Live Portfolio Pulse**.
-
-<p align="center">
-  <img
-    src="./assets/aether-x-live-project-pulse.svg"
-    alt="AETHER X Live Portfolio Pulse"
-    width="100%"
-  />
-</p>
+The current public portfolio-state view is the **AETHER X Live Portfolio Pulse**.
 
 The publication mechanism is intentionally bounded:
 
 - selected product/system signals come from allowlisted governed sources;
 - source access is read-only and repository-scoped;
 - private source bodies are not copied into the public repository;
-- the Research unit discloses only approved organizational state, not private scientific records;
+- Research discloses only approved organizational state, not private scientific records;
 - publication fails closed when required evidence cannot be read or parsed;
 - no aggregate completion percentage is inferred without an approved deterministic weighting contract.
 
@@ -95,98 +95,98 @@ Canonical source:
 
 **[AETHERXGLOBAL/aether-x-governed-intelligence](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**
 
-### 1. Architecture & Specifications
-
-- **[AX-PUB-ARCH-001 — Governed Intelligence Reference Architecture](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-ARCH-001_GOVERNED_INTELLIGENCE_REFERENCE_ARCHITECTURE.md)**
-- **[AX-PUB-SPEC-002 — Evidence, Authority & Verification Contract](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-002_EVIDENCE_AUTHORITY_VERIFICATION_CONTRACT.md)**
-- **[AX-PUB-SPEC-003 — Point-in-Time Knowledge & Provenance Standard](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-003_POINT_IN_TIME_KNOWLEDGE_PROVENANCE_STANDARD.md)**
-- **[AX-PUB-SPEC-004 — Governed Agent Authority & Tool-Use Boundary Standard](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/specifications/AX-PUB-SPEC-004_GOVERNED_AGENT_AUTHORITY_TOOL_USE_STANDARD.md)**
-
-These are public reference artifacts. They do not establish implementation inside a private AETHER X initiative.
-
-### 2. Machine-Readable Contracts
-
-- **[AX-PUB-SCHEMA-001 — Governed EAV Contract Schema](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-001_EAV_CONTRACT.schema.json)**
-- **[AX-PUB-SCHEMA-002 — Point-in-Time Knowledge Envelope](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-002_POINT_IN_TIME_KNOWLEDGE_ENVELOPE.schema.json)**
-- **[AX-PUB-SCHEMA-003 — Agent Tool-Use Authority Envelope](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/schemas/AX-PUB-SCHEMA-003_AGENT_TOOL_USE_AUTHORITY_ENVELOPE.schema.json)** — `CI-VALIDATED · CONCEPTUAL / NON-PRODUCT-SPECIFIC`
-
-`AX-PUB-SCHEMA-003` expresses selected agent identity, proposal, authority-context, bounded-grant, invocation and result structures. It is **not** a production authorization plane or product data model.
-
-### 3. Executable Reference Implementations
-
-- **[AX-PUB-REF-001 — EAV Contract Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/eav-contract-validator)** — `CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
-- **[AX-PUB-REF-002 — Point-in-Time Knowledge Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/point-in-time-knowledge-validator)** — `CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
-- **[AX-PUB-REF-003 — Agent Tool-Use Authority Validator](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/reference-implementations/agent-tool-authority-validator)** — `CI-TESTED · EDUCATIONAL / NON-PRODUCTION`
-
-`AX-PUB-REF-003` demonstrates selected principal/tool/action/resource/time/environment/parameter authority semantics. It does not establish production authorization enforcement.
-
-### 4. Conformance Evidence
-
-**[AX-PUB-TEST-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/conformance/AX-PUB-TEST-001)** has published reproducibility evidence:
+### Three Public Evidence Paths
 
 ```text
-AX_PUBLIC_CONFORMANCE_PASS cases=15 conforming=15
-AX_PUBLIC_CONFORMANCE_BOUNDARY_PASS
+AX-PUB-SPEC-002
+→ AX-PUB-SCHEMA-001
+→ AX-PUB-REF-001
+→ AX-PUB-TEST-001
+
+AX-PUB-SPEC-003
+→ AX-PUB-SCHEMA-002
+→ AX-PUB-REF-002
+→ AX-PUB-TEST-001
+
+AX-PUB-SPEC-004
+→ AX-PUB-SCHEMA-003
+→ AX-PUB-REF-003
+→ AX-PUB-TEST-002
 ```
 
-Its GitHub Actions status remains separately bounded as documented by the public artifact.
+The third path has directly recorded GitHub Actions evidence through `AX-PUB-CI-001`. Snapshot and manifest closure evidence is recorded through `AX-PUB-CI-002`.
 
-**[AX-PUB-TEST-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/conformance/AX-PUB-TEST-002)** defines 10 synthetic agent-authority cases and is `CI-TESTED` for its declared public scope.
+`PUBLIC CI PASS ≠ PRODUCT IMPLEMENTATION`  
+`REFERENCE VALIDATOR PASS ≠ PRODUCTION AUTHORIZATION`
 
-Direct agent-authority CI evidence is recorded in:
+---
 
-**[AX-PUB-CI-001 — Agent Authority vNext CI Validation Evidence](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-001_AGENT_AUTHORITY_VNEXT_VALIDATION.md)**
+## Formal Public Engineering Release
 
-The directly observed successful workflow runs include schema, reference, conformance and artifact-manifest validation for the verified public state.
+AETHER X has published:
 
-### 5. Artifact Governance & vNext Reproducibility
+```text
+Tag:
+public-engineering-vnext-1.0
 
-Current moving governance:
+Release title:
+AETHER X Governed Intelligence — Public Engineering vNext 1.0
 
-- **[AX-PUB-MANIFEST-001 v1.5](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/artifacts/AX-PUB-MANIFEST-001.json)**
-- **[AX-PUB-POL-001 v1.4](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/COMPATIBILITY_AND_VERSIONING.md)**
+Tag target:
+4f067c9fd3d3ac065ac50b10faf1abd1bdb91bb6
+```
 
-Current fixed review state:
+Publication evidence:
 
-**[AX-PUB-SNAP-002 — Governed Intelligence Public vNext](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/snapshots/AX-PUB-SNAP-002_GOVERNED_INTELLIGENCE_PUBLIC_VNEXT.md)**
+**[AX-PUB-REL-001 — Public Engineering vNext Release Record](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-REL-001_PUBLIC_ENGINEERING_VNEXT_RELEASE.md)**
 
-Snapshot anchor:
+The release packages a public engineering state. The fixed technical-review snapshot remains separately anchored by `AX-PUB-SNAP-002` at:
 
 ```text
 6dfdec04a4d8375bc2da0bb6a3830ff07eeb1711
 ```
 
-The snapshot records Git object identities for material public artifacts and executable entrypoints. Its published snapshot-integrity workflow was directly verified successful.
+The two identifiers have different roles and must not be conflated.
 
-Closure evidence:
-
-**[AX-PUB-CI-002 — Public Engineering vNext Snapshot Validation Evidence](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-002_VNEXT_SNAPSHOT_VALIDATION.md)**
-
-A subsequent final manifest gate for the current moving `AX-PUB-MANIFEST-001 v1.5 / AX-PUB-POL-001 v1.4` state was also directly observed successful.
-
-`PUBLIC SNAPSHOT ≠ PRODUCT RELEASE`  
-`PUBLIC CI PASS ≠ PRODUCT IMPLEMENTATION`  
-`REFERENCE VALIDATOR PASS ≠ PRODUCTION AUTHORIZATION`  
-`PUBLIC COMPATIBILITY ≠ PRODUCT INTEGRATION`
+`PUBLIC ENGINEERING RELEASE ≠ PRODUCT RELEASE`  
+`PUBLIC RELEASE ≠ CUSTOMER DEPLOYMENT`  
+`PUBLIC RELEASE ≠ INTERNAL PRODUCT ADOPTION`
 
 ---
 
-## What This GitHub Surface Establishes
+## Current Public Engineering Governance
 
-A reviewer can reasonably use this public GitHub surface as evidence that AETHER X GLOBAL has intentionally published:
+Current moving state:
+
+```text
+AX-PUB-MANIFEST-001 v1.6
+AX-PUB-POL-001 v1.5
+AX-PUB-CI-001
+AX-PUB-CI-002
+AX-PUB-SNAP-002 v1.0
+AX-PUB-REL-001 v1.0
+```
+
+The public manifest workflow verifies current artifact identity, paths, compatibility relationships, snapshot identity, release registration and public-only boundaries.
+
+---
+
+## What This GitHub Profile Establishes
+
+A public reviewer can reasonably use this GitHub surface as evidence that AETHER X GLOBAL has intentionally published:
 
 1. a governed-intelligence corporate thesis and engineering doctrine;
 2. explicit public maturity boundaries across disclosed initiatives;
-3. a canonical public engineering repository;
-4. technology-neutral architecture plus EAV, point-in-time/provenance and agent-authority specifications;
-5. three machine-readable public structural contracts;
-6. three CI-tested non-production reference validators;
-7. a reproducibly verified 15-case conformance kit and a CI-tested 10-case agent-authority conformance kit;
-8. fail-closed public/private dependency-boundary controls for public validation workflows;
-9. directly verified public CI evidence for the agent-authority path;
-10. explicit moving artifact governance at `Manifest v1.5 / Policy v1.4`;
-11. a commit-anchored, Git-object-inventoried, CI-validated vNext public snapshot;
-12. direct public CI evidence for snapshot and manifest closure.
+3. a dedicated institutional Research unit with a separate disclosure boundary;
+4. a canonical public engineering repository;
+5. technology-neutral architecture plus EAV, point-in-time/provenance and agent-authority specifications;
+6. three machine-readable public structural contracts;
+7. three bounded CI-tested reference validators;
+8. public conformance evidence with explicit synthetic-data and non-production boundaries;
+9. fail-closed public/private dependency-boundary controls;
+10. machine-readable artifact compatibility and version governance;
+11. a commit-anchored, CI-validated reproducibility snapshot;
+12. a formal public engineering Git tag / GitHub Release with an explicit non-product claim boundary.
 
 These are evidence of **public disclosure discipline, engineering doctrine, control design, machine-readable contract design, conformance discipline and reproducibility discipline**.
 
@@ -194,9 +194,9 @@ They are not independent verification of private implementation depth, commercia
 
 ---
 
-## What This GitHub Surface Does Not Establish
+## What This GitHub Profile Does Not Establish
 
-It must not be treated as proof of:
+This public profile must not be treated as proof of:
 
 - revenue, ARR, profitability or valuation;
 - customer contracts, pilots, product-market fit or customer outcomes;
@@ -206,11 +206,12 @@ It must not be treated as proof of:
 - a production agent runtime, production authorization plane or autonomous authority;
 - shared runtime, deployment dependency or technical integration across AETHER X initiatives;
 - regulatory approval, licence or certification;
-- a Git tag, GitHub Release or product release merely because a public engineering snapshot exists.
+- a product release merely because a public engineering release exists.
 
 `PUBLIC PROFILE ≠ DATA ROOM`  
 `TECHNICAL QUALITY ≠ COMMERCIAL TRACTION`  
-`PUBLIC REFERENCE ENGINEERING ≠ PRIVATE PRODUCT IMPLEMENTATION`
+`PUBLIC REFERENCE ENGINEERING ≠ PRIVATE PRODUCT IMPLEMENTATION`  
+`PUBLIC ENGINEERING RELEASE ≠ PRODUCT RELEASE`
 
 ---
 
@@ -231,6 +232,26 @@ Where appropriate and authorized, deeper diligence may use controlled access to 
 
 ---
 
+## Evidence Promotion Rule
+
+A new investor-facing claim should not enter the public evidence layer until it has, as applicable:
+
+```text
+TRACEABLE SOURCE
++
+CURRENT DATE / CONTEXT
++
+DEFINED CLAIM SCOPE
++
+MATERIAL LIMITATIONS
++
+PUBLIC-DISCLOSURE AUTHORITY
+```
+
+A pilot is not automatically a production deployment. A design partner is not automatically a paying customer. A benchmark is not automatically customer value. Research is not automatically predictive validity or profitability.
+
+---
+
 ## Security & Intellectual-Property Boundary
 
 Public investor evidence must not require disclosure of credentials, tokens, customer information, private research records, proprietary product source, confidential architecture, internal endpoints, unresolved sensitive security information, restricted datasets or unpublished commercial terms.
@@ -246,8 +267,10 @@ The objective is **credible evidence without unnecessary information exposure**.
 - [Public Quickstart](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/QUICKSTART.md)
 - [Public Artifact Manifest](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/artifacts/AX-PUB-MANIFEST-001.json)
 - [Compatibility & Versioning Policy](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/COMPATIBILITY_AND_VERSIONING.md)
-- [Public Snapshots](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/snapshots)
-- [Public CI Evidence](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/tree/main/evidence)
+- [AX-PUB-SNAP-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/snapshots/AX-PUB-SNAP-002_GOVERNED_INTELLIGENCE_PUBLIC_VNEXT.md)
+- [AX-PUB-CI-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-001_AGENT_AUTHORITY_VNEXT_VALIDATION.md)
+- [AX-PUB-CI-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-002_VNEXT_SNAPSHOT_VALIDATION.md)
+- [AX-PUB-REL-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-REL-001_PUBLIC_ENGINEERING_VNEXT_RELEASE.md)
 
 ---
 
