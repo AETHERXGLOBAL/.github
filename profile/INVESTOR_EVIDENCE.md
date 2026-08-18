@@ -44,10 +44,11 @@ A claim should be promoted only when the evidence is appropriate to the claim an
 | **Reference implementations** | `AX-PUB-REF-001`, `AX-PUB-REF-002`, `AX-PUB-REF-003` | `PUBLICLY INSPECTABLE · CI-TESTED · EDUCATIONAL / NON-PRODUCTION` |
 | **Governed-intelligence conformance** | `AX-PUB-TEST-001` with 15 declared synthetic cases and public/private boundary verification | `REPRODUCIBLY VERIFIED · CI RUN UNVERIFIED · NON-PRODUCTION` |
 | **Agent-authority conformance** | `AX-PUB-TEST-002` with 10 synthetic cases | `PUBLICLY INSPECTABLE · CI-TESTED · NON-PRODUCTION` |
-| **Artifact governance** | `AX-PUB-MANIFEST-001 v1.8`, `AX-PUB-POL-001 v1.6` | `PUBLICLY INSPECTABLE · MACHINE-READABLE / POLICY-GOVERNED` |
+| **Artifact governance** | `AX-PUB-MANIFEST-001 v1.10`, `AX-PUB-POL-001 v1.6` | `PUBLICLY INSPECTABLE · MACHINE-READABLE / POLICY-GOVERNED` |
 | **Fixed reproducibility state** | `AX-PUB-SNAP-002` with commit anchor, Git-blob inventory and snapshot CI evidence | `COMMIT-ANCHORED · SNAPSHOT-CI-VALIDATED · NON-PRODUCT` |
 | **Formal public engineering release** | Tag `public-engineering-vnext-1.0` and `AX-PUB-REL-001` | `FORMAL PUBLIC ENGINEERING RELEASE · NON-PRODUCT` |
-| **Developer adoption & SDK readiness program** | `AX-PUB-DEV-001`; next gate `DEV-GATE-00 — Contract Baseline` | `UNDER DEVELOPMENT · SDK CANDIDATE NOT YET ESTABLISHED` |
+| **Developer adoption & SDK readiness program** | `AX-PUB-DEV-001`; DEV-GATE-00 closed; current objective DEV-GATE-01 | `UNDER DEVELOPMENT · CONTRACT BASELINE ESTABLISHED · SDK CANDIDATE NOT YET ESTABLISHED` |
+| **Developer contract baseline** | `AX-PUB-DEV-002` plus `AX-PUB-CI-003` | `DEV-GATE-00 CLOSED · PUBLIC CONTRACT BASELINE ESTABLISHED` |
 | **Developer SDK publication** | `AX-PUB-GATE-001` | `SDK PUBLICATION NOT AUTHORIZED` |
 | **Private implementation & research depth** | Core development repositories and canonical Research repository remain private | `NOT PUBLICLY VERIFIABLE HERE` |
 | **Production readiness** | No company-wide production-readiness claim is made here | `NOT ESTABLISHED BY THIS PROFILE` |
@@ -63,7 +64,8 @@ A claim should be promoted only when the evidence is appropriate to the claim an
 - `CI-TESTED · EDUCATIONAL / NON-PRODUCTION` — public reference code with verified CI for its defined checks; not production fitness or certification.
 - `REPRODUCIBLY VERIFIED · CI RUN UNVERIFIED` — declared public Git content was independently reproduced/executed while GitHub Actions status remains separately bounded.
 - `FORMAL PUBLIC ENGINEERING RELEASE · NON-PRODUCT` — an intentionally published public engineering state; not a product release, deployment or customer-availability claim.
-- `UNDER DEVELOPMENT · SDK CANDIDATE NOT YET ESTABLISHED` — the developer-adoption program is active, while no supported or candidate package is yet claimed as established.
+- `DEV-GATE-00 CLOSED · PUBLIC CONTRACT BASELINE ESTABLISHED` — the declared developer contract baseline has been published and validated for its bounded public scope; this does not establish an SDK candidate or production API.
+- `UNDER DEVELOPMENT · CONTRACT BASELINE ESTABLISHED · SDK CANDIDATE NOT YET ESTABLISHED` — the developer-adoption program has advanced to reproducible-developer-experience engineering, while no supported or candidate SDK package is claimed as established.
 - `SDK PUBLICATION NOT AUTHORIZED` — the public reference repository is not represented as an officially supported SDK; promotion requires separate evidence and explicit authority under the readiness gate.
 - `NOT PUBLICLY ESTABLISHED` / `NOT ASSERTED` — no positive claim should be inferred from this GitHub surface.
 
@@ -118,7 +120,7 @@ AX-PUB-SPEC-004
 → AX-PUB-TEST-002
 ```
 
-The third path has directly recorded GitHub Actions evidence through `AX-PUB-CI-001`. Snapshot and manifest closure evidence is recorded through `AX-PUB-CI-002`.
+The third path has directly recorded GitHub Actions evidence through `AX-PUB-CI-001`. Snapshot and manifest closure evidence is recorded through `AX-PUB-CI-002`. DEV-GATE-00 developer-contract candidate validation is recorded through `AX-PUB-CI-003`.
 
 `PUBLIC CI PASS ≠ PRODUCT IMPLEMENTATION`  
 `REFERENCE VALIDATOR PASS ≠ PRODUCTION AUTHORIZATION`
@@ -166,15 +168,27 @@ Current state:
 
 ```text
 PROGRAM: ACTIVE / UNDER DEVELOPMENT
-NEXT GATE: DEV-GATE-00 — Contract Baseline
+DEV-GATE-00: CLOSED
+CURRENT ENGINEERING OBJECTIVE: DEV-GATE-01 — Reproducible Developer Experience
 SDK CANDIDATE: NOT YET ESTABLISHED
 PUBLIC SDK: NOT PUBLISHED
 ```
 
-The program defines a gated path from public reference engineering toward a reproducible developer contract, a bounded SDK candidate, conformance/compatibility evidence, software-supply-chain controls and external-evaluation readiness.
+The closed contract baseline is:
 
-This is a program state, not evidence of package publication, partner adoption, production API availability or support readiness.
+**[AX-PUB-DEV-002 — Developer Contract Baseline](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-002_DEVELOPER_CONTRACT_BASELINE.md)**
 
+Candidate-validation evidence is recorded by:
+
+**[AX-PUB-CI-003 — Developer Contract Baseline Validation Evidence](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-003_DEVELOPER_CONTRACT_BASELINE_VALIDATION.md)**
+
+The program defines a gated path from public reference engineering toward a reproducible developer experience, a bounded SDK candidate, conformance/compatibility evidence, software-supply-chain controls and external-evaluation readiness.
+
+The DEV-GATE-00 closure establishes only the bounded public developer contract baseline. It is not evidence of package publication, partner adoption, production API availability, support readiness or product implementation.
+
+The candidate-validation workflow completed successfully as run `32134148610` / #97. The later closed-state integrity verification also completed successfully as run `32134781334` / #106. These are repository-governance CI results, not external certification.
+
+`DEV-GATE-00 CLOSED ≠ SDK CANDIDATE`  
 `DEVELOPER ADOPTION PROGRAM ≠ SDK RELEASE`  
 `SDK CANDIDATE ≠ SUPPORTED SDK`
 
@@ -220,17 +234,19 @@ This gate is not a promise that an SDK will be released.
 Current moving state:
 
 ```text
-AX-PUB-MANIFEST-001 v1.8
+AX-PUB-MANIFEST-001 v1.10
 AX-PUB-POL-001 v1.6
 AX-PUB-CI-001
 AX-PUB-CI-002
+AX-PUB-CI-003
 AX-PUB-SNAP-002 v1.0
 AX-PUB-REL-001 v1.0
 AX-PUB-GATE-001 v1.0
 AX-PUB-DEV-001 v1.0
+AX-PUB-DEV-002 v1.0 — DEV-GATE-00 CLOSED
 ```
 
-The public manifest workflow verifies current artifact identity, paths, compatibility relationships, snapshot identity, release registration, readiness-gate registration, developer-program registration and public-only boundaries. `AX-PUB-DEV-001` registration was verified through `Validate Public Artifact Manifest` run `32133103972` / run #89 with conclusion `SUCCESS`; the verification-only pull request was closed without merge and its branch returned to an identical state with `main`.
+The public manifest workflow verifies current artifact identity, paths, compatibility relationships, snapshot identity, release registration, readiness-gate registration, developer-program and developer-contract registration, and public-only boundaries. `AX-PUB-DEV-002` candidate validation was directly observed through `Validate Public Artifact Manifest` run `32134148610` / #97 with conclusion `SUCCESS`. The published CLOSED state was subsequently verified through run `32134781334` / #106 with conclusion `SUCCESS`. Both verification-only pull requests were closed without merge and their branches were reset to an identical state with `main`.
 
 ---
 
@@ -251,11 +267,12 @@ A public reviewer can reasonably use this GitHub surface as evidence that AETHER
 11. a commit-anchored, CI-validated reproducibility snapshot;
 12. a formal public engineering Git tag / GitHub Release with an explicit non-product claim boundary;
 13. an explicit SDK publication-readiness gate preventing reference code from being misrepresented as a supported SDK;
-14. an active developer-adoption and SDK-readiness program with an explicit gated path and no claim that an SDK candidate or supported SDK already exists.
+14. an active developer-adoption and SDK-readiness program;
+15. a closed public developer contract baseline with a machine-readable companion, semantic error taxonomy, compatibility boundaries and directly recorded CI evidence.
 
 These are evidence of **public disclosure discipline, engineering doctrine, control design, machine-readable contract design, conformance discipline and reproducibility discipline**.
 
-They are not independent verification of private implementation depth, commercial traction, scientific validity, production scale, production data quality, security certification or financial performance.
+They are not independent verification of private implementation depth, commercial traction, scientific validity, production scale, production data quality, security certification, developer adoption or financial performance.
 
 ---
 
@@ -269,7 +286,8 @@ This public profile must not be treated as proof of:
 - predictive or investment performance;
 - scientific validation merely because a research program exists;
 - a production agent runtime, production authorization plane or autonomous authority;
-- a supported public SDK merely because reference implementations or a developer-adoption program exist;
+- a supported public SDK or SDK candidate merely because a developer contract baseline exists;
+- external developer or partner adoption;
 - shared runtime, deployment dependency or technical integration across AETHER X initiatives;
 - regulatory approval, licence or certification;
 - a product release merely because a public engineering release exists.
@@ -279,6 +297,7 @@ This public profile must not be treated as proof of:
 `PUBLIC REFERENCE ENGINEERING ≠ PRIVATE PRODUCT IMPLEMENTATION`  
 `PUBLIC ENGINEERING RELEASE ≠ PRODUCT RELEASE`  
 `PUBLIC REFERENCE IMPLEMENTATION ≠ SUPPORTED SDK`  
+`DEV-GATE-00 CLOSED ≠ SDK CANDIDATE`  
 `DEVELOPER ADOPTION PROGRAM ≠ SDK RELEASE`
 
 ---
@@ -318,9 +337,11 @@ The objective is **credible evidence without unnecessary information exposure**.
 - [AX-PUB-SNAP-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/snapshots/AX-PUB-SNAP-002_GOVERNED_INTELLIGENCE_PUBLIC_VNEXT.md)
 - [AX-PUB-CI-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-001_AGENT_AUTHORITY_VNEXT_VALIDATION.md)
 - [AX-PUB-CI-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-002_VNEXT_SNAPSHOT_VALIDATION.md)
+- [AX-PUB-CI-003](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-CI-003_DEVELOPER_CONTRACT_BASELINE_VALIDATION.md)
 - [AX-PUB-REL-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/evidence/AX-PUB-REL-001_PUBLIC_ENGINEERING_VNEXT_RELEASE.md)
 - [AX-PUB-GATE-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-GATE-001_DEVELOPER_SDK_PUBLICATION_READINESS.md)
 - [AX-PUB-DEV-001](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-001_DEVELOPER_ADOPTION_SDK_READINESS_PROGRAM.md)
+- [AX-PUB-DEV-002](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/AX-PUB-DEV-002_DEVELOPER_CONTRACT_BASELINE.md)
 
 ---
 
