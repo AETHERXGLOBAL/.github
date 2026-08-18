@@ -28,7 +28,7 @@ AETHER X GLOBAL engineers the system layer around advanced intelligence: **evide
 
 We do not define intelligence as model output alone. The company thesis is that advanced AI becomes institutionally useful when capability is connected to explicit evidence, authority, security, verification and accountable outcomes.
 
-AETHER X does **not** organize its core strategy around building the largest general-purpose foundation model. We build governed, multi-model systems and specialized intelligence components around consequential workflows. fileciteturn489file1
+AETHER X does **not** organize its core strategy around building the largest general-purpose foundation model. We build governed, multi-model systems and specialized intelligence components around consequential workflows.
 
 ---
 
