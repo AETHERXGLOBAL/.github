@@ -21,7 +21,7 @@
   <text x="80" y="108" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">AETHER X • LIVE GITHUB ACTIVITY</text>
   <text x="80" y="140" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">Professional pull-request telemetry generated directly from public GitHub organization data.</text>
   <text x="1520" y="92" text-anchor="end" fill="#DEB459" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="800">PUBLIC-ONLY • AUTO-REFRESH</text>
-  <text x="1520" y="120" text-anchor="end" fill="#6F7D89" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Latest PR activity: 2026-08-19 21:48 UTC</text>
+  <text x="1520" y="120" text-anchor="end" fill="#6F7D89" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">Latest PR activity: 2026-08-19 22:09 UTC</text>
 
   
   <g transform="translate(80 178)">
@@ -42,7 +42,7 @@
     <rect width="330" height="142" rx="20" fill="#0F1726" stroke="#243247" stroke-width="1.5"/>
     <rect width="5" height="142" rx="2.5" fill="#2EA043"/>
     <text x="27" y="35" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.1">OPEN</text>
-    <text x="27" y="85" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">3</text>
+    <text x="27" y="85" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800">0</text>
     <text x="27" y="116" fill="#AAB3BD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Currently open public PRs</text>
   </g>
   <g transform="translate(1130 178)">
@@ -63,9 +63,9 @@
   </g>
   <text x="108" y="472" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">aether-x-governed-intellige…</text>
   <rect x="390" y="455" width="620" height="26" rx="7" fill="#111C2C"/>
-  <rect x="390" y="455" width="26.57" height="26" rx="7" fill="#2EA043"/>
-  <rect x="416.57" y="455" width="389.71" height="26" fill="#8B5CF6"/>
-  <rect x="806.29" y="455" width="203.71" height="26" rx="7" fill="#F85149"/>
+  <rect x="390" y="455" width="0.00" height="26" rx="7" fill="#2EA043"/>
+  <rect x="390.00" y="455" width="389.71" height="26" fill="#8B5CF6"/>
+  <rect x="779.71" y="455" width="230.29" height="26" rx="7" fill="#F85149"/>
   <text x="1032" y="473" text-anchor="end" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700">70</text>
   <text x="108" y="521" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">.github</text>
   <rect x="390" y="504" width="620" height="26" rx="7" fill="#111C2C"/>
@@ -80,7 +80,7 @@
     <text x="28" y="69" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Live public GitHub telemetry</text>
   </g>
   <circle cx="1270" cy="493" r="68" fill="none" stroke="#162235" stroke-width="24"/>
-  <circle cx="1270" cy="493" r="68" fill="none" stroke="#2EA043" stroke-width="24" stroke-dasharray="15.82 411.43" stroke-dashoffset="-0.00" transform="rotate(-90 1270 493)"/><circle cx="1270" cy="493" r="68" fill="none" stroke="#8B5CF6" stroke-width="24" stroke-dasharray="290.11 137.14" stroke-dashoffset="-15.82" transform="rotate(-90 1270 493)"/><circle cx="1270" cy="493" r="68" fill="none" stroke="#F85149" stroke-width="24" stroke-dasharray="121.32 305.94" stroke-dashoffset="-305.94" transform="rotate(-90 1270 493)"/>
+  <circle cx="1270" cy="493" r="68" fill="none" stroke="#8B5CF6" stroke-width="24" stroke-dasharray="290.11 137.14" stroke-dashoffset="-0.00" transform="rotate(-90 1270 493)"/><circle cx="1270" cy="493" r="68" fill="none" stroke="#F85149" stroke-width="24" stroke-dasharray="137.14 290.11" stroke-dashoffset="-290.11" transform="rotate(-90 1270 493)"/>
   <text x="1270" y="489" text-anchor="middle" fill="#F4F4F3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="30" font-weight="800">81</text>
   <text x="1270" y="514" text-anchor="middle" fill="#8E9BAD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">PUBLIC PRs</text>
 
