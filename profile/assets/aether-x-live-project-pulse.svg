@@ -27,7 +27,7 @@
 <text x="70" y="122" class="title">LIVE PORTFOLIO PULSE</text>
 <text x="70" y="154" class="subtitle">Selected live portfolio telemetry · governed sources · bounded Research-unit disclosure</text>
 <text x="1530" y="72" text-anchor="end" class="footerGold">AUTO-REFRESH · PUBLIC-SAFE</text>
-<text x="1530" y="100" text-anchor="end" class="footer">Last published state update: 2026-08-17 20:17 UTC</text>
+<text x="1530" y="100" text-anchor="end" class="footer">Last published state update: 2026-08-22 15:40 UTC</text>
 <line x1="70" y1="184" x2="1530" y2="184" stroke="#9D753C" stroke-opacity=".7"/>
 
   <g transform="translate(70 210)">
@@ -36,18 +36,17 @@
     <text x="34" y="76" class="cardTitle">AETHER X QUANTUM</text>
     <text x="34" y="106" class="domain">FINANCIAL STRATEGY INTELLIGENCE</text>
     <rect x="34" y="128" width="632" height="58" rx="11" fill="#2B2418" stroke="#DEB459" stroke-opacity=".75"/>
-    <text x="52" y="155" class="phase">Gate 1 — Market Data Truth &amp; Governed Data Foundation · ACTIVE / NOT</text>
-<text x="52" y="175" class="phase">COMPLETE</text>
+    <text x="52" y="155" class="phase">ACTIVE DEVELOPMENT</text>
 
     <text x="34" y="222" class="label">VERIFIED SIGNAL</text>
-    <text x="34" y="247" class="body">Latest externally accepted gate: DOD-01-01</text>
+    <text x="34" y="247" class="body">No externally accepted gate is asserted by the current handoff.</text>
 
     <text x="34" y="304" class="label">NEXT AUTHORIZED / GOVERNED STEP</text>
     <text x="34" y="329" class="body">Next bounded action requires explicit authorization under the current gate.</text>
 
     <line x1="34" y1="365" x2="666" y2="365" stroke="#26364b"/>
     <text x="34" y="383" class="source">START_HERE.md · governed handoff</text>
-    <text x="666" y="383" class="boundaryEnd">V1 live execution: PROHIBITED</text>
+    <text x="666" y="383" class="boundaryEnd">Execution authority remains governed by the current project boundary.</text>
   </g>
   <g transform="translate(830 210)">
     <rect width="700" height="390" rx="24" fill="url(#panel)" stroke="#4F86C6" stroke-width="1.6"/>
