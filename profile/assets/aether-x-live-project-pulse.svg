@@ -27,7 +27,7 @@
 <text x="70" y="122" class="title">LIVE PORTFOLIO PULSE</text>
 <text x="70" y="154" class="subtitle">Selected live portfolio telemetry · governed sources · bounded Research-unit disclosure</text>
 <text x="1530" y="72" text-anchor="end" class="footerGold">AUTO-REFRESH · PUBLIC-SAFE</text>
-<text x="1530" y="100" text-anchor="end" class="footer">Last published state update: 2026-08-22 15:40 UTC</text>
+<text x="1530" y="100" text-anchor="end" class="footer">Last published state update: 2026-09-13 23:31 UTC</text>
 <line x1="70" y1="184" x2="1530" y2="184" stroke="#9D753C" stroke-opacity=".7"/>
 
   <g transform="translate(70 210)">
@@ -60,7 +60,7 @@
     <text x="34" y="247" class="body">3 accepted build tasks recorded in current status.</text>
 
     <text x="34" y="304" class="label">NEXT AUTHORIZED / GOVERNED STEP</text>
-    <text x="34" y="329" class="body">AXOS-T004 is selected as the next bounded build task.</text>
+    <text x="34" y="329" class="body">The next bounded build task is selected in the current governed status.</text>
 
     <line x1="34" y1="365" x2="666" y2="365" stroke="#26364b"/>
     <text x="34" y="383" class="source">PROJECT_STATUS.md · current build state</text>
