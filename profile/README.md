@@ -4,23 +4,51 @@
 
 <h1 align="center">AETHER X GLOBAL</h1>
 
-<p align="center"><strong>A Governed Intelligence Systems Company</strong></p>
+<p align="center"><strong>A Multi-Project Research & Technology Company</strong></p>
 <p align="center"><strong>Institutional Intelligence. Governed Autonomy.</strong></p>
-<p align="center"><strong>Build Intelligence That Can Be Trusted to Act.</strong></p>
+<p align="center"><strong>Research · Software · Systems Engineering</strong></p>
 
 <p align="center">
-  Engineering the system layer around advanced intelligence for consequential financial, research, enterprise, knowledge and institutional workflows.
+  Building evidence-driven technologies across governed enterprise intelligence, quantitative systems, AI operations infrastructure and institutional research.
 </p>
 
 <p align="center"><em>AETHER X GLOBAL is currently under formation.</em></p>
 
 ---
 
-## Primary Technology
+## Company Overview
+
+AETHER X GLOBAL is a **multi-project research and technology company** developing distinct technology initiatives across enterprise AI, quantitative and financial systems, AI operations infrastructure, high-integrity information architecture and institutional research.
+
+The portfolio is intentionally broader than any single product or research direction. Each initiative has its own purpose, maturity state and evidence boundary. Inclusion in the AETHER X portfolio does **not** imply production deployment, customer adoption or commercial availability.
+
+**AETHER X Governed Intelligence is the current flagship public technology direction. It is not the entirety of AETHER X GLOBAL.**
+
+---
+
+## Portfolio at a Glance
+
+<p align="center">
+  <img src="./assets/aether-x-portfolio-architecture-v2.svg" alt="AETHER X GLOBAL Portfolio and Research Architecture" width="100%" />
+</p>
+
+| Initiative / Unit | Disclosed state | Primary role |
+|---|---|---|
+| **AETHER X Governed Intelligence** | `R&D · PRE-PRODUCTION EVALUATION` | Flagship public technology direction for governed enterprise AI execution, authority, state, verification and evidence. |
+| **AETHER X Quantum** | `UNDER ACTIVE DEVELOPMENT` | Platform initiative for evidence-governed market analysis, strategy engineering, quantitative validation and controlled decision workflows. |
+| **AX-OS** | `UNDER DEVELOPMENT · ACTIVE BUILD` | Governed AI operations, authority, execution, verification and institutional learning. |
+| **AETHER Intelligence Core (AIC)** | `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION` | Strategic infrastructure direction for high-integrity financial information, point-in-time correctness and provenance. |
+| **AETHER X Research** | `INSTITUTIONAL RESEARCH UNIT · ACTIVE` | Evidence-governed technical, quantitative, data and AI research. |
+
+Portfolio labels are maturity statements, not claims of production deployment or commercial availability.
+
+---
+
+## Flagship Public Technology
 
 ### AETHER X Governed Intelligence
 
-**AETHER X Governed Intelligence** is the primary public technology direction of AETHER X GLOBAL: a governed execution architecture for enterprise AI workflows where model capability, institutional authority and consequential action must remain distinct.
+AETHER X Governed Intelligence is the company's current flagship public technology direction: a governed execution architecture for enterprise AI workflows where model capability, institutional authority and consequential action must remain distinct.
 
 The simplest public integration view is:
 
@@ -51,17 +79,9 @@ This is an **R&D / pre-production technology direction**. It is not represented 
 
 ---
 
-## Company
+## Shared Engineering Doctrine
 
-AETHER X GLOBAL develops governed intelligence systems in which **evidence, decision, authority, controlled action, verification and accountable outcomes** are engineered as explicit system boundaries.
-
-The company thesis is not that stronger models automatically create safer or more useful institutions. Advanced AI becomes institutionally useful when capability is connected to traceable evidence, bounded permissions, controlled execution, independent verification and durable accountability.
-
-AETHER X is model-agnostic by design. Models are components of the system; they are not the source of institutional authority.
-
----
-
-## Engineering Doctrine
+Across its technology and research portfolio, AETHER X uses a common evidence-aware engineering discipline:
 
 `OUTPUT ≠ FACT`  
 `RECOMMENDATION ≠ DECISION`  
@@ -82,40 +102,7 @@ A completed action is not automatically a successful outcome. Verification is a 
 Autonomy should be proportional to impact, reversibility, evidence quality, authority, monitoring and blast radius.
 
 ### Auditability by construction
-Decision, authority, action and verification evidence should be designed into the system rather than reconstructed after the fact.
-
----
-
-## Governed Intelligence
-
-<p align="center">
-  <img src="./assets/aether-x-intelligence-chain.svg" alt="AETHER X Governed Intelligence Chain" width="100%" />
-</p>
-
-AETHER X Governed Intelligence is the company's technology direction for AI systems that must participate in consequential workflows without collapsing analysis, permission and action into one uncontrolled step.
-
-The public technology surface is intentionally non-enabling. It provides high-level technology positioning, engineering-assurance summaries, intellectual-property boundaries and an enterprise evaluation pathway while proprietary implementation remains private.
-
-**[Explore AETHER X Governed Intelligence →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**
-
-`PUBLIC TECHNOLOGY SHOWCASE · CONTROLLED DISCLOSURE · NO OPEN-SOURCE LICENCE`
-
----
-
-## Portfolio & Research
-
-<p align="center">
-  <img src="./assets/aether-x-portfolio-architecture-v2.svg" alt="AETHER X GLOBAL Portfolio and Research Architecture" width="100%" />
-</p>
-
-| Initiative / Unit | Disclosed state | Primary role |
-|---|---|---|
-| **AETHER X Quantum** | `UNDER ACTIVE DEVELOPMENT` | Evidence-governed market analysis, strategy engineering, quantitative validation and controlled decision workflows. |
-| **AX-OS** | `UNDER DEVELOPMENT · ACTIVE BUILD` | Governed AI operations, authority, execution, verification and institutional learning. |
-| **AETHER Intelligence Core (AIC)** | `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION` | Strategic infrastructure direction for high-integrity financial information, point-in-time correctness and provenance. |
-| **AETHER X Research** | `INSTITUTIONAL RESEARCH UNIT · ACTIVE` | Evidence-governed technical, quantitative, data and AI research. |
-
-Portfolio labels are maturity statements, not claims of production deployment or commercial availability.
+Decision, authority, action and verification evidence should be designed into systems rather than reconstructed after the fact.
 
 ---
 
@@ -127,16 +114,16 @@ AETHER X uses progressive disclosure.
 
 Public repositories may contain:
 
-- company and technology positioning;
+- company and portfolio positioning;
 - non-enabling architecture views;
 - public-safe engineering evidence summaries;
 - maturity and limitation statements;
 - intellectual-property and licensing notices;
 - enterprise evaluation pathways.
 
-### Private engineering core
+### Private engineering and research systems
 
-Private repositories may contain:
+Private repositories and controlled systems may contain:
 
 - proprietary source code;
 - detailed schemas, contracts and implementation logic;
@@ -180,7 +167,7 @@ The public Governed Intelligence repository contains an explicit intellectual-pr
 
 ## Communication Standard
 
-AETHER X technical claims are intended to remain:
+AETHER X technical and research claims are intended to remain:
 
 **Precise · Institutional · Evidence-aware · Calm · Technically credible · Explicit about maturity**
 
@@ -197,4 +184,5 @@ These states are not interchangeable.
 ---
 
 <p align="center"><strong>AETHER X GLOBAL</strong></p>
+<p align="center"><strong>Multi-Project Research & Technology</strong></p>
 <p align="center"><strong>Institutional Intelligence. Governed Autonomy.</strong></p>
