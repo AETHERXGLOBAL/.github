@@ -8,7 +8,7 @@
 <p align="center"><strong>Research · Technology Platforms · Quantitative Systems · Applied AI</strong></p>
 
 <p align="center">
-  AetherX Global is a multidisciplinary research and technology company operating at the intersection of financial markets, artificial intelligence, advanced computing, and applied research. We develop technology platforms, analytical systems, quantitative research initiatives, and experimental AI-driven technologies designed to address complex problems across financial markets, enterprise systems, and selected scientific and technological domains.
+  AetherX Global is a multidisciplinary research and technology company working across financial markets, artificial intelligence, advanced technology, and quantitative and applied research.
 </p>
 
 <p align="center"><em>AETHER X GLOBAL is currently under formation.</em></p>
@@ -17,9 +17,9 @@
 
 ## Company Overview
 
-AETHER X GLOBAL is a **multi-project research and technology company** with work spanning financial markets, quantitative and analytical systems, artificial intelligence, advanced computing, enterprise technology and applied multidisciplinary research.
+AETHER X GLOBAL develops research, technology platforms, analytical systems and experimental AI-driven technologies across financial markets, enterprise systems and selected scientific and technological domains.
 
-The company is intentionally broader than any single product or technology direction. Its portfolio combines market-focused platforms and research, enterprise AI systems, advanced technology development and research initiatives in selected scientific and technical domains.
+The company is intentionally broader than any single product or technology direction. Its portfolio combines market-focused research and platforms, quantitative systems, enterprise AI technologies, advanced computing initiatives and multidisciplinary applied research.
 
 Each initiative has its own purpose, maturity state and evidence boundary. Inclusion in the AETHER X portfolio does **not** imply production deployment, customer adoption, regulatory approval or commercial availability.
 
@@ -27,19 +27,19 @@ Each initiative has its own purpose, maturity state and evidence boundary. Inclu
 
 ---
 
-## What We Work On
+## Areas of Work
 
 ### Financial Markets & Quantitative Research
-Research and technology development for market analysis, strategy engineering, quantitative validation, analytical workflows and new market-measurement concepts.
+Research on market behavior, technical and quantitative analysis, strategy research, quantitative validation, and development of market-oriented research tools.
 
 ### Artificial Intelligence & Advanced Technology
-AI-enabled systems, advanced computing and technology architectures designed for complex enterprise, analytical and research problems.
+Research and development of AI-driven systems, advanced computing concepts, and experimental technology platforms.
 
 ### Technology Platforms & Systems
-Software platforms, analytical systems and infrastructure initiatives that convert research into practical, testable technology.
+Design and development of analytical platforms, software systems, research infrastructure, and advanced technology frameworks.
 
 ### Applied & Multidisciplinary Research
-Research programs using AI, computation and evidence-driven methods across selected scientific, technical and institutional domains.
+AI- and computation-assisted research across selected scientific, technological, financial, and data domains.
 
 ---
 
@@ -57,11 +57,11 @@ Research programs using AI, computation and evidence-driven methods across selec
 | **AETHER Intelligence Core (AIC)** | `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION` | Strategic infrastructure direction for high-integrity financial information, point-in-time correctness and provenance. |
 | **AETHER X Research** | `INSTITUTIONAL RESEARCH UNIT · ACTIVE` | Applied research across AI, computing, quantitative methods, financial markets and selected scientific and technological domains. |
 
-Portfolio labels are maturity statements, not claims of production deployment or commercial availability.
+Portfolio labels describe disclosed research and development maturity only. They do **not** imply production deployment, customer adoption or commercial availability.
 
 ---
 
-## Flagship Public Enterprise Technology
+## Flagship Public Technology
 
 ### AETHER X Governed Intelligence
 
@@ -81,26 +81,22 @@ ENTERPRISE SYSTEM
 AETHER X GOVERNED INTELLIGENCE
 ```
 
-In practical terms, AI may propose an action; AETHER X Governed Intelligence is intended to govern the execution boundary before an approved request reaches an enterprise system and to preserve the state and evidence needed to review what happened.
+In practical terms, an AI-enabled workflow may propose an action; AETHER X Governed Intelligence is intended to govern the execution boundary before an approved request reaches an enterprise system and to preserve the state and evidence needed to review what happened.
 
 At deployment level, the technology may be delivered as an agreed service or governed runtime/engine inside a customer-controlled or jointly agreed environment. Exact packaging, hosting, networking and connector choices are determined during technical scoping rather than fixed publicly in advance.
 
 The standard evaluation path does **not** require transfer of proprietary core source code.
 
-This is an **R&D / pre-production enterprise AI execution and distributed-systems technology direction**. It is **not** a cybersecurity product, offensive-security product, threat-detection system or cyber-defense offering.
+**AETHER X Governed Intelligence is not a cybersecurity product, offensive-security product or threat-detection system.**
 
 **[Explore AETHER X Governed Intelligence →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**  
 [Executive Brief](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/EXECUTIVE_BRIEF.md) · [Enterprise Integration Model](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/ENTERPRISE_INTEGRATION_MODEL.md) · [Enterprise Evaluation](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/ENTERPRISE_EVALUATION.md)
 
 `PUBLIC TECHNOLOGY SHOWCASE · CONTROLLED DISCLOSURE · NO OPEN-SOURCE LICENCE`
 
----
+### Governed Intelligence Engineering Doctrine
 
-## Shared Research & Engineering Discipline
-
-Across its portfolio, AETHER X uses an evidence-aware development discipline that separates research hypotheses, engineering evidence, maturity state and commercial claims.
-
-For Governed Intelligence specifically, several architectural distinctions are central:
+The following principles apply specifically to the engineering doctrine of **AETHER X Governed Intelligence**:
 
 `OUTPUT ≠ FACT`  
 `RECOMMENDATION ≠ DECISION`  
@@ -108,7 +104,13 @@ For Governed Intelligence specifically, several architectural distinctions are c
 `TOOL AVAILABILITY ≠ TOOL PERMISSION`  
 `EXECUTION COMPLETE ≠ VERIFIED OUTCOME`
 
-Across market research, AI systems and technology development, material claims are intended to remain traceable to evidence, assumptions, methodology and validation state.
+These distinctions are used to keep evidence, decision, authority, execution and verification explicit within the Governed Intelligence architecture.
+
+---
+
+## Research & Engineering Discipline
+
+Across its broader portfolio, AETHER X separates research hypotheses, engineering evidence, maturity state and commercial claims. Material claims are intended to remain traceable to evidence, assumptions, methodology and validation state.
 
 ---
 
@@ -189,7 +191,7 @@ These states are not interchangeable.
 
 ---
 
-> **AetherX Global is built around a unifying principle, combining rigorous research, financial markets expertise, artificial intelligence, and advanced technology to develop original systems and practical solutions.**
+> **AetherX Global is built around a unifying principle: combining rigorous research, financial markets expertise, artificial intelligence, advanced technology, and disciplined engineering to develop original systems and practical solutions.**
 
 <p align="center"><strong>AETHER X GLOBAL</strong></p>
 <p align="center"><strong>Financial Markets · Artificial Intelligence · Advanced Technology · Research</strong></p>
