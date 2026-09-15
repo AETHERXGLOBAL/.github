@@ -26,19 +26,23 @@ The simplest public integration view is:
 
 ```text
 AI AGENT / MODEL / AUTOMATION
-            ↓
+            ↓ proposed action
 AETHER X GOVERNED INTELLIGENCE
-            ↓
+            ↓ approved, bounded request
 APPROVED ENTERPRISE API / CONNECTOR
             ↓
 ENTERPRISE SYSTEM
-            ↓
-RESULT / STATE / EVIDENCE RETURNS THROUGH THE GOVERNED BOUNDARY
+            ↓ result / state / evidence
+AETHER X GOVERNED INTELLIGENCE
 ```
 
 In practical terms, AI may propose an action; AETHER X is intended to govern the boundary before an approved request reaches an enterprise system and to preserve the state and evidence needed to review what happened.
 
-This is an **R&D / pre-production technology direction**. It is not represented as a production-ready runtime, supported public SDK or cybersecurity product.
+At deployment level, AETHER X may be delivered as an agreed service or governed runtime/engine inside a customer-controlled or jointly agreed environment. Exact packaging, hosting, networking and connector choices are determined during technical scoping rather than fixed publicly in advance.
+
+The standard evaluation path does **not** require transfer of proprietary core source code.
+
+This is an **R&D / pre-production technology direction**. It is not represented as a production-ready runtime or supported public SDK. **It is a governed enterprise AI execution / distributed-systems technology direction, not a cybersecurity product or offensive-security research project.**
 
 **[Explore AETHER X Governed Intelligence →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**  
 [Executive Brief](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/EXECUTIVE_BRIEF.md) · [Enterprise Integration Model](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/ENTERPRISE_INTEGRATION_MODEL.md) · [Enterprise Evaluation](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/ENTERPRISE_EVALUATION.md)
