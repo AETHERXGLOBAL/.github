@@ -4,12 +4,11 @@
 
 <h1 align="center">AETHER X GLOBAL</h1>
 
-<p align="center"><strong>A Multi-Project Research & Technology Company</strong></p>
-<p align="center"><strong>Institutional Intelligence. Governed Autonomy.</strong></p>
-<p align="center"><strong>Research · Software · Systems Engineering</strong></p>
+<p align="center"><strong>Financial Markets, Artificial Intelligence, Advanced Technology, and Research</strong></p>
+<p align="center"><strong>Research · Technology Platforms · Quantitative Systems · Applied AI</strong></p>
 
 <p align="center">
-  Building evidence-driven technologies across governed enterprise intelligence, quantitative systems, AI operations infrastructure and institutional research.
+  AetherX Global is a multidisciplinary research and technology company operating at the intersection of financial markets, artificial intelligence, advanced computing, and applied research. We develop technology platforms, analytical systems, quantitative research initiatives, and experimental AI-driven technologies designed to address complex problems across financial markets, enterprise systems, and selected scientific and technological domains.
 </p>
 
 <p align="center"><em>AETHER X GLOBAL is currently under formation.</em></p>
@@ -18,11 +17,29 @@
 
 ## Company Overview
 
-AETHER X GLOBAL is a **multi-project research and technology company** developing distinct technology initiatives across enterprise AI, quantitative and financial systems, AI operations infrastructure, high-integrity information architecture and institutional research.
+AETHER X GLOBAL is a **multi-project research and technology company** with work spanning financial markets, quantitative and analytical systems, artificial intelligence, advanced computing, enterprise technology and applied multidisciplinary research.
 
-The portfolio is intentionally broader than any single product or research direction. Each initiative has its own purpose, maturity state and evidence boundary. Inclusion in the AETHER X portfolio does **not** imply production deployment, customer adoption or commercial availability.
+The company is intentionally broader than any single product or technology direction. Its portfolio combines market-focused platforms and research, enterprise AI systems, advanced technology development and research initiatives in selected scientific and technical domains.
 
-**AETHER X Governed Intelligence is the current flagship public technology direction. It is not the entirety of AETHER X GLOBAL.**
+Each initiative has its own purpose, maturity state and evidence boundary. Inclusion in the AETHER X portfolio does **not** imply production deployment, customer adoption, regulatory approval or commercial availability.
+
+**AETHER X Governed Intelligence is the current flagship public enterprise-technology initiative. It is not the entirety of AETHER X GLOBAL.**
+
+---
+
+## What We Work On
+
+### Financial Markets & Quantitative Research
+Research and technology development for market analysis, strategy engineering, quantitative validation, analytical workflows and new market-measurement concepts.
+
+### Artificial Intelligence & Advanced Technology
+AI-enabled systems, advanced computing and technology architectures designed for complex enterprise, analytical and research problems.
+
+### Technology Platforms & Systems
+Software platforms, analytical systems and infrastructure initiatives that convert research into practical, testable technology.
+
+### Applied & Multidisciplinary Research
+Research programs using AI, computation and evidence-driven methods across selected scientific, technical and institutional domains.
 
 ---
 
@@ -34,21 +51,21 @@ The portfolio is intentionally broader than any single product or research direc
 
 | Initiative / Unit | Disclosed state | Primary role |
 |---|---|---|
-| **AETHER X Governed Intelligence** | `R&D · PRE-PRODUCTION EVALUATION` | Flagship public technology direction for governed enterprise AI execution, authority, state, verification and evidence. |
-| **AETHER X Quantum** | `UNDER ACTIVE DEVELOPMENT` | Platform initiative for evidence-governed market analysis, strategy engineering, quantitative validation and controlled decision workflows. |
-| **AX-OS** | `UNDER DEVELOPMENT · ACTIVE BUILD` | Governed AI operations, authority, execution, verification and institutional learning. |
+| **AETHER X Governed Intelligence** | `R&D · PRE-PRODUCTION EVALUATION` | Current flagship public enterprise-technology initiative for governed AI execution, explicit authority, state, verification and evidence. |
+| **AETHER X Quantum** | `UNDER ACTIVE DEVELOPMENT` | Financial-markets platform initiative for technical analysis, strategy engineering, quantitative validation, controlled decision workflows and market-indicator research. |
+| **AX-OS** | `UNDER DEVELOPMENT · ACTIVE BUILD` | AI operations infrastructure direction for governed execution, verification and institutional learning. |
 | **AETHER Intelligence Core (AIC)** | `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION` | Strategic infrastructure direction for high-integrity financial information, point-in-time correctness and provenance. |
-| **AETHER X Research** | `INSTITUTIONAL RESEARCH UNIT · ACTIVE` | Evidence-governed technical, quantitative, data and AI research. |
+| **AETHER X Research** | `INSTITUTIONAL RESEARCH UNIT · ACTIVE` | Applied research across AI, computing, quantitative methods, financial markets and selected scientific and technological domains. |
 
 Portfolio labels are maturity statements, not claims of production deployment or commercial availability.
 
 ---
 
-## Flagship Public Technology
+## Flagship Public Enterprise Technology
 
 ### AETHER X Governed Intelligence
 
-AETHER X Governed Intelligence is the company's current flagship public technology direction: a governed execution architecture for enterprise AI workflows where model capability, institutional authority and consequential action must remain distinct.
+AETHER X Governed Intelligence is the company's current flagship public enterprise-technology initiative: a governed execution architecture for AI-enabled institutional workflows where model capability, organizational authority and consequential action must remain distinct.
 
 The simplest public integration view is:
 
@@ -64,13 +81,13 @@ ENTERPRISE SYSTEM
 AETHER X GOVERNED INTELLIGENCE
 ```
 
-In practical terms, AI may propose an action; AETHER X is intended to govern the boundary before an approved request reaches an enterprise system and to preserve the state and evidence needed to review what happened.
+In practical terms, AI may propose an action; AETHER X Governed Intelligence is intended to govern the execution boundary before an approved request reaches an enterprise system and to preserve the state and evidence needed to review what happened.
 
-At deployment level, AETHER X may be delivered as an agreed service or governed runtime/engine inside a customer-controlled or jointly agreed environment. Exact packaging, hosting, networking and connector choices are determined during technical scoping rather than fixed publicly in advance.
+At deployment level, the technology may be delivered as an agreed service or governed runtime/engine inside a customer-controlled or jointly agreed environment. Exact packaging, hosting, networking and connector choices are determined during technical scoping rather than fixed publicly in advance.
 
 The standard evaluation path does **not** require transfer of proprietary core source code.
 
-This is an **R&D / pre-production technology direction**. It is not represented as a production-ready runtime or supported public SDK. **It is a governed enterprise AI execution / distributed-systems technology direction, not a cybersecurity product or offensive-security research project.**
+This is an **R&D / pre-production enterprise AI execution and distributed-systems technology direction**. It is **not** a cybersecurity product, offensive-security product, threat-detection system or cyber-defense offering.
 
 **[Explore AETHER X Governed Intelligence →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**  
 [Executive Brief](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/EXECUTIVE_BRIEF.md) · [Enterprise Integration Model](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/ENTERPRISE_INTEGRATION_MODEL.md) · [Enterprise Evaluation](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/ENTERPRISE_EVALUATION.md)
@@ -79,9 +96,11 @@ This is an **R&D / pre-production technology direction**. It is not represented 
 
 ---
 
-## Shared Engineering Doctrine
+## Shared Research & Engineering Discipline
 
-Across its technology and research portfolio, AETHER X uses a common evidence-aware engineering discipline:
+Across its portfolio, AETHER X uses an evidence-aware development discipline that separates research hypotheses, engineering evidence, maturity state and commercial claims.
+
+For Governed Intelligence specifically, several architectural distinctions are central:
 
 `OUTPUT ≠ FACT`  
 `RECOMMENDATION ≠ DECISION`  
@@ -89,20 +108,7 @@ Across its technology and research portfolio, AETHER X uses a common evidence-aw
 `TOOL AVAILABILITY ≠ TOOL PERMISSION`  
 `EXECUTION COMPLETE ≠ VERIFIED OUTCOME`
 
-### Evidence before confidence
-Material claims should remain traceable to source, time, provenance, assumptions and verification state.
-
-### Authority before action
-Technical capability does not create permission. Consequential actions require explicit, scoped and reviewable authority.
-
-### Verification before acceptance
-A completed action is not automatically a successful outcome. Verification is a separate engineering boundary.
-
-### Bounded autonomy
-Autonomy should be proportional to impact, reversibility, evidence quality, authority, monitoring and blast radius.
-
-### Auditability by construction
-Decision, authority, action and verification evidence should be designed into systems rather than reconstructed after the fact.
+Across market research, AI systems and technology development, material claims are intended to remain traceable to evidence, assumptions, methodology and validation state.
 
 ---
 
@@ -116,7 +122,7 @@ Public repositories may contain:
 
 - company and portfolio positioning;
 - non-enabling architecture views;
-- public-safe engineering evidence summaries;
+- public-safe engineering and research summaries;
 - maturity and limitation statements;
 - intellectual-property and licensing notices;
 - enterprise evaluation pathways.
@@ -128,9 +134,9 @@ Private repositories and controlled systems may contain:
 - proprietary source code;
 - detailed schemas, contracts and implementation logic;
 - internal SDK and validator implementations;
-- private adversarial test suites;
+- private test suites and research datasets;
 - confidential research and invention records;
-- internal release, security and evidence artifacts;
+- internal release and evidence artifacts;
 - unpublished product architecture.
 
 `PUBLIC DISCLOSURE ≠ IMPLEMENTATION DISCLOSURE`
@@ -157,9 +163,9 @@ AETHER X's default commercial objective is to retain ownership of the underlying
 
 ## Intellectual Property
 
-Public visibility does not create an open-source licence and does not transfer ownership of AETHER X technology.
+Public visibility does not create an open-source licence and does not transfer ownership of AETHER X technology, research or intellectual property.
 
-The public Governed Intelligence repository contains an explicit intellectual-property and licensing notice. Proprietary implementation and confidential technical material remain outside the public surface.
+Proprietary implementation and confidential technical material remain outside the public surface unless separately disclosed under an approved agreement.
 
 **[Intellectual Property Notice →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/INTELLECTUAL_PROPERTY.md)**
 
@@ -167,9 +173,9 @@ The public Governed Intelligence repository contains an explicit intellectual-pr
 
 ## Communication Standard
 
-AETHER X technical and research claims are intended to remain:
+AETHER X technical, market and research claims are intended to remain:
 
-**Precise · Institutional · Evidence-aware · Calm · Technically credible · Explicit about maturity**
+**Precise · Evidence-aware · Technically credible · Explicit about maturity · Clear about limitations**
 
 We distinguish between:
 
@@ -183,6 +189,7 @@ These states are not interchangeable.
 
 ---
 
+> **AetherX Global is built around a unifying principle, combining rigorous research, financial markets expertise, artificial intelligence, and advanced technology to develop original systems and practical solutions.**
+
 <p align="center"><strong>AETHER X GLOBAL</strong></p>
-<p align="center"><strong>Multi-Project Research & Technology</strong></p>
-<p align="center"><strong>Institutional Intelligence. Governed Autonomy.</strong></p>
+<p align="center"><strong>Financial Markets · Artificial Intelligence · Advanced Technology · Research</strong></p>
