@@ -12,6 +12,39 @@
   Engineering the system layer around advanced intelligence for consequential financial, research, enterprise, knowledge and institutional workflows.
 </p>
 
+<p align="center"><em>AETHER X GLOBAL is currently under formation.</em></p>
+
+---
+
+## Primary Technology
+
+### AETHER X Governed Intelligence
+
+**AETHER X Governed Intelligence** is the primary public technology direction of AETHER X GLOBAL: a governed execution architecture for enterprise AI workflows where model capability, institutional authority and consequential action must remain distinct.
+
+The simplest public integration view is:
+
+```text
+AI AGENT / MODEL / AUTOMATION
+            ↓
+AETHER X GOVERNED INTELLIGENCE
+            ↓
+APPROVED ENTERPRISE API / CONNECTOR
+            ↓
+ENTERPRISE SYSTEM
+            ↓
+RESULT / STATE / EVIDENCE RETURNS THROUGH THE GOVERNED BOUNDARY
+```
+
+In practical terms, AI may propose an action; AETHER X is intended to govern the boundary before an approved request reaches an enterprise system and to preserve the state and evidence needed to review what happened.
+
+This is an **R&D / pre-production technology direction**. It is not represented as a production-ready runtime, supported public SDK or cybersecurity product.
+
+**[Explore AETHER X Governed Intelligence →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**  
+[Executive Brief](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/EXECUTIVE_BRIEF.md) · [Enterprise Integration Model](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/ENTERPRISE_INTEGRATION_MODEL.md) · [Enterprise Evaluation](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/ENTERPRISE_EVALUATION.md)
+
+`PUBLIC TECHNOLOGY SHOWCASE · CONTROLLED DISCLOSURE · NO OPEN-SOURCE LICENCE`
+
 ---
 
 ## Company
