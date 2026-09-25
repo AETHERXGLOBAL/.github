@@ -27,6 +27,30 @@ Each initiative has its own purpose, maturity state and evidence boundary. Inclu
 
 ---
 
+## Featured Scientific Research
+
+### First Verified Public arXiv Research Output
+
+> **Localizable Bipartite Rank-One Ideal Measurements Have a Block-Replicated Nice-Bell Structure**  
+> **Author:** Ahmed Younis  
+> **Field:** Quantum Physics (`quant-ph`)  
+> **Public record:** [arXiv:2609.22181](https://arxiv.org/abs/2609.22181) · [DOI: 10.48550/arXiv.2609.22181](https://doi.org/10.48550/arXiv.2609.22181)  
+> **AETHER X Research record:** `AXR-2026-009`  
+> **Status:** `PUBLIC ARXIV PREPRINT · NOT YET PEER-REVIEWED`
+
+This work gives a structural characterization of finite-dimensional bipartite rank-one ideal projective measurements that are localizable without communication and establishes **Conjecture 1 of Akibue and Miyazaki**.
+
+AETHER X Research tracks the work internally as **AXR-2026-009** within its evidence-governed research program. The public arXiv manuscript lists the author affiliation as **Independent Researcher**; this public company profile therefore presents it as an **AETHER X-associated research output**, without changing or overstating the scholarly affiliation recorded by arXiv.
+
+The publication represents the first verified public arXiv output currently recorded in the AETHER X Research portfolio and provides a public, independently accessible scientific artifact arising from the company's research program.
+
+**Scientific boundary:** arXiv publication establishes public availability of the preprint. It does **not** by itself establish journal acceptance, peer review, or independent verification of the result.
+
+**[Read the paper on arXiv →](https://arxiv.org/abs/2609.22181)**  
+**[Research publication record →](./RESEARCH_PUBLICATIONS.md)**
+
+---
+
 ## Areas of Work
 
 ### Financial Markets & Quantitative Research
