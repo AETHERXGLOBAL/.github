@@ -4,14 +4,28 @@ This page records selected public scientific outputs associated with the AETHER 
 
 It is intentionally narrower than the private research repository. Only externally available research artifacts that can be independently located are listed here.
 
+<p align="center">
+  <a href="https://arxiv.org/abs/2609.22181">
+    <img src="./assets/aether-x-research-output-001.svg" alt="AETHER X Research verified public research output AXR-2026-009" width="100%" />
+  </a>
+</p>
+
 ---
 
-## AXR-2026-009
+## Public Output Index
+
+| # | Research record | Field | External record | Status |
+|---|---|---|---|---|
+| **001** | `AXR-2026-009` | Quantum Physics (`quant-ph`) | [arXiv:2609.22181](https://arxiv.org/abs/2609.22181) | `PUBLIC ARXIV PREPRINT` |
+
+---
+
+## AXR-2026-009 — Public Research Output 001
 
 ### Localizable Bipartite Rank-One Ideal Measurements Have a Block-Replicated Nice-Bell Structure
 
 **Author:** Ahmed Younis  
-**Public scholarly affiliation:** Independent Researcher  
+**Public scholarly affiliation on paper:** Independent Researcher  
 **AETHER X internal research record:** `AXR-2026-009`  
 **Subject:** Quantum Physics (`quant-ph`)  
 **arXiv:** [2609.22181](https://arxiv.org/abs/2609.22181)  
@@ -27,6 +41,12 @@ The paper proves a complete structural characterization of finite-dimensional bi
 Up to local-unitary equivalence, the characterized measurement bases have a block-replicated nice-Bell structure.
 
 The paper states that this establishes **Conjecture 1 of Akibue and Miyazaki** and gives a protocol-independent classification for this class of measurements.
+
+### Public significance
+
+This output is an externally reachable scientific artifact that can be independently located on arXiv. It gives the AETHER X Research program a concrete public research reference point tied to a specific internal research record while leaving unpublished research systems private.
+
+It is evidence of **public scholarly output**. It is not, by itself, evidence of peer review, journal acceptance, independent verification, product readiness, or commercial adoption.
 
 ### Research provenance
 
@@ -44,11 +64,13 @@ The public arXiv manuscript itself lists the author's affiliation as **Independe
 
 The public arXiv record is the authoritative external source for the paper title, author, subject classification, abstract, version history and DOI.
 
+**[Read the authoritative public record on arXiv →](https://arxiv.org/abs/2609.22181)**
+
 ---
 
-## Public research standard
+## Public Research Standard
 
-AETHER X aims to distinguish clearly between:
+AETHER X distinguishes explicitly between:
 
 - a research hypothesis;
 - internal computational or proof evidence;
@@ -58,3 +80,5 @@ AETHER X aims to distinguish clearly between:
 - production or commercial claims.
 
 Only externally verifiable public artifacts should be represented here as public research outputs.
+
+As additional research becomes publicly verifiable, it should be added to the **Public Output Index** using the same evidence and maturity standard.
