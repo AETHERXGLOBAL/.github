@@ -15,6 +15,35 @@
 
 ---
 
+## AETHER X Research — Verified Public Scientific Output
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2609.22181">
+    <img src="./assets/aether-x-research-output-001.svg" alt="AETHER X Research verified public research output AXR-2026-009" width="100%" />
+  </a>
+</p>
+
+### Public Research Output 001 · AXR-2026-009
+
+**Localizable Bipartite Rank-One Ideal Measurements Have a Block-Replicated Nice-Bell Structure**
+
+| Author | Field | Public record | Status |
+|---|---|---|---|
+| **Ahmed Younis** | Quantum Physics (`quant-ph`) | [arXiv:2609.22181](https://arxiv.org/abs/2609.22181) · [DOI](https://doi.org/10.48550/arXiv.2609.22181) | `PUBLIC ARXIV PREPRINT` |
+
+This paper gives a structural characterization of finite-dimensional bipartite rank-one ideal projective measurements that are localizable without communication. The paper states that the result establishes **Conjecture 1 of Akibue and Miyazaki**.
+
+AETHER X Research records the work internally as **AXR-2026-009**. The public arXiv manuscript lists the author's scholarly affiliation as **Independent Researcher**; AETHER X therefore presents it accurately as an **AETHER X-associated research output** rather than altering the affiliation recorded by arXiv.
+
+**Why it matters:** this is a public, independently reachable scientific artifact demonstrating that the AETHER X Research program has already produced externally visible scholarly output, not only internal research activity.
+
+`PUBLIC PREPRINT ≠ PEER REVIEW` · `ARXIV AVAILABILITY ≠ JOURNAL ACCEPTANCE` · `PUBLICATION ≠ INDEPENDENT VERIFICATION`
+
+**[Read the paper on arXiv →](https://arxiv.org/abs/2609.22181)**  
+**[View the public research publication record →](./RESEARCH_PUBLICATIONS.md)**
+
+---
+
 ## Company Overview
 
 AETHER X GLOBAL develops research, technology platforms, analytical systems and experimental AI-driven technologies across financial markets, enterprise systems and selected scientific and technological domains.
@@ -24,30 +53,6 @@ The company is intentionally broader than any single product or technology direc
 Each initiative has its own purpose, maturity state and evidence boundary. Inclusion in the AETHER X portfolio does **not** imply production deployment, customer adoption, regulatory approval or commercial availability.
 
 **AETHER X Governed Intelligence is the current flagship public enterprise-technology initiative. It is not the entirety of AETHER X GLOBAL.**
-
----
-
-## Featured Scientific Research
-
-### First Verified Public arXiv Research Output
-
-> **Localizable Bipartite Rank-One Ideal Measurements Have a Block-Replicated Nice-Bell Structure**  
-> **Author:** Ahmed Younis  
-> **Field:** Quantum Physics (`quant-ph`)  
-> **Public record:** [arXiv:2609.22181](https://arxiv.org/abs/2609.22181) · [DOI: 10.48550/arXiv.2609.22181](https://doi.org/10.48550/arXiv.2609.22181)  
-> **AETHER X Research record:** `AXR-2026-009`  
-> **Status:** `PUBLIC ARXIV PREPRINT · NOT YET PEER-REVIEWED`
-
-This work gives a structural characterization of finite-dimensional bipartite rank-one ideal projective measurements that are localizable without communication and establishes **Conjecture 1 of Akibue and Miyazaki**.
-
-AETHER X Research tracks the work internally as **AXR-2026-009** within its evidence-governed research program. The public arXiv manuscript lists the author affiliation as **Independent Researcher**; this public company profile therefore presents it as an **AETHER X-associated research output**, without changing or overstating the scholarly affiliation recorded by arXiv.
-
-The publication represents the first verified public arXiv output currently recorded in the AETHER X Research portfolio and provides a public, independently accessible scientific artifact arising from the company's research program.
-
-**Scientific boundary:** arXiv publication establishes public availability of the preprint. It does **not** by itself establish journal acceptance, peer review, or independent verification of the result.
-
-**[Read the paper on arXiv →](https://arxiv.org/abs/2609.22181)**  
-**[Research publication record →](./RESEARCH_PUBLICATIONS.md)**
 
 ---
 
