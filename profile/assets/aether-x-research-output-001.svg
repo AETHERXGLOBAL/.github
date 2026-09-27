@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc">
+<title id="title">AETHER X Research — Verified Public Research Output 001</title>
+<desc id="desc">Public arXiv preprint AXR-2026-009 by Ahmed Younis in quantum physics, arXiv 2609.22181.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#07111f"/>
+    <stop offset="0.55" stop-color="#0b1424"/>
+    <stop offset="1" stop-color="#050b14"/>
+  </linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#111d2f"/>
+    <stop offset="1" stop-color="#0b1422"/>
+  </linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#9f7935"/>
+    <stop offset="0.5" stop-color="#d7b56e"/>
+    <stop offset="1" stop-color="#9f7935"/>
+  </linearGradient>
+  <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+    <path d="M36 0H0V36" fill="none" stroke="#8fa0b5" stroke-opacity="0.045"/>
+  </pattern>
+  <style>
+    .brand{font:700 20px Inter,Segoe UI,Arial,sans-serif;letter-spacing:5px;fill:#d7b56e}
+    .kicker{font:700 15px Inter,Segoe UI,Arial,sans-serif;letter-spacing:2.2px;fill:#c9a86a}
+    .title{font:700 36px Inter,Segoe UI,Arial,sans-serif;fill:#f4f7fb}
+    .paper{font:700 30px Inter,Segoe UI,Arial,sans-serif;fill:#f6f8fb}
+    .meta{font:500 17px Inter,Segoe UI,Arial,sans-serif;fill:#bdc8d6}
+    .metaStrong{font:700 17px Inter,Segoe UI,Arial,sans-serif;fill:#edf2f8}
+    .pill{font:700 14px Inter,Segoe UI,Arial,sans-serif;letter-spacing:.8px;fill:#f1d79a}
+    .note{font:500 15px Inter,Segoe UI,Arial,sans-serif;fill:#92a0b2}
+    .num{font:700 72px Inter,Segoe UI,Arial,sans-serif;fill:#d7b56e}
+  </style>
+</defs>
+
+<rect width="1600" height="620" fill="url(#bg)"/>
+<rect width="1600" height="620" fill="url(#grid)"/>
+<circle cx="1375" cy="105" r="250" fill="none" stroke="#c9a86a" stroke-opacity="0.05"/>
+<circle cx="1375" cy="105" r="185" fill="none" stroke="#c9a86a" stroke-opacity="0.035"/>
+
+<text x="95" y="70" class="brand">AETHER X GLOBAL</text>
+<text x="95" y="112" class="kicker">AETHER X RESEARCH · VERIFIED PUBLIC OUTPUT</text>
+<rect x="95" y="136" width="310" height="3" fill="url(#gold)"/>
+
+<rect x="95" y="175" width="1410" height="345" rx="28" fill="url(#panel)" stroke="#b18d4c" stroke-width="1.8"/>
+
+<rect x="125" y="205" width="255" height="42" rx="12" fill="#332814" stroke="#9f7935"/>
+<text x="252.5" y="232" text-anchor="middle" class="pill">PUBLIC ARXIV PREPRINT</text>
+
+<text x="125" y="300" class="paper">Localizable Bipartite Rank-One Ideal Measurements</text>
+<text x="125" y="342" class="paper">Have a Block-Replicated Nice-Bell Structure</text>
+
+<text x="125" y="398" class="metaStrong">Ahmed Younis</text>
+<text x="125" y="432" class="meta">Quantum Physics · quant-ph</text>
+<text x="125" y="466" class="meta">arXiv:2609.22181 · DOI:10.48550/arXiv.2609.22181</text>
+
+<line x1="1110" y1="220" x2="1110" y2="475" stroke="#7d6335" stroke-width="1.5"/>
+<text x="1165" y="292" class="num">001</text>
+<text x="1165" y="330" class="kicker">PUBLIC RESEARCH OUTPUT</text>
+<text x="1165" y="382" class="metaStrong">AXR-2026-009</text>
+<text x="1165" y="416" class="meta">Initial arXiv submission</text>
+<text x="1165" y="448" class="metaStrong">27 August 2026</text>
+
+<text x="95" y="570" class="note">Public availability on arXiv does not by itself establish peer review, journal acceptance, or independent verification.</text>
+</svg>
