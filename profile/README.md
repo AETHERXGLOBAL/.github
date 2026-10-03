@@ -15,6 +15,48 @@
 
 ---
 
+## Public Open-Source Projects — Start Here
+
+If you are visiting AETHER X GLOBAL as a developer, researcher or technical reviewer, these are the two public projects designed for immediate hands-on use.
+
+### [ExecSurface](https://github.com/AETHERXGLOBAL/execsurface)
+
+**Runtime behavioral integrity for CI, dependencies, developer tools and AI-assisted workflows.**
+
+ExecSurface learns an accepted runtime execution surface, runs the same command later, and reports observed behavior that appeared, disappeared or changed.
+
+```text
+accepted runtime behavior -> observed execution -> deterministic drift -> PASS / REVIEW / BLOCK / ERROR
+```
+
+- Apache-2.0 open source
+- Rust CLI + GitHub Action
+- current public scope: Linux x86_64
+- self-service: no signup, API key or approval required
+
+**[Explore ExecSurface →](https://github.com/AETHERXGLOBAL/execsurface)** · [Five-Minute Start](https://github.com/AETHERXGLOBAL/execsurface/blob/main/docs/QUICKSTART_5_MIN.md) · [Discussions](https://github.com/AETHERXGLOBAL/execsurface/discussions)
+
+### [ReproCert](https://github.com/AETHERXGLOBAL/reprocert)
+
+**Claim-to-evidence reproducibility certificates for software, AI and research workflows.**
+
+ReproCert turns an explicit technical claim, exact command, evidence and checks into a machine-readable certificate with an explicit verdict.
+
+```text
+CLAIM -> EXACT COMMAND -> EVIDENCE -> VERDICT -> CERTIFICATE
+```
+
+- Apache-2.0 open source
+- Python CLI + GitHub Action
+- PyPI distribution and self-service project scaffolding
+- designed for CI, benchmarks, testing, AI and research workflows
+
+**[Explore ReproCert →](https://github.com/AETHERXGLOBAL/reprocert)** · [5-Minute Start](https://github.com/AETHERXGLOBAL/reprocert/blob/main/docs/QUICKSTART_5_MIN.md) · [Technical Evaluation](https://github.com/AETHERXGLOBAL/reprocert/blob/main/docs/TECHNICAL_EVALUATION.md)
+
+If either project is useful to your work, a GitHub **Star** helps other developers discover it. Technical criticism, failed reproductions and counterexamples are also welcome.
+
+---
+
 ## AETHER X Research — Verified Public Scientific Output
 
 <p align="center">
