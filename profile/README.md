@@ -207,9 +207,9 @@ AETHER X's default commercial objective is to retain ownership of underlying pro
 
 ## Current Governance Boundary
 
-The public product artifacts have stronger qualification evidence than the current repository-level branch-protection configuration. This is explicitly tracked rather than hidden.
+The two supported public products now use active repository rulesets on `main`, with pull-request gating, selected required CI checks, deletion/force-push protection and no configured bypass actors. Their current immutable release tags are separately protected from update and deletion.
 
-Repository governance hardening includes requiring reviewed changes, selected CI/status checks, blocking force pushes/deletion and making stable-channel movement auditable. These controls are separate from the technical qualification of already-published immutable release artifacts.
+Remaining governance work is explicitly limited to mutable stable-channel and public presentation surfaces; it does not reduce the already-qualified product state. The public Governed Intelligence repository is a controlled-disclosure/showcase surface, not the proprietary core implementation repository.
 
 See **[Public GitHub Portfolio Status](../PUBLIC_PORTFOLIO_STATUS.md)** for the current verified governance state.
 

@@ -82,29 +82,27 @@ A public preprint or DOI is a public research artifact; it is not equivalent to 
 
 ## Repository-governance audit
 
-The public technical quality and release evidence are stronger than the current repository-level change-control enforcement.
+Repository-level change control is now active on both supported public products. Remaining open governance work is limited to mutable/public presentation surfaces and the ReproCert stable channel.
 
 Verified at this audit point:
 
-| Repository / branch | Protection state | Tracking |
+| Repository / ref | Protection state | Tracking |
 |---|---|---|
-| `execsurface/main` | **NOT PROTECTED** | Open blocker: [`execsurface#133`](https://github.com/AETHERXGLOBAL/execsurface/issues/133) |
-| `reprocert/main` | **NOT PROTECTED** | Open governance task: [`reprocert#25`](https://github.com/AETHERXGLOBAL/reprocert/issues/25) |
-| `aether-x-governed-intelligence/main` | **NOT PROTECTED** | Open governance task: [`aether-x-governed-intelligence#13`](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/issues/13) |
-| `.github/main` | **NOT PROTECTED** | Tracked here; repository Issues are disabled |
+| `execsurface/main` | **PROTECTED** | Active ruleset `Protect main`; `execsurface#133` closed completed |
+| `execsurface/v0.1.0-alpha.5` | **PROTECTED RELEASE TAG** | Update and deletion blocked |
+| `reprocert/main` | **PROTECTED** | Active ruleset `Protect main` |
+| `reprocert/v0.2.2a1` | **PROTECTED RELEASE TAG** | Update and deletion blocked |
+| `reprocert/v0.2` | **NOT PROTECTED** | Remaining governance task: [`reprocert#25`](https://github.com/AETHERXGLOBAL/reprocert/issues/25) |
+| `aether-x-governed-intelligence/main` | **NOT PROTECTED** | Public controlled-disclosure/showcase surface; tracked by [`aether-x-governed-intelligence#13`](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/issues/13) |
+| `.github/main` | **NOT PROTECTED** | Organization presentation/governance surface; repository Issues are disabled |
 
-Minimum desired controls for public/release-critical repositories:
+For supported product `main` branches, the active controls include pull-request gating, selected required status checks, branch-current enforcement, deletion protection, non-fast-forward/force-push protection, and no configured bypass actors.
 
-- require pull requests before merge for material product/release changes;
-- require selected CI/status checks before merge;
-- block force pushes and branch deletion;
-- make bypass authority explicit and auditable;
-- review release/publishing workflow changes;
-- treat stable channel movement as deliberate, reviewable and auditable.
+Immutable release identities are separately protected by tag rulesets that block update and deletion. Stable channel refs such as ReproCert `v0.2` are intentionally movable only when their movement is deliberate, reviewable and auditable.
 
-The connected GitHub automation can verify these states but does not expose organization/repository administration mutations for creating branch protection or rulesets. Protection therefore requires an authorized GitHub administrator action followed by re-verification.
+The public Governed Intelligence repository is not the proprietary core implementation repository. Its role is controlled public technology disclosure and evaluation positioning; protection of that presentation surface is separate from governance of the private core.
 
-Repository protection is a governance control. It does not retroactively change the technical qualification of immutable published release artifacts.
+Repository protection is a governance control. It does not retroactively change the technical qualification evidence for already-published release artifacts.
 
 ## External-adoption boundary
 
