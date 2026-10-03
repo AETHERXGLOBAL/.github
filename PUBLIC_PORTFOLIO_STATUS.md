@@ -48,7 +48,7 @@ Current authority: [`execsurface/docs/STATUS.md`](https://github.com/AETHERXGLOB
 
 ### ReproCert
 
-ReproCert turns an explicit technical claim, exact command, evidence and checks into a machine-readable reproducibility certificate with an explicit verdict.
+ReproCert turns an explicit technical claim, exact command, evidence and checks into a machine-readable certificate with an explicit verdict.
 
 Current qualified state:
 
@@ -86,12 +86,12 @@ The public technical quality and release evidence are stronger than the current 
 
 Verified at this audit point:
 
-| Repository / branch | Protection state | Action |
+| Repository / branch | Protection state | Tracking |
 |---|---|---|
-| `execsurface/main` | **NOT PROTECTED** | Open blocker: `execsurface#133` |
-| `reprocert/main` | **NOT PROTECTED** | Open governance task: `reprocert#25` |
-| `aether-x-governed-intelligence/main` | **NOT PROTECTED** | Organization governance hardening required |
-| `.github/main` | **NOT PROTECTED** | Organization governance hardening required |
+| `execsurface/main` | **NOT PROTECTED** | Open blocker: [`execsurface#133`](https://github.com/AETHERXGLOBAL/execsurface/issues/133) |
+| `reprocert/main` | **NOT PROTECTED** | Open governance task: [`reprocert#25`](https://github.com/AETHERXGLOBAL/reprocert/issues/25) |
+| `aether-x-governed-intelligence/main` | **NOT PROTECTED** | Open governance task: [`aether-x-governed-intelligence#13`](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/issues/13) |
+| `.github/main` | **NOT PROTECTED** | Tracked here; repository Issues are disabled |
 
 Minimum desired controls for public/release-critical repositories:
 
@@ -101,6 +101,8 @@ Minimum desired controls for public/release-critical repositories:
 - make bypass authority explicit and auditable;
 - review release/publishing workflow changes;
 - treat stable channel movement as deliberate, reviewable and auditable.
+
+The connected GitHub automation can verify these states but does not expose organization/repository administration mutations for creating branch protection or rulesets. Protection therefore requires an authorized GitHub administrator action followed by re-verification.
 
 Repository protection is a governance control. It does not retroactively change the technical qualification of immutable published release artifacts.
 
