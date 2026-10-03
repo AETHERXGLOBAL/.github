@@ -4,141 +4,72 @@
 
 <h1 align="center">AETHER X GLOBAL</h1>
 
-<p align="center"><strong>Financial Markets, Artificial Intelligence, Advanced Technology, and Research</strong></p>
-<p align="center"><strong>Research · Technology Platforms · Quantitative Systems · Applied AI</strong></p>
+<p align="center"><strong>Verification · Evidence · Governed Execution · Advanced Research</strong></p>
+<p align="center"><strong>Financial Markets · Artificial Intelligence · Advanced Technology</strong></p>
 
 <p align="center">
-  AetherX Global is a multidisciplinary research and technology company working across financial markets, artificial intelligence, advanced technology, and quantitative and applied research.
+  AETHER X GLOBAL is a multidisciplinary research and technology company developing verifiable software systems, governed AI infrastructure, quantitative technologies and evidence-driven research.
 </p>
 
 <p align="center"><em>AETHER X GLOBAL is currently under formation.</em></p>
 
 ---
 
-## Public Open-Source Projects — Start Here
+## Start Here — Public Products
 
-If you are visiting AETHER X GLOBAL as a developer, researcher or technical reviewer, these are the two public projects designed for immediate hands-on use.
+AETHER X currently maintains two public open-source products intended for immediate hands-on use. Both have completed bounded final supported-Alpha qualification against their documented product scopes.
 
 ### [ExecSurface](https://github.com/AETHERXGLOBAL/execsurface)
 
 **Runtime behavioral integrity for CI, dependencies, developer tools and AI-assisted workflows.**
 
-ExecSurface learns an accepted runtime execution surface, runs the same command later, and reports observed behavior that appeared, disappeared or changed.
-
 ```text
 accepted runtime behavior -> observed execution -> deterministic drift -> PASS / REVIEW / BLOCK / ERROR
 ```
 
+**Current state:** `FINAL SUPPORTED ALPHA — v0.1.0-alpha.5`
+
 - Apache-2.0 open source
 - Rust CLI + GitHub Action
-- current public scope: Linux x86_64
+- public supported scope: Linux x86_64
+- native `ptrace` reference observer
+- crates.io + GitHub Release distribution
 - self-service: no signup, API key or approval required
 
-**[Explore ExecSurface →](https://github.com/AETHERXGLOBAL/execsurface)** · [Five-Minute Start](https://github.com/AETHERXGLOBAL/execsurface/blob/main/docs/QUICKSTART_5_MIN.md) · [Discussions](https://github.com/AETHERXGLOBAL/execsurface/discussions)
+Important boundary: `ExecSurface: PASS` means no policy-relevant observed execution-surface drift under the selected baseline/policy. It does not prove that the wrapped command succeeded or that software is safe.
+
+**[Explore ExecSurface →](https://github.com/AETHERXGLOBAL/execsurface)** · [Five-Minute Start](https://github.com/AETHERXGLOBAL/execsurface/blob/main/docs/QUICKSTART_5_MIN.md) · [Current Status](https://github.com/AETHERXGLOBAL/execsurface/blob/main/docs/STATUS.md)
 
 ### [ReproCert](https://github.com/AETHERXGLOBAL/reprocert)
 
 **Claim-to-evidence reproducibility certificates for software, AI and research workflows.**
 
-ReproCert turns an explicit technical claim, exact command, evidence and checks into a machine-readable certificate with an explicit verdict.
-
 ```text
 CLAIM -> EXACT COMMAND -> EVIDENCE -> VERDICT -> CERTIFICATE
 ```
 
+**Current state:** `FINAL SUPPORTED ALPHA — v0.2.2a1`
+
 - Apache-2.0 open source
 - Python CLI + GitHub Action
-- PyPI distribution and self-service project scaffolding
-- designed for CI, benchmarks, testing, AI and research workflows
+- PyPI distribution
+- qualified on Python 3.11–3.14 across tested GitHub-hosted Ubuntu, Windows and macOS environments
+- pytest, JUnit, suite, policy, predicate and hardened Docker integration paths
+- self-service project scaffolding
 
-**[Explore ReproCert →](https://github.com/AETHERXGLOBAL/reprocert)** · [5-Minute Start](https://github.com/AETHERXGLOBAL/reprocert/blob/main/docs/QUICKSTART_5_MIN.md) · [Technical Evaluation](https://github.com/AETHERXGLOBAL/reprocert/blob/main/docs/TECHNICAL_EVALUATION.md)
+Important boundary: certificate integrity does not by itself authenticate the producer, establish evidence-source truth, prove scientific validity or constitute security certification.
 
-If either project is useful to your work, a GitHub **Star** helps other developers discover it. Technical criticism, failed reproductions and counterexamples are also welcome.
+**[Explore ReproCert →](https://github.com/AETHERXGLOBAL/reprocert)** · [Five-Minute Start](https://github.com/AETHERXGLOBAL/reprocert/blob/main/docs/QUICKSTART_5_MIN.md) · [Current Status](https://github.com/AETHERXGLOBAL/reprocert/blob/main/docs/STATUS.md)
 
----
-
-## AETHER X Research — Verified Public Scientific Output
-
-<p align="center">
-  <a href="https://arxiv.org/abs/2609.22181">
-    <img src="./assets/aether-x-research-output-001.svg" alt="AETHER X Research verified public research output AXR-2026-009" width="100%" />
-  </a>
-</p>
-
-### Public Research Output 001 · AXR-2026-009
-
-**Localizable Bipartite Rank-One Ideal Measurements Have a Block-Replicated Nice-Bell Structure**
-
-| Author | Field | Public record | Status |
-|---|---|---|---|
-| **Ahmed Younis** | Quantum Physics (`quant-ph`) | [arXiv:2609.22181](https://arxiv.org/abs/2609.22181) · [DOI](https://doi.org/10.48550/arXiv.2609.22181) | `PUBLIC ARXIV PREPRINT` |
-
-This paper gives a structural characterization of finite-dimensional bipartite rank-one ideal projective measurements that are localizable without communication. The paper states that the result establishes **Conjecture 1 of Akibue and Miyazaki**.
-
-AETHER X Research records the work internally as **AXR-2026-009**. The public arXiv manuscript lists the author's scholarly affiliation as **Independent Researcher**; AETHER X therefore presents it accurately as an **AETHER X-associated research output** rather than altering the affiliation recorded by arXiv.
-
-**Why it matters:** this is a public, independently reachable scientific artifact demonstrating that the AETHER X Research program has already produced externally visible scholarly output, not only internal research activity.
-
-`PUBLIC PREPRINT ≠ PEER REVIEW` · `ARXIV AVAILABILITY ≠ JOURNAL ACCEPTANCE` · `PUBLICATION ≠ INDEPENDENT VERIFICATION`
-
-**[Read the paper on arXiv →](https://arxiv.org/abs/2609.22181)**  
-**[View the public research publication record →](./RESEARCH_PUBLICATIONS.md)**
+Technical criticism, failed reproductions, portability defects, counterexamples and independent integrations are welcome. AETHER X does not relabel its own tests, downloads, stars or internally controlled use as independent adoption.
 
 ---
 
-## Company Overview
+## Enterprise R&D
 
-AETHER X GLOBAL develops research, technology platforms, analytical systems and experimental AI-driven technologies across financial markets, enterprise systems and selected scientific and technological domains.
+### [AETHER X Governed Intelligence](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)
 
-The company is intentionally broader than any single product or technology direction. Its portfolio combines market-focused research and platforms, quantitative systems, enterprise AI technologies, advanced computing initiatives and multidisciplinary applied research.
-
-Each initiative has its own purpose, maturity state and evidence boundary. Inclusion in the AETHER X portfolio does **not** imply production deployment, customer adoption, regulatory approval or commercial availability.
-
-**AETHER X Governed Intelligence is the current flagship public enterprise-technology initiative. It is not the entirety of AETHER X GLOBAL.**
-
----
-
-## Areas of Work
-
-### Financial Markets & Quantitative Research
-Research on market behavior, technical and quantitative analysis, strategy research, quantitative validation, and development of market-oriented research tools.
-
-### Artificial Intelligence & Advanced Technology
-Research and development of AI-driven systems, advanced computing concepts, and experimental technology platforms.
-
-### Technology Platforms & Systems
-Design and development of analytical platforms, software systems, research infrastructure, and advanced technology frameworks.
-
-### Applied & Multidisciplinary Research
-AI- and computation-assisted research across selected scientific, technological, financial, and data domains.
-
----
-
-## Portfolio at a Glance
-
-<p align="center">
-  <img src="./assets/aether-x-portfolio-architecture-v2.svg" alt="AETHER X GLOBAL Portfolio and Research Architecture" width="100%" />
-</p>
-
-| Initiative / Unit | Disclosed state | Primary role |
-|---|---|---|
-| **AETHER X Governed Intelligence** | `R&D · PRE-PRODUCTION EVALUATION` | Current flagship public enterprise-technology initiative for governed AI execution, explicit authority, state, verification and evidence. |
-| **AETHER X Quantum** | `UNDER ACTIVE DEVELOPMENT` | Financial-markets platform initiative for technical analysis, strategy engineering, quantitative validation, controlled decision workflows and market-indicator research. |
-| **AX-OS** | `UNDER DEVELOPMENT · ACTIVE BUILD` | AI operations infrastructure direction for governed execution, verification and institutional learning. |
-| **AETHER Intelligence Core (AIC)** | `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION` | Strategic infrastructure direction for high-integrity financial information, point-in-time correctness and provenance. |
-| **AETHER X Research** | `INSTITUTIONAL RESEARCH UNIT · ACTIVE` | Applied research across AI, computing, quantitative methods, financial markets and selected scientific and technological domains. |
-
-Portfolio labels describe disclosed research and development maturity only. They do **not** imply production deployment, customer adoption or commercial availability.
-
----
-
-## Flagship Public Technology
-
-### AETHER X Governed Intelligence
-
-AETHER X Governed Intelligence is the company's current flagship public enterprise-technology initiative: a governed execution architecture for AI-enabled institutional workflows where model capability, organizational authority and consequential action must remain distinct.
-
-The simplest public integration view is:
+**Institutional AI execution with explicit evidence, authority, controlled action, state and verification.**
 
 ```text
 AI AGENT / MODEL / AUTOMATION
@@ -152,36 +83,80 @@ ENTERPRISE SYSTEM
 AETHER X GOVERNED INTELLIGENCE
 ```
 
-In practical terms, an AI-enabled workflow may propose an action; AETHER X Governed Intelligence is intended to govern the execution boundary before an approved request reaches an enterprise system and to preserve the state and evidence needed to review what happened.
+**Current state:** `R&D · PRE-PRODUCTION EVALUATION`
 
-At deployment level, the technology may be delivered as an agreed service or governed runtime/engine inside a customer-controlled or jointly agreed environment. Exact packaging, hosting, networking and connector choices are determined during technical scoping rather than fixed publicly in advance.
+The public repository is a controlled, non-confidential technology surface. It is not a public production runtime or supported SDK. Proprietary implementation, detailed schemas, validators, private test suites and internal release evidence remain controlled.
 
-The standard evaluation path does **not** require transfer of proprietary core source code.
+**[Explore Governed Intelligence →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)** · [Executive Brief](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/EXECUTIVE_BRIEF.md) · [Enterprise Evaluation](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/ENTERPRISE_EVALUATION.md)
 
-**AETHER X Governed Intelligence is not a cybersecurity product, offensive-security product or threat-detection system.**
-
-**[Explore AETHER X Governed Intelligence →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence)**  
-[Executive Brief](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/EXECUTIVE_BRIEF.md) · [Enterprise Integration Model](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/ENTERPRISE_INTEGRATION_MODEL.md) · [Enterprise Evaluation](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/ENTERPRISE_EVALUATION.md)
-
-`PUBLIC TECHNOLOGY SHOWCASE · CONTROLLED DISCLOSURE · NO OPEN-SOURCE LICENCE`
-
-### Governed Intelligence Engineering Doctrine
-
-The following principles apply specifically to the engineering doctrine of **AETHER X Governed Intelligence**:
-
-`OUTPUT ≠ FACT`  
-`RECOMMENDATION ≠ DECISION`  
-`CAPABILITY ≠ AUTHORITY`  
-`TOOL AVAILABILITY ≠ TOOL PERMISSION`  
-`EXECUTION COMPLETE ≠ VERIFIED OUTCOME`
-
-These distinctions are used to keep evidence, decision, authority, execution and verification explicit within the Governed Intelligence architecture.
+`PUBLIC TECHNOLOGY SHOWCASE · CONTROLLED DISCLOSURE · NO GENERAL OPEN-SOURCE LICENCE`
 
 ---
 
-## Research & Engineering Discipline
+## Research
 
-Across its broader portfolio, AETHER X separates research hypotheses, engineering evidence, maturity state and commercial claims. Material claims are intended to remain traceable to evidence, assumptions, methodology and validation state.
+AETHER X Research operates through a private canonical research system with explicit source authority, provenance, reproducibility, negative-evidence retention, publication-state controls and disclosure gates.
+
+### Verified public research output
+
+**AXR-2026-009 — Localizable Bipartite Rank-One Ideal Measurements Have a Block-Replicated Nice-Bell Structure**
+
+- field: Quantum Physics (`quant-ph`)
+- public record: [arXiv:2609.22181](https://arxiv.org/abs/2609.22181)
+- DOI: [10.48550/arXiv.2609.22181](https://doi.org/10.48550/arXiv.2609.22181)
+- public state: `PUBLIC ARXIV PREPRINT`
+
+The public manuscript lists the author affiliation as **Independent Researcher**. AETHER X therefore presents it accurately as an AETHER X-associated research output rather than changing the scholarly affiliation recorded by arXiv.
+
+`PUBLIC PREPRINT != PEER REVIEW` · `PUBLICATION != INDEPENDENT VERIFICATION`
+
+[Public Research Publication Record →](./RESEARCH_PUBLICATIONS.md)
+
+---
+
+## Public Portfolio Map
+
+| Public surface | Classification | Current state | What the label means |
+|---|---|---|---|
+| **ExecSurface** | `SUPPORTED PRODUCT` | `FINAL SUPPORTED ALPHA` | Bounded, qualified public product; not stable v1 or universal production-readiness claim |
+| **ReproCert** | `SUPPORTED PRODUCT` | `FINAL SUPPORTED ALPHA` | Bounded, qualified public product; not stable v1 or independent-adoption claim |
+| **AETHER X Governed Intelligence** | `ENTERPRISE R&D` | `PRE-PRODUCTION EVALUATION` | Controlled technology evaluation surface; not public production runtime |
+| **AETHER X Research** | `RESEARCH` | `ACTIVE` | Evidence-controlled research program; public outputs disclosed separately after applicable gates |
+
+For the canonical repository-by-repository maturity and governance audit, see **[Public GitHub Portfolio Status](../PUBLIC_PORTFOLIO_STATUS.md)**.
+
+---
+
+## Broader Private Portfolio
+
+AETHER X maintains additional private or controlled initiatives. Public mention does not imply public source availability, production deployment or commercial readiness.
+
+| Initiative | Disclosed state | Primary role |
+|---|---|---|
+| **AETHER X Quantum** | `UNDER ACTIVE DEVELOPMENT` | Financial-markets platform initiative for technical analysis, strategy engineering, quantitative validation and controlled decision workflows |
+| **AX-OS** | `APPROVED ARCHITECTURE · IMPLEMENTATION NOT STARTED` | Institutional intelligence operating-system architecture for objectives, teams, governed execution, evidence and verification |
+| **AETHER Intelligence Core (AIC)** | `APPROVED ARCHITECTURE · PRE-IMPLEMENTATION` | Separate strategic infrastructure direction for high-integrity financial information, point-in-time correctness and provenance |
+| **AETHER X Research** | `INSTITUTIONAL RESEARCH UNIT · ACTIVE` | Applied research across AI, computing, quantitative methods, financial markets and selected scientific and technological domains |
+
+AIC is separate from AX-OS. Architecture approval is not product implementation evidence.
+
+---
+
+## Engineering & Research Discipline
+
+AETHER X engineering and research work is organized around explicit evidence boundaries rather than maturity by assertion.
+
+Core operating principles include:
+
+`OUTPUT != FACT`  
+`RECOMMENDATION != DECISION`  
+`CAPABILITY != AUTHORITY`  
+`TOOL AVAILABILITY != TOOL PERMISSION`  
+`EXECUTION COMPLETE != VERIFIED OUTCOME`  
+`PUBLICATION != SCIENTIFIC VERIFICATION`  
+`INTERNAL QUALIFICATION != INDEPENDENT ADOPTION`
+
+Material failures, negative results, portability defects, conflicting evidence and external criticism are retained rather than silently rewritten into positive evidence.
 
 ---
 
@@ -189,36 +164,32 @@ Across its broader portfolio, AETHER X separates research hypotheses, engineerin
 
 AETHER X uses progressive disclosure.
 
-### Public surfaces
+### Public surfaces may include
 
-Public repositories may contain:
-
+- supported open-source products and public release artifacts;
 - company and portfolio positioning;
-- non-enabling architecture views;
-- public-safe engineering and research summaries;
-- maturity and limitation statements;
-- intellectual-property and licensing notices;
-- enterprise evaluation pathways.
+- public-safe architecture and engineering summaries;
+- explicit maturity and limitation statements;
+- research publications approved for public disclosure;
+- enterprise evaluation pathways and licensing boundaries.
 
-### Private engineering and research systems
+### Private or controlled systems may include
 
-Private repositories and controlled systems may contain:
+- proprietary source code and implementation contracts;
+- internal SDKs, validators and schemas;
+- private test corpora and adversarial suites;
+- unpublished hypotheses and research evidence;
+- confidential datasets and data-rights records;
+- internal release, provenance and diligence artifacts;
+- customer-specific or commercial implementations.
 
-- proprietary source code;
-- detailed schemas, contracts and implementation logic;
-- internal SDK and validator implementations;
-- private test suites and research datasets;
-- confidential research and invention records;
-- internal release and evidence artifacts;
-- unpublished product architecture.
-
-`PUBLIC DISCLOSURE ≠ IMPLEMENTATION DISCLOSURE`
+`PUBLIC DISCLOSURE != IMPLEMENTATION DISCLOSURE`
 
 ---
 
 ## Enterprise Engagement
 
-Qualified organizations evaluating AETHER X technology proceed through a controlled disclosure model:
+Qualified organizations evaluating proprietary AETHER X technology use a progressive-disclosure path:
 
 ```text
 NON-CONFIDENTIAL DISCUSSION
@@ -228,41 +199,25 @@ NON-CONFIDENTIAL DISCUSSION
 → COMMERCIAL LICENCE / STRATEGIC AGREEMENT
 ```
 
-AETHER X's default commercial objective is to retain ownership of the underlying technology while granting clearly scoped usage rights appropriate to the transaction.
+AETHER X's default commercial objective is to retain ownership of underlying proprietary technology while granting clearly scoped usage rights appropriate to the transaction.
 
-**[Enterprise Evaluation & Licensing →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/ENTERPRISE_EVALUATION.md)**
-
----
-
-## Intellectual Property
-
-Public visibility does not create an open-source licence and does not transfer ownership of AETHER X technology, research or intellectual property.
-
-Proprietary implementation and confidential technical material remain outside the public surface unless separately disclosed under an approved agreement.
-
-**[Intellectual Property Notice →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/INTELLECTUAL_PROPERTY.md)**
+[Enterprise Evaluation & Licensing →](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/blob/main/docs/ENTERPRISE_EVALUATION.md)
 
 ---
 
-## Communication Standard
+## Current Governance Boundary
 
-AETHER X technical, market and research claims are intended to remain:
+The public product artifacts have stronger qualification evidence than the current repository-level branch-protection configuration. This is explicitly tracked rather than hidden.
 
-**Precise · Evidence-aware · Technically credible · Explicit about maturity · Clear about limitations**
+Repository governance hardening includes requiring reviewed changes, selected CI/status checks, blocking force pushes/deletion and making stable-channel movement auditable. These controls are separate from the technical qualification of already-published immutable release artifacts.
 
-We distinguish between:
-
-`VERIFIED ENGINEERING EVIDENCE`  
-`UNDER DEVELOPMENT`  
-`APPROVED DESIGN`  
-`RESEARCH`  
-`COMMERCIAL AVAILABILITY`
-
-These states are not interchangeable.
+See **[Public GitHub Portfolio Status](../PUBLIC_PORTFOLIO_STATUS.md)** for the current verified governance state.
 
 ---
 
-> **AetherX Global is built around a unifying principle: combining rigorous research, financial markets expertise, artificial intelligence, advanced technology, and disciplined engineering to develop original systems and practical solutions.**
+## Company Status
+
+AETHER X GLOBAL is currently under formation. Portfolio labels describe disclosed engineering, research and product maturity only. They do not imply customer adoption, regulatory approval, commercial deployment, peer review, independent validation or stable-v1 compatibility unless separately evidenced.
 
 <p align="center"><strong>AETHER X GLOBAL</strong></p>
-<p align="center"><strong>Financial Markets · Artificial Intelligence · Advanced Technology · Research</strong></p>
+<p align="center"><strong>Verification · Evidence · Governed Execution · Advanced Research</strong></p>
