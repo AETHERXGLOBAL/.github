@@ -63,6 +63,23 @@ Important boundary: certificate integrity does not by itself authenticate the pr
 
 Technical criticism, failed reproductions, portability defects, counterexamples and independent integrations are welcome. AETHER X does not relabel its own tests, downloads, stars or internally controlled use as independent adoption.
 
+
+---
+
+## External Technical Impact
+
+AETHER X contributes technical analysis to external engineering discussions where its runtime-integrity and evidence-boundary work is directly relevant.
+
+### OpenAI Codex — daemon restart / execution-continuity bug
+
+In `openai/codex#50299`, AETHER X contributed a runtime-continuity framing that separated **daemon reachability** from **restoration of the same in-flight execution**. The external reporter explicitly confirmed that this distinction matched the failure they had been debugging. An OpenAI maintainer later stated that a fix was in place and expected in a future Codex release.
+
+**Primary sources:** [OpenAI Codex issue #50299](https://github.com/openai/codex/issues/50299) · [AETHER X technical comment](https://github.com/openai/codex/issues/50299#issuecomment-5953229001) · [External acknowledgement](https://github.com/openai/codex/issues/50299#issuecomment-5953856631) · [OpenAI maintainer fix note](https://github.com/openai/codex/issues/50299#issuecomment-5970421966)
+
+**Evidence boundary:** this is external technical engagement and impact evidence. It does **not** mean OpenAI adopted, integrated, endorsed, or used ExecSurface itself, and it is not represented as product validation.
+
+[ExecSurface impact record →](https://github.com/AETHERXGLOBAL/execsurface/issues/160)
+
 ---
 
 ## Enterprise R&D
