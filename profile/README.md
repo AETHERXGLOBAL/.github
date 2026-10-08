@@ -17,7 +17,7 @@
 
 ## Start Here — Public Products
 
-AETHER X currently maintains two public open-source products intended for immediate hands-on use. **ExecSurface is now a stable v1 product within its documented Linux x86_64/native-`ptrace` boundary; ReproCert remains a bounded Final Supported Alpha.** Maturity labels are evidence-backed and repository-specific.
+AETHER X currently maintains two public open-source products intended for immediate hands-on use. **ExecSurface and ReproCert are both stable v1 products within distinct, tested and explicitly bounded support contracts.** Maturity labels are evidence-backed and repository-specific.
 
 ### [ExecSurface](https://github.com/AETHERXGLOBAL/execsurface)
 
@@ -48,12 +48,12 @@ Important boundary: `ExecSurface: PASS` means no policy-relevant observed execut
 CLAIM -> EXACT COMMAND -> EVIDENCE -> VERDICT -> CERTIFICATE
 ```
 
-**Current state:** `FINAL SUPPORTED ALPHA — v0.2.2a1`
+**Current state:** `STABLE v1.0.0 — PUBLIC PYPI + ACTION CONSUMERS QUALIFIED`
 
 - Apache-2.0 open source
 - Python CLI + GitHub Action
-- PyPI distribution
-- qualified on Python 3.11–3.14 across tested GitHub-hosted Ubuntu, Windows and macOS environments
+- PyPI stable package [`aetherx-reprocert==1.0.0`](https://pypi.org/project/aetherx-reprocert/1.0.0/) and protected moving GitHub Action channel `@v1`
+- public package qualified on Python 3.11–3.14 across tested GitHub-hosted Ubuntu, Windows and macOS environments
 - pytest, JUnit, suite, policy, predicate and hardened Docker integration paths
 - self-service project scaffolding
 
@@ -171,7 +171,7 @@ The public manuscript lists the author affiliation as **Independent Researcher**
 | Public surface | Classification | Current state | What the label means |
 |---|---|---|---|
 | **ExecSurface** | `SUPPORTED PRODUCT` | `STABLE v1.0.0` | Bounded stable product for the documented Linux x86_64/native-`ptrace` contract; not a universal-platform or independent-validation claim |
-| **ReproCert** | `SUPPORTED PRODUCT` | `FINAL SUPPORTED ALPHA` | Bounded, qualified public product; not stable v1 or independent-adoption claim |
+| **ReproCert** | `SUPPORTED PRODUCT` | `STABLE v1.0.0` | Published PyPI + protected `@v1` public Action; 12-platform/Python-matrix public consumer qualification, not independent third-party adoption or scientific/security truth |
 | **AETHER X Governed Intelligence** | `ENTERPRISE R&D` | `PRE-PRODUCTION EVALUATION` | Controlled technology evaluation surface; not public production runtime |
 | **AETHER X Research** | `RESEARCH` | `ACTIVE` | Evidence-controlled research program; public outputs disclosed separately after applicable gates |
 
@@ -259,9 +259,9 @@ AETHER X's default commercial objective is to retain ownership of underlying pro
 
 ## Current Governance Boundary
 
-The two supported public products use active repository rulesets on `main`, with pull-request gating, selected required CI checks, deletion/force-push protection and no configured bypass actors. ExecSurface additionally has an active no-bypass immutable-v1 tag ruleset covering `v1.*`; its deliberately movable `v1` channel remains outside that immutable-tag pattern. ReproCert's exact qualified release tag is separately protected.
+The two supported public products have protected `main` branches and protected stable-release identities. ExecSurface uses immutable `v1.*` release-tag protection and a separately movable `v1` channel. ReproCert has an active no-bypass immutable-tag rule for `v1.*` plus a distinct protected, normally forward-movable `v1` branch. ReproCert's historical Alpha tag `v0.2.2a1` and moving rollback branch `v0.2` remain protected.
 
-Remaining governance work is limited to explicitly tracked mutable-channel and presentation surfaces; it does not reduce the already-qualified product state. The public Governed Intelligence repository is a controlled-disclosure/showcase surface, not the proprietary core implementation repository.
+These governance controls supplement — and do not replace — the exact-source and public consumer qualification evidence. The public Governed Intelligence repository is a controlled-disclosure/showcase surface, not the proprietary core implementation repository.
 
 See **[Public GitHub Portfolio Status](../PUBLIC_PORTFOLIO_STATUS.md)** for the current verified governance state.
 

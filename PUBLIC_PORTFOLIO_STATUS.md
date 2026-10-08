@@ -1,6 +1,6 @@
 # AETHER X GLOBAL — Public GitHub Portfolio Status
 
-Date: 2026-10-08
+Date: 2026-10-09
 Scope: public repositories owned by `AETHERXGLOBAL`
 
 ## Purpose
@@ -24,7 +24,7 @@ At this audit point, the organization exposes four public repositories.
 | Repository | Classification | Current public state | Canonical boundary |
 |---|---|---|---|
 | [`execsurface`](https://github.com/AETHERXGLOBAL/execsurface) | **SUPPORTED PRODUCT** | **Stable v1.0.0 — internally qualified, bounded support** | Linux x86_64; native ptrace reference observer; bounded execution-surface drift semantics |
-| [`reprocert`](https://github.com/AETHERXGLOBAL/reprocert) | **SUPPORTED PRODUCT** | **Final Supported Alpha — v0.2.2a1** | Python/CLI/GitHub Action product boundary; tested Python 3.11–3.14 on GitHub-hosted Ubuntu, Windows and macOS |
+| [`reprocert`](https://github.com/AETHERXGLOBAL/reprocert) | **SUPPORTED PRODUCT** | **Stable v1.0.0 — published and public-consumer qualified** | Exact PyPI 1.0.0, protected `@v1` Action, tested Python 3.11–3.14 on GitHub-hosted Ubuntu, Windows and macOS; bounded integrity semantics |
 | [`aether-x-governed-intelligence`](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence) | **ENTERPRISE R&D / CONTROLLED TECHNOLOGY SHOWCASE** | **R&D · pre-production evaluation** | Non-confidential public technology surface; not a public production runtime or supported SDK |
 | [`.github`](https://github.com/AETHERXGLOBAL/.github) | **ORGANIZATION SURFACE** | Company profile / public portfolio navigation | Presentation and public maturity map; not a product repository |
 
@@ -52,9 +52,11 @@ ReproCert turns an explicit technical claim, exact command, evidence and checks 
 
 Current qualified state:
 
-`REPROCERT_0_2_2A1_FINAL_SUPPORTED_ALPHA_WITH_DECLARED_LIMITATIONS`
+`REPROCERT_V1_0_0_PUBLIC_STABLE_QUALIFIED_WITH_DECLARED_LIMITATIONS`
 
-Public installation/distribution surfaces include PyPI and the stable `AETHERXGLOBAL/reprocert@v0.2` GitHub Action channel.
+Current public surfaces: [PyPI `aetherx-reprocert==1.0.0`](https://pypi.org/project/aetherx-reprocert/1.0.0/), immutable [GitHub Release `v1.0.0`](https://github.com/AETHERXGLOBAL/reprocert/releases/tag/v1.0.0), and protected `AETHERXGLOBAL/reprocert@v1` GitHub Action channel. The historical Alpha `0.2.2a1` and protected `@v0.2` rollback line remain preserved.
+
+Evidence: [exact release and PyPI publication](https://github.com/AETHERXGLOBAL/reprocert/actions/runs/37844876488) and [public PyPI/Action consumer matrix — 14/14 SUCCESS](https://github.com/AETHERXGLOBAL/reprocert/actions/runs/37846420495). Internal/public self-qualification is **not** independent third-party adoption.
 
 Important boundary: certificate integrity does not by itself authenticate the producer, prove evidence-source truth, establish scientific validity or constitute security certification.
 
@@ -82,7 +84,7 @@ A public preprint or DOI is a public research artifact; it is not equivalent to 
 
 ## Repository-governance audit
 
-Repository-level change control is now active on both supported public products. Remaining open governance work is limited to mutable/public presentation surfaces and the ReproCert stable channel.
+Repository-level change control is active on both supported public products, including immutable releases and ReproCert's protected movable stable channel. Public portfolio metadata is separately maintained through protected change review.
 
 Verified at this audit point:
 
@@ -92,13 +94,15 @@ Verified at this audit point:
 | `execsurface/v1.*` exact release tags | **PROTECTED IMMUTABLE RELEASE TAGS** | Active no-bypass tag ruleset blocks update and deletion; `v1.0.0` is the current stable immutable release |
 | `reprocert/main` | **PROTECTED** | Active ruleset `Protect main` |
 | `reprocert/v0.2.2a1` | **PROTECTED RELEASE TAG** | Update and deletion blocked |
-| `reprocert/v0.2` | **NOT PROTECTED** | Remaining governance task: [`reprocert#25`](https://github.com/AETHERXGLOBAL/reprocert/issues/25) |
-| `aether-x-governed-intelligence/main` | **NOT PROTECTED** | Public controlled-disclosure/showcase surface; tracked by [`aether-x-governed-intelligence#13`](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/issues/13) |
-| `.github/main` | **NOT PROTECTED** | Organization presentation/governance surface; repository Issues are disabled |
+| `reprocert/v1.0.0` exact stable tag | **PROTECTED IMMUTABLE RELEASE TAG** | Active no-bypass ruleset #24747076 covering `refs/tags/v1.*` |
+| `reprocert/v1` stable Action branch | **PROTECTED MOVABLE MAJOR CHANNEL** | Active no-bypass ruleset #24751782 blocking deletion/force pushes while allowing normal forward movement |
+| `reprocert/v0.2` | **PROTECTED MOVABLE ALPHA ROLLBACK CHANNEL** | [`reprocert#25`](https://github.com/AETHERXGLOBAL/reprocert/issues/25) closed, governance PASS |
+| `aether-x-governed-intelligence/main` | **PROTECTED** | Public controlled-disclosure/showcase surface; [`aether-x-governed-intelligence#13`](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence/issues/13) closed |
+| `.github/main` | **PROTECTED** | Organization presentation/governance surface; Classic Branch Protection |
 
 For supported product `main` branches, the active controls include pull-request gating, selected required status checks, branch-current enforcement, deletion protection, non-fast-forward/force-push protection, and no configured bypass actors.
 
-Immutable release identities are separately protected by tag rulesets that block update and deletion. Movable stable channel refs such as ExecSurface `v1` and ReproCert `v0.2` are not immutable release identities; movement must remain deliberate, reviewable and auditable.
+Immutable release identities are separately protected by tag rulesets that block update and deletion. Movable major-channel refs such as ExecSurface `v1` and ReproCert `v1` / `v0.2` are separate from immutable exact release identities; movement must remain deliberate, reviewable and auditable.
 
 The public Governed Intelligence repository is not the proprietary core implementation repository. Its role is controlled public technology disclosure and evaluation positioning; protection of that presentation surface is separate from governance of the private core.
 
