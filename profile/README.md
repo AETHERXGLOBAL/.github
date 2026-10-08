@@ -15,6 +15,17 @@
 
 ---
 
+## Choose a Product — 60-Second Guide
+
+| Engineering problem | Recommended tool | First verified step |
+|---|---|---|
+| Detect new or missing file, process or network behavior after a dependency, build or AI-tool change | **[ExecSurface](https://github.com/AETHERXGLOBAL/execsurface)** · Linux x86_64 | [Run the controlled PASS → REVIEW example](https://github.com/AETHERXGLOBAL/execsurface/blob/main/docs/QUICKSTART_5_MIN.md) |
+| Convert a test, benchmark or research claim into a portable evidence-bound certificate | **[ReproCert](https://github.com/AETHERXGLOBAL/reprocert)** · Python 3.11–3.14 | [Install `aetherx-reprocert==1.0.0` and verify a certificate](https://github.com/AETHERXGLOBAL/reprocert/blob/main/docs/QUICKSTART_5_MIN.md) |
+
+Both have published `v1.0.0` releases, a self-service path and documented technical limitations. The [public portfolio status](https://github.com/AETHERXGLOBAL/.github/blob/main/PUBLIC_PORTFOLIO_STATUS.md) distinguishes shipped products, controlled R&D and research. **Internal qualification is not external adoption.**
+
+---
+
 ## Start Here — Public Products
 
 AETHER X currently maintains two public open-source products intended for immediate hands-on use. **ExecSurface and ReproCert are both stable v1 products within distinct, tested and explicitly bounded support contracts.** Maturity labels are evidence-backed and repository-specific.
@@ -66,54 +77,11 @@ Technical criticism, failed reproductions, portability defects, counterexamples 
 
 ---
 
-## Selected External Technical Impact
+## External Engineering Engagement — independently checkable links
 
-AETHER X contributes architecture-level technical analysis where runtime identity, evidence, authority and execution semantics intersect with real engineering failures. The records below link directly to primary-source discussions and preserve strict claim boundaries.
+AETHER X has participated in technical discussions around [NVIDIA OpenShell runtime lifecycle identity](https://github.com/NVIDIA/OpenShell/issues/4009), [OpenAI Codex thread/control-surface routing](https://github.com/openai/codex/issues/49729), and [Codex execution continuity](https://github.com/openai/codex/issues/50299). These references document engineering contributions and third-party discussion, **not** product adoption, company endorsement, or customer deployment.
 
-### NVIDIA OpenShell — execution-generation lifecycle safety
-
-In [NVIDIA/OpenShell #4009](https://github.com/NVIDIA/OpenShell/issues/4009), AETHER X separated **target identity** from **target execution generation** and proposed a serialized compare-and-act contract for lifecycle operations:
-
-`request_id != expected_execution`
-
-The analysis distinguishes idempotency from causal targeting, requires stale or unverifiable execution preconditions to fail closed, and defines retry semantics so an old stop request cannot silently retarget a replacement execution.
-
-After the initial discussion, the issue author published a [live Go SDK reproduction](https://github.com/danehans/openshell-4009-repro) showing the stale-target class across both **stop/start** and **delete/recreate** replacement paths. AETHER X then contributed a tighter execution-incarnation and conformance-test contract.
-
-**Primary sources:** [OpenShell issue #4009](https://github.com/NVIDIA/OpenShell/issues/4009) · [initial AETHER X invariant](https://github.com/NVIDIA/OpenShell/issues/4009#issuecomment-5952940030) · [external live reproduction](https://github.com/NVIDIA/OpenShell/issues/4009#issuecomment-6002850688) · [AETHER X follow-up contract](https://github.com/NVIDIA/OpenShell/issues/4009#issuecomment-6015380839)
-
-**Evidence boundary:** this establishes substantive external technical engagement and independently published evidence for the same stale-target problem class. It does **not** mean NVIDIA adopted, integrated, endorsed or used ExecSurface.
-
-[ExecSurface impact record →](https://github.com/AETHERXGLOBAL/execsurface/issues/161)
-
-### OpenAI Codex — thread identity and control-surface addressability
-
-In [openai/codex #49729](https://github.com/openai/codex/issues/49729), AETHER X framed a cross-control-surface contract:
-
-`thread existence / validity != addressability from every control surface`
-
-The analysis proposed a canonical opaque thread reference, typed placement/routing incompatibility instead of generic `NOT_FOUND`, and explicit capability-generation state for delegated native tools.
-
-Subsequent Windows and macOS reports supplied useful positive controls: the same local conversation could remain valid through native or fresh-helper routes while the parent Dot route still failed. AETHER X synthesized those reports into a narrower routing/placement conformance matrix.
-
-**Primary sources:** [Codex issue #49729](https://github.com/openai/codex/issues/49729) · [AETHER X identity/placement analysis](https://github.com/openai/codex/issues/49729#issuecomment-5968783804) · [Windows positive control](https://github.com/openai/codex/issues/49729#issuecomment-6004491806) · [macOS positive control](https://github.com/openai/codex/issues/49729#issuecomment-6012498003) · [AETHER X synthesis](https://github.com/openai/codex/issues/49729#issuecomment-6015514240)
-
-**Evidence boundary:** this is multi-reporter external evidence for a real identity/routing failure class plus an AETHER X technical synthesis. It does **not** mean OpenAI adopted the proposed design or used ExecSurface.
-
-[ExecSurface impact record →](https://github.com/AETHERXGLOBAL/execsurface/issues/162)
-
-### OpenAI Codex — daemon restart / execution continuity
-
-In [openai/codex #50299](https://github.com/openai/codex/issues/50299), AETHER X contributed a runtime-continuity framing that separated **daemon reachability** from **restoration of the same in-flight execution**. The external reporter explicitly confirmed that this distinction matched the failure they had been debugging. An OpenAI maintainer later stated that a fix was in place and expected in a future Codex release.
-
-**Primary sources:** [OpenAI Codex issue #50299](https://github.com/openai/codex/issues/50299) · [AETHER X technical comment](https://github.com/openai/codex/issues/50299#issuecomment-5953229001) · [external acknowledgement](https://github.com/openai/codex/issues/50299#issuecomment-5953856631) · [OpenAI maintainer fix note](https://github.com/openai/codex/issues/50299#issuecomment-5970421966)
-
-**Evidence boundary:** this is external technical engagement and impact evidence. It does **not** mean OpenAI adopted, integrated, endorsed or used ExecSurface itself, and it is not represented as product validation.
-
-[ExecSurface impact record →](https://github.com/AETHERXGLOBAL/execsurface/issues/160)
-
-> **Evidence standard:** external discussion, reproduction, acknowledgement and fix-path evidence are recorded separately from product adoption, endorsement and independent validation. AETHER X does not collapse those categories.
-
+**[Read the complete issue-by-issue technical record, primary-source comments, and claim limitations →](https://github.com/AETHERXGLOBAL/.github/blob/main/EXTERNAL_TECHNICAL_ENGAGEMENT.md)**
 
 ---
 
