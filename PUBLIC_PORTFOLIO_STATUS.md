@@ -1,6 +1,6 @@
 # AETHER X GLOBAL — Public GitHub Portfolio Status
 
-Date: 2026-10-03
+Date: 2026-10-08
 Scope: public repositories owned by `AETHERXGLOBAL`
 
 ## Purpose
@@ -10,7 +10,7 @@ This document is the canonical public-facing maturity map for the AETHER X GLOBA
 It prevents three common errors:
 
 1. treating research or architecture as a finished product;
-2. treating a supported Alpha as stable v1 or universal production readiness;
+2. treating a bounded product state as broader platform support, universal production readiness or independent validation;
 3. treating public visibility, downloads, stars, forks, contributions or internal qualification as independent adoption.
 
 `PUBLIC != PRODUCTION`
@@ -23,7 +23,7 @@ At this audit point, the organization exposes four public repositories.
 
 | Repository | Classification | Current public state | Canonical boundary |
 |---|---|---|---|
-| [`execsurface`](https://github.com/AETHERXGLOBAL/execsurface) | **SUPPORTED PRODUCT** | **Final Supported Alpha — v0.1.0-alpha.5** | Linux x86_64; native ptrace reference observer; bounded execution-surface drift semantics |
+| [`execsurface`](https://github.com/AETHERXGLOBAL/execsurface) | **SUPPORTED PRODUCT** | **Stable v1.0.0 — internally qualified, bounded support** | Linux x86_64; native ptrace reference observer; bounded execution-surface drift semantics |
 | [`reprocert`](https://github.com/AETHERXGLOBAL/reprocert) | **SUPPORTED PRODUCT** | **Final Supported Alpha — v0.2.2a1** | Python/CLI/GitHub Action product boundary; tested Python 3.11–3.14 on GitHub-hosted Ubuntu, Windows and macOS |
 | [`aether-x-governed-intelligence`](https://github.com/AETHERXGLOBAL/aether-x-governed-intelligence) | **ENTERPRISE R&D / CONTROLLED TECHNOLOGY SHOWCASE** | **R&D · pre-production evaluation** | Non-confidential public technology surface; not a public production runtime or supported SDK |
 | [`.github`](https://github.com/AETHERXGLOBAL/.github) | **ORGANIZATION SURFACE** | Company profile / public portfolio navigation | Presentation and public maturity map; not a product repository |
@@ -38,9 +38,9 @@ ExecSurface is a runtime behavioral-integrity and verification layer for executi
 
 Current qualified state:
 
-`ALPHA5_FINAL_SUPPORTED_ALPHA_WITH_DECLARED_LIMITATIONS — LINUX_X86_64_PTRACE`
+`V1_0_0_STABLE_INTERNALLY_QUALIFIED — LINUX_X86_64_PTRACE`
 
-Public installation/distribution surfaces include crates.io, GitHub Releases and a stable GitHub Action channel.
+Public installation/distribution surfaces include crates.io, the stable GitHub Release `v1.0.0`, immutable Action pin `@v1.0.0`, and the moving stable GitHub Action channel `@v1`.
 
 Important boundary: `ExecSurface: PASS` means no policy-relevant observed execution-surface drift under the selected baseline/policy. It does not prove that the wrapped target command succeeded or that software is safe.
 
@@ -89,7 +89,7 @@ Verified at this audit point:
 | Repository / ref | Protection state | Tracking |
 |---|---|---|
 | `execsurface/main` | **PROTECTED** | Active ruleset `Protect main`; `execsurface#133` closed completed |
-| `execsurface/v0.1.0-alpha.5` | **PROTECTED RELEASE TAG** | Update and deletion blocked |
+| `execsurface/v1.*` exact release tags | **PROTECTED IMMUTABLE RELEASE TAGS** | Active no-bypass tag ruleset blocks update and deletion; `v1.0.0` is the current stable immutable release |
 | `reprocert/main` | **PROTECTED** | Active ruleset `Protect main` |
 | `reprocert/v0.2.2a1` | **PROTECTED RELEASE TAG** | Update and deletion blocked |
 | `reprocert/v0.2` | **NOT PROTECTED** | Remaining governance task: [`reprocert#25`](https://github.com/AETHERXGLOBAL/reprocert/issues/25) |
@@ -98,7 +98,7 @@ Verified at this audit point:
 
 For supported product `main` branches, the active controls include pull-request gating, selected required status checks, branch-current enforcement, deletion protection, non-fast-forward/force-push protection, and no configured bypass actors.
 
-Immutable release identities are separately protected by tag rulesets that block update and deletion. Stable channel refs such as ReproCert `v0.2` are intentionally movable only when their movement is deliberate, reviewable and auditable.
+Immutable release identities are separately protected by tag rulesets that block update and deletion. Movable stable channel refs such as ExecSurface `v1` and ReproCert `v0.2` are not immutable release identities; movement must remain deliberate, reviewable and auditable.
 
 The public Governed Intelligence repository is not the proprietary core implementation repository. Its role is controlled public technology disclosure and evaluation positioning; protection of that presentation surface is separate from governance of the private core.
 
