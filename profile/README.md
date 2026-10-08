@@ -77,11 +77,17 @@ Technical criticism, failed reproductions, portability defects, counterexamples 
 
 ---
 
-## External Engineering Engagement — independently checkable links
+## Selected External Engineering Contributions
 
-AETHER X has participated in technical discussions around [NVIDIA OpenShell runtime lifecycle identity](https://github.com/NVIDIA/OpenShell/issues/4009), [OpenAI Codex thread/control-surface routing](https://github.com/openai/codex/issues/49729), and [Codex execution continuity](https://github.com/openai/codex/issues/50299). These references document engineering contributions and third-party discussion, **not** product adoption, company endorsement, or customer deployment.
+Selected participation in public engineering and standards discussions, with links to original comments and independent follow-up evidence:
 
-**[Read the complete issue-by-issue technical record, primary-source comments, and claim limitations →](https://github.com/AETHERXGLOBAL/.github/blob/main/EXTERNAL_TECHNICAL_ENGAGEMENT.md)**
+- **[NVIDIA OpenShell — execution-generation safety](https://github.com/NVIDIA/OpenShell/issues/4009):** AETHER X proposed an explicit execution-incarnation / compare-and-act boundary for delayed lifecycle requests. The issue author independently published a [live SDK reproduction](https://github.com/NVIDIA/OpenShell/issues/4009#issuecomment-6002850688) of the stale-target problem class; [our follow-up](https://github.com/NVIDIA/OpenShell/issues/4009#issuecomment-6015380839) refined the suggested contract. This does **not** establish adoption of our proposed design.
+- **[OpenAI Codex — execution continuity and thread routing](https://github.com/openai/codex/issues/50299):** [Our daemon-continuity analysis](https://github.com/openai/codex/issues/50299#issuecomment-5953229001) was [acknowledged by the external reporter](https://github.com/openai/codex/issues/50299#issuecomment-5953856631); an OpenAI maintainer separately [reported a fix for the issue](https://github.com/openai/codex/issues/50299#issuecomment-5970421966). Our [thread-placement analysis](https://github.com/openai/codex/issues/49729#issuecomment-6015514240) remains a distinct public contribution, not proof of a product integration.
+- **[in-toto Attestation — provenance versus runtime authority](https://github.com/in-toto/attestation/issues/604):** AETHER X [proposed separating code authorship, review approval and observed execution effects](https://github.com/in-toto/attestation/issues/604#issuecomment-5949924701). A [specification participant agreed](https://github.com/in-toto/attestation/issues/604#issuecomment-5958028833) and described a non-goal for the registration document; this is an acknowledged technical contribution, **not** a completed standards adoption claim.
+
+**Evidence boundary:** technical discussion, external acknowledgement, independently published reproduction and a maintainer's issue-fix note are **not** AETHER X product adoption, endorsement, partnership, customer deployment or independent product validation. No company logos are used as partner marks.
+
+[Full technical evidence, limitations and primary-source trail →](https://github.com/AETHERXGLOBAL/.github/blob/main/EXTERNAL_TECHNICAL_ENGAGEMENT.md)
 
 ---
 
