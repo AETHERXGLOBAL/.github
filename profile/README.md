@@ -17,7 +17,7 @@
 
 ## Start Here — Public Products
 
-AETHER X currently maintains two public open-source products intended for immediate hands-on use. Both have completed bounded final supported-Alpha qualification against their documented product scopes.
+AETHER X currently maintains two public open-source products intended for immediate hands-on use. **ExecSurface is now a stable v1 product within its documented Linux x86_64/native-`ptrace` boundary; ReproCert remains a bounded Final Supported Alpha.** Maturity labels are evidence-backed and repository-specific.
 
 ### [ExecSurface](https://github.com/AETHERXGLOBAL/execsurface)
 
@@ -27,7 +27,7 @@ AETHER X currently maintains two public open-source products intended for immedi
 accepted runtime behavior -> observed execution -> deterministic drift -> PASS / REVIEW / BLOCK / ERROR
 ```
 
-**Current state:** `FINAL SUPPORTED ALPHA — v0.1.0-alpha.5`
+**Current state:** `STABLE v1.0.0 — INTERNALLY QUALIFIED, BOUNDED SUPPORT`
 
 - Apache-2.0 open source
 - Rust CLI + GitHub Action
@@ -170,7 +170,7 @@ The public manuscript lists the author affiliation as **Independent Researcher**
 
 | Public surface | Classification | Current state | What the label means |
 |---|---|---|---|
-| **ExecSurface** | `SUPPORTED PRODUCT` | `FINAL SUPPORTED ALPHA` | Bounded, qualified public product; not stable v1 or universal production-readiness claim |
+| **ExecSurface** | `SUPPORTED PRODUCT` | `STABLE v1.0.0` | Bounded stable product for the documented Linux x86_64/native-`ptrace` contract; not a universal-platform or independent-validation claim |
 | **ReproCert** | `SUPPORTED PRODUCT` | `FINAL SUPPORTED ALPHA` | Bounded, qualified public product; not stable v1 or independent-adoption claim |
 | **AETHER X Governed Intelligence** | `ENTERPRISE R&D` | `PRE-PRODUCTION EVALUATION` | Controlled technology evaluation surface; not public production runtime |
 | **AETHER X Research** | `RESEARCH` | `ACTIVE` | Evidence-controlled research program; public outputs disclosed separately after applicable gates |
@@ -259,9 +259,9 @@ AETHER X's default commercial objective is to retain ownership of underlying pro
 
 ## Current Governance Boundary
 
-The two supported public products now use active repository rulesets on `main`, with pull-request gating, selected required CI checks, deletion/force-push protection and no configured bypass actors. Their current immutable release tags are separately protected from update and deletion.
+The two supported public products use active repository rulesets on `main`, with pull-request gating, selected required CI checks, deletion/force-push protection and no configured bypass actors. ExecSurface additionally has an active no-bypass immutable-v1 tag ruleset covering `v1.*`; its deliberately movable `v1` channel remains outside that immutable-tag pattern. ReproCert's exact qualified release tag is separately protected.
 
-Remaining governance work is explicitly limited to mutable stable-channel and public presentation surfaces; it does not reduce the already-qualified product state. The public Governed Intelligence repository is a controlled-disclosure/showcase surface, not the proprietary core implementation repository.
+Remaining governance work is limited to explicitly tracked mutable-channel and presentation surfaces; it does not reduce the already-qualified product state. The public Governed Intelligence repository is a controlled-disclosure/showcase surface, not the proprietary core implementation repository.
 
 See **[Public GitHub Portfolio Status](../PUBLIC_PORTFOLIO_STATUS.md)** for the current verified governance state.
 
