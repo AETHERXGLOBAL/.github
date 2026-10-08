@@ -48,6 +48,16 @@ In [openai/codex #50299](https://github.com/openai/codex/issues/50299), AETHER X
 
 [ExecSurface impact record →](https://github.com/AETHERXGLOBAL/execsurface/issues/160)
 
+### in-toto Attestation — AI generation provenance and runtime authority
+
+In [in-toto Attestation #604](https://github.com/in-toto/attestation/issues/604), AETHER X proposed that provenance for generated code ranges, human/agent sign-off evidence and observed runtime effects represent **distinct claims**, not interchangeable certificates or authorization decisions. The initial [AETHER X contribution](https://github.com/in-toto/attestation/issues/604#issuecomment-5949924701) explicitly separated authorship, review approval and execution-effect evidence.
+
+A [predicate specification participant's reply](https://github.com/in-toto/attestation/issues/604#issuecomment-5958028833) explicitly agreed with that trust boundary, noted related language already present in the normative acceptance-check contract, and said the registration document would explicitly state that generation/review provenance does not attest runtime behavior. This **does not** prove AETHER X authored the specification, that a final normative document incorporated novel AETHER X code, or that in-toto adopted ExecSurface.
+
+**Primary sources:** [Issue #604](https://github.com/in-toto/attestation/issues/604) · [AETHER X boundary comment](https://github.com/in-toto/attestation/issues/604#issuecomment-5949924701) · [specification participant acknowledgement](https://github.com/in-toto/attestation/issues/604#issuecomment-5958028833)
+
+**Evidence boundary:** source-supported acknowledgement of a technical distinction in an open standards discussion; **not** project adoption, standards-body endorsement, partnership or independent product validation.
+
 > **Evidence standard:** external discussion, reproduction, acknowledgement and fix-path evidence are recorded separately from product adoption, endorsement and independent validation. AETHER X does not collapse those categories.
 
 
