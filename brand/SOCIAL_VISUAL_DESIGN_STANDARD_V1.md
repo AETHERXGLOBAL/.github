@@ -125,7 +125,7 @@ Mark `REVISE` if **any** are true:
 
 ## 11. Reference and continuity notes
 
-- Founder-supplied official transparent gold logo (chat attachment, 2026-10-19): `شعار الشركة(1).png` (SHA-256 `68f969c190e7854226dc9adb1c4065e415a54c5e4aa6fb0131372ab80365e102`, 1254×1254 RGBA, original user-supplied). Do not substitute a different logo or claim byte identity without hash verification.
+- Founder-supplied official transparent gold logo (chat attachment, 2026-10-19): [Original approved PNG on GitHub](assets/aether-x-global-founder-original-20261019.png) (founder upload `شعار الشركة(1).png`, SHA-256 `68f969c190e7854226dc9adb1c4065e415a54c5e4aa6fb0131372ab80365e102`, 1254×1254 RGBA). Do not substitute a different logo or claim byte identity without hash verification.
 - Founder-supplied website Products/AX-OS screenshot (chat attachment, 2026-10-19): `Screenshot 2026-10-17 133144(1).png`.
 - Historical published LinkedIn visuals for Governed Intelligence and ExecSurface are **precedents for continuity, not canonical design masters**. Their publishing history is preserved; no retroactive rework.
 - Source of company brand/identity: `https://github.com/AETHERXGLOBAL/aether-x-governance/blob/main/sources/AETHER_X_GLOBAL.md`.
