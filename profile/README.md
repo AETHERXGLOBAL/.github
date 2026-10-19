@@ -15,6 +15,10 @@
 
 ---
 
+## Brand & social visual identity
+
+Every new AETHER X GLOBAL LinkedIn or Facebook graphic must follow the **[Social Visual Design Standard](../brand/SOCIAL_VISUAL_DESIGN_STANDARD_V1.md)** and **[brand design hub](../brand/README.md)**. Use only source-verified, unchanged approved logo assets; [logo integrity/provenance register](../brand/LOGO_ASSET_REGISTER.md). Product-specific mechanisms and evidence take precedence over decorative sci-fi artwork. Social publication requires separate founder authorization.
+
 ## Choose a Product — 60-Second Guide
 
 | Engineering problem | Recommended tool | First verified step |
