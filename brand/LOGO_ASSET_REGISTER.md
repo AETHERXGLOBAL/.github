@@ -1,6 +1,6 @@
 # AETHER X GLOBAL — Logo Asset Source & Integrity Register
 
-**State:** Integrity record prepared. **The exact founder-uploaded 2026-10-19 PNG is not yet stored in this GitHub branch**; do not treat this metadata file as the image itself.
+**State:** **EXACT-BYTE ORIGINAL UPLOADED ON THIS BRANCH.** The attached PNG was imported without recompression or AI modification. The GitHub blob identity was checked against the locally computed Git blob SHA-1.
 
 ## Founder-provided social logo
 
@@ -9,8 +9,10 @@
 - Dimensions: **1254 × 1254 px**.
 - Exact file size: **1,277,567 bytes**.
 - SHA-256: `68f969c190e7854226dc9adb1c4065e415a54c5e4aa6fb0131372ab80365e102`
-- Intended GitHub destination once binary upload can be verified: `brand/assets/aether-x-global-founder-original-20261019.png`
-- Rule: only claim this exact logo has been archived when the committed binary SHA-256 matches the line above.
+- Stored asset: [Download official transparent founder-provided logo](assets/aether-x-global-founder-original-20261019.png) (`brand/assets/aether-x-global-founder-original-20261019.png`)
+- Verified Git blob SHA-1 (binary byte identity): `77307f7008187cd237c48355fadecb5148ca2876`.
+- Verified committed change: new PNG file only; no unrelated path changed in the commit.
+- Rule: for any downstream copy, check exact SHA-256 above before declaring it identical to the founder original.
 
 ## Other references (not interchangeable)
 
@@ -19,8 +21,8 @@
 
 ## Safe process
 
-1. Obtain the transparent founder-provided logo from an authorized original file source.
-2. Upload its **unchanged bytes** to the intended path; do not re-export or reconstruct it via AI.
+1. Download the founder-approved transparent logo from the GitHub asset link above.
+2. Preserve the **unchanged bytes** and never re-export or reconstruct the master using AI.
 3. Compute SHA-256 locally and compare to the exact hash above.
 4. Verify transparency and dimensions. Only after both checks may the file be designated an approved social compositing master.
 5. Use that exact file as a locked compositing layer. Keep the original unchanged; any optimized derivative must be separately named and documented.
