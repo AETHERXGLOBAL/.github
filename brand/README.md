@@ -2,7 +2,7 @@
 
 **Start here before creating or editing any AETHER X GLOBAL social image.**
 
-**Status:** Proposed on a review branch. Founder-approved direction for **future** LinkedIn/Facebook graphics; this becomes the canonical GitHub design hub only after the PR is reviewed and merged.
+**Authority:** Founder-approved direction for **future** LinkedIn/Facebook graphics. Only the version present on the protected `main` branch is the canonical GitHub standard; review-branch variants are candidates.
 
 ## Official transparent logo
 
