@@ -6,7 +6,7 @@
 **Decision:** Founder-approved visual direction for **new** social content; retrospective redesign of existing published posts is not required.  
 **Scope:** LinkedIn, Facebook, and reusable corporate social visuals.  
 **Authority:** Subordinate to approved AETHER X corporate identity, product/research truth, legal/IP standards, and verified website brand assets. This is a visual production standard, not an authorization to publish, change source repositories, or disclose confidential information.  
-**Status:** Founder-approved working standard; proposed for canonical adoption through the linked GitHub Pull Request. Effective as the repository standard only after review and merge.
+**Canonicality rule:** Founder-approved for future social visuals; the protected `main` branch copy is authoritative once this change is merged. An unmerged branch remains a candidate.
 
 ## 1. Visual North Star
 
