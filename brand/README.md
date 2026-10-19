@@ -4,6 +4,12 @@
 
 **Status:** Proposed on a review branch. Founder-approved direction for **future** LinkedIn/Facebook graphics; this becomes the canonical GitHub design hub only after the PR is reviewed and merged.
 
+## Official transparent logo
+
+<img src="assets/aether-x-global-founder-original-20261019.png" alt="AETHER X GLOBAL official original gold logo" width="230" />
+
+[Download the original transparent PNG](assets/aether-x-global-founder-original-20261019.png) · [Check its exact hash and provenance](LOGO_ASSET_REGISTER.md). The brand asset must be composited **unchanged**; AI must not redraw it.
+
 ## Required reading
 
 1. [Social Visual Design Standard V1.0](SOCIAL_VISUAL_DESIGN_STANDARD_V1.md) — exact composition, approved visual families, palette, typography, rejection gates and publishing limitations.
