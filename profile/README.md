@@ -15,6 +15,14 @@
 
 ---
 
+## Strategic Direction — Founder Approved (20 October 2026)
+
+**Governed & Verifiable Intelligence** is AETHER X GLOBAL's approved enterprise-technology priority: engineering AI-enabled workflows with explicit evidence, accountable decisions, bounded authority, observable execution and independently checkable outcomes.
+
+This strategy preserves **ExecSurface** and **ReproCert** as independent, publicly supported products within their respective boundaries, **Governed Intelligence** as the flagship enterprise R&D direction, and **AETHER Verify** as a controlled research program. It is **not** a claim of an integrated production platform, customer deployment, universal agent safety or external validation.
+
+**[Read the public 2026–2028 strategic direction, portfolio roles and execution priorities →](../STRATEGIC_DIRECTION_2026_2028.md)
+
 ## Brand & social visual identity
 
 Every new AETHER X GLOBAL LinkedIn or Facebook graphic must follow the **[Social Visual Design Standard](../brand/SOCIAL_VISUAL_DESIGN_STANDARD_V1.md)** and **[brand design hub](../brand/README.md)**. Use only source-verified, unchanged approved logo assets; [logo integrity/provenance register](../brand/LOGO_ASSET_REGISTER.md). Product-specific mechanisms and evidence take precedence over decorative sci-fi artwork. Social publication requires separate founder authorization.
