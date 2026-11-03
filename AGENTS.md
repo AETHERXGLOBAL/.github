@@ -9,3 +9,7 @@ Before material work, an authorized AETHER assistant must verify the live projec
 **No widened authority:** this pointer does not authorize changing project scope, secrets, finance, production, public claims, trading, security permissions, CI bypass, merging or risk acceptance; follow project-specific Sources, independent verification and release gates. Existing project READ-FIRST instructions take precedence for factual state. An AGENTS.md file does not automatically inject this policy into all new ChatGPT/plugin chats or unrelated repositories.
 
 **Organization visibility:** This AGENTS.md is a pointer for work in the organization profile repository only; GitHub does not automatically propagate it to every member repo. AETHER project repositories need their own startup pointer, and outside readers may not have access to the private corporate source.
+
+## Company publishing identity — project editorial guidance
+
+For new GitHub-facing public copy, default to the **AETHER X GLOBAL** organization identity (short **AETHER X**). Omit optional tool/vendor-generated signatures, badges and assistant co-author trails. Always preserve real GitHub actor/author identity, source provenance, mandatory disclosures and technical evidence; never impersonate or rewrite historical records. Follow [GitHub Publishing Identity](GITHUB_PUBLISHING_IDENTITY.md) and each project's binding policies. This guidance applies to this repository and is not automatically installed in other repositories or plugins.
