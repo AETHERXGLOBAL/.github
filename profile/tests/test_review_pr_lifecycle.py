@@ -84,6 +84,7 @@ esac
         self.iteration += 1
         work = self.root / f'run_{self.iteration}'
         self.git(self.root, 'clone', '--branch', 'main', str(self.remote), str(work))
+        self.env['RUNNER_TEMP'] = str(self.root / f'output_{self.iteration}')
         proc = subprocess.run(['bash', 'profile/scripts/review_pr_lifecycle.sh', 'prepare', mode], cwd=work, env=self.env, capture_output=True, text=True)
         self.assertEqual(proc.returncode, 0, proc.stderr)
         if value is not None:
@@ -160,7 +161,57 @@ esac
         self.git(self.root, 'clone', '--branch', 'main', str(self.remote), str(work))
         p = subprocess.run(['bash', 'profile/scripts/review_pr_lifecycle.sh', 'publish', 'engineering'], cwd=work, env=self.env, capture_output=True, text=True)
         self.assertNotEqual(p.returncode, 0)
-        self.assertIn('REVIEW_WRONG_BRANCH', p.stderr)
+        self.assertIn('REVIEW_WORKTREE_MISSING', p.stderr)
+
+    def test_trusted_main_code_cannot_be_replaced_by_bot_branch(self):
+        # Poison separate executable files in lower-trust review branch; never run them.
+        self.run_cycle('engineering', 'FIRST')
+        for poisoned_path in ('profile/scripts/review_pr_lifecycle.sh',
+                              'profile/scripts/render_engineering_pulse.py',
+                              '.github/workflows/update-engineering-pulse.yml'):
+            with self.subTest(path=poisoned_path):
+                remote = self.root / ('poison_' + poisoned_path.replace('/', '_'))
+                self.git(self.root, 'clone', str(self.remote), str(remote))
+                self.git(remote, 'config', 'user.email', 'test@localhost')
+                self.git(remote, 'config', 'user.name', 'attacker')
+                self.git(remote, 'switch', '-c', 'poison', f'origin/{BRANCH["engineering"]}')
+                poison = remote / poisoned_path
+                poison.parent.mkdir(parents=True, exist_ok=True)
+                poison.write_text('MALICIOUS_CANARY_DO_NOT_RUN\n')
+                self.git(remote, 'add', poisoned_path)
+                self.git(remote, 'commit', '-m', 'poison-code')
+                self.git(remote, 'push', 'origin', f'HEAD:refs/heads/{BRANCH["engineering"]}')
+                self.iteration += 1
+                good = self.root / f'guard_{self.iteration}'
+                self.git(self.root, 'clone', '--branch', 'main', str(self.remote), str(good))
+                self.env['RUNNER_TEMP'] = str(self.root / f'guard_output_{self.iteration}')
+                p = subprocess.run(['bash', 'profile/scripts/review_pr_lifecycle.sh', 'prepare', 'engineering'],
+                                   cwd=good, env=self.env, capture_output=True, text=True)
+                self.assertNotEqual(p.returncode, 0)
+                self.assertIn('REVIEW_UNTRUSTED_BRANCH_CHANGE_BLOCKED', p.stderr)
+                self.assertNotIn('MALICIOUS_CANARY_DO_NOT_RUN',
+                                 (good / 'profile/scripts/review_pr_lifecycle.sh').read_text())
+                # Restore only the temporary test repository via a compensating commit.
+                clean = self.root / f'clean_{self.iteration}'
+                self.git(self.root, 'clone', '--branch', 'main', str(self.remote), str(clean))
+                self.git(clean, 'config', 'user.email', 'test@localhost')
+                self.git(clean, 'config', 'user.name', 'test')
+                self.git(clean, 'switch', '-c', 'clean', f'origin/{BRANCH["engineering"]}')
+                self.git(clean, 'revert', '--no-edit', 'HEAD')
+                self.git(clean, 'push', 'origin', f'HEAD:refs/heads/{BRANCH["engineering"]}')
+
+    def test_main_remains_executable_source_during_refresh(self):
+        self.run_cycle('portfolio', 'RENDERED')
+        self.iteration += 1
+        trusted = self.root / f'trust_{self.iteration}'
+        self.git(self.root, 'clone', '--branch', 'main', str(self.remote), str(trusted))
+        self.env['RUNNER_TEMP'] = str(self.root / f'trust_output_{self.iteration}')
+        r = subprocess.run(['bash', 'profile/scripts/review_pr_lifecycle.sh', 'prepare', 'portfolio'],
+                           cwd=trusted, env=self.env, capture_output=True, text=True)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertEqual(self.git(trusted, 'branch', '--show-current'), 'main')
+        self.assertEqual(self.git(trusted, 'rev-parse', 'HEAD'),
+                         self.git(trusted, 'rev-parse', 'origin/main'))
 
 if __name__ == '__main__':
     unittest.main()
