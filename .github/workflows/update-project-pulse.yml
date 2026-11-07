@@ -20,7 +20,6 @@ on:
       - ".github/workflows/update-project-pulse.yml"
   schedule:
     - cron: "*/5 * * * *"
-  workflow_dispatch:
   repository_dispatch:
     types:
       - project_state_changed
@@ -50,8 +49,12 @@ jobs:
           python3 -m unittest discover -s profile/tests -p 'test_portfolio_pulse.py' -v
           python3 -m unittest discover -s profile/tests -p 'test_review_pr_lifecycle.py' -v
 
+  # F05: privileged refresh is only eligible on main-bound GitHub events.
+  # Manual branch-selectable dispatch is intentionally absent (F05).
   refresh:
-    if: github.event_name != 'pull_request'
+    if: >-
+      (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'repository_dispatch') &&
+      github.ref == 'refs/heads/main'
     permissions:
       contents: write
       pull-requests: write
