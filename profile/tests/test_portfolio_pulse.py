@@ -30,7 +30,7 @@ QUANTUM = ('<!-- AETHERX_HANDOFF_STATE_BEGIN -->\n'
            '"current_product_priority":"Gate 12 — PRIVATE_CANARY_CASE_002 = BLOCKED",'
            '"last_externally_accepted_gate":"PRIVATE_CANARY_CASE_001 — accepted",'
            '"next_authorized_governance_action":"PRIVATE_UNRELEASED_ACTION"}\n'
-           '\x60\x60\x60')
+           '\x60\x60\x60\n<!-- AETHERX_HANDOFF_STATE_END -->')
 AXOS = ('Architecture: **FINAL v1.1 FROZEN / APPROVED**\n'
         'Product implementation: **NOT STARTED**\n'
         'First future engineering task: **AXOS-001 READY / CONTRACT PREPARED / NOT ISSUED**\n')
@@ -82,11 +82,37 @@ class PortfolioPulseContract(unittest.TestCase):
                 state = dict(original)
                 state.update(changes)
                 doc = ('<!-- AETHERX_HANDOFF_STATE_BEGIN -->\n'
-                       '\x60\x60\x60json\n' + json.dumps(state) + '\n\x60\x60\x60')
+                       '\x60\x60\x60json\n' + json.dumps(state) + '\n\x60\x60\x60\n'
+                       '<!-- AETHERX_HANDOFF_STATE_END -->')
                 path = Path(tmp) / 'pulse.svg'
                 with patch.object(render, "OUTPUT", path), \
                      patch.object(render, "fetch_text", return_value=doc):
                     self.assertEqual(render.main(), 1)
+                self.assertFalse(path.exists())
+
+    def test_quantum_duplicate_or_incomplete_blocks_fail_closed(self):
+        cases = {
+            'duplicate_complete_blocks': QUANTUM + '\n' + QUANTUM,
+            'duplicate_begin_marker': '<!-- AETHERX_HANDOFF_STATE_BEGIN -->\n' + QUANTUM,
+            'duplicate_end_marker': QUANTUM + '<!-- AETHERX_HANDOFF_STATE_END -->',
+            'missing_end_marker': QUANTUM.replace('<!-- AETHERX_HANDOFF_STATE_END -->', ''),
+            'missing_begin_marker': QUANTUM.replace('<!-- AETHERX_HANDOFF_STATE_BEGIN -->', ''),
+            'missing_json_fence': QUANTUM.replace('\x60\x60\x60json', 'json'),
+            'broken_close_fence': QUANTUM.replace('\x60\x60\x60\n<!-- AETHERX_HANDOFF_STATE_END -->',
+                                                   '<!-- AETHERX_HANDOFF_STATE_END -->'),
+            'injected_second_json_block': QUANTUM.replace('<!-- AETHERX_HANDOFF_STATE_END -->',
+                '\x60\x60\x60json\n{}\n\x60\x60\x60\n<!-- AETHERX_HANDOFF_STATE_END -->'),
+            'backward_markers': '<!-- AETHERX_HANDOFF_STATE_END -->\n' + QUANTUM.replace(
+                '<!-- AETHERX_HANDOFF_STATE_END -->', ''),
+            'duplicate_authority_json_key': QUANTUM.replace('"v1_live_execution":"PROHIBITED",',
+                '"v1_live_execution":"PROHIBITED","v1_live_execution":"GRANTED",'),
+            'invalid_json': QUANTUM.replace('"schema_version":"4.0.0",', '"schema_version":,')
+        }
+        for label, text in cases.items():
+            with self.subTest(label=label), tempfile.TemporaryDirectory() as tmp:
+                path = Path(tmp) / 'pulse.svg'
+                with patch.object(render, 'fetch_text', return_value=text), patch.object(render, 'OUTPUT', path):
+                    self.assertEqual(render.main(), 1, label)
                 self.assertFalse(path.exists())
 
     def test_private_canaries_never_enter_public_fields(self):
