@@ -32,8 +32,38 @@ PATHS = {
 APPROVED_WORKFLOW_SHA256 = {
     ".github/workflows/update-engineering-pulse.yml": "c14fac6d9f9e8a30d08ab2f553e2dcda9843546f304ee6e1369e2a9cb5e4a9a8",
     ".github/workflows/update-project-pulse.yml": "9e73d38e43b5ee3b5cd5ebf7920180297f1cd89c5aa0b15064c6f3a064a86931",
-    ".github/workflows/inspect-profile-pr.yml": "deaa22924b254ec7a010ae328abe64eeecfe1bc377d7427ed1d06b95df4cb6be",
+    ".github/workflows/inspect-profile-pr.yml": "b43770512253733626258a4e802b67033956debaa4b554fd28c636477c3ff9d2",
 }
+
+# Runtime source is executed by privileged refresh on the protected base.
+# This policy is enforced by the *base-branch* scanner, never by candidate PR
+# code. Do not allow a candidate to approve its own modified scanner/policy.
+# If any protected source changes, block automated acceptance and require
+# independently authenticated review and enforced branch protection.
+PRIVILEGED_RUNTIME_PATHS = frozenset({
+    "profile/scripts/inspect_profile_pr.py",  # security decision engine itself
+    "profile/scripts/review_pr_lifecycle.sh",
+    "profile/scripts/render_engineering_pulse.py",
+    "profile/scripts/render_project_pulse.py",
+    "profile/scripts/sanitize_project_pulse.py",
+})
+
+
+def is_privileged_executable_path(path: str) -> bool:
+    # Deny by directory scope, not only filename. A changed script cannot
+    # smuggle its new local dependency into an otherwise clean PR.
+    return (
+        path in PRIVILEGED_RUNTIME_PATHS
+        or path.startswith("profile/scripts/")
+        or path.startswith(".github/actions/")
+        or path in ("pyproject.toml", "setup.py", "setup.cfg", "requirements.txt",
+                    "CODEOWNERS", ".github/CODEOWNERS", "docs/CODEOWNERS",
+                    "AGENTS.md", ".github/AGENTS.md")
+        or path.startswith("profile/security/")
+        or (path.startswith("profile/") and not path.startswith("profile/tests/")
+            and path.endswith((".py", ".sh", ".bash", ".js", ".mjs", ".cjs")))
+    )
+
 
 EXPECTED_SHA256_BY_EVENTS = {
     tuple(events): APPROVED_WORKFLOW_SHA256[path]
@@ -161,6 +191,11 @@ def inspect_pr(repository: str, number: int, token: str) -> None:
             for candidate in (name, old):
                 if candidate is None:
                     continue
+                # Do not mistake a same-PR modification to the scanner or
+                # privileged runtime helpers for validated workflow source.
+                # There is deliberately no bypass flag in candidate code.
+                if is_privileged_executable_path(candidate):
+                    raise ValueError("F05_PROTECTED_EXECUTABLE_CHANGE_REQUIRES_MANUAL_GATE")
                 if (candidate == ".github/workflows" or
                         candidate.startswith(".github/workflows/")):
                     if candidate not in APPROVED_WORKFLOW_SHA256:
