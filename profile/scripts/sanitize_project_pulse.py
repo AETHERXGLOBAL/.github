@@ -89,7 +89,7 @@ def main() -> int:
     # not proof that every scheduled poll produced a new public state.
     svg = svg.replace("Last verified refresh:", "Last published state update:")
 
-    axos = re.search(r"AXOS-T\d+", svg)
+    axos = re.search(r"AXOS-\d{3}", svg)
 
     svg = replace_next_step(
         svg,
@@ -100,9 +100,9 @@ def main() -> int:
         svg,
         "AX-OS",
         (
-            f"{axos.group(0)} is selected as the next bounded build task."
+            f"{axos.group(0)} remains unissued; no build start is authorized."
             if axos
-            else "The next bounded build task is selected in the current governed status."
+            else "No AX-OS implementation start is authorized."
         ),
     )
     svg = replace_next_step(
