@@ -139,9 +139,10 @@ class WorkflowTrustBoundary(unittest.TestCase):
                 return {
                     "base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main"},
                     "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "sha": sha},
+                    "changed_files": 3,
                 }
             if "/pulls/29/files?" in route:
-                return [{"filename": path} for path in inspect.APPROVED_WORKFLOW_SHA256]
+                return [{"filename": path, "status": "modified"} for path in inspect.APPROVED_WORKFLOW_SHA256]
             for path in inspect.APPROVED_WORKFLOW_SHA256:
                 if path in route:
                     return {"type": "file", "encoding": "base64",
@@ -160,9 +161,10 @@ class WorkflowTrustBoundary(unittest.TestCase):
             routes.append(route)
             if route.endswith("/pulls/29"):
                 return {"base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main"},
-                        "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "sha": sha}}
+                        "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "sha": sha},
+                        "changed_files": 1}
             if "/files?" in route:
-                return [{"filename": ".github/workflows/evil-new-workflow.yml"}]
+                return [{"filename": ".github/workflows/evil-new-workflow.yml", "status": "added"}]
             raise AssertionError("Should block before fetching content")
         with patch.object(inspect, "_api_get", side_effect=fake_get):
             with self.assertRaisesRegex(ValueError, "F05_NEW_UNREVIEWED_WORKFLOW"):
@@ -184,7 +186,7 @@ class WorkflowTrustBoundary(unittest.TestCase):
         def fake_get(route, token):
             if route.endswith("/pulls/29"):
                 return {"base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main"},
-                        "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "sha": sha}}
+                        "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "sha": sha}, "changed_files": 3}
             if "/files?" in route:
                 return [{"filename": path} for path in inspect.APPROVED_WORKFLOW_SHA256]
             for path in inspect.APPROVED_WORKFLOW_SHA256:
@@ -208,7 +210,7 @@ class WorkflowTrustBoundary(unittest.TestCase):
                 attempts += 1
                 return {"base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main"},
                         "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"},
-                                 "sha": sha if attempts == 1 else "b" * 40}}
+                                 "sha": sha if attempts == 1 else "b" * 40}, "changed_files": 3}
             if "/files?" in route:
                 return [{"filename": path} for path in inspect.APPROVED_WORKFLOW_SHA256]
             for path in inspect.APPROVED_WORKFLOW_SHA256:
