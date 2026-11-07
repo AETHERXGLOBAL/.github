@@ -9,6 +9,8 @@ on:
       - "profile/scripts/sanitize_project_pulse.py"
       - ".github/workflows/update-project-pulse.yml"
       - "profile/tests/test_portfolio_pulse.py"
+      - "profile/tests/test_review_pr_lifecycle.py"
+      - "profile/scripts/review_pr_lifecycle.sh"
   push:
     branches:
       - main
@@ -46,6 +48,7 @@ jobs:
         run: |
           python3 -m py_compile profile/scripts/render_project_pulse.py profile/scripts/sanitize_project_pulse.py
           python3 -m unittest discover -s profile/tests -p 'test_portfolio_pulse.py' -v
+          python3 -m unittest discover -s profile/tests -p 'test_review_pr_lifecycle.py' -v
 
   refresh:
     if: github.event_name != 'pull_request'
@@ -56,22 +59,14 @@ jobs:
     timeout-minutes: 8
     steps:
       - name: Checkout public profile repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
         with:
+          ref: main
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Select review-only portfolio refresh branch
-        run: |
-          set -euo pipefail
-          BRANCH="automation/live-portfolio-pulse-review"
-          git fetch origin main
-          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
-            git fetch origin "$BRANCH"
-            git switch -C "$BRANCH" FETCH_HEAD
-            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" merge --no-edit origin/main
-          else
-            git switch -C "$BRANCH" origin/main
-          fi
+        run: bash profile/scripts/review_pr_lifecycle.sh prepare portfolio
 
       - name: Validate publication scripts
         run: |
@@ -169,24 +164,7 @@ jobs:
               print("PORTFOLIO_PULSE_STATE_CHANGED")
           PY
 
-      - name: Propose changed governed state for protected-branch review
+      - name: Propose or recover review PR for governed state
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-          PULSE="profile/assets/aether-x-live-project-pulse.svg"
-          BRANCH="automation/live-portfolio-pulse-review"
-          if [[ -z "$(git status --porcelain -- "$PULSE")" ]]; then
-            echo "No governed public-state change; no review update needed."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- "$PULSE"
-          git commit -m "chore(profile): propose reviewed portfolio pulse update"
-          git push origin "HEAD:refs/heads/$BRANCH"
-          if ! gh pr list --repo "$GITHUB_REPOSITORY" --head "$BRANCH" --state open --json number --jq '.[0].number // empty' | grep -q '[0-9]'; then
-            gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$BRANCH" \
-              --title "[REVIEW] Refresh governed live portfolio pulse" \
-              --body "Governed-source candidate requiring independent confirmation of source accessibility and public disclosure markers. No automatic merge or direct main push."
-          fi
+        run: bash profile/scripts/review_pr_lifecycle.sh publish portfolio
