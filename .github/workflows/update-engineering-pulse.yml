@@ -57,7 +57,7 @@ jobs:
         run: |
           set -euo pipefail
           BRANCH="main"
-          git clone --depth 1 --branch "${BRANCH}" "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
+          git clone --branch "${BRANCH}" "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
 
       - name: Select review-only refresh branch
         if: github.event_name != 'pull_request'
