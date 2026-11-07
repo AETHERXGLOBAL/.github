@@ -21,7 +21,7 @@ def simulate(count, pages, *, allow_files=False):
         assert token == "INERT_TEST_TOKEN"
         calls.append(route)
         if route.endswith("/pulls/29"):
-            result = {"base": {"repo": {"full_name": REPO}, "ref": "main"},
+            result = {"base": {"repo": {"full_name": REPO}, "ref": "main", "sha": "1" * 40},
                       "head": {"sha": SHA, "repo": {"full_name": REPO}}}
             if count is not None:
                 result["changed_files"] = count
@@ -82,9 +82,9 @@ class F05R2F1N01(unittest.TestCase):
         pages = {1: [{"filename": f"profile/docs/{i:03}.md", "status": "modified"} for i in range(100)],
                  2: [{"filename": "profile/docs/100.md", "status": "modified"}]}
         calls = simulate(101, pages, allow_files=True)
-        self.assertEqual(sum("/files?" in route for route in calls), 2)
+        self.assertEqual(sum("/files?" in route for route in calls), 3)
         self.assertEqual(sum("/contents/" in route for route in calls), 3)
-        self.assertEqual(len(calls), 7)
+        self.assertEqual(len(calls), 8)
 
     def test_second_page_missing_is_not_end_of_list(self):
         page_one = [{"filename": f"profile/docs/{i:03}.md", "status": "modified"} for i in range(100)]
