@@ -1,0 +1,25 @@
+# AETHER X GLOBAL — independent review ownership for AETHERXGLOBAL/.github
+# This policy applies ONLY to this repository; it does not propagate to other repos.
+# CODEOWNERS becomes effective for pull requests to main only after this file is
+# reviewed independently and merged through the existing protected process.
+# Code-owner review enforcement must be configured independently in branch protection.
+#
+# GitHub configuration, workflows, local actions, and this CODEOWNERS file itself.
+/.github/ @ahmed363younis-dot
+#
+# Trusted execution scripts, tests and source-trust policy.
+/profile/scripts/ @ahmed363younis-dot
+/profile/tests/ @ahmed363younis-dot
+/profile/security/ @ahmed363younis-dot
+#
+# Root-level instruction, publishing authority, build and executable entrypoints.
+/AGENTS.md @ahmed363younis-dot
+/GITHUB_PUBLISHING_IDENTITY.md @ahmed363younis-dot
+/*.py @ahmed363younis-dot
+/*.sh @ahmed363younis-dot
+/pyproject.toml @ahmed363younis-dot
+/setup.py @ahmed363younis-dot
+/setup.cfg @ahmed363younis-dot
+/requirements*.txt @ahmed363younis-dot
+/package.json @ahmed363younis-dot
+/package-lock.json @ahmed363younis-dot
