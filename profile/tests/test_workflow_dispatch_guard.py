@@ -188,7 +188,7 @@ class WorkflowTrustBoundary(unittest.TestCase):
                 return {"base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main"},
                         "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "sha": sha}, "changed_files": 3}
             if "/files?" in route:
-                return [{"filename": path} for path in inspect.APPROVED_WORKFLOW_SHA256]
+                return [{"filename": path, "status": "modified"} for path in inspect.APPROVED_WORKFLOW_SHA256]
             for path in inspect.APPROVED_WORKFLOW_SHA256:
                 if path in route:
                     content = source_for(path)
@@ -212,7 +212,7 @@ class WorkflowTrustBoundary(unittest.TestCase):
                         "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"},
                                  "sha": sha if attempts == 1 else "b" * 40}, "changed_files": 3}
             if "/files?" in route:
-                return [{"filename": path} for path in inspect.APPROVED_WORKFLOW_SHA256]
+                return [{"filename": path, "status": "modified"} for path in inspect.APPROVED_WORKFLOW_SHA256]
             for path in inspect.APPROVED_WORKFLOW_SHA256:
                 if path in route:
                     return {"type": "file", "encoding": "base64",
