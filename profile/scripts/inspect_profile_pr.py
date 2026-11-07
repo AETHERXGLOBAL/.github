@@ -169,6 +169,16 @@ def inspect_pr(repository: str, number: int, token: str) -> None:
     if listed != expected_count or len(seen_names) != expected_count:
         raise ValueError("F05_PR_FILE_COUNT_MISMATCH")
 
+    # Explicit end-of-list probe. Do not assume the API has no extra entries
+    # merely because changed_files predicted a given last page. A nonempty,
+    # missing, or malformed sentinel page fails closed (including >3000 cases).
+    trailing = _api_get(
+        f"/repos/{repository}/pulls/{number}/files?per_page=100&page={pages + 1}",
+        token,
+    )
+    if not isinstance(trailing, list) or trailing:
+        raise ValueError("F05_UNEXPECTED_PR_FILE_TRAILING_PAGE")
+
     # Pinned by immutable PR-head SHA; do not checkout or run any PR content.
     for path, expected in APPROVED_WORKFLOW_SHA256.items():
         data = _api_get(
@@ -188,12 +198,48 @@ def inspect_pr(repository: str, number: int, token: str) -> None:
         if path in PATHS:
             verify_privileged_workflow(raw.decode("utf-8", errors="strict"), PATHS[path])
 
-    # Detect concurrent PR-head movement; a newly pushed head needs a fresh
-    # independent run. GitHub required checks for latest HEAD remain a separate
-    # protected-branch administrative control.
+    # Bind all security-relevant PR metadata to one snapshot, not just HEAD.
+    # The candidate SHA is immutable, but its PR base/count may change while
+    # this read-only inspection is underway. Missing fields fail closed.
+    def snapshot(value: object) -> tuple[str, str, str, str, str, int]:
+        if not isinstance(value, dict):
+            raise ValueError("F05_INVALID_PR_SNAPSHOT")
+        head_value = value.get("head")
+        base_value = value.get("base")
+        if not isinstance(head_value, dict) or not isinstance(base_value, dict):
+            raise ValueError("F05_INVALID_PR_SNAPSHOT")
+        head_repo_value = head_value.get("repo")
+        base_repo_value = base_value.get("repo")
+        if not isinstance(head_repo_value, dict) or not isinstance(base_repo_value, dict):
+            raise ValueError("F05_INVALID_PR_SNAPSHOT")
+        h_sha = head_value.get("sha")
+        h_repo = head_repo_value.get("full_name")
+        b_sha = base_value.get("sha")
+        b_repo = base_repo_value.get("full_name")
+        b_ref = base_value.get("ref")
+        count = value.get("changed_files")
+        if not isinstance(h_sha, str) or not re.fullmatch(r"[a-fA-F0-9]{40}", h_sha):
+            raise ValueError("F05_INVALID_PR_SNAPSHOT")
+        if not isinstance(b_sha, str) or not re.fullmatch(r"[a-fA-F0-9]{40}", b_sha):
+            raise ValueError("F05_INVALID_PR_SNAPSHOT")
+        if not isinstance(h_repo, str) or not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", h_repo):
+            raise ValueError("F05_INVALID_PR_SNAPSHOT")
+        if b_repo != repository or b_ref != "main":
+            raise ValueError("F05_INVALID_PR_SNAPSHOT")
+        if type(count) is not int or not 1 <= count < 3000:
+            raise ValueError("F05_INVALID_PR_SNAPSHOT")
+        return h_sha, h_repo, b_sha, b_ref, b_repo, count
+
+    # Parse the initial snapshot now too (and reject an absent base commit).
+    original_snapshot = snapshot(pr)
     latest = _api_get(f"/repos/{repository}/pulls/{number}", token)
-    if latest.get("head", {}).get("sha") != head_sha:
+    # Preserve a specific reason for HEAD motion; all other inconsistencies
+    # are snapshot drift and also require a new independent run.
+    latest_snapshot = snapshot(latest)
+    if latest_snapshot[0] != original_snapshot[0]:
         raise ValueError("F05_PR_HEAD_MOVED_RETRY_REQUIRED")
+    if latest_snapshot != original_snapshot:
+        raise ValueError("F05_PR_SNAPSHOT_CHANGED_RETRY_REQUIRED")
     print("F05_TRUSTED_PR_SOURCE_INSPECTION_PASS — read-only static source contract")
 
 
