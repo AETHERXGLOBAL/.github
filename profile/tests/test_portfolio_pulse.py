@@ -20,10 +20,16 @@ render = load("portfolio_renderer", "render_project_pulse.py")
 sanitize = load("portfolio_sanitizer", "sanitize_project_pulse.py")
 QUANTUM = ('<!-- AETHERX_HANDOFF_STATE_BEGIN -->\n'
            '\x60\x60\x60json\n'
-           '{"current_product_priority":"Gate 12 — local qualification = BLOCKED",'
-           '"last_externally_accepted_gate":"Gate 11 — accepted",'
-           '"next_authorized_governance_action":"PRIVATE_UNRELEASED_ACTION",'
-           '"v1_live_execution_boundary":"prohibited"}\n'
+           '{"schema_version":"4.0.0",'
+           '"v1_live_execution":"PROHIBITED",'
+           '"mt5_v1":"READ_ONLY",'
+           '"production_security_go":"NOT_GRANTED",'
+           '"risk_acceptance":"NOT_GRANTED",'
+           '"production_authority":"NOT_GRANTED",'
+           '"live_trading_authority":"NOT_GRANTED",'
+           '"current_product_priority":"Gate 12 — PRIVATE_CANARY_CASE_002 = BLOCKED",'
+           '"last_externally_accepted_gate":"PRIVATE_CANARY_CASE_001 — accepted",'
+           '"next_authorized_governance_action":"PRIVATE_UNRELEASED_ACTION"}\n'
            '\x60\x60\x60')
 AXOS = ('Architecture: **FINAL v1.1 FROZEN / APPROVED**\n'
         'Product implementation: **NOT STARTED**\n'
@@ -57,8 +63,38 @@ class PortfolioPulseContract(unittest.TestCase):
                 self.assertIn(marker, svg)
             for forbidden in ("AETHER INTELLIGENCE CORE · AIC", "aether-intelligence-core-AIC-",
                               "LIVE PROJECT PULSE", "Last verified refresh:",
-                              "PRIVATE_UNRELEASED_ACTION", "AMII RESEARCH LAB", "G3 — BUILD"):
+                              "PRIVATE_UNRELEASED_ACTION", "PRIVATE_CANARY_CASE_001",
+                              "PRIVATE_CANARY_CASE_002", "AMII RESEARCH LAB", "G3 — BUILD"):
                 self.assertNotIn(forbidden, svg)
+
+    def test_restrictive_quantum_schema_required(self):
+        import json
+        original = json.loads(QUANTUM.split('\x60\x60\x60json\n', 1)[1].split('\n\x60\x60\x60', 1)[0])
+        cases = [
+            ("missing_boundary", {"v1_live_execution": None}),
+            ("live_granted", {"live_trading_authority": "GRANTED"}),
+            ("not_read_only", {"mt5_v1": "LIVE"}),
+            ("malformed_type", {"production_authority": ["NOT_GRANTED"]}),
+            ("future_schema", {"schema_version": "5.0.0"}),
+        ]
+        for label, changes in cases:
+            with self.subTest(label=label), tempfile.TemporaryDirectory() as tmp:
+                state = dict(original)
+                state.update(changes)
+                doc = ('<!-- AETHERX_HANDOFF_STATE_BEGIN -->\n'
+                       '\x60\x60\x60json\n' + json.dumps(state) + '\n\x60\x60\x60')
+                path = Path(tmp) / 'pulse.svg'
+                with patch.object(render, "OUTPUT", path), \
+                     patch.object(render, "fetch_text", return_value=doc):
+                    self.assertEqual(render.main(), 1)
+                self.assertFalse(path.exists())
+
+    def test_private_canaries_never_enter_public_fields(self):
+        with patch.object(render, 'fetch_text', return_value=QUANTUM):
+            pulse = render.parse_quantum()
+        public = ' '.join(vars(pulse).values())
+        for canary in ('PRIVATE_CANARY_CASE_001', 'PRIVATE_CANARY_CASE_002', 'PRIVATE_UNRELEASED_ACTION'):
+            self.assertNotIn(canary, public)
 
     def test_missing_canonical_source_fails_closed(self):
         with tempfile.TemporaryDirectory() as tmp, \
