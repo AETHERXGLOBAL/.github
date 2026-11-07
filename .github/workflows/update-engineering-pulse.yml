@@ -8,6 +8,7 @@ on:
       - "profile/scripts/render_engineering_pulse.py"
       - "profile/assets/aether-x-engineering-pulse.svg"
       - ".github/workflows/update-engineering-pulse.yml"
+      - "profile/tests/test_public_git_activity.py"
   push:
     branches:
       - main
@@ -19,15 +20,34 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 concurrency:
   group: public-github-activity-dashboard-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: false
 
 jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout PR without persisted credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Offline public dashboard regression tests
+        run: |
+          python3 -m py_compile profile/scripts/render_engineering_pulse.py
+          python3 -m unittest discover -s profile/tests -p 'test_public_git_activity.py' -v
+
   refresh:
+    if: github.event_name != 'pull_request'
+    permissions:
+      contents: write
+      pull-requests: write
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
@@ -36,7 +56,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          BRANCH="${GITHUB_HEAD_REF:-main}"
+          BRANCH="main"
           git clone --depth 1 --branch "${BRANCH}" "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
 
       - name: Select review-only refresh branch
@@ -49,7 +69,7 @@ jobs:
           if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
             git fetch origin "$BRANCH"
             git switch -C "$BRANCH" FETCH_HEAD
-            git rebase origin/main
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" merge --no-edit origin/main
           else
             git switch -C "$BRANCH" origin/main
           fi
