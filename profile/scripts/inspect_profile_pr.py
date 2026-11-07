@@ -119,27 +119,55 @@ def inspect_pr(repository: str, number: int, token: str) -> None:
         raise ValueError("F05_INVALID_HEAD_SHA")
     if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", head_full_name):
         raise ValueError("F05_INVALID_HEAD_REPOSITORY")
-    # Reject extra/renamed workflow files as well as unreviewed modifications
-    # of the three pinned definitions. These are *data* reads only.
-    seen = set()
-    for page in range(1, 32):
+    # GitHub's changed_files is the authoritative number of changed entries.
+    # A short/empty/duplicate/malformed page must NEVER mean "no more changes".
+    expected_count = pr.get("changed_files")
+    if type(expected_count) is not int or not 1 <= expected_count < 3000:
+        raise ValueError("F05_INVALID_PR_CHANGED_FILES_COUNT")
+
+    def valid_path(value: object) -> bool:
+        if not isinstance(value, str) or not value or any(ch in value for ch in "\\\x00\r\n"):
+            return False
+        if value.startswith("/") or any(piece in ("", ".", "..") for piece in value.split("/")):
+            return False
+        return True
+
+    seen_names: set[str] = set()
+    seen_previous: set[str] = set()
+    listed = 0
+    pages = (expected_count + 99) // 100
+    for page in range(1, pages + 1):
         files = _api_get(f"/repos/{repository}/pulls/{number}/files?per_page=100&page={page}", token)
-        if not isinstance(files, list) or len(files) > 100:
-            raise ValueError("F05_INVALID_PR_FILE_LIST")
+        required_this_page = min(100, expected_count - listed)
+        if not isinstance(files, list) or len(files) != required_this_page:
+            raise ValueError("F05_PR_FILES_INCOMPLETE_OR_OVERFLOW")
         for entry in files:
             if not isinstance(entry, dict):
                 raise ValueError("F05_INVALID_PR_FILE_ENTRY")
             name = entry.get("filename")
+            status = entry.get("status")
             old = entry.get("previous_filename")
+            if not valid_path(name) or name in seen_names:
+                raise ValueError("F05_INVALID_OR_DUPLICATE_FILENAME")
+            if status not in ("added", "modified", "removed", "renamed", "copied", "changed"):
+                raise ValueError("F05_INVALID_PR_FILE_STATUS")
+            if status == "renamed":
+                if not valid_path(old) or old == name or old in seen_previous:
+                    raise ValueError("F05_INVALID_OR_DUPLICATE_RENAME_SOURCE")
+                seen_previous.add(old)
+            elif old is not None:
+                raise ValueError("F05_UNEXPECTED_PREVIOUS_FILENAME")
+            seen_names.add(name)
             for candidate in (name, old):
-                if isinstance(candidate, str) and candidate.startswith(".github/workflows/"):
+                if candidate is None:
+                    continue
+                if (candidate == ".github/workflows" or
+                        candidate.startswith(".github/workflows/")):
                     if candidate not in APPROVED_WORKFLOW_SHA256:
                         raise ValueError("F05_NEW_UNREVIEWED_WORKFLOW")
-                    seen.add(candidate)
-        if len(files) < 100:
-            break
-    else:
-        raise ValueError("F05_PR_FILE_LIST_TOO_LONG")
+        listed += len(files)
+    if listed != expected_count or len(seen_names) != expected_count:
+        raise ValueError("F05_PR_FILE_COUNT_MISMATCH")
 
     # Pinned by immutable PR-head SHA; do not checkout or run any PR content.
     for path, expected in APPROVED_WORKFLOW_SHA256.items():
