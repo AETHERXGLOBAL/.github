@@ -163,23 +163,20 @@ def parse_axos() -> Pulse:
     )
 
 
-def parse_aic() -> Pulse:
-    text = fetch_text("aether-intelligence-core-AIC-", "05_AIC_CURRENT_STATE.md")
-    phase_match = re.search(r"\*\*Phase\s+([^*\n]+)\*\*", text)
-    phase = f"PHASE {clean(phase_match.group(1), 78)}" if phase_match else "PHASE 0"
-    gate_match = re.search(r"Implementation Gate:\*{0,2}\s*`([^`]+)`", text)
-    if gate_match:
-        phase = f"{phase} · {clean(gate_match.group(1), 54)}"
+def governed_core_public_boundary() -> Pulse:
+    """Bounded, non-live entry until a canonical approved source is readable.
 
+    The retired AIC repository name is not a valid source for the successor.
+    Do not turn an inaccessible project into a claimed verified milestone.
+    """
     return Pulse(
-        "AETHER INTELLIGENCE CORE · AIC",
-        "FINANCIAL INTELLIGENCE INFRASTRUCTURE",
-        phase,
-        "Implementation has not started under the current baseline; architecture/governance phase remains active.",
-        section_first_line(text, "Next Authorized Step")
-        or "Next authorized step is not asserted.",
-        "No platform, connector, ingestion pipeline or production data collection has started.",
-        "05_AIC_CURRENT_STATE.md · CURRENT",
+        "AETHER X GOVERNED INTELLIGENCE CORE",
+        "VERIFIABLE AUTONOMOUS INTELLIGENCE INFRASTRUCTURE",
+        "DEVELOPMENT · NOT PUBLICLY VERIFIED",
+        "No current externally verified project gate is asserted by this dashboard.",
+        "Consult canonical project evidence before publishing a milestone.",
+        "NO PRODUCTION OR RELEASE READINESS IS ASSERTED",
+        "Public disclosure boundary · no live project status",
     )
 
 
@@ -300,7 +297,7 @@ def render(pulses: list[Pulse]) -> str:
 
 def main() -> int:
     try:
-        pulses = [parse_quantum(), parse_axos(), parse_aic(), research_unit_state()]
+        pulses = [parse_quantum(), parse_axos(), governed_core_public_boundary(), research_unit_state()]
         OUTPUT.parent.mkdir(parents=True, exist_ok=True)
         OUTPUT.write_text(render(pulses), encoding="utf-8")
         print("PROJECT_PULSE_RENDER_PASS")
