@@ -20,6 +20,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: public-github-activity-dashboard-${{ github.event.pull_request.number || github.ref }}
@@ -37,6 +38,21 @@ jobs:
           set -euo pipefail
           BRANCH="${GITHUB_HEAD_REF:-main}"
           git clone --depth 1 --branch "${BRANCH}" "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
+
+      - name: Select review-only refresh branch
+        if: github.event_name != 'pull_request'
+        run: |
+          set -euo pipefail
+          cd repo
+          BRANCH="automation/public-github-activity-review"
+          git fetch origin main
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
+            git fetch origin "$BRANCH"
+            git switch -C "$BRANCH" FETCH_HEAD
+            git rebase origin/main
+          else
+            git switch -C "$BRANCH" origin/main
+          fi
 
       - name: Validate renderer syntax
         run: |
@@ -57,19 +73,26 @@ jobs:
           print("SVG_XML_VALID")
           PY
 
-      - name: Publish only when dashboard changed
+      - name: Propose changed dashboard for protected-branch review
         if: github.event_name != 'pull_request'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           cd repo
-          if git diff --quiet -- profile/assets/aether-x-engineering-pulse.svg; then
-            echo "No public GitHub telemetry change; no commit required."
+          FILE="profile/assets/aether-x-engineering-pulse.svg"
+          BRANCH="automation/public-github-activity-review"
+          if git diff --quiet -- "$FILE"; then
+            echo "No changed public activity; no review update needed."
             exit 0
           fi
-          git config user.name "AETHER X GitHub Activity"
+          git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/assets/aether-x-engineering-pulse.svg
-          git commit -m "chore(profile): refresh public GitHub activity"
-          git push origin HEAD:main
+          git add -- "$FILE"
+          git commit -m "chore(profile): propose reviewed public GitHub activity update"
+          git push origin "HEAD:refs/heads/$BRANCH"
+          if ! gh pr list --repo "$GITHUB_REPOSITORY" --head "$BRANCH" --state open --json number --jq '.[0].number // empty' | grep -q '[0-9]'; then
+            gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$BRANCH" \
+              --title "[REVIEW] Refresh public GitHub activity dashboard" \
+              --body "Generated public-only activity telemetry. Requires human review and normal branch-protection checks before merge. No automatic publication or bypass."
+          fi
