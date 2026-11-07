@@ -51,7 +51,7 @@ def verify_privileged_workflow(source: str, allowed: tuple[str, ...]) -> None:
     if jobs.split("    permissions:\n", 1)[0].split("  refresh:\n", 1)[1] != exact_guard:
         # Caller may have comments between job declaration and if guard.
         raise ValueError("F05_FAIL_OPEN_OR_MUTATED_GUARD")
-    permissions = jobs.split("    permissions:\n", 1)[1].split("    runs-on:\n", 1)[0]
+    permissions = re.split(r"(?m)^    runs-on: ", jobs.split("    permissions:\n", 1)[1], maxsplit=1)[0]
     if permissions != "      contents: write\n      pull-requests: write\n":
         raise ValueError("F05_PRIVILEGED_PERMISSION_DRIFT")
     if jobs.count("    runs-on: ubuntu-latest") != 1:
