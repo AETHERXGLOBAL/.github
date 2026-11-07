@@ -1,0 +1,45 @@
+name: Inspect AETHER X profile PR source (trusted read-only)
+
+# F05: This definition is loaded from the PROTECTED BASE branch; it never
+# checks out the PR head or executes untrusted source. Do not replace this
+# with a pull_request workflow in the privileged refresh files.
+# GitHub organization event policies may restrict pull_request_target; no
+# policy change or secret access is authorized by adding this file.
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize, ready_for_review, edited]
+    branches:
+      - main
+
+# No paths filter: retarget edits and changes to any runtime dependency
+# must not be silently exempted by GitHub path evaluation limits.
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: aether-profile-pr-inspection-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+
+jobs:
+  inspect:
+    if: github.event.pull_request.base.ref == 'main'
+    permissions:
+      contents: read
+      pull-requests: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout trusted base only (never PR head)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Inspect PR workflow definitions as data only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          python3 -B profile/scripts/inspect_profile_pr.py
