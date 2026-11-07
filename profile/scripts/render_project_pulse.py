@@ -136,30 +136,35 @@ def parse_quantum() -> Pulse:
 
 
 def parse_axos() -> Pulse:
+    """Treat the current canonical AX-OS status as a frozen design, not a build.
+
+    Fail closed if the approved status schema changes. A future implementation
+    transition requires an explicit public-status mapping review.
+    """
     text = fetch_text("AX-OS", "PROJECT_STATUS.md")
-    phase_match = re.search(r"Project Phase / Gate:\s*`?([^`\n]+)`?", text)
-    phase = clean(phase_match.group(1), 90) if phase_match else "G3 — BUILD"
-
-    accepted = re.findall(
-        r"^\-\s+`?AXOS-T\d+[^\n]*\*\*ACCEPTED\*\*",
-        text,
-        re.MULTILINE,
+    architecture = re.search(
+        r"^Architecture:\s*\*\*FINAL v1\.1 FROZEN / APPROVED\*\*",
+        text, re.MULTILINE,
     )
-    signal = f"{len(accepted)} accepted build task{'s' if len(accepted) != 1 else ''} recorded in current status."
-
-    next_step = section_first_line(text, "Next Authorized Build Outcome")
-    if not next_step:
-        ready = re.search(r"`?(AXOS-T\d+)`?:\s*\*\*READY / SELECTED NEXT\*\*", text)
-        next_step = f"{ready.group(1)} · READY / SELECTED NEXT" if ready else ""
+    implementation = re.search(
+        r"^Product implementation:\s*\*\*NOT STARTED\*\*",
+        text, re.MULTILINE,
+    )
+    kickoff = re.search(
+        r"^First future engineering task:\s*\*\*(AXOS-\d{3}) READY / CONTRACT PREPARED / NOT ISSUED\*\*",
+        text, re.MULTILINE,
+    )
+    if not (architecture and implementation and kickoff):
+        raise RuntimeError("AX-OS status schema changed; public milestone qualification required")
 
     return Pulse(
         "AX-OS",
         "GOVERNED AI OPERATIONS",
-        phase,
-        signal,
-        next_step or "Next bounded build outcome is not asserted.",
-        "No Security GO, Pilot, Production or Release authority is asserted.",
-        "PROJECT_STATUS.md · current build state",
+        "ARCHITECTURE APPROVED · PRODUCT NOT STARTED",
+        "Frozen architecture and pre-implementation design only; no product runtime is asserted.",
+        f"{kickoff.group(1)} · CONTRACT PREPARED / NOT ISSUED",
+        "NO IMPLEMENTATION, PILOT, PRODUCTION OR RELEASE AUTHORITY",
+        "PROJECT_STATUS.md · canonical pre-implementation state",
     )
 
 
