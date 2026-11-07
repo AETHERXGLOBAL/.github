@@ -137,12 +137,13 @@ class WorkflowTrustBoundary(unittest.TestCase):
             calls.append(route)
             if route.endswith("/pulls/29"):
                 return {
-                    "base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main"},
+                    "base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main", "sha": "1" * 40},
                     "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "sha": sha},
                     "changed_files": 3,
                 }
             if "/pulls/29/files?" in route:
-                return [{"filename": path, "status": "modified"} for path in inspect.APPROVED_WORKFLOW_SHA256]
+                return ([{"filename": path, "status": "modified"} for path in inspect.APPROVED_WORKFLOW_SHA256]
+                        if route.endswith("&page=1") else [])
             for path in inspect.APPROVED_WORKFLOW_SHA256:
                 if path in route:
                     return {"type": "file", "encoding": "base64",
@@ -150,9 +151,9 @@ class WorkflowTrustBoundary(unittest.TestCase):
             raise AssertionError(route)
         with patch.object(inspect, "_api_get", side_effect=fake_get):
             inspect.inspect_pr("AETHERXGLOBAL/.github", 29, "TEST_INERT_TOKEN")
-        self.assertEqual(len(calls), 6)
-        self.assertTrue(all("/contents/" in route for route in calls[2:5]))
-        self.assertTrue(all(f"?ref={sha}" in route for route in calls[2:5]))
+        self.assertEqual(len(calls), 7)
+        self.assertTrue(all("/contents/" in route for route in calls[3:6]))
+        self.assertTrue(all(f"?ref={sha}" in route for route in calls[3:6]))
 
     def test_new_workflow_file_fails_before_any_content_execution(self):
         sha = "a" * 40
@@ -160,7 +161,7 @@ class WorkflowTrustBoundary(unittest.TestCase):
         def fake_get(route, token):
             routes.append(route)
             if route.endswith("/pulls/29"):
-                return {"base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main"},
+                return {"base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main", "sha": "1" * 40},
                         "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "sha": sha},
                         "changed_files": 1}
             if "/files?" in route:
@@ -185,10 +186,11 @@ class WorkflowTrustBoundary(unittest.TestCase):
         sha = "a" * 40
         def fake_get(route, token):
             if route.endswith("/pulls/29"):
-                return {"base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main"},
+                return {"base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main", "sha": "1" * 40},
                         "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "sha": sha}, "changed_files": 3}
             if "/files?" in route:
-                return [{"filename": path, "status": "modified"} for path in inspect.APPROVED_WORKFLOW_SHA256]
+                return ([{"filename": path, "status": "modified"} for path in inspect.APPROVED_WORKFLOW_SHA256]
+                        if route.endswith("&page=1") else [])
             for path in inspect.APPROVED_WORKFLOW_SHA256:
                 if path in route:
                     content = source_for(path)
@@ -208,11 +210,12 @@ class WorkflowTrustBoundary(unittest.TestCase):
             nonlocal attempts
             if route.endswith("/pulls/29"):
                 attempts += 1
-                return {"base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main"},
+                return {"base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main", "sha": "1" * 40},
                         "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"},
                                  "sha": sha if attempts == 1 else "b" * 40}, "changed_files": 3}
             if "/files?" in route:
-                return [{"filename": path, "status": "modified"} for path in inspect.APPROVED_WORKFLOW_SHA256]
+                return ([{"filename": path, "status": "modified"} for path in inspect.APPROVED_WORKFLOW_SHA256]
+                        if route.endswith("&page=1") else [])
             for path in inspect.APPROVED_WORKFLOW_SHA256:
                 if path in route:
                     return {"type": "file", "encoding": "base64",
