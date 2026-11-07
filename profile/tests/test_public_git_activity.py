@@ -21,7 +21,7 @@ class PublicActivityContract(unittest.TestCase):
              patch.object(mod, "fetch_repo_pulls", return_value=records) as fetch:
             self.assertEqual(mod.main(), 0)
             svg = (Path(tmp) / "pulse.svg").read_text(encoding="utf-8")
-            xml.etree.ElementTree.fromstring(svg)
+            ET.fromstring(svg)
             self.assertIn("PUBLIC-ONLY", svg)
             self.assertIn("public-example", svg)
             self.assertNotIn("private-example", svg)
