@@ -10,6 +10,7 @@ on:
       - ".github/workflows/update-project-pulse.yml"
       - "profile/tests/test_portfolio_pulse.py"
       - "profile/tests/test_review_pr_lifecycle.py"
+      - "profile/tests/test_workflow_dispatch_guard.py"
       - "profile/scripts/review_pr_lifecycle.sh"
   push:
     branches:
@@ -48,6 +49,7 @@ jobs:
           python3 -m py_compile profile/scripts/render_project_pulse.py profile/scripts/sanitize_project_pulse.py
           python3 -m unittest discover -s profile/tests -p 'test_portfolio_pulse.py' -v
           python3 -m unittest discover -s profile/tests -p 'test_review_pr_lifecycle.py' -v
+          python3 -m unittest discover -s profile/tests -p 'test_workflow_dispatch_guard.py' -v
 
   # F05: privileged refresh is only eligible on main-bound GitHub events.
   # Manual branch-selectable dispatch is intentionally absent (F05).
