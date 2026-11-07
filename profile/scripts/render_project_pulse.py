@@ -97,13 +97,35 @@ def parse_quantum() -> Pulse:
     used only to validate restrictive execution boundaries.
     """
     text = fetch_text("aether-x-quantum", "START_HERE.md")
-    match = re.search(
-        r"<!-- AETHERX_HANDOFF_STATE_BEGIN -->\s*```json\s*(\{[\s\S]*?\})\s*```",
-        text,
+    begin = "<!-- AETHERX_HANDOFF_STATE_BEGIN -->"
+    end = "<!-- AETHERX_HANDOFF_STATE_END -->"
+    if text.count(begin) != 1 or text.count(end) != 1:
+        raise RuntimeError("Quantum must have exactly one complete state block")
+    first = text.index(begin)
+    last = text.index(end)
+    if last <= first:
+        raise RuntimeError("Quantum state block marker order invalid")
+    block = text[first:last + len(end)]
+    match = re.fullmatch(
+        r"<!-- AETHERX_HANDOFF_STATE_BEGIN -->[ \t]*\r?\n"
+        r"```json[ \t]*\r?\n"
+        r"(?P<state>\{[\s\S]*?\})[ \t]*\r?\n"
+        r"```[ \t]*\r?\n"
+        r"<!-- AETHERX_HANDOFF_STATE_END -->",
+        block,
     )
     if not match:
-        raise RuntimeError("Quantum machine-readable handoff state not found")
-    state = json.loads(match.group(1))
+        raise RuntimeError("Quantum state block must be complete and structurally unique")
+
+    def unique_keys(pairs):
+        obj = {}
+        for key, value in pairs:
+            if key in obj:
+                raise RuntimeError("Quantum JSON has duplicate field names")
+            obj[key] = value
+        return obj
+
+    state = json.loads(match.group("state"), object_pairs_hook=unique_keys)
     if not isinstance(state, dict):
         raise RuntimeError("Quantum handoff must be a JSON object")
     required = {
