@@ -1,0 +1,72 @@
+name: AETHER Profile Read-Only CI
+
+# No pull_request_target, workflow_dispatch, schedule, secrets or write scope.
+on:
+  push:
+    branches:
+      - governance/profile-readonly-ci-20261107
+  pull_request:
+    branches:
+      - main
+    types: [opened, reopened, synchronize, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  baseline-config-smoke:
+    name: baseline-config-smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout source without persistent credentials
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Compile checked-out Python source
+        run: |
+          set -euo pipefail
+          python3 -m compileall -q profile
+      - name: Verify review ownership and baseline test presence
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          text = Path('.github/CODEOWNERS').read_text(encoding='utf-8')
+          for rule in ('/.github/ @ahmed363younis-dot', '/profile/scripts/ @ahmed363younis-dot', '/profile/tests/ @ahmed363younis-dot'):
+              assert rule in text.splitlines(), f'CODEOWNER_MISSING: {rule}'
+          print('CODEOWNER_DECLARATION_PRESENT')
+          PY
+          if [ -d profile/tests ] && find profile/tests -name 'test_*.py' -print -quit | grep -q .; then
+            python3 -m unittest discover -s profile/tests -p 'test_*.py' -v
+          else
+            echo 'NO_TESTS_IN_BASELINE: this check is a syntax and ownership smoke test only, not a PR #29 regression PASS.'
+          fi
+
+  pinned-pr29-regression:
+    name: pinned-pr29-regression
+    if: github.event_name == 'push' && github.ref == 'refs/heads/governance/profile-readonly-ci-20261107'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout exactly reviewed PR 29 source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: fa75717fb05f24a5a97492bd6aad50a94ca37929
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Assert exact commit and regression suite inventory
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "fa75717fb05f24a5a97492bd6aad50a94ca37929"
+          test "$(find profile/tests -maxdepth 1 -type f -name 'test_*.py' | wc -l)" -ge 7
+          echo 'PR29_PINNED_SOURCE_VERIFIED'
+      - name: Run all offline PR29 regressions with no external tokens
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+          GH_PROMPT_DISABLED: '1'
+        run: |
+          set -euo pipefail
+          python3 -m compileall -q profile/scripts profile/tests
+          python3 -m unittest discover -s profile/tests -p 'test_*.py' -v
