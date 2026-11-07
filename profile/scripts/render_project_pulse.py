@@ -90,6 +90,12 @@ def section_first_line(text: str, heading: str) -> str:
 
 
 def parse_quantum() -> Pulse:
+    """Strict public status boundary for the current V4 Quantum handoff schema.
+
+    Never interpolate internal gate titles, accepted-gate text, next steps, or
+    arbitrary source strings into a publicly rendered SVG. Canonical state is
+    used only to validate restrictive execution boundaries.
+    """
     text = fetch_text("aether-x-quantum", "START_HERE.md")
     match = re.search(
         r"<!-- AETHERX_HANDOFF_STATE_BEGIN -->\s*```json\s*(\{[\s\S]*?\})\s*```",
@@ -98,40 +104,28 @@ def parse_quantum() -> Pulse:
     if not match:
         raise RuntimeError("Quantum machine-readable handoff state not found")
     state = json.loads(match.group(1))
-
-    priority = clean(state.get("current_product_priority", ""), 240)
-    gate_match = re.search(r"(Gate\s+\d+\s+—\s+[^.=]+)\s*=\s*([^.;]+)", priority)
-    if gate_match:
-        phase = f"{clean(gate_match.group(1), 72)} · {clean(gate_match.group(2), 42)}"
-    else:
-        phase = "ACTIVE DEVELOPMENT"
-
-    accepted = clean(state.get("last_externally_accepted_gate", ""), 180)
-    if accepted:
-        gate_id = accepted.split("—", 1)[0].strip()
-        signal = f"Latest externally accepted gate: {gate_id}"
-    else:
-        signal = "No externally accepted gate is asserted by the current handoff."
-
-    next_step = clean(
-        state.get("next_authorized_product_action_after_governance_acceptance")
-        or state.get("next_authorized_governance_action")
-        or "",
-        175,
-    )
-    boundary = (
-        "V1 live execution: PROHIBITED"
-        if str(state.get("v1_live_execution_boundary", "")).lower() == "prohibited"
-        else "Execution authority remains governed by the current project boundary."
-    )
+    if not isinstance(state, dict):
+        raise RuntimeError("Quantum handoff must be a JSON object")
+    required = {
+        "schema_version": "4.0.0",
+        "v1_live_execution": "PROHIBITED",
+        "mt5_v1": "READ_ONLY",
+        "production_security_go": "NOT_GRANTED",
+        "risk_acceptance": "NOT_GRANTED",
+        "production_authority": "NOT_GRANTED",
+        "live_trading_authority": "NOT_GRANTED",
+    }
+    if any(type(state.get(key)) is not str or state[key] != value
+           for key, value in required.items()):
+        raise RuntimeError("Quantum state schema or non-live authorization boundary changed")
     return Pulse(
         "AETHER X QUANTUM",
         "FINANCIAL STRATEGY INTELLIGENCE",
-        phase,
-        signal,
-        next_step or "Next bounded action is not asserted in the current handoff.",
-        boundary,
-        "START_HERE.md · governed handoff",
+        "GOVERNED DEVELOPMENT · NO PUBLIC GATE ASSERTED",
+        "No live execution or production authority is claimed.",
+        "Any next step requires explicit project-gate authorization.",
+        "V1 live execution: PROHIBITED",
+        "START_HERE.md · limited public authorization boundary",
     )
 
 
