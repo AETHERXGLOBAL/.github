@@ -17,6 +17,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: aether-x-live-portfolio-pulse
@@ -31,6 +32,19 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Select review-only portfolio refresh branch
+        run: |
+          set -euo pipefail
+          BRANCH="automation/live-portfolio-pulse-review"
+          git fetch origin main
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
+            git fetch origin "$BRANCH"
+            git switch -C "$BRANCH" FETCH_HEAD
+            git rebase origin/main
+          else
+            git switch -C "$BRANCH" origin/main
+          fi
 
       - name: Validate publication scripts
         run: |
@@ -128,18 +142,24 @@ jobs:
               print("PORTFOLIO_PULSE_STATE_CHANGED")
           PY
 
-      - name: Publish only when governed public state changed
+      - name: Propose changed governed state for protected-branch review
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           PULSE="profile/assets/aether-x-live-project-pulse.svg"
+          BRANCH="automation/live-portfolio-pulse-review"
           if [[ -z "$(git status --porcelain -- "$PULSE")" ]]; then
-            echo "No governed public-state change; no commit required."
+            echo "No governed public-state change; no review update needed."
             exit 0
           fi
-
-          git config user.name "AETHER X Portfolio Pulse"
+          git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "$PULSE"
-          git commit -m "chore(profile): refresh live portfolio pulse"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          git add -- "$PULSE"
+          git commit -m "chore(profile): propose reviewed portfolio pulse update"
+          git push origin "HEAD:refs/heads/$BRANCH"
+          if ! gh pr list --repo "$GITHUB_REPOSITORY" --head "$BRANCH" --state open --json number --jq '.[0].number // empty' | grep -q '[0-9]'; then
+            gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$BRANCH" \
+              --title "[REVIEW] Refresh governed live portfolio pulse" \
+              --body "Governed-source candidate requiring independent confirmation of source accessibility and public disclosure markers. No automatic merge or direct main push."
+          fi
