@@ -7,16 +7,12 @@ name: Inspect AETHER X profile PR source (trusted read-only)
 # policy change or secret access is authorized by adding this file.
 on:
   pull_request_target:
-    types: [opened, reopened, synchronize, ready_for_review]
+    types: [opened, reopened, synchronize, ready_for_review, edited]
     branches:
       - main
-    paths:
-      - ".github/workflows/**"
-      - "profile/scripts/**"
-      - "profile/tests/**"
-      - "profile/assets/aether-x-engineering-pulse.svg"
-      - "profile/assets/aether-x-live-project-pulse.svg"
 
+# No paths filter: retarget edits and changes to any runtime dependency
+# must not be silently exempted by GitHub path evaluation limits.
 permissions:
   contents: read
   pull-requests: read
