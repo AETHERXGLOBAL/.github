@@ -90,7 +90,6 @@ def main() -> int:
     svg = svg.replace("Last verified refresh:", "Last published state update:")
 
     axos = re.search(r"AXOS-T\d+", svg)
-    aic = re.search(r"AIC-\d+", svg)
 
     svg = replace_next_step(
         svg,
@@ -108,12 +107,8 @@ def main() -> int:
     )
     svg = replace_next_step(
         svg,
-        "AETHER INTELLIGENCE CORE · AIC",
-        (
-            f"{aic.group(0)} is the next authorized pre-implementation step."
-            if aic
-            else "The next authorized pre-implementation step is recorded in the current state."
-        ),
+        "AETHER X GOVERNED INTELLIGENCE CORE",
+        "No verified milestone is asserted until canonical evidence is accessible.",
     )
     svg = refine_research_card(svg)
     svg = replace_next_step(
