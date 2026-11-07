@@ -1,6 +1,14 @@
 name: Update AETHER X Live Portfolio Pulse
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "profile/scripts/render_project_pulse.py"
+      - "profile/scripts/sanitize_project_pulse.py"
+      - ".github/workflows/update-project-pulse.yml"
+      - "profile/tests/test_portfolio_pulse.py"
   push:
     branches:
       - main
@@ -16,15 +24,34 @@ on:
       - project_state_changed
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 concurrency:
   group: aether-x-live-portfolio-pulse
   cancel-in-progress: false
 
 jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout PR without persisted credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Offline governed portfolio regression tests
+        run: |
+          python3 -m py_compile profile/scripts/render_project_pulse.py profile/scripts/sanitize_project_pulse.py
+          python3 -m unittest discover -s profile/tests -p 'test_portfolio_pulse.py' -v
+
   refresh:
+    if: github.event_name != 'pull_request'
+    permissions:
+      contents: write
+      pull-requests: write
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
@@ -41,7 +68,7 @@ jobs:
           if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
             git fetch origin "$BRANCH"
             git switch -C "$BRANCH" FETCH_HEAD
-            git rebase origin/main
+            git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" merge --no-edit origin/main
           else
             git switch -C "$BRANCH" origin/main
           fi
