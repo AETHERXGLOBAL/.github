@@ -99,6 +99,36 @@ class WorkflowTrustBoundary(unittest.TestCase):
                     with self.assertRaises(ValueError):
                         inspect.verify_privileged_workflow(changed, allowed)
 
+    def test_closed_bytes_reject_appended_shell_action_and_secret(self):
+        # The exact attack from AETHER SECURITY: formerly FALSE_GREEN.
+        for path, allowed in WORKFLOWS.items():
+            with self.subTest(file=path):
+                original = source_for(path)
+                mutations = (
+                    original + "\n      - name: INERT_SECURITY_TEST\n        run: echo F05_INERT_CANARY\n",
+                    original + "\n      - name: INERT_ACTION\n        uses: example/action@deadbeef\n",
+                    original + "\n        env:\n          INERT: ${{ secrets.PROJECT_PULSE_READ_TOKEN }}\n",
+                    original.replace("      - name: Checkout", "      - name: INERT\n        run: echo INERT\n      - name: Checkout", 1),
+                    original.replace("        env:\n", "        env:\n          CANARY: ${{ secrets.OTHER_SECRET }}\n", 1),
+                    original.replace("      - name: Validate", "      - name: INERT\n        uses: example/action@deadbeef\n      - name: Validate", 1),
+                    original.replace("jobs:\n", "jobs:\n  sidecar:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo INERT\n", 1),
+                    original.replace("  refresh:\n", "  refresh:\n    env:\n      CANARY: ${{ secrets.OTHER_SECRET }}\n", 1),
+                    original.replace("jobs:\n", "jobs:\n  refresh:\n    if: true\n", 1),
+                    original.replace("\non:\n", "\non:\n  schedule: [ { cron: '* * * * *' } ]\n", 1),
+                    original.replace("permissions:\n", "permissions:\n  contents: write\n", 1),
+                )
+                for i, changed in enumerate(mutations):
+                    with self.subTest(mutation=i), self.assertRaises(ValueError):
+                        inspect.verify_privileged_workflow(changed, allowed)
+
+    def test_inspector_workflow_is_immutably_pinned(self):
+        path = ".github/workflows/inspect-profile-pr.yml"
+        self.assertIn(path, inspect.APPROVED_WORKFLOW_SHA256)
+        import hashlib
+        self.assertEqual(hashlib.sha256(source_for(path).encode()).hexdigest(),
+                         inspect.APPROVED_WORKFLOW_SHA256[path])
+        self.assertEqual(set(inspect.APPROVED_WORKFLOW_SHA256), set(WORKFLOWS) | {path})
+
     def test_fake_api_reads_only_pr_head_as_data(self):
         calls = []
         sha = "a" * 40
@@ -110,16 +140,86 @@ class WorkflowTrustBoundary(unittest.TestCase):
                     "base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main"},
                     "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "sha": sha},
                 }
-            for path in WORKFLOWS:
+            if "/pulls/29/files?" in route:
+                return [{"filename": path} for path in inspect.APPROVED_WORKFLOW_SHA256]
+            for path in inspect.APPROVED_WORKFLOW_SHA256:
                 if path in route:
                     return {"type": "file", "encoding": "base64",
                             "content": base64.b64encode(source_for(path).encode()).decode()}
             raise AssertionError(route)
         with patch.object(inspect, "_api_get", side_effect=fake_get):
             inspect.inspect_pr("AETHERXGLOBAL/.github", 29, "TEST_INERT_TOKEN")
-        self.assertEqual(len(calls), 3)
-        self.assertTrue(all("/contents/" in route for route in calls[1:]))
-        self.assertTrue(all(f"?ref={sha}" in route for route in calls[1:]))
+        self.assertEqual(len(calls), 6)
+        self.assertTrue(all("/contents/" in route for route in calls[2:5]))
+        self.assertTrue(all(f"?ref={sha}" in route for route in calls[2:5]))
+
+    def test_new_workflow_file_fails_before_any_content_execution(self):
+        sha = "a" * 40
+        routes = []
+        def fake_get(route, token):
+            routes.append(route)
+            if route.endswith("/pulls/29"):
+                return {"base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main"},
+                        "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "sha": sha}}
+            if "/files?" in route:
+                return [{"filename": ".github/workflows/evil-new-workflow.yml"}]
+            raise AssertionError("Should block before fetching content")
+        with patch.object(inspect, "_api_get", side_effect=fake_get):
+            with self.assertRaisesRegex(ValueError, "F05_NEW_UNREVIEWED_WORKFLOW"):
+                inspect.inspect_pr("AETHERXGLOBAL/.github", 29, "TEST_INERT_TOKEN")
+        self.assertEqual(len(routes), 2)
+
+    def test_changed_workflow_bytes_fail_even_if_they_preserve_all_checked_fields(self):
+        for path in inspect.APPROVED_WORKFLOW_SHA256:
+            with self.subTest(path=path):
+                original = source_for(path)
+                import hashlib
+                self.assertEqual(hashlib.sha256(original.encode()).hexdigest(),
+                                 inspect.APPROVED_WORKFLOW_SHA256[path])
+                self.assertNotEqual(hashlib.sha256((original + "\n#INERT\n").encode()).hexdigest(),
+                                    inspect.APPROVED_WORKFLOW_SHA256[path])
+
+    def test_mutated_api_workflow_is_rejected_end_to_end(self):
+        sha = "a" * 40
+        def fake_get(route, token):
+            if route.endswith("/pulls/29"):
+                return {"base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main"},
+                        "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "sha": sha}}
+            if "/files?" in route:
+                return [{"filename": path} for path in inspect.APPROVED_WORKFLOW_SHA256]
+            for path in inspect.APPROVED_WORKFLOW_SHA256:
+                if path in route:
+                    content = source_for(path)
+                    if path.endswith("update-engineering-pulse.yml"):
+                        content += "\n      - name: INERT_SECURITY_TEST\n        run: echo F05_INERT_CANARY\n"
+                    return {"type": "file", "encoding": "base64",
+                            "content": base64.b64encode(content.encode()).decode()}
+            raise AssertionError(route)
+        with patch.object(inspect, "_api_get", side_effect=fake_get):
+            with self.assertRaisesRegex(ValueError, "F05_UNREVIEWED_WORKFLOW_BYTES"):
+                inspect.inspect_pr("AETHERXGLOBAL/.github", 29, "TEST_INERT_TOKEN")
+
+    def test_concurrent_pr_head_update_fails_closed(self):
+        attempts = 0
+        sha = "a" * 40
+        def fake_get(route, token):
+            nonlocal attempts
+            if route.endswith("/pulls/29"):
+                attempts += 1
+                return {"base": {"repo": {"full_name": "AETHERXGLOBAL/.github"}, "ref": "main"},
+                        "head": {"repo": {"full_name": "AETHERXGLOBAL/.github"},
+                                 "sha": sha if attempts == 1 else "b" * 40}}
+            if "/files?" in route:
+                return [{"filename": path} for path in inspect.APPROVED_WORKFLOW_SHA256]
+            for path in inspect.APPROVED_WORKFLOW_SHA256:
+                if path in route:
+                    return {"type": "file", "encoding": "base64",
+                            "content": base64.b64encode(source_for(path).encode()).decode()}
+            raise AssertionError(route)
+        with patch.object(inspect, "_api_get", side_effect=fake_get):
+            with self.assertRaisesRegex(ValueError, "F05_PR_HEAD_MOVED_RETRY_REQUIRED"):
+                inspect.inspect_pr("AETHERXGLOBAL/.github", 29, "TEST_INERT_TOKEN")
+        self.assertEqual(attempts, 2)
 
     def test_fake_api_refuses_mismatched_base(self):
         pr = {"base": {"ref": "untrusted", "repo": {"full_name": "AETHERXGLOBAL/.github"}},
