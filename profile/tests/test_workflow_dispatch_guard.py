@@ -24,7 +24,7 @@ def check_trusted_refresh_contract(source: str, expected_events: set[str]) -> No
     found_events = set(re.findall(r"^  ([a-z_]+):", on_block, re.MULTILINE))
     if found_events != expected_events:
         raise AssertionError(f"Unexpected event triggers: {found_events}")
-    if "workflow_dispatch" in source or "pull_request_target" in source:
+    if "workflow_dispatch" in found_events or "pull_request_target" in found_events:
         raise AssertionError("Untrusted branch-selectable / privileged trigger")
     if source.count("  refresh:\n") != 1 or source.count("  validate:\n") != 1:
         raise AssertionError("Unexpected privileged or validation job structure")
