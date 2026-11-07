@@ -89,8 +89,7 @@ def main() -> int:
     # not proof that every scheduled poll produced a new public state.
     svg = svg.replace("Last verified refresh:", "Last published state update:")
 
-    axos = re.search(r"AXOS-T\d+", svg)
-    aic = re.search(r"AIC-\d+", svg)
+    axos = re.search(r"AXOS-\d{3}", svg)
 
     svg = replace_next_step(
         svg,
@@ -101,19 +100,15 @@ def main() -> int:
         svg,
         "AX-OS",
         (
-            f"{axos.group(0)} is selected as the next bounded build task."
+            f"{axos.group(0)} remains unissued; no build start is authorized."
             if axos
-            else "The next bounded build task is selected in the current governed status."
+            else "No AX-OS implementation start is authorized."
         ),
     )
     svg = replace_next_step(
         svg,
-        "AETHER INTELLIGENCE CORE · AIC",
-        (
-            f"{aic.group(0)} is the next authorized pre-implementation step."
-            if aic
-            else "The next authorized pre-implementation step is recorded in the current state."
-        ),
+        "AETHER X GOVERNED INTELLIGENCE CORE",
+        "No verified milestone is asserted until canonical evidence is accessible.",
     )
     svg = refine_research_card(svg)
     svg = replace_next_step(

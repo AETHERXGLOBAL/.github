@@ -90,96 +90,114 @@ def section_first_line(text: str, heading: str) -> str:
 
 
 def parse_quantum() -> Pulse:
+    """Strict public status boundary for the current V4 Quantum handoff schema.
+
+    Never interpolate internal gate titles, accepted-gate text, next steps, or
+    arbitrary source strings into a publicly rendered SVG. Canonical state is
+    used only to validate restrictive execution boundaries.
+    """
     text = fetch_text("aether-x-quantum", "START_HERE.md")
-    match = re.search(
-        r"<!-- AETHERX_HANDOFF_STATE_BEGIN -->\s*```json\s*(\{[\s\S]*?\})\s*```",
-        text,
+    begin = "<!-- AETHERX_HANDOFF_STATE_BEGIN -->"
+    end = "<!-- AETHERX_HANDOFF_STATE_END -->"
+    if text.count(begin) != 1 or text.count(end) != 1:
+        raise RuntimeError("Quantum must have exactly one complete state block")
+    first = text.index(begin)
+    last = text.index(end)
+    if last <= first:
+        raise RuntimeError("Quantum state block marker order invalid")
+    block = text[first:last + len(end)]
+    match = re.fullmatch(
+        r"<!-- AETHERX_HANDOFF_STATE_BEGIN -->[ \t]*\r?\n"
+        r"```json[ \t]*\r?\n"
+        r"(?P<state>\{[\s\S]*?\})[ \t]*\r?\n"
+        r"```[ \t]*\r?\n"
+        r"<!-- AETHERX_HANDOFF_STATE_END -->",
+        block,
     )
     if not match:
-        raise RuntimeError("Quantum machine-readable handoff state not found")
-    state = json.loads(match.group(1))
+        raise RuntimeError("Quantum state block must be complete and structurally unique")
 
-    priority = clean(state.get("current_product_priority", ""), 240)
-    gate_match = re.search(r"(Gate\s+\d+\s+—\s+[^.=]+)\s*=\s*([^.;]+)", priority)
-    if gate_match:
-        phase = f"{clean(gate_match.group(1), 72)} · {clean(gate_match.group(2), 42)}"
-    else:
-        phase = "ACTIVE DEVELOPMENT"
+    def unique_keys(pairs):
+        obj = {}
+        for key, value in pairs:
+            if key in obj:
+                raise RuntimeError("Quantum JSON has duplicate field names")
+            obj[key] = value
+        return obj
 
-    accepted = clean(state.get("last_externally_accepted_gate", ""), 180)
-    if accepted:
-        gate_id = accepted.split("—", 1)[0].strip()
-        signal = f"Latest externally accepted gate: {gate_id}"
-    else:
-        signal = "No externally accepted gate is asserted by the current handoff."
-
-    next_step = clean(
-        state.get("next_authorized_product_action_after_governance_acceptance")
-        or state.get("next_authorized_governance_action")
-        or "",
-        175,
-    )
-    boundary = (
-        "V1 live execution: PROHIBITED"
-        if str(state.get("v1_live_execution_boundary", "")).lower() == "prohibited"
-        else "Execution authority remains governed by the current project boundary."
-    )
+    state = json.loads(match.group("state"), object_pairs_hook=unique_keys)
+    if not isinstance(state, dict):
+        raise RuntimeError("Quantum handoff must be a JSON object")
+    required = {
+        "schema_version": "4.0.0",
+        "v1_live_execution": "PROHIBITED",
+        "mt5_v1": "READ_ONLY",
+        "production_security_go": "NOT_GRANTED",
+        "risk_acceptance": "NOT_GRANTED",
+        "production_authority": "NOT_GRANTED",
+        "live_trading_authority": "NOT_GRANTED",
+    }
+    if any(type(state.get(key)) is not str or state[key] != value
+           for key, value in required.items()):
+        raise RuntimeError("Quantum state schema or non-live authorization boundary changed")
     return Pulse(
         "AETHER X QUANTUM",
         "FINANCIAL STRATEGY INTELLIGENCE",
-        phase,
-        signal,
-        next_step or "Next bounded action is not asserted in the current handoff.",
-        boundary,
-        "START_HERE.md · governed handoff",
+        "GOVERNED DEVELOPMENT · NO PUBLIC GATE ASSERTED",
+        "No live execution or production authority is claimed.",
+        "Any next step requires explicit project-gate authorization.",
+        "V1 live execution: PROHIBITED",
+        "START_HERE.md · limited public authorization boundary",
     )
 
 
 def parse_axos() -> Pulse:
+    """Treat the current canonical AX-OS status as a frozen design, not a build.
+
+    Fail closed if the approved status schema changes. A future implementation
+    transition requires an explicit public-status mapping review.
+    """
     text = fetch_text("AX-OS", "PROJECT_STATUS.md")
-    phase_match = re.search(r"Project Phase / Gate:\s*`?([^`\n]+)`?", text)
-    phase = clean(phase_match.group(1), 90) if phase_match else "G3 — BUILD"
-
-    accepted = re.findall(
-        r"^\-\s+`?AXOS-T\d+[^\n]*\*\*ACCEPTED\*\*",
-        text,
-        re.MULTILINE,
+    architecture = re.search(
+        r"^Architecture:\s*\*\*FINAL v1\.1 FROZEN / APPROVED\*\*",
+        text, re.MULTILINE,
     )
-    signal = f"{len(accepted)} accepted build task{'s' if len(accepted) != 1 else ''} recorded in current status."
-
-    next_step = section_first_line(text, "Next Authorized Build Outcome")
-    if not next_step:
-        ready = re.search(r"`?(AXOS-T\d+)`?:\s*\*\*READY / SELECTED NEXT\*\*", text)
-        next_step = f"{ready.group(1)} · READY / SELECTED NEXT" if ready else ""
+    implementation = re.search(
+        r"^Product implementation:\s*\*\*NOT STARTED\*\*",
+        text, re.MULTILINE,
+    )
+    kickoff = re.search(
+        r"^First future engineering task:\s*\*\*(AXOS-\d{3}) READY / CONTRACT PREPARED / NOT ISSUED\*\*",
+        text, re.MULTILINE,
+    )
+    if not (architecture and implementation and kickoff):
+        raise RuntimeError("AX-OS status schema changed; public milestone qualification required")
 
     return Pulse(
         "AX-OS",
         "GOVERNED AI OPERATIONS",
-        phase,
-        signal,
-        next_step or "Next bounded build outcome is not asserted.",
-        "No Security GO, Pilot, Production or Release authority is asserted.",
-        "PROJECT_STATUS.md · current build state",
+        "ARCHITECTURE APPROVED · PRODUCT NOT STARTED",
+        "Frozen architecture and pre-implementation design only; no product runtime is asserted.",
+        f"{kickoff.group(1)} · CONTRACT PREPARED / NOT ISSUED",
+        "NO IMPLEMENTATION, PILOT, PRODUCTION OR RELEASE AUTHORITY",
+        "PROJECT_STATUS.md · canonical pre-implementation state",
     )
 
 
-def parse_aic() -> Pulse:
-    text = fetch_text("aether-intelligence-core-AIC-", "05_AIC_CURRENT_STATE.md")
-    phase_match = re.search(r"\*\*Phase\s+([^*\n]+)\*\*", text)
-    phase = f"PHASE {clean(phase_match.group(1), 78)}" if phase_match else "PHASE 0"
-    gate_match = re.search(r"Implementation Gate:\*{0,2}\s*`([^`]+)`", text)
-    if gate_match:
-        phase = f"{phase} · {clean(gate_match.group(1), 54)}"
+def governed_core_public_boundary() -> Pulse:
+    """Bounded, non-live entry until a canonical approved source is readable.
 
+    The retired AIC repository name is not a valid source for the successor.
+    Do not turn an inaccessible project into a claimed verified milestone.
+    """
     return Pulse(
-        "AETHER INTELLIGENCE CORE · AIC",
-        "FINANCIAL INTELLIGENCE INFRASTRUCTURE",
-        phase,
-        "Implementation has not started under the current baseline; architecture/governance phase remains active.",
-        section_first_line(text, "Next Authorized Step")
-        or "Next authorized step is not asserted.",
-        "No platform, connector, ingestion pipeline or production data collection has started.",
-        "05_AIC_CURRENT_STATE.md · CURRENT",
+        "AETHER X GOVERNED INTELLIGENCE CORE",
+        "VERIFIABLE AUTONOMOUS INTELLIGENCE INFRASTRUCTURE",
+        "DEVELOPMENT · NOT PUBLICLY VERIFIED",
+        "No current externally verified project gate is asserted by this dashboard.",
+        "Consult canonical project evidence before publishing a milestone.",
+        "NO PRODUCTION OR RELEASE READINESS IS ASSERTED",
+        "Public disclosure boundary · no live project status",
     )
 
 
@@ -300,7 +318,7 @@ def render(pulses: list[Pulse]) -> str:
 
 def main() -> int:
     try:
-        pulses = [parse_quantum(), parse_axos(), parse_aic(), research_unit_state()]
+        pulses = [parse_quantum(), parse_axos(), governed_core_public_boundary(), research_unit_state()]
         OUTPUT.parent.mkdir(parents=True, exist_ok=True)
         OUTPUT.write_text(render(pulses), encoding="utf-8")
         print("PROJECT_PULSE_RENDER_PASS")
