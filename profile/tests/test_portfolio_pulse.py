@@ -25,7 +25,9 @@ QUANTUM = ('<!-- AETHERX_HANDOFF_STATE_BEGIN -->\n'
            '"next_authorized_governance_action":"PRIVATE_UNRELEASED_ACTION",'
            '"v1_live_execution_boundary":"prohibited"}\n'
            '\x60\x60\x60')
-AXOS = 'Project Phase / Gate: \x60G3 — BUILD\x60\n## Next Authorized Build Outcome\n- \x60AXOS-T09\x60: **READY / SELECTED NEXT**\n'
+AXOS = ('Architecture: **FINAL v1.1 FROZEN / APPROVED**\n'
+        'Product implementation: **NOT STARTED**\n'
+        'First future engineering task: **AXOS-001 READY / CONTRACT PREPARED / NOT ISSUED**\n')
 
 class PortfolioPulseContract(unittest.TestCase):
     def test_successor_is_bounded_and_sources_are_allowlisted(self):
@@ -47,13 +49,15 @@ class PortfolioPulseContract(unittest.TestCase):
             self.assertEqual(seen, [("aether-x-quantum", "START_HERE.md"), ("AX-OS", "PROJECT_STATUS.md")])
             for marker in ("AETHER X Live Portfolio Pulse", "LIVE PORTFOLIO PULSE",
                            "AETHER X GOVERNED INTELLIGENCE CORE", "DEVELOPMENT · NOT PUBLICLY VERIFIED",
+                           "ARCHITECTURE APPROVED · PRODUCT NOT STARTED",
+                           "AXOS-001 remains unissued; no build start is authorized.",
                            "AETHER X RESEARCH", "INSTITUTIONAL RESEARCH UNIT · ACTIVE",
                            "RESEARCH ≠ PRODUCTION", "PUBLIC DISCLOSURE REQUIRES APPROVAL",
                            "Last published state update:", "V1 live execution: PROHIBITED"):
                 self.assertIn(marker, svg)
             for forbidden in ("AETHER INTELLIGENCE CORE · AIC", "aether-intelligence-core-AIC-",
                               "LIVE PROJECT PULSE", "Last verified refresh:",
-                              "PRIVATE_UNRELEASED_ACTION", "AMII RESEARCH LAB"):
+                              "PRIVATE_UNRELEASED_ACTION", "AMII RESEARCH LAB", "G3 — BUILD"):
                 self.assertNotIn(forbidden, svg)
 
     def test_missing_canonical_source_fails_closed(self):
